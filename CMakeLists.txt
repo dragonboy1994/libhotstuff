@@ -44,7 +44,10 @@ add_dependencies(secp256k1 libsecp256k1)
 
 # add libraries
 
-include_directories(./)
+include_directories(/usr/local/Cellar/libuv/HEAD-493be3e/include)
+include_directories(/usr/local/Cellar/openssl@1.1/1.1.1i/include)
+include_directories(/usr/local/opt/openssl@1.1/lib)
+include_directories(/usr/local/Cellar/boost/1.75.0_1/include)
 include_directories(include)
 add_library(hotstuff
     OBJECT

@@ -1,0 +1,20 @@
+2021-01-09 23:44:12.694005 [net info] loaded configuration from hotstuff.conf
+2021-01-09 23:44:12.694229 [net info] loading extra configuration from ./hotstuff-sec3.conf
+2021-01-09 23:44:12.708785 [net info] starting all threads...
+2021-01-09 23:44:12.709121 [net info] listening to 10003
+2021-01-09 23:44:12.713088 [net info] accepted <Conn fd=53 addr=<NetAddr 127.0.0.1:65451> mode=passive>
+2021-01-09 23:44:12.716286 [net info] 6540a0fea6: lost connection <Conn fd=53 addr=<NetAddr 127.0.0.1:65451> mode=passive>
+2021-01-09 23:44:12.716482 [net info] starting all threads...
+2021-01-09 23:44:12.716790 [net info] listening to 20003
+2021-01-09 23:44:12.717011 [hotstuff info] ** starting the system with parameters **
+2021-01-09 23:44:12.717043 [hotstuff info] blk_size = 1
+2021-01-09 23:44:12.717056 [hotstuff info] conns = 0
+2021-01-09 23:44:12.717067 [hotstuff info] ** starting the event loop...
+2021-01-09 23:44:12.717227 [hotstuff proto] Pacemaker: stop rotation at 0
+2021-01-09 23:44:12.717906 [net info] created <Conn fd=126 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-09 23:44:12.718263 [net info] created <Conn fd=129 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-09 23:44:12.718432 [hotstuff warn] network async error: tls generic error
+
+2021-01-09 23:44:12.718472 [hotstuff warn] network async error: tls generic error
+
+2021-01-09 23:44:12.718667 [net info] created <Conn fd=132 addr=<NetAddr 127.0.0.1:10002> mode=active>

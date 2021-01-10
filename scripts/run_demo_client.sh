@@ -5,4 +5,6 @@
 # commands should still get through (be replicated) once the new leader becomes
 # stable.
 
+echo "starting clients"
+cd /Users/soubhikdeb/Downloads/PhD\ Research\ Extn/FairStuff/libhotstuff
 ./examples/hotstuff-client --idx 0 --iter -1 --max-async 4
