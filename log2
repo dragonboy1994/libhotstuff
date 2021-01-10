@@ -1,0 +1,17 @@
+2021-01-09 23:44:12.688705 [net info] loaded configuration from hotstuff.conf
+2021-01-09 23:44:12.688863 [net info] loading extra configuration from ./hotstuff-sec2.conf
+2021-01-09 23:44:12.698179 [net info] starting all threads...
+2021-01-09 23:44:12.698581 [net info] listening to 10002
+2021-01-09 23:44:12.704369 [net info] starting all threads...
+2021-01-09 23:44:12.704693 [net info] listening to 20002
+2021-01-09 23:44:12.705009 [hotstuff info] ** starting the system with parameters **
+2021-01-09 23:44:12.705049 [hotstuff info] blk_size = 1
+2021-01-09 23:44:12.705073 [hotstuff info] conns = 0
+2021-01-09 23:44:12.705094 [hotstuff info] ** starting the event loop...
+2021-01-09 23:44:12.705704 [hotstuff proto] Pacemaker: stop rotation at 0
+2021-01-09 23:44:12.706601 [net info] created <Conn fd=124 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-09 23:44:12.707047 [net info] created <Conn fd=127 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-09 23:44:12.707428 [net info] created <Conn fd=130 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-09 23:44:12.707781 [net info] accepted <Conn fd=133 addr=<NetAddr 127.0.0.1:65445> mode=passive>
+2021-01-09 23:44:12.707848 [net info] connected to remote <Conn fd=124 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-09 23:44:12.707882 [net info] connected to remote <Conn fd=127 addr=<NetAddr 127.0.0.1:10001> mode=active>
