@@ -1,17 +1,29 @@
-2021-01-09 23:44:12.683040 [net info] loaded configuration from hotstuff.conf
-2021-01-09 23:44:12.683256 [net info] loading extra configuration from ./hotstuff-sec1.conf
-2021-01-09 23:44:12.696320 [net info] starting all threads...
-2021-01-09 23:44:12.698536 [net info] listening to 10001
-2021-01-09 23:44:12.704296 [net info] starting all threads...
-2021-01-09 23:44:12.704675 [net info] listening to 20001
-2021-01-09 23:44:12.705009 [hotstuff info] ** starting the system with parameters **
-2021-01-09 23:44:12.705047 [hotstuff info] blk_size = 1
-2021-01-09 23:44:12.705070 [hotstuff info] conns = 0
-2021-01-09 23:44:12.705092 [hotstuff info] ** starting the event loop...
-2021-01-09 23:44:12.705502 [hotstuff proto] Pacemaker: stop rotation at 0
-2021-01-09 23:44:12.706222 [net info] created <Conn fd=124 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-09 23:44:12.706632 [net info] created <Conn fd=127 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-09 23:44:12.707206 [net info] created <Conn fd=130 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-09 23:44:12.707572 [net info] accepted <Conn fd=133 addr=<NetAddr 127.0.0.1:65446> mode=passive>
-2021-01-09 23:44:12.707643 [net info] connected to remote <Conn fd=124 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-09 23:44:12.707680 [net info] connected to remote <Conn fd=127 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-15 13:28:25.951374 [net info] loaded configuration from hotstuff.conf
+2021-01-15 13:28:25.951575 [net info] loading extra configuration from ./hotstuff-sec1.conf
+2021-01-15 13:28:25.963620 [net info] starting all threads...
+2021-01-15 13:28:25.964120 [net info] listening to 10001
+2021-01-15 13:28:25.969976 [net info] starting all threads...
+2021-01-15 13:28:25.970598 [net info] listening to 20001
+2021-01-15 13:28:25.970880 [hotstuff info] ** starting the system with parameters **
+2021-01-15 13:28:25.970906 [hotstuff info] blk_size = 8
+2021-01-15 13:28:25.970924 [hotstuff info] conns = 0
+2021-01-15 13:28:25.970939 [hotstuff info] ** starting the event loop...
+2021-01-15 13:28:25.971744 [net info] created <Conn fd=121 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-15 13:28:25.972087 [net info] accepted <Conn fd=124 addr=<NetAddr 127.0.0.1:63768> mode=passive>
+2021-01-15 13:28:25.972154 [net info] connected to remote <Conn fd=121 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-15 13:28:25.973701 [net info] created <Conn fd=129 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-15 13:28:25.973769 [net info] connected to remote <Conn fd=129 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-15 13:28:25.978007 [net info] c261250345: lost connection <Conn fd=121 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-15 13:28:25.978103 [net info] c261250345: lost connection <Conn fd=124 addr=<NetAddr 127.0.0.1:63768> mode=passive>
+2021-01-15 13:28:25.978187 [hotstuff proto] Pacemaker: stop rotation at 0
+2021-01-15 13:28:25.978391 [hotstuff warn] network async error: tls generic error
+
+2021-01-15 13:28:25.978436 [hotstuff warn] network async error: tls generic error
+
+2021-01-15 13:28:25.978463 [hotstuff warn] network async error: tls generic error
+
+2021-01-15 13:28:25.978486 [hotstuff warn] network async error: tls generic error
+
+2021-01-15 13:28:25.978776 [net info] created <Conn fd=132 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-15 13:28:25.983129 [net info] c261250345: setup connection <Conn fd=129 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-15 13:28:25.983229 [net info] c261250345: lost connection <Conn fd=132 addr=<NetAddr 127.0.0.1:10003> mode=active>

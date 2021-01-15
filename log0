@@ -1,19 +1,16 @@
-2021-01-09 23:44:12.689791 [net info] loaded configuration from hotstuff.conf
-2021-01-09 23:44:12.690011 [net info] loading extra configuration from ./hotstuff-sec0.conf
-2021-01-09 23:44:12.699980 [net info] starting all threads...
-2021-01-09 23:44:12.700346 [net info] listening to 10000
-2021-01-09 23:44:12.706301 [net info] starting all threads...
-2021-01-09 23:44:12.707051 [net info] accepted <Conn fd=117 addr=<NetAddr 127.0.0.1:65443> mode=passive>
-2021-01-09 23:44:12.707385 [net info] accepted <Conn fd=120 addr=<NetAddr 127.0.0.1:65444> mode=passive>
-2021-01-09 23:44:12.707859 [net info] listening to 20000
-2021-01-09 23:44:12.708200 [hotstuff info] ** starting the system with parameters **
-2021-01-09 23:44:12.708252 [hotstuff info] blk_size = 1
-2021-01-09 23:44:12.708274 [hotstuff info] conns = 0
-2021-01-09 23:44:12.708292 [hotstuff info] ** starting the event loop...
-2021-01-09 23:44:12.708484 [hotstuff proto] Pacemaker: stop rotation at 0
-2021-01-09 23:44:12.709738 [net info] created <Conn fd=130 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-09 23:44:12.710138 [net info] created <Conn fd=133 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-09 23:44:12.710930 [net info] created <Conn fd=136 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-09 23:44:12.711045 [net info] connected to remote <Conn fd=130 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-09 23:44:12.711096 [net info] connected to remote <Conn fd=133 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-09 23:44:12.711131 [net info] connected to remote <Conn fd=136 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-15 13:28:25.951471 [net info] loaded configuration from hotstuff.conf
+2021-01-15 13:28:25.951761 [net info] loading extra configuration from ./hotstuff-sec0.conf
+2021-01-15 13:28:25.963606 [net info] starting all threads...
+2021-01-15 13:28:25.963947 [net info] listening to 10000
+2021-01-15 13:28:25.969612 [net info] starting all threads...
+2021-01-15 13:28:25.969982 [net info] listening to 20000
+2021-01-15 13:28:25.970207 [hotstuff info] ** starting the system with parameters **
+2021-01-15 13:28:25.970233 [hotstuff info] blk_size = 8
+2021-01-15 13:28:25.970249 [hotstuff info] conns = 0
+2021-01-15 13:28:25.970263 [hotstuff info] ** starting the event loop...
+2021-01-15 13:28:25.970475 [hotstuff proto] Pacemaker: stop rotation at 0
+2021-01-15 13:28:25.971416 [net info] created <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-15 13:28:25.971820 [net info] created <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-15 13:28:25.972196 [net info] created <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-15 13:28:25.972580 [net info] accepted <Conn fd=134 addr=<NetAddr 127.0.0.1:63769> mode=passive>
+2021-01-15 13:28:25.972647 [net info] connected to remote <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
