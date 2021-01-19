@@ -140,8 +140,8 @@ public:
 
     void serialize(DataStream &s) const;
     void unserialize(DataStream &s, HotStuffCore *hsc);
-    const std::vector<uint256_t> extract_cmds() const { return cmds; }
-    const std::vector<uint64_t> &extract_timestamps() const { return timestamps; }
+    // const std::vector<uint256_t> extract_cmds() const { return cmds; }
+    // const std::vector<uint64_t> &extract_timestamps() const { return timestamps; }
 };
 
 
@@ -280,8 +280,9 @@ public:
     void add_command_to_storage(const uint256_t cmd_hash);
     bool is_new_command(const uint256_t &cmd_hash) const;
     void refresh_available_cmds(const std::vector<uint256_t> cmds);
-    const std::vector<uint256_t> &get_cmd_hashes() const { return cmd_hashes; }
-    const std::vector<uint64_t> &get_timestamps() const { return timestamps; }
+    const std::vector<uint256_t> &get_all_cmd_hashes() const { return cmd_hashes; }
+    const std::vector<uint64_t> &get_all_timestamps() const { return timestamps; }
+    std::vector<uint64_t> get_timestamps(const std::vector<uint256_t> &cmd_hashes_inquired) const;
     // const OrderedList get_orderedlist() const;
 };
 

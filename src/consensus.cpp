@@ -17,6 +17,7 @@
 
 #include <cassert>
 #include <stack>
+#include <boost/lexical_cast.hpp>
 
 #include "hotstuff/util.h"
 #include "hotstuff/consensus.h"
@@ -48,6 +49,26 @@ HotStuffCore::HotStuffCore(ReplicaID id,
 void HotStuffCore::sanity_check_delivered(const block_t &blk) {
     if (!blk->delivered)
         throw std::runtime_error("block not delivered");
+}
+
+
+bool HotStuffCore::acceptable_fairness_check(const std::vector<uint64_t> check_timestamps, uint64_t delta_max) const
+{
+    bool accept = true;
+    for (auto i = 0; i < check_timestamps.size(); i++)
+    {
+        for (auto j = 0; j <= i; j++)
+        {
+            //std::string str = boost::lexical_cast<std::string>(check_timestamps[i] - check_timestamps[j]);
+            //LOG_PROTO("Differences in timestamps are %s", str.c_str());
+            if (check_timestamps[j] >= check_timestamps[i] + 2 * delta_max)
+            {
+                accept = false;
+                HOTSTUFF_LOG_PROTO("Unacceptable fairness!");
+            }
+        }
+    }
+    return accept;
 }
 
 block_t HotStuffCore::get_delivered_blk(const uint256_t &blk_hash) {
@@ -197,6 +218,10 @@ void HotStuffCore::on_receive_proposal(const Proposal &prop) {
             command_timestamp_storage->add_command_to_storage(cmd);
         }
     }
+    // get timestamps of the commands in the proposed block
+    std::vector<uint64_t> timestamps_of_cmds = command_timestamp_storage->get_timestamps(bnew->get_cmds());
+    
+
     update(bnew);
     bool opinion = false;
     if (bnew->height > vheight)

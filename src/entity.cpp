@@ -130,7 +130,7 @@ bool CommandTimestampStorage::is_new_command(const uint256_t &cmd_hash) const
   * The input to this function will be block->cmds. */
 void CommandTimestampStorage::refresh_available_cmds(const std::vector<uint256_t> cmds)
 {
-    for (auto cmd : cmds)
+    for (auto& cmd : cmds)
     {
         auto it = std::find(available_cmd_hashes.begin(), available_cmd_hashes.end(), cmd);
         if (it != available_cmd_hashes.end())
@@ -142,7 +142,20 @@ void CommandTimestampStorage::refresh_available_cmds(const std::vector<uint256_t
     }
 }
 
-
+/** Get a orderedlist on giving a vector of commands as input.
+     * Called just before calling acceptable fairness check in order to get the 
+     * corresponding timestamps of the commands in the proposed block.
+     * Must be called after add_command_to_storage().*/
+std::vector<uint64_t> CommandTimestampStorage::get_timestamps(const std::vector<uint256_t> &cmd_hashes_inquired) const
+{
+    std::vector<uint64_t> timestamps_list;
+    for (auto& cmd_hash : cmd_hashes_inquired)
+    {
+        auto it = std::find(cmd_hashes.begin(), cmd_hashes.end(), cmd_hash);
+        timestamps_list.push_back(timestamps[std::distance(cmd_hashes.begin(), it)]);
+    }
+    return timestamps_list;
+}
 
 /** Get a new ordered list to send as part of the vote.
   * Basically has to repackage the available cmds and timestamps into ordered list
