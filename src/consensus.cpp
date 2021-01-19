@@ -40,7 +40,8 @@ HotStuffCore::HotStuffCore(ReplicaID id,
         tails{b0},
         vote_disabled(false),
         id(id),
-        storage(new EntityStorage()) {
+        storage(new EntityStorage()),
+        command_timestamp_storage(new CommandTimestampStorage()) {
     storage->add_blk(b0);
 }
 
@@ -188,6 +189,14 @@ void HotStuffCore::on_receive_proposal(const Proposal &prop) {
     LOG_PROTO("got %s", std::string(prop).c_str());
     block_t bnew = prop.blk;
     sanity_check_delivered(bnew);
+    // checking for any new commands the replica is seeing for first time
+    for (auto &cmd : bnew->get_cmds())
+    {
+        if (command_timestamp_storage->is_new_command(cmd))
+        {
+            command_timestamp_storage->add_command_to_storage(cmd);
+        }
+    }
     update(bnew);
     bool opinion = false;
     if (bnew->height > vheight)

@@ -23,6 +23,9 @@
 #include <string>
 #include <cstddef>
 #include <ios>
+#include <sstream>
+#include <sys/time.h>
+#include <algorithm>
 
 #include "salticidae/netaddr.h"
 #include "salticidae/ref.h"
@@ -217,6 +220,38 @@ struct BlockHeightCmp {
     bool operator()(const block_t &a, const block_t &b) const {
         return a->get_height() < b->get_height();
     }
+};
+
+/** 
+ * 1. CommandTimeStorage will store all command hashes that has been received and the 
+ * corresponding timestamps.
+ * 2. It will also contain commands in ascending order of timestamps that heven't been 
+ * included in any previous block. 
+*/
+class CommandTimestampStorage
+{
+    /* for active checking while doing acceptable fairness check of the proposal */
+    std::unordered_map<const uint256_t, const uint64_t> cmd_ts_storage;
+
+    /** Available commands to be included in the ordered list of the vote.
+     * New commands are inserted in add_command_to_storage() function, everything 
+     * in ascending order of timestamps. Whenever a new proposal is received, check whether
+     * the proposal is acceptable under approximately fair. Only if it is acceptable, remove 
+     * those commands and timestamps from it.*/
+    // WARN - the updating procedure for these two is not applicable for rotating leader
+    std::vector<uint256_t> available_cmd_hashes;
+    std::vector<uint64_t> available_timestamps;
+
+    /* for print later on */
+    std::vector<uint256_t> cmd_hashes; // the corresponding hashes
+    std::vector<uint64_t> timestamps;  // the time stamps when corresponding commands are received
+
+public:
+    void add_command_to_storage(const uint256_t cmd_hash);
+    bool is_new_command(const uint256_t &cmd_hash) const;
+    void refresh_available_cmds(const std::vector<uint256_t> cmds);
+    // const OrderedList get_orderedlist() const;
+    
 };
 
 class EntityStorage {
