@@ -92,6 +92,13 @@ class HotStuffCore {
      * @return true if valid */
     bool on_deliver_blk(const block_t &blk);
 
+
+    /** This will do the checking for acceptable fairness on the proposal received from leader.
+    * "check timestamps" are the timestamps arranged in the order of corresponding commands
+    * included in the proposal. 
+    * "delta_max" is the maximum bound on the network delay. */
+    bool acceptable_fairness_check(const std::vector<uint64_t> check_timestamps, uint64_t delta_max) const;
+
     /** Call upon the delivery of a proposal message.
      * The block mentioned in the message should be already delivered. */
     void on_receive_proposal(const Proposal &prop);
