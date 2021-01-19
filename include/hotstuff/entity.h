@@ -250,8 +250,9 @@ public:
     void add_command_to_storage(const uint256_t cmd_hash);
     bool is_new_command(const uint256_t &cmd_hash) const;
     void refresh_available_cmds(const std::vector<uint256_t> cmds);
+    const std::vector<uint256_t> &get_cmd_hashes() const { return cmd_hashes; }
+    const std::vector<uint64_t> &get_timestamps() const { return timestamps; }
     // const OrderedList get_orderedlist() const;
-    
 };
 
 class EntityStorage {
