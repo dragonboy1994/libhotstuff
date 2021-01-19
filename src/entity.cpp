@@ -68,4 +68,84 @@ promise_t Block::verify(const HotStuffCore *hsc, VeriPool &vpool) const {
     return qc->verify(hsc->get_config(), vpool);
 }
 
+
+
+
+
+void CommandTimestampStorage::add_command_to_storage(const uint256_t cmd_hash)
+{
+    struct timeval tv;
+    gettimeofday(&tv, nullptr);
+    uint64_t timestamp_us = tv.tv_sec;
+    timestamp_us *= 1000 * 1000;
+    timestamp_us += tv.tv_usec;
+    cmd_ts_storage.insert(std::make_pair(cmd_hash, timestamp_us));
+    available_cmd_hashes.push_back(cmd_hash);
+    available_timestamps.push_back(timestamp_us);
+    cmd_hashes.push_back(cmd_hash);
+    timestamps.push_back(timestamp_us);
+}
+
+/** return true if it is a new command */
+bool CommandTimestampStorage::is_new_command(const uint256_t &cmd_hash) const
+{
+    if (std::find(cmd_hashes.begin(), cmd_hashes.end(), cmd_hash) == cmd_hashes.end())
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+/** Updating the available cmds and timestamps on receiving acceptable proposals.
+  * This must be called after ensuring acceptable_fairness_check() outputs True.
+  * The input to this function will be block->cmds. */
+void CommandTimestampStorage::refresh_available_cmds(const std::vector<uint256_t> cmds)
+{
+    for (auto cmd : cmds)
+    {
+        auto it = std::find(available_cmd_hashes.begin(), available_cmd_hashes.end(), cmd);
+        if (it != available_cmd_hashes.end())
+        {
+            auto index = std::distance(available_cmd_hashes.begin(), it);
+            available_cmd_hashes.erase(available_cmd_hashes.begin() + index);
+            available_timestamps.erase(available_timestamps.begin() + index);
+        }
+    }
+}
+
+
+
+/** Get a new ordered list to send as part of the vote.
+  * Basically has to repackage the available cmds and timestamps into ordered list
+*/
+/*
+const OrderedList get_orderedlist() const
+{
+    // should there be size requirements on how big the ordered list should be?
+    while (available_cmd_hashes.size() < 3)
+    {
+        HOTSTUFF_LOG_PROTO("Waiting!");
+        HOTSTUFF_LOG_PROTO("Number of available cmd hashes is: %d", available_cmd_hashes.size());
+    }
+    HOTSTUFF_LOG_PROTO("Number of available cmd hashes is: %d", available_cmd_hashes.size());
+
+    std::vector<uint256_t> proposed_available_cmd_hashes;
+    std::vector<uint64_t> proposed_available_timestamps;
+    for (auto i = 0; i < 3; i++)
+    {
+        proposed_available_cmd_hashes.push_back(available_cmd_hashes[i]);
+        proposed_available_timestamps.push_back(available_timestamps[i]);
+        //HOTSTUFF_LOG_PROTO("cmd is: %s", get_hex10(available_cmd_hashes[i]).c_str());
+        //HOTSTUFF_LOG_PROTO("cmd is: %s", boost::lexical_cast<std::string>(available_timestamps[i]).c_str());
+    }
+
+    // remove the above while not testing and update the following to send all available cmds and ts
+    OrderedList replica_proposed_orderedlist = OrderedList(proposed_available_cmd_hashes, proposed_available_timestamps);
+    HOTSTUFF_LOG_PROTO("Obtained Ordered list!");
+    return replica_proposed_orderedlist;
+}
+*/
 }

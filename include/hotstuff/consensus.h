@@ -69,6 +69,7 @@ class HotStuffCore {
 
     public:
     BoxObj<EntityStorage> storage;
+    BoxObj<CommandTimestampStorage> command_timestamp_storage;
 
     HotStuffCore(ReplicaID id, privkey_bt &&priv_key);
     virtual ~HotStuffCore() {
