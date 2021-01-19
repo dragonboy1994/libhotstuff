@@ -54,6 +54,7 @@ class HotStuffCore {
     /* == feature switches == */
     /** always vote negatively, useful for some PaceMakers */
     bool vote_disabled;
+    uint64_t delta_max = 1; /** a bound on network delay */
 
     block_t get_delivered_blk(const uint256_t &blk_hash);
     void sanity_check_delivered(const block_t &blk);

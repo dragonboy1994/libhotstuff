@@ -52,7 +52,7 @@ void HotStuffCore::sanity_check_delivered(const block_t &blk) {
 }
 
 
-bool HotStuffCore::acceptable_fairness_check(const std::vector<uint64_t> check_timestamps, uint64_t delta_max) const
+bool HotStuffCore::acceptable_fairness_check(const std::vector<uint64_t> check_timestamps, uint64_t delta) const
 {
     bool accept = true;
     for (auto i = 0; i < check_timestamps.size(); i++)
@@ -61,7 +61,7 @@ bool HotStuffCore::acceptable_fairness_check(const std::vector<uint64_t> check_t
         {
             //std::string str = boost::lexical_cast<std::string>(check_timestamps[i] - check_timestamps[j]);
             //LOG_PROTO("Differences in timestamps are %s", str.c_str());
-            if (check_timestamps[j] >= check_timestamps[i] + 2 * delta_max)
+            if (check_timestamps[j] >= check_timestamps[i] + 2 * delta)
             {
                 accept = false;
                 HOTSTUFF_LOG_PROTO("Unacceptable fairness!");
@@ -221,37 +221,41 @@ void HotStuffCore::on_receive_proposal(const Proposal &prop) {
     // get timestamps of the commands in the proposed block
     std::vector<uint64_t> timestamps_of_cmds = command_timestamp_storage->get_timestamps(bnew->get_cmds());
     
-
-    update(bnew);
-    bool opinion = false;
-    if (bnew->height > vheight)
+    if (acceptable_fairness_check (timestamps_of_cmds, delta_max)) 
     {
-        if (bnew->qc_ref && bnew->qc_ref->height > b_lock->height)
+        HOTSTUFF_LOG_PROTO("Passed acceptable fairness check!");
+        command_timestamp_storage->refresh_available_cmds(bnew->get_cmds());
+        update(bnew);
+        bool opinion = false;
+        if (bnew->height > vheight)
         {
-            opinion = true; // liveness condition
-            vheight = bnew->height;
-        }
-        else
-        {   // safety condition (extend the locked branch)
-            block_t b;
-            for (b = bnew;
-                b->height > b_lock->height;
-                b = b->parents[0]);
-            if (b == b_lock) /* on the same branch */
+            if (bnew->qc_ref && bnew->qc_ref->height > b_lock->height)
             {
-                opinion = true;
+                opinion = true; // liveness condition
                 vheight = bnew->height;
             }
+            else
+            {   // safety condition (extend the locked branch)
+                block_t b;
+                for (b = bnew;
+                    b->height > b_lock->height;
+                    b = b->parents[0]);
+                if (b == b_lock) /* on the same branch */
+                {
+                    opinion = true;
+                    vheight = bnew->height;
+                }
+            }
         }
+        LOG_PROTO("now state: %s", std::string(*this).c_str());
+        if (bnew->qc_ref)
+            on_qc_finish(bnew->qc_ref);
+        on_receive_proposal_(prop);
+        if (opinion && !vote_disabled)
+            do_vote(prop.proposer,
+                Vote(id, bnew->get_hash(),
+                    create_part_cert(*priv_key, bnew->get_hash()), this));
     }
-    LOG_PROTO("now state: %s", std::string(*this).c_str());
-    if (bnew->qc_ref)
-        on_qc_finish(bnew->qc_ref);
-    on_receive_proposal_(prop);
-    if (opinion && !vote_disabled)
-        do_vote(prop.proposer,
-            Vote(id, bnew->get_hash(),
-                create_part_cert(*priv_key, bnew->get_hash()), this));
 }
 
 void HotStuffCore::on_receive_vote(const Vote &vote) {
