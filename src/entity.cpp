@@ -136,8 +136,10 @@ void CommandTimestampStorage::refresh_available_cmds(const std::vector<uint256_t
         if (it != available_cmd_hashes.end())
         {
             auto index = std::distance(available_cmd_hashes.begin(), it);
+            HOTSTUFF_LOG_PROTO("The command being erased is %s", get_hex10(available_cmd_hashes[index]).c_str());
             available_cmd_hashes.erase(available_cmd_hashes.begin() + index);
             available_timestamps.erase(available_timestamps.begin() + index);
+
         }
     }
 }
