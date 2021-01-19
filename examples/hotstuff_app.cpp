@@ -22,6 +22,7 @@
 #include <random>
 #include <unistd.h>
 #include <signal.h>
+#include <fstream>
 
 #include "salticidae/stream.h"
 #include "salticidae/util.h"
@@ -417,17 +418,18 @@ void HotStuffApp::print_stat() const {
     }
     HOTSTUFF_LOG_INFO("--- end client msg. ---");
 
-    /*
+    
     HOTSTUFF_LOG_INFO("--- writing command_timestamp_storage into a file. ---");
     std::ofstream outFile("command_timestamp_storage" + std::to_string(get_id()) + ".txt");
     std::vector<uint256_t> cmd_hashes = command_timestamp_storage->get_cmd_hashes();
     std::vector<uint64_t> timestamps = command_timestamp_storage->get_timestamps();
     for (int i = 0; i <= cmd_hashes.size(); i++)
     {
-        outFile << get_hex10(cmd_hashes[i]).c_str() << " " << timestamps[i] << "\n";
+        outFile << get_hex10(cmd_hashes[i]).c_str() << " " << timestamps[i] << "\n"
+                << std::endl;
     }
     outFile.close();
     HOTSTUFF_LOG_INFO("--- writing done. ---");
-    */
+    
 #endif
 }
