@@ -119,6 +119,33 @@ get_hashes(const std::vector<Hashable> &plist) {
     return hashes;
 }
 
+class OrderedList;
+using orderedlist_t = salticidae::ArcObj<OrderedList>;
+
+
+
+
+/** Abstraction for containing OrderedList. */
+class OrderedList
+{
+    friend HotStuffCore;
+    /** cmds contain the commands and timestamps contain their corresponding timestamps.*/
+    std::vector<uint256_t> cmds;
+    std::vector<uint64_t> timestamps;
+
+public:
+    OrderedList() = default;
+    OrderedList(std::vector<uint256_t> cmds,
+                std::vector<uint64_t> timestamps) : cmds(cmds), timestamps(timestamps) {}
+
+    void serialize(DataStream &s) const;
+    void unserialize(DataStream &s, HotStuffCore *hsc);
+    const std::vector<uint256_t> extract_cmds() const { return cmds; }
+    const std::vector<uint64_t> &extract_timestamps() const { return timestamps; }
+};
+
+
+
 class Block {
     friend HotStuffCore;
     std::vector<uint256_t> parent_hashes;
@@ -222,6 +249,9 @@ struct BlockHeightCmp {
     }
 };
 
+
+
+
 /** 
  * 1. CommandTimeStorage will store all command hashes that has been received and the 
  * corresponding timestamps.
@@ -254,6 +284,9 @@ public:
     const std::vector<uint64_t> &get_timestamps() const { return timestamps; }
     // const OrderedList get_orderedlist() const;
 };
+
+
+
 
 class EntityStorage {
     std::unordered_map<const uint256_t, block_t> blk_cache;
