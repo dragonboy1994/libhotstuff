@@ -136,7 +136,7 @@ void CommandTimestampStorage::refresh_available_cmds(const std::vector<uint256_t
         if (it != available_cmd_hashes.end())
         {
             auto index = std::distance(available_cmd_hashes.begin(), it);
-            HOTSTUFF_LOG_PROTO("The command being erased is %s", get_hex10(available_cmd_hashes[index]).c_str());
+            // HOTSTUFF_LOG_PROTO("The command being erased is %s", get_hex10(available_cmd_hashes[index]).c_str());
             available_cmd_hashes.erase(available_cmd_hashes.begin() + index);
             available_timestamps.erase(available_timestamps.begin() + index);
 
@@ -159,9 +159,32 @@ std::vector<uint64_t> CommandTimestampStorage::get_timestamps(const std::vector<
     return timestamps_list;
 }
 
+
 /** Get a new ordered list to send as part of the vote.
   * Basically has to repackage the available cmds and timestamps into ordered list
 */
+const orderedlist_t CommandTimestampStorage::get_orderedlist(const uint256_t &blk_hash)
+{
+    std::vector<uint256_t> proposed_available_cmd_hashes;
+    std::vector<uint64_t> proposed_available_timestamps;
+    for (auto i = 0; i < 3; i++)
+    {
+        proposed_available_cmd_hashes.push_back(available_cmd_hashes[i]);
+        proposed_available_timestamps.push_back(available_timestamps[i]);
+        //HOTSTUFF_LOG_PROTO("cmd is: %s", get_hex10(available_cmd_hashes[i]).c_str());
+        //HOTSTUFF_LOG_PROTO("cmd is: %s", boost::lexical_cast<std::string>(available_timestamps[i]).c_str());
+    }
+    auto it = replica_preferred_ordering_cache.find(blk_hash);
+    if (it != replica_preferred_ordering_cache.end()) 
+    {
+        replica_preferred_ordering_cache.erase(blk_hash);
+    }
+    return replica_preferred_ordering_cache.insert(std::make_pair(
+            blk_hash, new OrderedList(
+                proposed_available_cmd_hashes, 
+                proposed_available_timestamps))).first->second;
+}
+
 /*
 const OrderedList get_orderedlist() const
 {
