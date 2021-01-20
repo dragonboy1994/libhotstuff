@@ -382,6 +382,10 @@ void HotStuffBase::do_broadcast_proposal(const Proposal &prop) {
 }
 
 void HotStuffBase::do_vote(ReplicaID last_proposer, const Vote &vote) {
+    HOTSTUFF_LOG_PROTO("Inside do vote!");
+    // WARN - Here the data inside replica_preferred_orderedlist is not returned on calling extract_cmds()
+    std::vector<uint256_t> test_cmds = vote.replica_preferred_orderedlist->extract_cmds();
+    HOTSTUFF_LOG_PROTO("The size inside do_vote before pmaker is: %lu", test_cmds.size());
     pmaker->beat_resp(last_proposer)
             .then([this, vote](ReplicaID proposer) {
         if (proposer == get_id())
@@ -391,10 +395,9 @@ void HotStuffBase::do_vote(ReplicaID last_proposer, const Vote &vote) {
         }
         else
         {
-            HOTSTUFF_LOG_PROTO("Inside do vote!");
-            // Here the data inside replica_preferred_orderedlist is not returned on calling extract_cmds()
+            // WARN - Here the data inside replica_preferred_orderedlist is not returned on calling extract_cmds()
             std::vector<uint256_t> test_cmds = vote.replica_preferred_orderedlist->extract_cmds();
-            HOTSTUFF_LOG_PROTO("The size inside do_vote is: %lu", test_cmds.size());
+            HOTSTUFF_LOG_PROTO("The size inside do_vote  after pmakeris: %lu", test_cmds.size());
             pn.send_msg(MsgVote(vote), get_config().get_peer_id(proposer));
         }
     });
