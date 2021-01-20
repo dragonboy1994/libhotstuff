@@ -1,97 +1,109 @@
-2021-01-20 09:30:24.881453 [net info] loaded configuration from hotstuff.conf
-2021-01-20 09:30:24.885417 [net info] loading extra configuration from ./hotstuff-sec2.conf
-2021-01-20 09:30:24.889507 [hotstuff proto] Proposed block size : 0
-2021-01-20 09:30:24.900033 [net info] starting all threads...
-2021-01-20 09:30:24.900410 [net info] listening to 10002
-2021-01-20 09:30:24.906168 [net info] starting all threads...
-2021-01-20 09:30:24.906681 [net info] listening to 20002
-2021-01-20 09:30:24.907021 [hotstuff info] ** starting the system with parameters **
-2021-01-20 09:30:24.907222 [hotstuff info] blk_size = 3
-2021-01-20 09:30:24.907242 [hotstuff info] conns = 0
-2021-01-20 09:30:24.907256 [hotstuff info] ** starting the event loop...
-2021-01-20 09:30:24.907482 [hotstuff proto] Pacemaker: stop rotation at 0
-2021-01-20 09:30:24.908984 [net info] created <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-20 09:30:24.909437 [net info] created <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-20 09:30:24.909879 [net info] created <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-20 09:30:24.910273 [net info] accepted <Conn fd=134 addr=<NetAddr 127.0.0.1:64824> mode=passive>
-2021-01-20 09:30:24.910349 [net info] connected to remote <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-20 09:30:24.910378 [net info] connected to remote <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-20 09:30:24.910403 [net info] connected to remote <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-20 09:30:24.910688 [net info] accepted <Conn fd=137 addr=<NetAddr 127.0.0.1:64826> mode=passive>
-2021-01-20 09:30:24.918289 [net info] accepted <Conn fd=140 addr=<NetAddr 127.0.0.1:64832> mode=passive>
-2021-01-20 09:30:24.925252 [net info] 065b010aed: setup connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-20 09:30:24.925378 [net info] 065b010aed: setup connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-20 09:30:24.930984 [net info] 065b010aed: setup connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-20 09:30:24.932869 [net info] 065b010aed: setup connection <Conn fd=137 addr=<NetAddr 127.0.0.1:64826> mode=passive>
-2021-01-20 09:30:24.933068 [net info] 065b010aed: lost connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-20 09:30:24.934113 [net info] 065b010aed: setup connection <Conn fd=134 addr=<NetAddr 127.0.0.1:64824> mode=passive>
-2021-01-20 09:30:24.934401 [net info] established 065b010aed <---> 542865a568 (via <Conn fd=137 addr=<NetAddr 127.0.0.1:64826> mode=passive>)
-2021-01-20 09:30:24.935807 [net info] 065b010aed: setup connection <Conn fd=140 addr=<NetAddr 127.0.0.1:64832> mode=passive>
-2021-01-20 09:30:24.936018 [net info] 065b010aed: ping from <Conn fd=137 addr=<NetAddr 127.0.0.1:64826> mode=passive>
-2021-01-20 09:30:24.937952 [net info] 065b010aed: lost connection <Conn fd=140 addr=<NetAddr 127.0.0.1:64832> mode=passive>
-2021-01-20 09:30:24.938371 [net info] established 065b010aed <---> 6540a0fea6 (via <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>)
-2021-01-20 09:30:24.938414 [net info] 065b010aed: ping from <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-20 09:30:24.940133 [net info] established 065b010aed <---> c261250345 (via <Conn fd=134 addr=<NetAddr 127.0.0.1:64824> mode=passive>)
-2021-01-20 09:30:24.940297 [net info] 065b010aed: lost connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-20 09:30:24.940860 [net info] 065b010aed: ping from <Conn fd=134 addr=<NetAddr 127.0.0.1:64824> mode=passive>
-2021-01-20 09:30:29.627515 [net info] accepted <Conn fd=119 addr=<NetAddr 127.0.0.1:64835> mode=passive>
-2021-01-20 09:30:29.664247 [hotstuff proto] Adding command af5570f5a1 to storage
-2021-01-20 09:30:29.665230 [hotstuff proto] Adding command 01acecb507 to storage
-2021-01-20 09:30:29.665275 [hotstuff proto] Adding command 2fcd151b82 to storage
-2021-01-20 09:30:29.665314 [hotstuff proto] Adding command 9ae4c9d086 to storage
-2021-01-20 09:30:29.665372 [hotstuff proto] Adding command 1b03ab083d to storage
-2021-01-20 09:30:29.665405 [hotstuff proto] Adding command 2be2196b9c to storage
-2021-01-20 09:30:29.665435 [hotstuff proto] Adding command 20aef0af2b to storage
-2021-01-20 09:30:29.665466 [hotstuff proto] Adding command 4e65285e65 to storage
-2021-01-20 09:30:29.665496 [hotstuff proto] Adding command 7b742c398b to storage
-2021-01-20 09:30:29.665528 [hotstuff proto] Adding command d8e0873e07 to storage
-2021-01-20 09:30:29.665558 [hotstuff proto] Adding command dd73a46975 to storage
-2021-01-20 09:30:29.665588 [hotstuff proto] Adding command f1d6ff0821 to storage
-2021-01-20 09:30:29.665619 [hotstuff proto] Adding command 930abd7018 to storage
-2021-01-20 09:30:29.665649 [hotstuff proto] Adding command 53dd18d822 to storage
-2021-01-20 09:30:29.665680 [hotstuff proto] Adding command ead27b1c86 to storage
-2021-01-20 09:30:29.665710 [hotstuff proto] Adding command 5f1ddbc2fb to storage
-2021-01-20 09:30:29.665741 [hotstuff proto] Adding command 48443c868f to storage
-2021-01-20 09:30:29.665774 [hotstuff proto] Adding command 9c8616c455 to storage
-2021-01-20 09:30:29.665804 [hotstuff proto] Adding command db182aa591 to storage
-2021-01-20 09:30:29.665835 [hotstuff proto] Adding command 1bcca6c039 to storage
-2021-01-20 09:30:29.665864 [hotstuff proto] Adding command f83bb221d5 to storage
-2021-01-20 09:30:29.665894 [hotstuff proto] Adding command a44c4438cf to storage
-2021-01-20 09:30:29.665921 [hotstuff proto] Adding command 2fadf4ab76 to storage
-2021-01-20 09:30:29.665950 [hotstuff proto] Adding command 3fbaba3c5b to storage
-2021-01-20 09:30:29.665982 [hotstuff proto] Adding command c63761c39f to storage
-2021-01-20 09:30:29.666013 [hotstuff proto] Adding command 9779c6fff1 to storage
-2021-01-20 09:30:29.666042 [hotstuff proto] Adding command 67e4f26e84 to storage
-2021-01-20 09:30:29.666073 [hotstuff proto] Adding command 5db43ae74c to storage
-2021-01-20 09:30:29.666103 [hotstuff proto] Adding command 31dba5fca7 to storage
-2021-01-20 09:30:29.666133 [hotstuff proto] Adding command 90d3cc4af3 to storage
-2021-01-20 09:30:29.666162 [hotstuff proto] Adding command 5eab1e29e4 to storage
-2021-01-20 09:30:29.666192 [hotstuff proto] Adding command 3786b5685d to storage
-2021-01-20 09:30:29.666221 [hotstuff proto] Adding command f976b84a67 to storage
-2021-01-20 09:30:29.666255 [hotstuff proto] Adding command c59a297409 to storage
-2021-01-20 09:30:29.666285 [hotstuff proto] Adding command c854c8f56f to storage
-2021-01-20 09:30:29.666314 [hotstuff proto] Adding command e1eb586829 to storage
-2021-01-20 09:30:29.666343 [hotstuff proto] Adding command 7c2f21ce5c to storage
-2021-01-20 09:30:29.666373 [hotstuff proto] Adding command bb2f4bcd51 to storage
-2021-01-20 09:30:29.666401 [hotstuff proto] Adding command 66ee151dbf to storage
-2021-01-20 09:30:29.666430 [hotstuff proto] Adding command 547c34decb to storage
-2021-01-20 09:30:29.666460 [hotstuff proto] Adding command 04164f6252 to storage
-2021-01-20 09:30:29.666488 [hotstuff proto] Adding command be84dc21f3 to storage
-2021-01-20 09:30:29.666517 [hotstuff proto] Adding command 25ab3aa916 to storage
-2021-01-20 09:30:29.666547 [hotstuff proto] Adding command 2544f2559d to storage
-2021-01-20 09:30:29.666578 [hotstuff proto] Adding command 0dd443f367 to storage
-2021-01-20 09:30:29.666608 [hotstuff proto] Adding command 7067b4ef8a to storage
-2021-01-20 09:30:29.666637 [hotstuff proto] Adding command 4d93be036c to storage
-2021-01-20 09:30:29.666667 [hotstuff proto] Adding command 42f0c08faf to storage
-2021-01-20 09:30:29.666698 [hotstuff proto] Adding command 982258dda3 to storage
-2021-01-20 09:30:29.666728 [hotstuff proto] Adding command 51335e1808 to storage
-2021-01-20 09:30:29.668258 [hotstuff proto] Proposed block size : 3
-2021-01-20 09:30:29.668390 [hotstuff proto] got <proposal rid=0 blk=20b18a460e>
-2021-01-20 09:30:29.668413 [hotstuff proto] Passed acceptable fairness check!
-2021-01-20 09:30:29.668469 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
-2021-01-20 09:30:29.668543 [hotstuff proto] Extracting commands!
-2021-01-20 09:30:29.668562 [hotstuff proto] The size before inserting into vote is: 3
-2021-01-20 09:30:29.668747 [hotstuff proto] Extracting commands!
-2021-01-20 09:30:29.668771 [hotstuff proto] The size while constructing vote is: 3
-2021-01-20 09:30:29.668797 [hotstuff proto] Inside do vote!
-2021-01-20 09:30:29.668814 [hotstuff proto] Extracting commands!
+2021-01-20 10:38:09.327885 [net info] loaded configuration from hotstuff.conf
+2021-01-20 10:38:09.328088 [net info] loading extra configuration from ./hotstuff-sec2.conf
+2021-01-20 10:38:09.331200 [hotstuff proto] Proposed block size : 0
+2021-01-20 10:38:09.338110 [net info] starting all threads...
+2021-01-20 10:38:09.339102 [net info] listening to 10002
+2021-01-20 10:38:09.348193 [net info] starting all threads...
+2021-01-20 10:38:09.348698 [net info] listening to 20002
+2021-01-20 10:38:09.350452 [hotstuff info] ** starting the system with parameters **
+2021-01-20 10:38:09.350507 [hotstuff info] blk_size = 3
+2021-01-20 10:38:09.350528 [hotstuff info] conns = 0
+2021-01-20 10:38:09.350543 [hotstuff info] ** starting the event loop...
+2021-01-20 10:38:09.350755 [hotstuff proto] Pacemaker: stop rotation at 0
+2021-01-20 10:38:09.352922 [net info] created <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-20 10:38:09.353308 [net info] created <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-20 10:38:09.353853 [net info] created <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-20 10:38:09.354219 [net info] accepted <Conn fd=134 addr=<NetAddr 127.0.0.1:65396> mode=passive>
+2021-01-20 10:38:09.354277 [net info] connected to remote <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-20 10:38:09.354305 [net info] connected to remote <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-20 10:38:09.354634 [net info] accepted <Conn fd=137 addr=<NetAddr 127.0.0.1:65397> mode=passive>
+2021-01-20 10:38:09.354676 [net info] connected to remote <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-20 10:38:09.360412 [net info] accepted <Conn fd=140 addr=<NetAddr 127.0.0.1:65401> mode=passive>
+2021-01-20 10:38:09.366591 [net info] 065b010aed: setup connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-20 10:38:09.372150 [net info] 065b010aed: setup connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-20 10:38:09.372234 [net info] 065b010aed: setup connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-20 10:38:09.377233 [net info] 065b010aed: setup connection <Conn fd=137 addr=<NetAddr 127.0.0.1:65397> mode=passive>
+2021-01-20 10:38:09.377289 [net info] 065b010aed: setup connection <Conn fd=134 addr=<NetAddr 127.0.0.1:65396> mode=passive>
+2021-01-20 10:38:09.377536 [net info] 065b010aed: lost connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-20 10:38:09.377960 [net info] 065b010aed: lost connection <Conn fd=137 addr=<NetAddr 127.0.0.1:65397> mode=passive>
+2021-01-20 10:38:09.378166 [net info] 065b010aed: lost connection <Conn fd=134 addr=<NetAddr 127.0.0.1:65396> mode=passive>
+2021-01-20 10:38:09.378426 [net info] established 065b010aed <---> 542865a568 (via <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>)
+2021-01-20 10:38:09.380696 [net info] 065b010aed: ping from <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-20 10:38:09.382097 [net info] 065b010aed: setup connection <Conn fd=140 addr=<NetAddr 127.0.0.1:65401> mode=passive>
+2021-01-20 10:38:09.382198 [net info] established 065b010aed <---> c261250345 (via <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>)
+2021-01-20 10:38:09.382307 [net info] 065b010aed: ping from <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-20 10:38:09.382383 [net info] 065b010aed: lost connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-20 10:38:09.382453 [net info] ended 065b010aed <-/-> c261250345 (via <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>)
+2021-01-20 10:38:09.382722 [net info] established 065b010aed <---> c261250345 (via <Conn fd=140 addr=<NetAddr 127.0.0.1:65401> mode=passive>)
+2021-01-20 10:38:09.383458 [net info] 065b010aed: ping from <Conn fd=140 addr=<NetAddr 127.0.0.1:65401> mode=passive>
+2021-01-20 10:38:11.601048 [net info] accepted <Conn fd=119 addr=<NetAddr 127.0.0.1:65403> mode=passive>
+2021-01-20 10:38:11.607089 [net info] 065b010aed: setup connection <Conn fd=119 addr=<NetAddr 127.0.0.1:65403> mode=passive>
+2021-01-20 10:38:11.607603 [net info] 065b010aed: lost connection <Conn fd=119 addr=<NetAddr 127.0.0.1:65403> mode=passive>
+2021-01-20 10:38:11.840144 [net info] created <Conn fd=119 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-20 10:38:11.840445 [net info] connected to remote <Conn fd=119 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-20 10:38:11.845605 [net info] 065b010aed: setup connection <Conn fd=119 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-20 10:38:11.847567 [net info] established 065b010aed <---> 6540a0fea6 (via <Conn fd=119 addr=<NetAddr 127.0.0.1:10003> mode=active>)
+2021-01-20 10:38:11.847623 [net info] 065b010aed: ping from <Conn fd=119 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-20 10:38:14.319231 [net info] accepted <Conn fd=120 addr=<NetAddr 127.0.0.1:65407> mode=passive>
+2021-01-20 10:38:14.373816 [hotstuff proto] Adding command af5570f5a1 to storage
+2021-01-20 10:38:14.374063 [hotstuff proto] Adding command 01acecb507 to storage
+2021-01-20 10:38:14.374107 [hotstuff proto] Adding command 2fcd151b82 to storage
+2021-01-20 10:38:14.374145 [hotstuff proto] Adding command 9ae4c9d086 to storage
+2021-01-20 10:38:14.374177 [hotstuff proto] Adding command 1b03ab083d to storage
+2021-01-20 10:38:14.374210 [hotstuff proto] Adding command 2be2196b9c to storage
+2021-01-20 10:38:14.374240 [hotstuff proto] Adding command 20aef0af2b to storage
+2021-01-20 10:38:14.374273 [hotstuff proto] Adding command 4e65285e65 to storage
+2021-01-20 10:38:14.374302 [hotstuff proto] Adding command 7b742c398b to storage
+2021-01-20 10:38:14.374442 [hotstuff proto] Adding command d8e0873e07 to storage
+2021-01-20 10:38:14.374529 [hotstuff proto] Adding command dd73a46975 to storage
+2021-01-20 10:38:14.374581 [hotstuff proto] Adding command f1d6ff0821 to storage
+2021-01-20 10:38:14.374619 [hotstuff proto] Adding command 930abd7018 to storage
+2021-01-20 10:38:14.374651 [hotstuff proto] Adding command 53dd18d822 to storage
+2021-01-20 10:38:14.374683 [hotstuff proto] Adding command ead27b1c86 to storage
+2021-01-20 10:38:14.374719 [hotstuff proto] Adding command 5f1ddbc2fb to storage
+2021-01-20 10:38:14.374750 [hotstuff proto] Adding command 48443c868f to storage
+2021-01-20 10:38:14.374784 [hotstuff proto] Adding command 9c8616c455 to storage
+2021-01-20 10:38:14.374818 [hotstuff proto] Adding command db182aa591 to storage
+2021-01-20 10:38:14.374848 [hotstuff proto] Adding command 1bcca6c039 to storage
+2021-01-20 10:38:14.374877 [hotstuff proto] Adding command f83bb221d5 to storage
+2021-01-20 10:38:14.374908 [hotstuff proto] Adding command a44c4438cf to storage
+2021-01-20 10:38:14.374939 [hotstuff proto] Adding command 2fadf4ab76 to storage
+2021-01-20 10:38:14.374970 [hotstuff proto] Adding command 3fbaba3c5b to storage
+2021-01-20 10:38:14.375002 [hotstuff proto] Adding command c63761c39f to storage
+2021-01-20 10:38:14.375032 [hotstuff proto] Adding command 9779c6fff1 to storage
+2021-01-20 10:38:14.375052 [hotstuff proto] Adding command 67e4f26e84 to storage
+2021-01-20 10:38:14.375068 [hotstuff proto] Adding command 5db43ae74c to storage
+2021-01-20 10:38:14.375086 [hotstuff proto] Adding command 31dba5fca7 to storage
+2021-01-20 10:38:14.375103 [hotstuff proto] Adding command 90d3cc4af3 to storage
+2021-01-20 10:38:14.375121 [hotstuff proto] Adding command 5eab1e29e4 to storage
+2021-01-20 10:38:14.375142 [hotstuff proto] Adding command 3786b5685d to storage
+2021-01-20 10:38:14.375159 [hotstuff proto] Adding command f976b84a67 to storage
+2021-01-20 10:38:14.375180 [hotstuff proto] Adding command c59a297409 to storage
+2021-01-20 10:38:14.375197 [hotstuff proto] Adding command c854c8f56f to storage
+2021-01-20 10:38:14.375215 [hotstuff proto] Adding command e1eb586829 to storage
+2021-01-20 10:38:14.375232 [hotstuff proto] Adding command 7c2f21ce5c to storage
+2021-01-20 10:38:14.375249 [hotstuff proto] Adding command bb2f4bcd51 to storage
+2021-01-20 10:38:14.375266 [hotstuff proto] Adding command 66ee151dbf to storage
+2021-01-20 10:38:14.375283 [hotstuff proto] Adding command 547c34decb to storage
+2021-01-20 10:38:14.375325 [hotstuff proto] Adding command 04164f6252 to storage
+2021-01-20 10:38:14.375344 [hotstuff proto] Adding command be84dc21f3 to storage
+2021-01-20 10:38:14.375361 [hotstuff proto] Adding command 25ab3aa916 to storage
+2021-01-20 10:38:14.375378 [hotstuff proto] Adding command 2544f2559d to storage
+2021-01-20 10:38:14.375396 [hotstuff proto] Adding command 0dd443f367 to storage
+2021-01-20 10:38:14.375413 [hotstuff proto] Adding command 7067b4ef8a to storage
+2021-01-20 10:38:14.375434 [hotstuff proto] Adding command 4d93be036c to storage
+2021-01-20 10:38:14.375451 [hotstuff proto] Adding command 42f0c08faf to storage
+2021-01-20 10:38:14.375470 [hotstuff proto] Adding command 982258dda3 to storage
+2021-01-20 10:38:14.375486 [hotstuff proto] Adding command 51335e1808 to storage
+2021-01-20 10:38:14.378397 [hotstuff proto] Proposed block size : 3
+2021-01-20 10:38:14.378530 [hotstuff proto] got <proposal rid=0 blk=20b18a460e>
+2021-01-20 10:38:14.378553 [hotstuff proto] Passed acceptable fairness check!
+2021-01-20 10:38:14.378616 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
+2021-01-20 10:38:14.378658 [hotstuff proto] Extracting commands!
+2021-01-20 10:38:14.378677 [hotstuff proto] The size before inserting into vote is: 3
+2021-01-20 10:38:14.378864 [hotstuff proto] Extracting commands!
+2021-01-20 10:38:14.378887 [hotstuff proto] The size while constructing vote is: 3
+2021-01-20 10:38:14.378907 [hotstuff proto] Inside do vote!
+2021-01-20 10:38:14.378924 [hotstuff proto] Extracting commands!
+2021-01-20 10:38:14.378940 [hotstuff proto] The size inside do_vote before pmaker is: 3
+2021-01-20 10:38:14.378962 [hotstuff proto] Extracting commands!
