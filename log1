@@ -1,322 +1,100 @@
-2021-01-19 19:35:27.503565 [net info] loaded configuration from hotstuff.conf
-2021-01-19 19:35:27.503786 [net info] loading extra configuration from ./hotstuff-sec1.conf
-2021-01-19 19:35:27.522713 [net info] starting all threads...
-2021-01-19 19:35:27.523820 [net info] listening to 10001
-2021-01-19 19:35:27.531240 [net info] starting all threads...
-2021-01-19 19:35:27.532565 [net info] listening to 20001
-2021-01-19 19:35:27.533503 [hotstuff info] ** starting the system with parameters **
-2021-01-19 19:35:27.533561 [hotstuff info] blk_size = 3
-2021-01-19 19:35:27.533589 [hotstuff info] conns = 0
-2021-01-19 19:35:27.533604 [hotstuff info] ** starting the event loop...
-2021-01-19 19:35:27.533806 [hotstuff proto] Pacemaker: stop rotation at 0
-2021-01-19 19:35:27.536568 [net info] created <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-19 19:35:27.536980 [net info] created <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-19 19:35:27.537447 [net info] created <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-19 19:35:27.537786 [net info] accepted <Conn fd=134 addr=<NetAddr 127.0.0.1:60464> mode=passive>
-2021-01-19 19:35:27.537844 [net info] connected to remote <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-19 19:35:27.537874 [net info] connected to remote <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-19 19:35:27.537909 [net info] connected to remote <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-19 19:35:27.539416 [net info] accepted <Conn fd=137 addr=<NetAddr 127.0.0.1:60469> mode=passive>
-2021-01-19 19:35:27.554833 [net info] accepted <Conn fd=140 addr=<NetAddr 127.0.0.1:60471> mode=passive>
-2021-01-19 19:35:27.555914 [net info] c261250345: setup connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-19 19:35:27.556045 [net info] c261250345: setup connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-19 19:35:27.556160 [net info] c261250345: setup connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-19 19:35:27.556243 [net info] c261250345: setup connection <Conn fd=134 addr=<NetAddr 127.0.0.1:60464> mode=passive>
-2021-01-19 19:35:27.560398 [net info] c261250345: setup connection <Conn fd=137 addr=<NetAddr 127.0.0.1:60469> mode=passive>
-2021-01-19 19:35:27.560647 [net info] c261250345: lost connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-19 19:35:27.561294 [net info] established c261250345 <---> 542865a568 (via <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>)
-2021-01-19 19:35:27.561347 [net info] c261250345: ping from <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-19 19:35:27.561486 [net info] c261250345: lost connection <Conn fd=134 addr=<NetAddr 127.0.0.1:60464> mode=passive>
-2021-01-19 19:35:27.563441 [net info] established c261250345 <---> 6540a0fea6 (via <Conn fd=137 addr=<NetAddr 127.0.0.1:60469> mode=passive>)
-2021-01-19 19:35:27.564263 [net info] c261250345: ping from <Conn fd=137 addr=<NetAddr 127.0.0.1:60469> mode=passive>
-2021-01-19 19:35:27.564437 [net info] c261250345: lost connection <Conn fd=137 addr=<NetAddr 127.0.0.1:60469> mode=passive>
-2021-01-19 19:35:27.564491 [net info] ended c261250345 <-/-> 6540a0fea6 (via <Conn fd=137 addr=<NetAddr 127.0.0.1:60469> mode=passive>)
-2021-01-19 19:35:27.566051 [net info] established c261250345 <---> 6540a0fea6 (via <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>)
-2021-01-19 19:35:27.566109 [net info] c261250345: setup connection <Conn fd=140 addr=<NetAddr 127.0.0.1:60471> mode=passive>
-2021-01-19 19:35:27.566139 [net info] c261250345: ping from <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-19 19:35:27.567848 [net info] c261250345: lost connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-19 19:35:27.567885 [net info] ended c261250345 <-/-> 542865a568 (via <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>)
-2021-01-19 19:35:27.568085 [net info] established c261250345 <---> 542865a568 (via <Conn fd=140 addr=<NetAddr 127.0.0.1:60471> mode=passive>)
-2021-01-19 19:35:27.569009 [net info] c261250345: ping from <Conn fd=140 addr=<NetAddr 127.0.0.1:60471> mode=passive>
-2021-01-19 19:35:29.782131 [net info] accepted <Conn fd=119 addr=<NetAddr 127.0.0.1:60474> mode=passive>
-2021-01-19 19:35:29.788502 [net info] c261250345: setup connection <Conn fd=119 addr=<NetAddr 127.0.0.1:60474> mode=passive>
-2021-01-19 19:35:29.789029 [net info] established c261250345 <---> 065b010aed (via <Conn fd=119 addr=<NetAddr 127.0.0.1:60474> mode=passive>)
-2021-01-19 19:35:29.789749 [net info] c261250345: ping from <Conn fd=119 addr=<NetAddr 127.0.0.1:60474> mode=passive>
-2021-01-19 19:35:32.499509 [net info] accepted <Conn fd=121 addr=<NetAddr 127.0.0.1:60476> mode=passive>
-2021-01-19 19:35:32.570444 [hotstuff proto] Adding command af5570f5a1 to storage
-2021-01-19 19:35:32.570572 [hotstuff proto] Adding command 01acecb507 to storage
-2021-01-19 19:35:32.570638 [hotstuff proto] Adding command 2fcd151b82 to storage
-2021-01-19 19:35:32.570701 [hotstuff proto] Adding command 9ae4c9d086 to storage
-2021-01-19 19:35:32.570744 [hotstuff proto] Adding command 1b03ab083d to storage
-2021-01-19 19:35:32.570787 [hotstuff proto] Adding command 2be2196b9c to storage
-2021-01-19 19:35:32.570831 [hotstuff proto] Adding command 20aef0af2b to storage
-2021-01-19 19:35:32.570872 [hotstuff proto] Adding command 4e65285e65 to storage
-2021-01-19 19:35:32.570914 [hotstuff proto] Adding command 7b742c398b to storage
-2021-01-19 19:35:32.570960 [hotstuff proto] Adding command d8e0873e07 to storage
-2021-01-19 19:35:32.571002 [hotstuff proto] Adding command dd73a46975 to storage
-2021-01-19 19:35:32.571043 [hotstuff proto] Adding command f1d6ff0821 to storage
-2021-01-19 19:35:32.571083 [hotstuff proto] Adding command 930abd7018 to storage
-2021-01-19 19:35:32.571122 [hotstuff proto] Adding command 53dd18d822 to storage
-2021-01-19 19:35:32.571164 [hotstuff proto] Adding command ead27b1c86 to storage
-2021-01-19 19:35:32.571203 [hotstuff proto] Adding command 5f1ddbc2fb to storage
-2021-01-19 19:35:32.571244 [hotstuff proto] Adding command 48443c868f to storage
-2021-01-19 19:35:32.571287 [hotstuff proto] Adding command 9c8616c455 to storage
-2021-01-19 19:35:32.571328 [hotstuff proto] Adding command db182aa591 to storage
-2021-01-19 19:35:32.571367 [hotstuff proto] Adding command 1bcca6c039 to storage
-2021-01-19 19:35:32.571408 [hotstuff proto] Adding command f83bb221d5 to storage
-2021-01-19 19:35:32.571447 [hotstuff proto] Adding command a44c4438cf to storage
-2021-01-19 19:35:32.571486 [hotstuff proto] Adding command 2fadf4ab76 to storage
-2021-01-19 19:35:32.571524 [hotstuff proto] Adding command 3fbaba3c5b to storage
-2021-01-19 19:35:32.571564 [hotstuff proto] Adding command c63761c39f to storage
-2021-01-19 19:35:32.571601 [hotstuff proto] Adding command 9779c6fff1 to storage
-2021-01-19 19:35:32.571639 [hotstuff proto] Adding command 67e4f26e84 to storage
-2021-01-19 19:35:32.571678 [hotstuff proto] Adding command 5db43ae74c to storage
-2021-01-19 19:35:32.571715 [hotstuff proto] Adding command 31dba5fca7 to storage
-2021-01-19 19:35:32.571753 [hotstuff proto] Adding command 90d3cc4af3 to storage
-2021-01-19 19:35:32.571790 [hotstuff proto] Adding command 5eab1e29e4 to storage
-2021-01-19 19:35:32.571827 [hotstuff proto] Adding command 3786b5685d to storage
-2021-01-19 19:35:32.571864 [hotstuff proto] Adding command f976b84a67 to storage
-2021-01-19 19:35:32.571905 [hotstuff proto] Adding command c59a297409 to storage
-2021-01-19 19:35:32.571942 [hotstuff proto] Adding command c854c8f56f to storage
-2021-01-19 19:35:32.571979 [hotstuff proto] Adding command e1eb586829 to storage
-2021-01-19 19:35:32.572018 [hotstuff proto] Adding command 7c2f21ce5c to storage
-2021-01-19 19:35:32.572162 [hotstuff proto] Adding command bb2f4bcd51 to storage
-2021-01-19 19:35:32.572203 [hotstuff proto] Adding command 66ee151dbf to storage
-2021-01-19 19:35:32.572241 [hotstuff proto] Adding command 547c34decb to storage
-2021-01-19 19:35:32.572280 [hotstuff proto] Adding command 04164f6252 to storage
-2021-01-19 19:35:32.572317 [hotstuff proto] Adding command be84dc21f3 to storage
-2021-01-19 19:35:32.572395 [hotstuff proto] Adding command 25ab3aa916 to storage
-2021-01-19 19:35:32.572430 [hotstuff proto] Adding command 2544f2559d to storage
-2021-01-19 19:35:32.572462 [hotstuff proto] Adding command 0dd443f367 to storage
-2021-01-19 19:35:32.572494 [hotstuff proto] Adding command 7067b4ef8a to storage
-2021-01-19 19:35:32.572527 [hotstuff proto] Adding command 4d93be036c to storage
-2021-01-19 19:35:32.572561 [hotstuff proto] Adding command 42f0c08faf to storage
-2021-01-19 19:35:32.572596 [hotstuff proto] Adding command 982258dda3 to storage
-2021-01-19 19:35:32.572629 [hotstuff proto] Adding command 51335e1808 to storage
-2021-01-19 19:35:32.576123 [hotstuff proto] got <proposal rid=0 blk=20b18a460e>
-2021-01-19 19:35:32.576255 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.576354 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
-2021-01-19 19:35:32.576797 [hotstuff proto] The cmd being sent is: 9ae4c9d086
-2021-01-19 19:35:32.577149 [hotstuff proto] The cmd being sent is: 1b03ab083d
-2021-01-19 19:35:32.577226 [hotstuff proto] The cmd being sent is: 2be2196b9c
-2021-01-19 19:35:32.577281 [hotstuff proto] The corresponding timestamps are: 1611102932570726
-2021-01-19 19:35:32.577314 [hotstuff proto] The corresponding timestamps are: 1611102932570768
-2021-01-19 19:35:32.577333 [hotstuff proto] The corresponding timestamps are: 1611102932570811
-2021-01-19 19:35:32.581527 [hotstuff proto] got <proposal rid=0 blk=193bac8a34>
-2021-01-19 19:35:32.581661 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.581796 [hotstuff proto] now state: <hotstuff hqc=20b18a460e hqc.height=1 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=2 tails=1>
-2021-01-19 19:35:32.581843 [hotstuff proto] The cmd being sent is: 20aef0af2b
-2021-01-19 19:35:32.581872 [hotstuff proto] The cmd being sent is: 4e65285e65
-2021-01-19 19:35:32.581898 [hotstuff proto] The cmd being sent is: 7b742c398b
-2021-01-19 19:35:32.581917 [hotstuff proto] The corresponding timestamps are: 1611102932570854
-2021-01-19 19:35:32.581932 [hotstuff proto] The corresponding timestamps are: 1611102932570897
-2021-01-19 19:35:32.581949 [hotstuff proto] The corresponding timestamps are: 1611102932570939
-2021-01-19 19:35:32.584736 [hotstuff proto] got <proposal rid=0 blk=06b104b67f>
-2021-01-19 19:35:32.585049 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.585134 [hotstuff proto] now state: <hotstuff hqc=193bac8a34 hqc.height=2 b_lock=20b18a460e b_exec=6b7d92eaae vheight=3 tails=1>
-2021-01-19 19:35:32.585397 [hotstuff proto] The cmd being sent is: d8e0873e07
-2021-01-19 19:35:32.585458 [hotstuff proto] The cmd being sent is: dd73a46975
-2021-01-19 19:35:32.585509 [hotstuff proto] The cmd being sent is: f1d6ff0821
-2021-01-19 19:35:32.585531 [hotstuff proto] The corresponding timestamps are: 1611102932570985
-2021-01-19 19:35:32.585550 [hotstuff proto] The corresponding timestamps are: 1611102932571025
-2021-01-19 19:35:32.585566 [hotstuff proto] The corresponding timestamps are: 1611102932571064
-2021-01-19 19:35:32.588060 [hotstuff proto] got <proposal rid=0 blk=4af27fe4a7>
-2021-01-19 19:35:32.588203 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.588280 [hotstuff proto] commit <block id=20b18a460e height=1 parent=6b7d92eaae qc_ref=6b7d92eaae>
-2021-01-19 19:35:32.588322 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=1 cmd=af5570f5a1 blk=20b18a460e>
-2021-01-19 19:35:32.588492 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=1 cmd=01acecb507 blk=20b18a460e>
-2021-01-19 19:35:32.588534 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=1 cmd=2fcd151b82 blk=20b18a460e>
-2021-01-19 19:35:32.588593 [hotstuff proto] now state: <hotstuff hqc=06b104b67f hqc.height=3 b_lock=193bac8a34 b_exec=20b18a460e vheight=4 tails=1>
-2021-01-19 19:35:32.588641 [hotstuff proto] The cmd being sent is: 930abd7018
-2021-01-19 19:35:32.588729 [hotstuff proto] The cmd being sent is: 53dd18d822
-2021-01-19 19:35:32.588789 [hotstuff proto] The cmd being sent is: ead27b1c86
-2021-01-19 19:35:32.588807 [hotstuff proto] The corresponding timestamps are: 1611102932571105
-2021-01-19 19:35:32.588823 [hotstuff proto] The corresponding timestamps are: 1611102932571147
-2021-01-19 19:35:32.588838 [hotstuff proto] The corresponding timestamps are: 1611102932571186
-2021-01-19 19:35:32.591880 [hotstuff proto] got <proposal rid=0 blk=7b814ba841>
-2021-01-19 19:35:32.592080 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.592159 [hotstuff proto] commit <block id=193bac8a34 height=2 parent=20b18a460e qc_ref=20b18a460e>
-2021-01-19 19:35:32.592201 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=2 cmd=9ae4c9d086 blk=193bac8a34>
-2021-01-19 19:35:32.592302 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=2 cmd=1b03ab083d blk=193bac8a34>
-2021-01-19 19:35:32.592343 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=2 cmd=2be2196b9c blk=193bac8a34>
-2021-01-19 19:35:32.592397 [hotstuff proto] now state: <hotstuff hqc=4af27fe4a7 hqc.height=4 b_lock=06b104b67f b_exec=193bac8a34 vheight=5 tails=1>
-2021-01-19 19:35:32.592444 [hotstuff proto] The cmd being sent is: 5f1ddbc2fb
-2021-01-19 19:35:32.592473 [hotstuff proto] The cmd being sent is: 48443c868f
-2021-01-19 19:35:32.592499 [hotstuff proto] The cmd being sent is: 9c8616c455
-2021-01-19 19:35:32.592583 [hotstuff proto] The corresponding timestamps are: 1611102932571226
-2021-01-19 19:35:32.592600 [hotstuff proto] The corresponding timestamps are: 1611102932571267
-2021-01-19 19:35:32.592616 [hotstuff proto] The corresponding timestamps are: 1611102932571311
-2021-01-19 19:35:32.595763 [hotstuff proto] got <proposal rid=0 blk=f9d0ccd3a2>
-2021-01-19 19:35:32.595829 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.595912 [hotstuff proto] commit <block id=06b104b67f height=3 parent=193bac8a34 qc_ref=193bac8a34>
-2021-01-19 19:35:32.595958 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=3 cmd=20aef0af2b blk=06b104b67f>
-2021-01-19 19:35:32.596005 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=3 cmd=4e65285e65 blk=06b104b67f>
-2021-01-19 19:35:32.596046 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=3 cmd=7b742c398b blk=06b104b67f>
-2021-01-19 19:35:32.596104 [hotstuff proto] now state: <hotstuff hqc=7b814ba841 hqc.height=5 b_lock=4af27fe4a7 b_exec=06b104b67f vheight=6 tails=1>
-2021-01-19 19:35:32.596170 [hotstuff proto] The cmd being sent is: db182aa591
-2021-01-19 19:35:32.596200 [hotstuff proto] The cmd being sent is: 1bcca6c039
-2021-01-19 19:35:32.596227 [hotstuff proto] The cmd being sent is: f83bb221d5
-2021-01-19 19:35:32.596245 [hotstuff proto] The corresponding timestamps are: 1611102932571350
-2021-01-19 19:35:32.596261 [hotstuff proto] The corresponding timestamps are: 1611102932571390
-2021-01-19 19:35:32.596275 [hotstuff proto] The corresponding timestamps are: 1611102932571430
-2021-01-19 19:35:32.601421 [hotstuff proto] got <proposal rid=0 blk=0223c8644b>
-2021-01-19 19:35:32.601515 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.601598 [hotstuff proto] commit <block id=4af27fe4a7 height=4 parent=06b104b67f qc_ref=06b104b67f>
-2021-01-19 19:35:32.601641 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=4 cmd=d8e0873e07 blk=4af27fe4a7>
-2021-01-19 19:35:32.601682 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=4 cmd=dd73a46975 blk=4af27fe4a7>
-2021-01-19 19:35:32.601720 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=4 cmd=f1d6ff0821 blk=4af27fe4a7>
-2021-01-19 19:35:32.601768 [hotstuff proto] now state: <hotstuff hqc=f9d0ccd3a2 hqc.height=6 b_lock=7b814ba841 b_exec=4af27fe4a7 vheight=7 tails=1>
-2021-01-19 19:35:32.601812 [hotstuff proto] The cmd being sent is: a44c4438cf
-2021-01-19 19:35:32.601842 [hotstuff proto] The cmd being sent is: 2fadf4ab76
-2021-01-19 19:35:32.601869 [hotstuff proto] The cmd being sent is: 3fbaba3c5b
-2021-01-19 19:35:32.601886 [hotstuff proto] The corresponding timestamps are: 1611102932571469
-2021-01-19 19:35:32.601938 [hotstuff proto] The corresponding timestamps are: 1611102932571507
-2021-01-19 19:35:32.601957 [hotstuff proto] The corresponding timestamps are: 1611102932571546
-2021-01-19 19:35:32.608589 [hotstuff proto] got <proposal rid=0 blk=f504a37455>
-2021-01-19 19:35:32.608643 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.608728 [hotstuff proto] commit <block id=7b814ba841 height=5 parent=4af27fe4a7 qc_ref=4af27fe4a7>
-2021-01-19 19:35:32.608779 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=5 cmd=930abd7018 blk=7b814ba841>
-2021-01-19 19:35:32.608891 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=5 cmd=53dd18d822 blk=7b814ba841>
-2021-01-19 19:35:32.608959 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=5 cmd=ead27b1c86 blk=7b814ba841>
-2021-01-19 19:35:32.609020 [hotstuff proto] now state: <hotstuff hqc=0223c8644b hqc.height=7 b_lock=f9d0ccd3a2 b_exec=7b814ba841 vheight=8 tails=1>
-2021-01-19 19:35:32.609071 [hotstuff proto] The cmd being sent is: c63761c39f
-2021-01-19 19:35:32.609094 [hotstuff proto] The cmd being sent is: 9779c6fff1
-2021-01-19 19:35:32.609110 [hotstuff proto] The cmd being sent is: 67e4f26e84
-2021-01-19 19:35:32.609121 [hotstuff proto] The corresponding timestamps are: 1611102932571584
-2021-01-19 19:35:32.609130 [hotstuff proto] The corresponding timestamps are: 1611102932571623
-2021-01-19 19:35:32.609139 [hotstuff proto] The corresponding timestamps are: 1611102932571660
-2021-01-19 19:35:32.611891 [hotstuff proto] got <proposal rid=0 blk=3082ef21ad>
-2021-01-19 19:35:32.611963 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.612040 [hotstuff proto] commit <block id=f9d0ccd3a2 height=6 parent=7b814ba841 qc_ref=7b814ba841>
-2021-01-19 19:35:32.612083 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=6 cmd=5f1ddbc2fb blk=f9d0ccd3a2>
-2021-01-19 19:35:32.612310 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=6 cmd=48443c868f blk=f9d0ccd3a2>
-2021-01-19 19:35:32.612350 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=6 cmd=9c8616c455 blk=f9d0ccd3a2>
-2021-01-19 19:35:32.612929 [hotstuff proto] now state: <hotstuff hqc=f504a37455 hqc.height=8 b_lock=0223c8644b b_exec=f9d0ccd3a2 vheight=9 tails=1>
-2021-01-19 19:35:32.612982 [hotstuff proto] The cmd being sent is: 5db43ae74c
-2021-01-19 19:35:32.613010 [hotstuff proto] The cmd being sent is: 31dba5fca7
-2021-01-19 19:35:32.613035 [hotstuff proto] The cmd being sent is: 90d3cc4af3
-2021-01-19 19:35:32.613052 [hotstuff proto] The corresponding timestamps are: 1611102932571698
-2021-01-19 19:35:32.613071 [hotstuff proto] The corresponding timestamps are: 1611102932571735
-2021-01-19 19:35:32.613087 [hotstuff proto] The corresponding timestamps are: 1611102932571772
-2021-01-19 19:35:32.618594 [hotstuff proto] got <proposal rid=0 blk=4c8c7f464b>
-2021-01-19 19:35:32.618681 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.618753 [hotstuff proto] commit <block id=0223c8644b height=7 parent=f9d0ccd3a2 qc_ref=f9d0ccd3a2>
-2021-01-19 19:35:32.618793 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=7 cmd=db182aa591 blk=0223c8644b>
-2021-01-19 19:35:32.618833 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=7 cmd=1bcca6c039 blk=0223c8644b>
-2021-01-19 19:35:32.618865 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=7 cmd=f83bb221d5 blk=0223c8644b>
-2021-01-19 19:35:32.618897 [hotstuff proto] now state: <hotstuff hqc=3082ef21ad hqc.height=9 b_lock=f504a37455 b_exec=0223c8644b vheight=10 tails=1>
-2021-01-19 19:35:32.618923 [hotstuff proto] The cmd being sent is: 5eab1e29e4
-2021-01-19 19:35:32.618939 [hotstuff proto] The cmd being sent is: 3786b5685d
-2021-01-19 19:35:32.618953 [hotstuff proto] The cmd being sent is: f976b84a67
-2021-01-19 19:35:32.618962 [hotstuff proto] The corresponding timestamps are: 1611102932571810
-2021-01-19 19:35:32.618972 [hotstuff proto] The corresponding timestamps are: 1611102932571847
-2021-01-19 19:35:32.619001 [hotstuff proto] The corresponding timestamps are: 1611102932571884
-2021-01-19 19:35:32.622294 [hotstuff proto] got <proposal rid=0 blk=b2f177e640>
-2021-01-19 19:35:32.622649 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.622728 [hotstuff proto] commit <block id=f504a37455 height=8 parent=0223c8644b qc_ref=0223c8644b>
-2021-01-19 19:35:32.622772 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=8 cmd=a44c4438cf blk=f504a37455>
-2021-01-19 19:35:32.622830 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=8 cmd=2fadf4ab76 blk=f504a37455>
-2021-01-19 19:35:32.622890 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=8 cmd=3fbaba3c5b blk=f504a37455>
-2021-01-19 19:35:32.622953 [hotstuff proto] now state: <hotstuff hqc=4c8c7f464b hqc.height=10 b_lock=3082ef21ad b_exec=f504a37455 vheight=11 tails=1>
-2021-01-19 19:35:32.623001 [hotstuff proto] The cmd being sent is: c59a297409
-2021-01-19 19:35:32.623030 [hotstuff proto] The cmd being sent is: c854c8f56f
-2021-01-19 19:35:32.623047 [hotstuff proto] The cmd being sent is: e1eb586829
-2021-01-19 19:35:32.623058 [hotstuff proto] The corresponding timestamps are: 1611102932571925
-2021-01-19 19:35:32.623067 [hotstuff proto] The corresponding timestamps are: 1611102932571963
-2021-01-19 19:35:32.623076 [hotstuff proto] The corresponding timestamps are: 1611102932571999
-2021-01-19 19:35:32.625770 [hotstuff proto] got <proposal rid=0 blk=f64247d351>
-2021-01-19 19:35:32.626048 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.626131 [hotstuff proto] commit <block id=3082ef21ad height=9 parent=f504a37455 qc_ref=f504a37455>
-2021-01-19 19:35:32.626176 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=9 cmd=c63761c39f blk=3082ef21ad>
-2021-01-19 19:35:32.626224 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=9 cmd=9779c6fff1 blk=3082ef21ad>
-2021-01-19 19:35:32.626264 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=9 cmd=67e4f26e84 blk=3082ef21ad>
-2021-01-19 19:35:32.626319 [hotstuff proto] now state: <hotstuff hqc=b2f177e640 hqc.height=11 b_lock=4c8c7f464b b_exec=3082ef21ad vheight=12 tails=1>
-2021-01-19 19:35:32.626369 [hotstuff proto] The cmd being sent is: 7c2f21ce5c
-2021-01-19 19:35:32.626398 [hotstuff proto] The cmd being sent is: bb2f4bcd51
-2021-01-19 19:35:32.626424 [hotstuff proto] The cmd being sent is: 66ee151dbf
-2021-01-19 19:35:32.626441 [hotstuff proto] The corresponding timestamps are: 1611102932572141
-2021-01-19 19:35:32.626457 [hotstuff proto] The corresponding timestamps are: 1611102932572186
-2021-01-19 19:35:32.626472 [hotstuff proto] The corresponding timestamps are: 1611102932572225
-2021-01-19 19:35:32.634993 [hotstuff proto] got <proposal rid=0 blk=a3fa5f20af>
-2021-01-19 19:35:32.635069 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.635121 [hotstuff proto] commit <block id=4c8c7f464b height=10 parent=3082ef21ad qc_ref=3082ef21ad>
-2021-01-19 19:35:32.635149 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=10 cmd=5db43ae74c blk=4c8c7f464b>
-2021-01-19 19:35:32.635179 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=10 cmd=31dba5fca7 blk=4c8c7f464b>
-2021-01-19 19:35:32.635202 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=10 cmd=90d3cc4af3 blk=4c8c7f464b>
-2021-01-19 19:35:32.635234 [hotstuff proto] now state: <hotstuff hqc=f64247d351 hqc.height=12 b_lock=b2f177e640 b_exec=4c8c7f464b vheight=13 tails=1>
-2021-01-19 19:35:32.635263 [hotstuff proto] The cmd being sent is: 547c34decb
-2021-01-19 19:35:32.635280 [hotstuff proto] The cmd being sent is: 04164f6252
-2021-01-19 19:35:32.635295 [hotstuff proto] The cmd being sent is: be84dc21f3
-2021-01-19 19:35:32.635307 [hotstuff proto] The corresponding timestamps are: 1611102932572263
-2021-01-19 19:35:32.635317 [hotstuff proto] The corresponding timestamps are: 1611102932572300
-2021-01-19 19:35:32.635327 [hotstuff proto] The corresponding timestamps are: 1611102932572377
-2021-01-19 19:35:32.638636 [hotstuff proto] got <proposal rid=0 blk=10c8c69904>
-2021-01-19 19:35:32.638707 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.638779 [hotstuff proto] commit <block id=b2f177e640 height=11 parent=4c8c7f464b qc_ref=4c8c7f464b>
-2021-01-19 19:35:32.638821 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=11 cmd=5eab1e29e4 blk=b2f177e640>
-2021-01-19 19:35:32.638866 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=11 cmd=3786b5685d blk=b2f177e640>
-2021-01-19 19:35:32.638906 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=11 cmd=f976b84a67 blk=b2f177e640>
-2021-01-19 19:35:32.638959 [hotstuff proto] now state: <hotstuff hqc=a3fa5f20af hqc.height=13 b_lock=f64247d351 b_exec=b2f177e640 vheight=14 tails=1>
-2021-01-19 19:35:32.639004 [hotstuff proto] The cmd being sent is: 25ab3aa916
-2021-01-19 19:35:32.639032 [hotstuff proto] The cmd being sent is: 2544f2559d
-2021-01-19 19:35:32.639058 [hotstuff proto] The cmd being sent is: 0dd443f367
-2021-01-19 19:35:32.639074 [hotstuff proto] The corresponding timestamps are: 1611102932572412
-2021-01-19 19:35:32.639088 [hotstuff proto] The corresponding timestamps are: 1611102932572444
-2021-01-19 19:35:32.639104 [hotstuff proto] The corresponding timestamps are: 1611102932572476
-2021-01-19 19:35:32.642034 [hotstuff proto] got <proposal rid=0 blk=dd6d158833>
-2021-01-19 19:35:32.642133 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.642210 [hotstuff proto] commit <block id=f64247d351 height=12 parent=b2f177e640 qc_ref=b2f177e640>
-2021-01-19 19:35:32.642298 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=12 cmd=c59a297409 blk=f64247d351>
-2021-01-19 19:35:32.642385 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=12 cmd=c854c8f56f blk=f64247d351>
-2021-01-19 19:35:32.642639 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=12 cmd=e1eb586829 blk=f64247d351>
-2021-01-19 19:35:32.642747 [hotstuff proto] now state: <hotstuff hqc=10c8c69904 hqc.height=14 b_lock=a3fa5f20af b_exec=f64247d351 vheight=15 tails=1>
-2021-01-19 19:35:32.642799 [hotstuff proto] The cmd being sent is: 7067b4ef8a
-2021-01-19 19:35:32.642828 [hotstuff proto] The cmd being sent is: 4d93be036c
-2021-01-19 19:35:32.642853 [hotstuff proto] The cmd being sent is: 42f0c08faf
-2021-01-19 19:35:32.642870 [hotstuff proto] The corresponding timestamps are: 1611102932572509
-2021-01-19 19:35:32.642886 [hotstuff proto] The corresponding timestamps are: 1611102932572542
-2021-01-19 19:35:32.642901 [hotstuff proto] The corresponding timestamps are: 1611102932572576
-2021-01-19 19:35:32.646196 [hotstuff proto] got <proposal rid=0 blk=3719d98443>
-2021-01-19 19:35:32.646268 [hotstuff proto] Passed acceptable fairness check!
-2021-01-19 19:35:32.646352 [hotstuff proto] commit <block id=a3fa5f20af height=13 parent=f64247d351 qc_ref=f64247d351>
-2021-01-19 19:35:32.646400 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=13 cmd=7c2f21ce5c blk=a3fa5f20af>
-2021-01-19 19:35:32.646451 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=13 cmd=bb2f4bcd51 blk=a3fa5f20af>
-2021-01-19 19:35:32.646573 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=13 cmd=66ee151dbf blk=a3fa5f20af>
-2021-01-19 19:35:32.646674 [hotstuff proto] now state: <hotstuff hqc=dd6d158833 hqc.height=15 b_lock=10c8c69904 b_exec=a3fa5f20af vheight=16 tails=1>
-2021-01-19 19:35:32.646769 [hotstuff proto] The cmd being sent is: 982258dda3
-2021-01-19 19:35:32.646862 [hotstuff proto] The cmd being sent is: 51335e1808
-2021-01-19 19:35:32.646907 [hotstuff proto] The cmd being sent is: 51335e1808
-2021-01-19 19:35:32.646929 [hotstuff proto] The corresponding timestamps are: 1611102932572611
-2021-01-19 19:35:32.646971 [hotstuff proto] The corresponding timestamps are: 1611102932572644
-2021-01-19 19:35:32.646989 [hotstuff proto] The corresponding timestamps are: 1611102932572644
-2021-01-19 19:35:37.508857 [hotstuff info] ===== begin stats =====
-2021-01-19 19:35:37.508936 [hotstuff info] -------- queues -------
-2021-01-19 19:35:37.508966 [hotstuff info] blk_fetch_waiting: 0
-2021-01-19 19:35:37.509051 [hotstuff info] blk_delivery_waiting: 0
-2021-01-19 19:35:37.509100 [hotstuff info] decision_waiting: 11
-2021-01-19 19:35:37.509125 [hotstuff info] -------- misc ---------
-2021-01-19 19:35:37.509146 [hotstuff info] fetched: 0
-2021-01-19 19:35:37.509166 [hotstuff info] delivered: 16
-2021-01-19 19:35:37.509377 [hotstuff info] cmd_cache: 0
-2021-01-19 19:35:37.509397 [hotstuff info] blk_cache: 17
-2021-01-19 19:35:37.509408 [hotstuff info] ------ misc (10s) -----
-2021-01-19 19:35:37.509418 [hotstuff info] fetched: 0
-2021-01-19 19:35:37.509427 [hotstuff info] delivered: 16
-2021-01-19 19:35:37.509436 [hotstuff info] decided: 39
-2021-01-19 19:35:37.509445 [hotstuff info] gened: 0
-2021-01-19 19:35:37.509454 [hotstuff info] avg. parent_size: 1.000
-2021-01-19 19:35:37.509465 [hotstuff info] delivery time: 0.001 avg, 0.000 min, 0.003 max
-2021-01-19 19:35:37.509477 [hotstuff info] --- replica msg. (10s) ---
-2021-01-19 19:35:37.509581 [hotstuff info] 542865a568: 19(2093), 19(5869), 0
-2021-01-19 19:35:37.509684 [hotstuff info] 065b010aed: 3(13), 3(13), 0
-2021-01-19 19:35:37.509776 [hotstuff info] 6540a0fea6: 3(13), 3(13), 0
-2021-01-19 19:35:37.509799 [hotstuff info] sent: 25
-2021-01-19 19:35:37.509819 [hotstuff info] recv: 25
-2021-01-19 19:35:37.509837 [hotstuff info] --- replica msg. total ---
-2021-01-19 19:35:37.509854 [hotstuff info] sent: 25
-2021-01-19 19:35:37.509873 [hotstuff info] recv: 25
-2021-01-19 19:35:37.509888 [hotstuff info] ====== end stats ======
-2021-01-19 19:35:37.509905 [hotstuff info] --- client msg. (10s) ---
-2021-01-19 19:35:37.509929 [hotstuff info] <NetAddr 127.0.0.1:60476>: 39(2925), 50(400)
-2021-01-19 19:35:37.509946 [hotstuff info] --- end client msg. ---
-2021-01-19 19:35:37.509963 [hotstuff info] --- writing command_timestamp_storage into a file. ---
+2021-01-20 09:30:24.881341 [net info] loaded configuration from hotstuff.conf
+2021-01-20 09:30:24.885268 [net info] loading extra configuration from ./hotstuff-sec1.conf
+2021-01-20 09:30:24.888304 [hotstuff proto] Proposed block size : 0
+2021-01-20 09:30:24.899726 [net info] starting all threads...
+2021-01-20 09:30:24.900340 [net info] listening to 10001
+2021-01-20 09:30:24.906219 [net info] starting all threads...
+2021-01-20 09:30:24.906681 [net info] listening to 20001
+2021-01-20 09:30:24.907024 [hotstuff info] ** starting the system with parameters **
+2021-01-20 09:30:24.907054 [hotstuff info] blk_size = 3
+2021-01-20 09:30:24.907071 [hotstuff info] conns = 0
+2021-01-20 09:30:24.907085 [hotstuff info] ** starting the event loop...
+2021-01-20 09:30:24.907286 [hotstuff proto] Pacemaker: stop rotation at 0
+2021-01-20 09:30:24.908646 [net info] created <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-20 09:30:24.909199 [net info] created <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-20 09:30:24.909563 [net info] created <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-20 09:30:24.909879 [net info] accepted <Conn fd=134 addr=<NetAddr 127.0.0.1:64823> mode=passive>
+2021-01-20 09:30:24.909950 [net info] connected to remote <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-20 09:30:24.909981 [net info] connected to remote <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-20 09:30:24.910356 [net info] accepted <Conn fd=137 addr=<NetAddr 127.0.0.1:64825> mode=passive>
+2021-01-20 09:30:24.910449 [net info] connected to remote <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-20 09:30:24.917656 [net info] accepted <Conn fd=140 addr=<NetAddr 127.0.0.1:64831> mode=passive>
+2021-01-20 09:30:24.929579 [net info] c261250345: setup connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-20 09:30:24.938567 [net info] c261250345: setup connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-20 09:30:24.938657 [net info] c261250345: setup connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-20 09:30:24.938721 [net info] c261250345: setup connection <Conn fd=134 addr=<NetAddr 127.0.0.1:64823> mode=passive>
+2021-01-20 09:30:24.938848 [net info] c261250345: setup connection <Conn fd=137 addr=<NetAddr 127.0.0.1:64825> mode=passive>
+2021-01-20 09:30:24.939315 [net info] established c261250345 <---> 6540a0fea6 (via <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>)
+2021-01-20 09:30:24.939931 [net info] established c261250345 <---> 542865a568 (via <Conn fd=134 addr=<NetAddr 127.0.0.1:64823> mode=passive>)
+2021-01-20 09:30:24.940021 [net info] c261250345: ping from <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-20 09:30:24.940102 [net info] c261250345: lost connection <Conn fd=137 addr=<NetAddr 127.0.0.1:64825> mode=passive>
+2021-01-20 09:30:24.940297 [net info] c261250345: lost connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-20 09:30:24.940634 [net info] established c261250345 <---> 065b010aed (via <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>)
+2021-01-20 09:30:24.940671 [net info] c261250345: ping from <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-20 09:30:24.940802 [net info] c261250345: ping from <Conn fd=134 addr=<NetAddr 127.0.0.1:64823> mode=passive>
+2021-01-20 09:30:24.941819 [net info] c261250345: setup connection <Conn fd=140 addr=<NetAddr 127.0.0.1:64831> mode=passive>
+2021-01-20 09:30:24.942028 [net info] c261250345: lost connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-20 09:30:24.942072 [net info] ended c261250345 <-/-> 6540a0fea6 (via <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>)
+2021-01-20 09:30:24.942314 [net info] established c261250345 <---> 6540a0fea6 (via <Conn fd=140 addr=<NetAddr 127.0.0.1:64831> mode=passive>)
+2021-01-20 09:30:24.942893 [net info] c261250345: ping from <Conn fd=140 addr=<NetAddr 127.0.0.1:64831> mode=passive>
+2021-01-20 09:30:29.626781 [net info] accepted <Conn fd=119 addr=<NetAddr 127.0.0.1:64834> mode=passive>
+2021-01-20 09:30:29.664068 [hotstuff proto] Adding command af5570f5a1 to storage
+2021-01-20 09:30:29.664312 [hotstuff proto] Adding command 01acecb507 to storage
+2021-01-20 09:30:29.664349 [hotstuff proto] Adding command 2fcd151b82 to storage
+2021-01-20 09:30:29.664384 [hotstuff proto] Adding command 9ae4c9d086 to storage
+2021-01-20 09:30:29.664415 [hotstuff proto] Adding command 1b03ab083d to storage
+2021-01-20 09:30:29.664448 [hotstuff proto] Adding command 2be2196b9c to storage
+2021-01-20 09:30:29.664478 [hotstuff proto] Adding command 20aef0af2b to storage
+2021-01-20 09:30:29.664509 [hotstuff proto] Adding command 4e65285e65 to storage
+2021-01-20 09:30:29.664540 [hotstuff proto] Adding command 7b742c398b to storage
+2021-01-20 09:30:29.664572 [hotstuff proto] Adding command d8e0873e07 to storage
+2021-01-20 09:30:29.664601 [hotstuff proto] Adding command dd73a46975 to storage
+2021-01-20 09:30:29.664632 [hotstuff proto] Adding command f1d6ff0821 to storage
+2021-01-20 09:30:29.664664 [hotstuff proto] Adding command 930abd7018 to storage
+2021-01-20 09:30:29.664695 [hotstuff proto] Adding command 53dd18d822 to storage
+2021-01-20 09:30:29.664726 [hotstuff proto] Adding command ead27b1c86 to storage
+2021-01-20 09:30:29.664757 [hotstuff proto] Adding command 5f1ddbc2fb to storage
+2021-01-20 09:30:29.664788 [hotstuff proto] Adding command 48443c868f to storage
+2021-01-20 09:30:29.664820 [hotstuff proto] Adding command 9c8616c455 to storage
+2021-01-20 09:30:29.664850 [hotstuff proto] Adding command db182aa591 to storage
+2021-01-20 09:30:29.664880 [hotstuff proto] Adding command 1bcca6c039 to storage
+2021-01-20 09:30:29.664911 [hotstuff proto] Adding command f83bb221d5 to storage
+2021-01-20 09:30:29.664942 [hotstuff proto] Adding command a44c4438cf to storage
+2021-01-20 09:30:29.664972 [hotstuff proto] Adding command 2fadf4ab76 to storage
+2021-01-20 09:30:29.665002 [hotstuff proto] Adding command 3fbaba3c5b to storage
+2021-01-20 09:30:29.665034 [hotstuff proto] Adding command c63761c39f to storage
+2021-01-20 09:30:29.665065 [hotstuff proto] Adding command 9779c6fff1 to storage
+2021-01-20 09:30:29.665095 [hotstuff proto] Adding command 67e4f26e84 to storage
+2021-01-20 09:30:29.665126 [hotstuff proto] Adding command 5db43ae74c to storage
+2021-01-20 09:30:29.665156 [hotstuff proto] Adding command 31dba5fca7 to storage
+2021-01-20 09:30:29.665187 [hotstuff proto] Adding command 90d3cc4af3 to storage
+2021-01-20 09:30:29.665216 [hotstuff proto] Adding command 5eab1e29e4 to storage
+2021-01-20 09:30:29.665247 [hotstuff proto] Adding command 3786b5685d to storage
+2021-01-20 09:30:29.665277 [hotstuff proto] Adding command f976b84a67 to storage
+2021-01-20 09:30:29.665311 [hotstuff proto] Adding command c59a297409 to storage
+2021-01-20 09:30:29.665342 [hotstuff proto] Adding command c854c8f56f to storage
+2021-01-20 09:30:29.665372 [hotstuff proto] Adding command e1eb586829 to storage
+2021-01-20 09:30:29.665403 [hotstuff proto] Adding command 7c2f21ce5c to storage
+2021-01-20 09:30:29.665435 [hotstuff proto] Adding command bb2f4bcd51 to storage
+2021-01-20 09:30:29.665466 [hotstuff proto] Adding command 66ee151dbf to storage
+2021-01-20 09:30:29.665496 [hotstuff proto] Adding command 547c34decb to storage
+2021-01-20 09:30:29.665527 [hotstuff proto] Adding command 04164f6252 to storage
+2021-01-20 09:30:29.665558 [hotstuff proto] Adding command be84dc21f3 to storage
+2021-01-20 09:30:29.665588 [hotstuff proto] Adding command 25ab3aa916 to storage
+2021-01-20 09:30:29.665619 [hotstuff proto] Adding command 2544f2559d to storage
+2021-01-20 09:30:29.665649 [hotstuff proto] Adding command 0dd443f367 to storage
+2021-01-20 09:30:29.665680 [hotstuff proto] Adding command 7067b4ef8a to storage
+2021-01-20 09:30:29.665710 [hotstuff proto] Adding command 4d93be036c to storage
+2021-01-20 09:30:29.665741 [hotstuff proto] Adding command 42f0c08faf to storage
+2021-01-20 09:30:29.665774 [hotstuff proto] Adding command 982258dda3 to storage
+2021-01-20 09:30:29.665804 [hotstuff proto] Adding command 51335e1808 to storage
+2021-01-20 09:30:29.668209 [hotstuff proto] Proposed block size : 3
+2021-01-20 09:30:29.668404 [hotstuff proto] got <proposal rid=0 blk=20b18a460e>
+2021-01-20 09:30:29.668455 [hotstuff proto] Passed acceptable fairness check!
+2021-01-20 09:30:29.668538 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
+2021-01-20 09:30:29.668618 [hotstuff proto] Extracting commands!
+2021-01-20 09:30:29.668672 [hotstuff proto] The size before inserting into vote is: 3
+2021-01-20 09:30:29.668898 [hotstuff proto] Extracting commands!
+2021-01-20 09:30:29.668929 [hotstuff proto] The size while constructing vote is: 3
+2021-01-20 09:30:29.668959 [hotstuff proto] Inside do vote!
+2021-01-20 09:30:29.668976 [hotstuff proto] Extracting commands!

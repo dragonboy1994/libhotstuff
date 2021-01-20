@@ -135,13 +135,17 @@ class OrderedList
 
 public:
     OrderedList() = default;
-    OrderedList(std::vector<uint256_t> cmds,
-                std::vector<uint64_t> timestamps) : cmds(cmds), timestamps(timestamps) {}
+    OrderedList(const std::vector<uint256_t> &cmds,
+                const std::vector<uint64_t> &timestamps) : cmds(cmds), timestamps(timestamps) {}
 
     void serialize(DataStream &s) const;
     void unserialize(DataStream &s, HotStuffCore *hsc);
-    std::vector<uint256_t> extract_cmds() const { return cmds; }
-    std::vector<uint64_t> extract_timestamps() const { return timestamps; }
+    const std::vector<uint256_t> &extract_cmds() const 
+    { 
+        HOTSTUFF_LOG_PROTO("Extracting commands!");
+        return cmds; 
+    }
+    const std::vector<uint64_t> &extract_timestamps() const { return timestamps; }
 };
 
 

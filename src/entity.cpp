@@ -20,23 +20,16 @@
 namespace hotstuff {
 
 void OrderedList::serialize(DataStream &s) const {
-    HOTSTUFF_LOG_INFO("Stop 0");
-    HOTSTUFF_LOG_PROTO("Date : %lu", cmds.size());
     s << htole((uint32_t)cmds.size());
-    HOTSTUFF_LOG_INFO("Stop 1");
     for (const auto &cmd : cmds)
         s << cmd;
-    HOTSTUFF_LOG_INFO("Stop 2");
     for (const auto &timestamp : timestamps)
         s << timestamp;
-    HOTSTUFF_LOG_INFO("Stop 3");
 }
 
 void OrderedList::unserialize(DataStream &s, HotStuffCore *hsc) {
-    HOTSTUFF_LOG_INFO("Orderedlist being deserialized 0");
     uint32_t n;
     s >> n;
-    HOTSTUFF_LOG_INFO("Orderedlist being deserialized 1");
     cmds.resize(n);
     for (auto &cmd : cmds)
         s >> cmd;
@@ -49,6 +42,7 @@ void Block::serialize(DataStream &s) const {
     s << htole((uint32_t)parent_hashes.size());
     for (const auto &hash: parent_hashes)
         s << hash;
+    HOTSTUFF_LOG_PROTO("Proposed block size : %lu", cmds.size());
     s << htole((uint32_t)cmds.size());
     for (auto cmd: cmds)
         s << cmd;
