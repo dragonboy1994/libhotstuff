@@ -140,8 +140,8 @@ public:
 
     void serialize(DataStream &s) const;
     void unserialize(DataStream &s, HotStuffCore *hsc);
-    // const std::vector<uint256_t> extract_cmds() const { return cmds; }
-    // const std::vector<uint64_t> &extract_timestamps() const { return timestamps; }
+    std::vector<uint256_t> extract_cmds() const { return cmds; }
+    std::vector<uint64_t> extract_timestamps() const { return timestamps; }
 };
 
 
@@ -272,9 +272,13 @@ class CommandTimestampStorage
     std::vector<uint256_t> available_cmd_hashes;
     std::vector<uint64_t> available_timestamps;
 
-    /* for print later on */
+    /** for print later on */
     std::vector<uint256_t> cmd_hashes; // the corresponding hashes
     std::vector<uint64_t> timestamps;  // the time stamps when corresponding commands are received
+
+    /** storing all replica preferred orderedlist that will be sent with the vote.
+     * the key is the block hash for which the vote is being sent.*/
+    std::unordered_map<const uint256_t, orderedlist_t> replica_preferred_ordering_cache;
 
 public:
     void add_command_to_storage(const uint256_t cmd_hash);
@@ -283,7 +287,7 @@ public:
     const std::vector<uint256_t> &get_all_cmd_hashes() const { return cmd_hashes; }
     const std::vector<uint64_t> &get_all_timestamps() const { return timestamps; }
     std::vector<uint64_t> get_timestamps(const std::vector<uint256_t> &cmd_hashes_inquired) const;
-    // const OrderedList get_orderedlist() const;
+    const orderedlist_t get_orderedlist(const uint256_t &blk_hash);
 };
 
 
