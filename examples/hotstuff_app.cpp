@@ -22,6 +22,7 @@
 #include <random>
 #include <unistd.h>
 #include <signal.h>
+#include <fstream>
 
 #include "salticidae/stream.h"
 #include "salticidae/util.h"
@@ -339,6 +340,12 @@ void HotStuffApp::client_request_cmd_handler(MsgReqCmd &&msg, const conn_t &conn
     const NetAddr addr = conn->get_addr();
     auto cmd = parse_cmd(msg.serialized);
     const auto &cmd_hash = cmd->get_hash();
+    // adding command to the local storage and also recording the receive timestamp
+    if (command_timestamp_storage->is_new_command(cmd->get_hash()))
+    {
+        HOTSTUFF_LOG_PROTO("Adding command %s to storage", get_hex10(cmd->get_hash()).c_str());
+        command_timestamp_storage->add_command_to_storage(cmd->get_hash());
+    }
     HOTSTUFF_LOG_DEBUG("processing %s", std::string(*cmd).c_str());
     exec_command(cmd_hash, [this, addr](Finality fin) {
         resp_queue.enqueue(std::make_pair(fin, addr));
@@ -354,8 +361,8 @@ void HotStuffApp::start(const std::vector<std::tuple<NetAddr, bytearray_t, bytea
     });
     ev_stat_timer.add(stat_period);
     impeach_timer = TimerEvent(ec, [this](TimerEvent &) {
-        if (get_decision_waiting().size())
-            get_pace_maker()->impeach();
+        //if (get_decision_waiting().size())
+        //    get_pace_maker()->impeach();
         reset_imp_timer();
     });
     impeach_timer.add(impeach_timeout);
@@ -410,5 +417,19 @@ void HotStuffApp::print_stat() const {
         _nrecv += nr;
     }
     HOTSTUFF_LOG_INFO("--- end client msg. ---");
+
+    
+    HOTSTUFF_LOG_INFO("--- writing command_timestamp_storage into a file. ---");
+    std::ofstream outFile("command_timestamp_storage" + std::to_string(get_id()) + ".txt");
+    std::vector<uint256_t> cmd_hashes = command_timestamp_storage->get_all_cmd_hashes();
+    std::vector<uint64_t> timestamps = command_timestamp_storage->get_all_timestamps();
+    for (int i = 0; i <= cmd_hashes.size(); i++)
+    {
+        outFile << get_hex10(cmd_hashes[i]).c_str() << " " << timestamps[i] << "\n"
+                << std::endl;
+    }
+    outFile.close();
+    HOTSTUFF_LOG_INFO("--- writing done. ---");
+    
 #endif
 }

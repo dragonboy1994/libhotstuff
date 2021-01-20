@@ -23,6 +23,9 @@
 #include <string>
 #include <cstddef>
 #include <ios>
+#include <sstream>
+#include <sys/time.h>
+#include <algorithm>
 
 #include "salticidae/netaddr.h"
 #include "salticidae/ref.h"
@@ -115,6 +118,37 @@ get_hashes(const std::vector<Hashable> &plist) {
         hashes.push_back(p->get_hash());
     return hashes;
 }
+
+class OrderedList;
+using orderedlist_t = salticidae::ArcObj<OrderedList>;
+
+
+
+
+/** Abstraction for containing OrderedList. */
+class OrderedList
+{
+    friend HotStuffCore;
+    /** cmds contain the commands and timestamps contain their corresponding timestamps.*/
+    std::vector<uint256_t> cmds;
+    std::vector<uint64_t> timestamps;
+
+public:
+    OrderedList() = default;
+    OrderedList(const std::vector<uint256_t> &cmds,
+                const std::vector<uint64_t> &timestamps) : cmds(cmds), timestamps(timestamps) {}
+
+    void serialize(DataStream &s) const;
+    void unserialize(DataStream &s, HotStuffCore *hsc);
+    const std::vector<uint256_t> &extract_cmds() const 
+    { 
+        HOTSTUFF_LOG_PROTO("Extracting commands!");
+        return cmds; 
+    }
+    const std::vector<uint64_t> &extract_timestamps() const { return timestamps; }
+};
+
+
 
 class Block {
     friend HotStuffCore;
@@ -218,6 +252,50 @@ struct BlockHeightCmp {
         return a->get_height() < b->get_height();
     }
 };
+
+
+
+
+/** 
+ * 1. CommandTimeStorage will store all command hashes that has been received and the 
+ * corresponding timestamps.
+ * 2. It will also contain commands in ascending order of timestamps that heven't been 
+ * included in any previous block. 
+*/
+class CommandTimestampStorage
+{
+    /* for active checking while doing acceptable fairness check of the proposal */
+    std::unordered_map<const uint256_t, const uint64_t> cmd_ts_storage;
+
+    /** Available commands to be included in the ordered list of the vote.
+     * New commands are inserted in add_command_to_storage() function, everything 
+     * in ascending order of timestamps. Whenever a new proposal is received, check whether
+     * the proposal is acceptable under approximately fair. Only if it is acceptable, remove 
+     * those commands and timestamps from it.*/
+    // WARN - the updating procedure for these two is not applicable for rotating leader
+    std::vector<uint256_t> available_cmd_hashes;
+    std::vector<uint64_t> available_timestamps;
+
+    /** for print later on */
+    std::vector<uint256_t> cmd_hashes; // the corresponding hashes
+    std::vector<uint64_t> timestamps;  // the time stamps when corresponding commands are received
+
+    /** storing all replica preferred orderedlist that will be sent with the vote.
+     * the key is the block hash for which the vote is being sent.*/
+    std::unordered_map<const uint256_t, orderedlist_t> replica_preferred_ordering_cache;
+
+public:
+    void add_command_to_storage(const uint256_t cmd_hash);
+    bool is_new_command(const uint256_t &cmd_hash) const;
+    void refresh_available_cmds(const std::vector<uint256_t> cmds);
+    const std::vector<uint256_t> &get_all_cmd_hashes() const { return cmd_hashes; }
+    const std::vector<uint64_t> &get_all_timestamps() const { return timestamps; }
+    std::vector<uint64_t> get_timestamps(const std::vector<uint256_t> &cmd_hashes_inquired) const;
+    const orderedlist_t get_orderedlist(const uint256_t &blk_hash);
+};
+
+
+
 
 class EntityStorage {
     std::unordered_map<const uint256_t, block_t> blk_cache;

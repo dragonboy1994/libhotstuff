@@ -54,6 +54,7 @@ class HotStuffCore {
     /* == feature switches == */
     /** always vote negatively, useful for some PaceMakers */
     bool vote_disabled;
+    uint64_t delta_max = 1; /** a bound on network delay */
 
     block_t get_delivered_blk(const uint256_t &blk_hash);
     void sanity_check_delivered(const block_t &blk);
@@ -69,6 +70,7 @@ class HotStuffCore {
 
     public:
     BoxObj<EntityStorage> storage;
+    BoxObj<CommandTimestampStorage> command_timestamp_storage;
 
     HotStuffCore(ReplicaID id, privkey_bt &&priv_key);
     virtual ~HotStuffCore() {
@@ -90,6 +92,13 @@ class HotStuffCore {
      * function.
      * @return true if valid */
     bool on_deliver_blk(const block_t &blk);
+
+
+    /** This will do the checking for acceptable fairness on the proposal received from leader.
+    * "check timestamps" are the timestamps arranged in the order of corresponding commands
+    * included in the proposal. 
+    * "delta_max" is the maximum bound on the network delay. */
+    bool acceptable_fairness_check(const std::vector<uint64_t> check_timestamps, uint64_t delta_max) const;
 
     /** Call upon the delivery of a proposal message.
      * The block mentioned in the message should be already delivered. */
@@ -212,7 +221,9 @@ struct Vote: public Serializable {
     uint256_t blk_hash;
     /** proof of validity for the vote */
     part_cert_bt cert;
-    
+    /** the preferred orderlist of the pending commands of the voter. */
+    orderedlist_t replica_preferred_orderedlist;
+
     /** handle of the core object to allow polymorphism */
     HotStuffCore *hsc;
 
@@ -225,6 +236,20 @@ struct Vote: public Serializable {
         blk_hash(blk_hash),
         cert(std::move(cert)), hsc(hsc) {}
 
+    Vote(ReplicaID voter,
+        const uint256_t &blk_hash,
+        part_cert_bt &&cert,
+        const orderedlist_t &replica_preferred_orderedlist,
+        HotStuffCore *hsc):
+        voter(voter),
+        blk_hash(blk_hash),
+        cert(std::move(cert)), 
+        replica_preferred_orderedlist(replica_preferred_orderedlist),
+        hsc(hsc) {
+        std::vector<uint256_t> test_cmds = replica_preferred_orderedlist->extract_cmds();
+        HOTSTUFF_LOG_PROTO("The size while constructing vote is: %lu", test_cmds.size());
+        }
+
     Vote(const Vote &other):
         voter(other.voter),
         blk_hash(other.blk_hash),
@@ -234,12 +259,22 @@ struct Vote: public Serializable {
     Vote(Vote &&other) = default;
     
     void serialize(DataStream &s) const override {
-        s << voter << blk_hash << *cert;
+        HOTSTUFF_LOG_PROTO("Serializing vote at replica starting!");
+        std::vector<uint256_t> test_cmds = replica_preferred_orderedlist->extract_cmds();
+        HOTSTUFF_LOG_PROTO("The size before serializing is: %lu", test_cmds.size());
+        s << voter << blk_hash << *replica_preferred_orderedlist << *cert;
     }
 
     void unserialize(DataStream &s) override {
         assert(hsc != nullptr);
         s >> voter >> blk_hash;
+        HOTSTUFF_LOG_PROTO("Deserializing vote at leader!");
+        OrderedList _test;
+        _test.unserialize(s, hsc);
+        std::vector<uint256_t> _test_cmds = _test.extract_cmds();
+        for(auto &cmd: _test_cmds) {
+            HOTSTUFF_LOG_PROTO("The command sent is: %s", get_hex10(cmd).c_str());
+        }
         cert = hsc->parse_part_cert(s);
     }
 
