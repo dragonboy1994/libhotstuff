@@ -17,6 +17,7 @@
 
 #include <cassert>
 #include <stack>
+#include <boost/lexical_cast.hpp>
 
 #include "hotstuff/util.h"
 #include "hotstuff/consensus.h"
@@ -40,13 +41,34 @@ HotStuffCore::HotStuffCore(ReplicaID id,
         tails{b0},
         vote_disabled(false),
         id(id),
-        storage(new EntityStorage()) {
+        storage(new EntityStorage()),
+        command_timestamp_storage(new CommandTimestampStorage()) {
     storage->add_blk(b0);
 }
 
 void HotStuffCore::sanity_check_delivered(const block_t &blk) {
     if (!blk->delivered)
         throw std::runtime_error("block not delivered");
+}
+
+
+bool HotStuffCore::acceptable_fairness_check(const std::vector<uint64_t> check_timestamps, uint64_t delta) const
+{
+    bool accept = true;
+    for (auto i = 0; i < check_timestamps.size(); i++)
+    {
+        for (auto j = 0; j <= i; j++)
+        {
+            //std::string str = boost::lexical_cast<std::string>(check_timestamps[i] - check_timestamps[j]);
+            //LOG_PROTO("Differences in timestamps are %s", str.c_str());
+            if (check_timestamps[j] >= check_timestamps[i] + 2 * delta)
+            {
+                accept = false;
+                HOTSTUFF_LOG_PROTO("Unacceptable fairness!");
+            }
+        }
+    }
+    return accept;
 }
 
 block_t HotStuffCore::get_delivered_blk(const uint256_t &blk_hash) {
@@ -188,36 +210,57 @@ void HotStuffCore::on_receive_proposal(const Proposal &prop) {
     LOG_PROTO("got %s", std::string(prop).c_str());
     block_t bnew = prop.blk;
     sanity_check_delivered(bnew);
-    update(bnew);
-    bool opinion = false;
-    if (bnew->height > vheight)
+    // checking for any new commands the replica is seeing for first time
+    for (auto &cmd : bnew->get_cmds())
     {
-        if (bnew->qc_ref && bnew->qc_ref->height > b_lock->height)
+        if (command_timestamp_storage->is_new_command(cmd))
         {
-            opinion = true; // liveness condition
-            vheight = bnew->height;
-        }
-        else
-        {   // safety condition (extend the locked branch)
-            block_t b;
-            for (b = bnew;
-                b->height > b_lock->height;
-                b = b->parents[0]);
-            if (b == b_lock) /* on the same branch */
-            {
-                opinion = true;
-                vheight = bnew->height;
-            }
+            command_timestamp_storage->add_command_to_storage(cmd);
         }
     }
-    LOG_PROTO("now state: %s", std::string(*this).c_str());
-    if (bnew->qc_ref)
-        on_qc_finish(bnew->qc_ref);
-    on_receive_proposal_(prop);
-    if (opinion && !vote_disabled)
-        do_vote(prop.proposer,
-            Vote(id, bnew->get_hash(),
-                create_part_cert(*priv_key, bnew->get_hash()), this));
+    // get timestamps of the commands in the proposed block
+    std::vector<uint64_t> timestamps_of_cmds = command_timestamp_storage->get_timestamps(bnew->get_cmds());
+    
+    if (acceptable_fairness_check (timestamps_of_cmds, delta_max)) 
+    {
+        HOTSTUFF_LOG_PROTO("Passed acceptable fairness check!");
+        command_timestamp_storage->refresh_available_cmds(bnew->get_cmds());
+        update(bnew);
+        bool opinion = false;
+        if (bnew->height > vheight)
+        {
+            if (bnew->qc_ref && bnew->qc_ref->height > b_lock->height)
+            {
+                opinion = true; // liveness condition
+                vheight = bnew->height;
+            }
+            else
+            {   // safety condition (extend the locked branch)
+                block_t b;
+                for (b = bnew;
+                    b->height > b_lock->height;
+                    b = b->parents[0]);
+                if (b == b_lock) /* on the same branch */
+                {
+                    opinion = true;
+                    vheight = bnew->height;
+                }
+            }
+        }
+        LOG_PROTO("now state: %s", std::string(*this).c_str());
+        if (bnew->qc_ref)
+            on_qc_finish(bnew->qc_ref);
+        on_receive_proposal_(prop);
+        orderedlist_t replica_orderedlist = command_timestamp_storage->get_orderedlist(bnew->get_hash());
+        std::vector<uint256_t> test_cmds = replica_orderedlist->extract_cmds();
+        HOTSTUFF_LOG_PROTO("The size before inserting into vote is: %lu", test_cmds.size());
+        // std::vector<uint64_t> test_ts = replica_orderedlist->extract_timestamps();
+        if (opinion && !vote_disabled)
+            do_vote(prop.proposer,
+                    Vote(id, bnew->get_hash(),
+                         create_part_cert(*priv_key, bnew->get_hash()),
+                         replica_orderedlist, this));
+    }
 }
 
 void HotStuffCore::on_receive_vote(const Vote &vote) {
