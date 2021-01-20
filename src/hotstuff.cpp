@@ -373,6 +373,9 @@ HotStuffBase::HotStuffBase(uint32_t blk_size,
 
 void HotStuffBase::do_broadcast_proposal(const Proposal &prop) {
     //MsgPropose prop_msg(prop);
+    HOTSTUFF_LOG_PROTO("Inside do broadcast proposal!");
+    std::vector<uint256_t> test_cmds = prop.blk->get_cmds();
+    HOTSTUFF_LOG_PROTO("The size inside do broadcast proposal is: %lu", test_cmds.size());
     pn.multicast_msg(MsgPropose(prop), peers);
     //for (const auto &replica: peers)
     //    pn.send_msg(prop_msg, replica);
@@ -387,7 +390,13 @@ void HotStuffBase::do_vote(ReplicaID last_proposer, const Vote &vote) {
             //on_receive_vote(vote);
         }
         else
+        {
+            HOTSTUFF_LOG_PROTO("Inside do vote!");
+            // Here the data inside replica_preferred_orderedlist is not returned on calling extract_cmds()
+            std::vector<uint256_t> test_cmds = vote.replica_preferred_orderedlist->extract_cmds();
+            HOTSTUFF_LOG_PROTO("The size inside do_vote is: %lu", test_cmds.size());
             pn.send_msg(MsgVote(vote), get_config().get_peer_id(proposer));
+        }
     });
 }
 

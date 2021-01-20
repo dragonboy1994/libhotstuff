@@ -253,18 +253,13 @@ void HotStuffCore::on_receive_proposal(const Proposal &prop) {
         on_receive_proposal_(prop);
         orderedlist_t replica_orderedlist = command_timestamp_storage->get_orderedlist(bnew->get_hash());
         std::vector<uint256_t> test_cmds = replica_orderedlist->extract_cmds();
-        for(auto &cmd: test_cmds) {
-            HOTSTUFF_LOG_PROTO("The cmd being sent is: %s",get_hex10(cmd).c_str());
-        }
-        std::vector<uint64_t> test_ts = replica_orderedlist->extract_timestamps();
-        for (auto &ts : test_ts)
-        {
-            HOTSTUFF_LOG_PROTO("The corresponding timestamps are: %s", boost::lexical_cast<std::string>(ts).c_str());
-        }
+        HOTSTUFF_LOG_PROTO("The size before inserting into vote is: %lu", test_cmds.size());
+        // std::vector<uint64_t> test_ts = replica_orderedlist->extract_timestamps();
         if (opinion && !vote_disabled)
             do_vote(prop.proposer,
-                Vote(id, bnew->get_hash(),
-                    create_part_cert(*priv_key, bnew->get_hash()), this));
+                    Vote(id, bnew->get_hash(),
+                         create_part_cert(*priv_key, bnew->get_hash()),
+                         replica_orderedlist, this));
     }
 }
 
