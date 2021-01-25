@@ -34,7 +34,7 @@ void OrderedList::unserialize(DataStream &s, HotStuffCore *hsc) {
     for (auto &cmd : cmds)
         s >> cmd;
     timestamps.resize(n);
-    for (auto timestamp : timestamps)
+    for (auto &timestamp : timestamps)
         s >> timestamp;
 }
 
@@ -157,7 +157,7 @@ std::vector<uint64_t> CommandTimestampStorage::get_timestamps(const std::vector<
 /** Get a new ordered list to send as part of the vote.
   * Basically has to repackage the available cmds and timestamps into ordered list
 */
-const orderedlist_t CommandTimestampStorage::get_orderedlist(const uint256_t &blk_hash)
+orderedlist_t CommandTimestampStorage::get_orderedlist(const uint256_t &blk_hash)
 {
     std::vector<uint256_t> proposed_available_cmd_hashes;
     std::vector<uint64_t> proposed_available_timestamps;

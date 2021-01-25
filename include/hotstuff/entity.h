@@ -33,6 +33,7 @@
 #include "hotstuff/util.h"
 #include "hotstuff/crypto.h"
 
+
 namespace hotstuff {
 
 enum EntityType {
@@ -145,6 +146,8 @@ public:
         HOTSTUFF_LOG_PROTO("Extracting commands!");
         return cmds; 
     }
+
+
     const std::vector<uint64_t> &extract_timestamps() const { return timestamps; }
 };
 
@@ -291,8 +294,13 @@ public:
     const std::vector<uint256_t> &get_all_cmd_hashes() const { return cmd_hashes; }
     const std::vector<uint64_t> &get_all_timestamps() const { return timestamps; }
     std::vector<uint64_t> get_timestamps(const std::vector<uint256_t> &cmd_hashes_inquired) const;
-    const orderedlist_t get_orderedlist(const uint256_t &blk_hash);
+    orderedlist_t get_orderedlist(const uint256_t &blk_hash);
+    
 };
+
+
+
+
 
 
 
