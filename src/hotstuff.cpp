@@ -381,26 +381,40 @@ void HotStuffBase::do_broadcast_proposal(const Proposal &prop) {
     //    pn.send_msg(prop_msg, replica);
 }
 
-void HotStuffBase::do_vote(ReplicaID last_proposer, const Vote &vote) {
+void HotStuffBase::do_vote(ReplicaID last_proposer, const Vote &vote)
+{
     HOTSTUFF_LOG_PROTO("Inside do vote!");
     // WARN - Here the data inside replica_preferred_orderedlist is not returned on calling extract_cmds()
-    std::vector<uint256_t> test_cmds = vote.replica_preferred_orderedlist->extract_cmds();
-    HOTSTUFF_LOG_PROTO("The size inside do_vote before pmaker is: %lu", test_cmds.size());
+    //std::vector<uint256_t> test_cmds = vote.replica_preferred_orderedlist->extract_cmds();
+    //HOTSTUFF_LOG_PROTO("The size inside do_vote before pmaker is: %lu", test_cmds.size());
     pmaker->beat_resp(last_proposer)
-            .then([this, vote](ReplicaID proposer) {
-        if (proposer == get_id())
-        {
-            throw HotStuffError("unreachable line");
-            //on_receive_vote(vote);
-        }
-        else
-        {
-            // WARN - Here the data inside replica_preferred_orderedlist is not returned on calling extract_cmds()
-            std::vector<uint256_t> test_cmds = vote.replica_preferred_orderedlist->extract_cmds();
-            HOTSTUFF_LOG_PROTO("The size inside do_vote  after pmakeris: %lu", test_cmds.size());
-            pn.send_msg(MsgVote(vote), get_config().get_peer_id(proposer));
-        }
-    });
+        .then([this, vote](ReplicaID proposer) {
+            if (proposer == get_id())
+            {
+                throw HotStuffError("unreachable line");
+                //on_receive_vote(vote);
+            }
+            else
+            {
+                HOTSTUFF_LOG_PROTO("Replica id is: %d",vote.voter);
+                ReplicaID voterID = std::move(vote.voter);
+                HOTSTUFF_LOG_PROTO("Replica id test is: %d", voterID);
+                uint256_t blk_hash_test = std::move(vote.blk_hash);
+                HOTSTUFF_LOG_PROTO("Block hash is: %s", get_hex10(blk_hash_test).c_str());
+                HOTSTUFF_LOG_PROTO("Part cert is: %s", get_hex10(vote.cert->get_obj_hash()).c_str());
+                //part_cert_bt certificate = create_part_cert(*priv_key, blk_hash_test);
+                //HOTSTUFF_LOG_PROTO("Part test cert is: %s", get_hex10(certificate->get_obj_hash()).c_str());
+                // WARN - Here the data inside replica_preferred_orderedlist is not returned on calling extract_cmds()
+                //orderedlist_t replica_orderedlist = command_timestamp_storage->get_orderedlist(blk_hash_test);
+                Vote vote_test = Vote(voterID, blk_hash_test, create_part_cert(*priv_key, blk_hash_test), command_timestamp_storage->get_orderedlist(blk_hash_test), this);
+                HOTSTUFF_LOG_PROTO("The size inside do_vote  after pmakeris: %lu", vote_test.replica_preferred_orderedlist->extract_cmds().size());
+                for(auto &ts: vote_test.replica_preferred_orderedlist->extract_timestamps()) {
+                    HOTSTUFF_LOG_PROTO("The ts sent is: %s", boost::lexical_cast<std::string>(ts).c_str());
+                }
+                // HOTSTUFF_LOG_PROTO("The size inside do_vote  after pmakeris: %lu", vote.replica_preferred_orderedlist->extract_cmds().size());
+                pn.send_msg(MsgVote(vote_test), get_config().get_peer_id(proposer));
+            }
+        });
 }
 
 void HotStuffBase::do_consensus(const block_t &blk) {

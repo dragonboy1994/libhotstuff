@@ -21,6 +21,7 @@
 #include <cassert>
 #include <set>
 #include <unordered_map>
+#include <boost/lexical_cast.hpp>
 
 #include "hotstuff/promise.hpp"
 #include "hotstuff/type.h"
@@ -32,6 +33,7 @@ namespace hotstuff {
 struct Proposal;
 struct Vote;
 struct Finality;
+class VoteStorage;
 
 /** Abstraction for HotStuff protocol state machine (without network implementation). */
 class HotStuffCore {
@@ -43,7 +45,6 @@ class HotStuffCore {
     block_t b_exec;                            /**< last executed block */
     uint32_t vheight;          /**< height of the block last voted for */
     /* === auxilliary variables === */
-    privkey_bt priv_key;            /**< private key for signing votes */
     std::set<block_t> tails;   /**< set of tail blocks */
     ReplicaConfig config;                   /**< replica configuration */
     /* === async event queues === */
@@ -66,6 +67,7 @@ class HotStuffCore {
     void on_receive_proposal_(const Proposal &prop);
 
     protected:
+    privkey_bt priv_key;            /**< private key for signing votes */
     ReplicaID id;                  /**< identity of the replica itself */
 
     public:
@@ -215,7 +217,8 @@ struct Proposal: public Serializable {
 };
 
 /** Abstraction for vote messages. */
-struct Vote: public Serializable {
+struct Vote : public Serializable
+{
     ReplicaID voter;
     /** block being voted */
     uint256_t blk_hash;
@@ -223,75 +226,88 @@ struct Vote: public Serializable {
     part_cert_bt cert;
     /** the preferred orderlist of the pending commands of the voter. */
     orderedlist_t replica_preferred_orderedlist;
-
+    
     /** handle of the core object to allow polymorphism */
     HotStuffCore *hsc;
 
-    Vote(): cert(nullptr), hsc(nullptr) {}
+    Vote() : cert(nullptr), hsc(nullptr) {}
     Vote(ReplicaID voter,
-        const uint256_t &blk_hash,
-        part_cert_bt &&cert,
-        HotStuffCore *hsc):
-        voter(voter),
-        blk_hash(blk_hash),
-        cert(std::move(cert)), hsc(hsc) {}
+         const uint256_t &blk_hash,
+         part_cert_bt &&cert,
+         HotStuffCore *hsc) : voter(voter),
+                              blk_hash(blk_hash),
+                              cert(std::move(cert)), hsc(hsc) {}
 
     Vote(ReplicaID voter,
-        const uint256_t &blk_hash,
-        part_cert_bt &&cert,
-        const orderedlist_t &replica_preferred_orderedlist,
-        HotStuffCore *hsc):
-        voter(voter),
-        blk_hash(blk_hash),
-        cert(std::move(cert)), 
-        replica_preferred_orderedlist(replica_preferred_orderedlist),
-        hsc(hsc) {
+         const uint256_t &blk_hash,
+         part_cert_bt &&cert,
+         orderedlist_t &&replica_preferred_orderedlist,
+         HotStuffCore *hsc) : voter(voter),
+                              blk_hash(blk_hash),
+                              cert(std::move(cert)),
+                              replica_preferred_orderedlist(std::move(replica_preferred_orderedlist)),
+                              hsc(hsc)
+    {
         std::vector<uint256_t> test_cmds = replica_preferred_orderedlist->extract_cmds();
         HOTSTUFF_LOG_PROTO("The size while constructing vote is: %lu", test_cmds.size());
-        }
+    }
 
-    Vote(const Vote &other):
-        voter(other.voter),
-        blk_hash(other.blk_hash),
-        cert(other.cert ? other.cert->clone() : nullptr),
-        hsc(other.hsc) {}
+    Vote(const Vote &other) : voter(other.voter),
+                              blk_hash(other.blk_hash),
+                              cert(other.cert ? other.cert->clone() : nullptr),
+                              hsc(other.hsc) {}
 
     Vote(Vote &&other) = default;
-    
-    void serialize(DataStream &s) const override {
+
+    void serialize(DataStream &s) const override
+    {
         HOTSTUFF_LOG_PROTO("Serializing vote at replica starting!");
         std::vector<uint256_t> test_cmds = replica_preferred_orderedlist->extract_cmds();
         HOTSTUFF_LOG_PROTO("The size before serializing is: %lu", test_cmds.size());
-        s << voter << blk_hash << *replica_preferred_orderedlist << *cert;
+        for (auto &ts : replica_preferred_orderedlist->extract_timestamps())
+        {
+            HOTSTUFF_LOG_PROTO("Inside serialize, the ts sent is: %s", boost::lexical_cast<std::string>(ts).c_str());
+        }
+        s << voter << blk_hash  << *replica_preferred_orderedlist << *cert;
     }
 
-    void unserialize(DataStream &s) override {
+    void unserialize(DataStream &s) override
+    {
         assert(hsc != nullptr);
         s >> voter >> blk_hash;
         HOTSTUFF_LOG_PROTO("Deserializing vote at leader!");
         OrderedList _test;
         _test.unserialize(s, hsc);
         std::vector<uint256_t> _test_cmds = _test.extract_cmds();
-        for(auto &cmd: _test_cmds) {
+        for (auto &cmd : _test_cmds)
+        {
             HOTSTUFF_LOG_PROTO("The command sent is: %s", get_hex10(cmd).c_str());
+        }
+        std::vector<uint64_t> _test_ts= _test.extract_timestamps();
+        for (auto &ts : _test_ts)
+        {
+            HOTSTUFF_LOG_PROTO("The ts sent is: %s", boost::lexical_cast<std::string>(ts).c_str());
         }
         cert = hsc->parse_part_cert(s);
     }
 
-    bool verify() const {
+    bool verify() const
+    {
         assert(hsc != nullptr);
         return cert->verify(hsc->get_config().get_pubkey(voter)) &&
-                cert->get_obj_hash() == blk_hash;
+               cert->get_obj_hash() == blk_hash;
     }
 
-    promise_t verify(VeriPool &vpool) const {
+    promise_t verify(VeriPool &vpool) const
+    {
         assert(hsc != nullptr);
         return cert->verify(hsc->get_config().get_pubkey(voter), vpool).then([this](bool result) {
             return result && cert->get_obj_hash() == blk_hash;
         });
     }
 
-    operator std::string () const {
+    operator std::string() const
+    {
         DataStream s;
         s << "<vote "
           << "rid=" << std::to_string(voter) << " "
@@ -300,7 +316,9 @@ struct Vote: public Serializable {
     }
 };
 
-struct Finality: public Serializable {
+
+struct Finality : public Serializable
+{
     ReplicaID rid;
     int8_t decision;
     uint32_t cmd_idx;
@@ -345,7 +363,6 @@ struct Finality: public Serializable {
         return s;
     }
 };
-
 }
 
 #endif

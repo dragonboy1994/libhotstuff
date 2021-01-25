@@ -17,7 +17,6 @@
 
 #include <cassert>
 #include <stack>
-#include <boost/lexical_cast.hpp>
 
 #include "hotstuff/util.h"
 #include "hotstuff/consensus.h"
@@ -251,15 +250,14 @@ void HotStuffCore::on_receive_proposal(const Proposal &prop) {
         if (bnew->qc_ref)
             on_qc_finish(bnew->qc_ref);
         on_receive_proposal_(prop);
-        orderedlist_t replica_orderedlist = command_timestamp_storage->get_orderedlist(bnew->get_hash());
-        std::vector<uint256_t> test_cmds = replica_orderedlist->extract_cmds();
-        HOTSTUFF_LOG_PROTO("The size before inserting into vote is: %lu", test_cmds.size());
+        // std::vector<uint256_t> test_cmds = replica_orderedlist->extract_cmds();
+        // HOTSTUFF_LOG_PROTO("The size before inserting into vote is: %lu", test_cmds.size());
         // std::vector<uint64_t> test_ts = replica_orderedlist->extract_timestamps();
+
         if (opinion && !vote_disabled)
             do_vote(prop.proposer,
-                    Vote(id, bnew->get_hash(),
-                         create_part_cert(*priv_key, bnew->get_hash()),
-                         replica_orderedlist, this));
+                    Vote(id, bnew->get_hash(), 
+                        create_part_cert(*priv_key, bnew->get_hash()), this));
     }
 }
 

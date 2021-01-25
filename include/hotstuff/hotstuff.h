@@ -21,6 +21,13 @@
 #include <queue>
 #include <unordered_map>
 #include <unordered_set>
+#include <boost/lexical_cast.hpp>
+
+#include <stack>
+#include <vector>
+#include <memory>
+#include <functional>
+#include <type_traits>
 
 #include "salticidae/util.h"
 #include "salticidae/network.h"

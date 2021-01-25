@@ -1,106 +1,528 @@
-2021-01-20 10:38:09.326805 [net info] loaded configuration from hotstuff.conf
-2021-01-20 10:38:09.327106 [net info] loading extra configuration from ./hotstuff-sec3.conf
-2021-01-20 10:38:09.331977 [hotstuff proto] Proposed block size : 0
-2021-01-20 10:38:09.339476 [net info] starting all threads...
-2021-01-20 10:38:09.340082 [net info] listening to 10003
-2021-01-20 10:38:09.349404 [net info] starting all threads...
-2021-01-20 10:38:09.350691 [net info] listening to 20003
-2021-01-20 10:38:09.351397 [hotstuff info] ** starting the system with parameters **
-2021-01-20 10:38:09.351430 [hotstuff info] blk_size = 3
-2021-01-20 10:38:09.351448 [hotstuff info] conns = 0
-2021-01-20 10:38:09.351463 [hotstuff info] ** starting the event loop...
-2021-01-20 10:38:09.351676 [hotstuff proto] Pacemaker: stop rotation at 0
-2021-01-20 10:38:09.352767 [net info] created <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-20 10:38:09.353226 [net info] created <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-20 10:38:09.353719 [net info] created <Conn fd=131 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-20 10:38:09.353800 [net info] connected to remote <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-20 10:38:09.353962 [net info] connected to remote <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-20 10:38:09.353995 [net info] connected to remote <Conn fd=131 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-20 10:38:09.354450 [net info] accepted <Conn fd=134 addr=<NetAddr 127.0.0.1:65398> mode=passive>
-2021-01-20 10:38:09.354793 [net info] accepted <Conn fd=137 addr=<NetAddr 127.0.0.1:65399> mode=passive>
-2021-01-20 10:38:09.356093 [net info] accepted <Conn fd=140 addr=<NetAddr 127.0.0.1:65402> mode=passive>
-2021-01-20 10:38:09.365345 [net info] 6540a0fea6: setup connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-20 10:38:09.372798 [net info] 6540a0fea6: setup connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-20 10:38:09.373137 [net info] 6540a0fea6: setup connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-20 10:38:09.374190 [net info] 6540a0fea6: setup connection <Conn fd=134 addr=<NetAddr 127.0.0.1:65398> mode=passive>
-2021-01-20 10:38:09.375626 [net info] 6540a0fea6: setup connection <Conn fd=137 addr=<NetAddr 127.0.0.1:65399> mode=passive>
-2021-01-20 10:38:09.375835 [net info] 6540a0fea6: lost connection <Conn fd=134 addr=<NetAddr 127.0.0.1:65398> mode=passive>
-2021-01-20 10:38:09.376934 [net info] 6540a0fea6: lost connection <Conn fd=137 addr=<NetAddr 127.0.0.1:65399> mode=passive>
-2021-01-20 10:38:09.377896 [net info] established 6540a0fea6 <---> 542865a568 (via <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>)
-2021-01-20 10:38:09.377936 [net info] 6540a0fea6: ping from <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-20 10:38:09.378129 [net info] 6540a0fea6: lost connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-20 10:38:09.379272 [net info] 6540a0fea6: setup connection <Conn fd=140 addr=<NetAddr 127.0.0.1:65402> mode=passive>
-2021-01-20 10:38:09.379375 [net info] 6540a0fea6: lost connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-20 10:38:09.381908 [net info] established 6540a0fea6 <---> c261250345 (via <Conn fd=140 addr=<NetAddr 127.0.0.1:65402> mode=passive>)
-2021-01-20 10:38:09.382828 [net info] 6540a0fea6: ping from <Conn fd=140 addr=<NetAddr 127.0.0.1:65402> mode=passive>
-2021-01-20 10:38:11.600713 [net info] created <Conn fd=119 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-20 10:38:11.601038 [net info] connected to remote <Conn fd=119 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-20 10:38:11.606163 [net info] 6540a0fea6: setup connection <Conn fd=119 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-20 10:38:11.607774 [net info] 6540a0fea6: lost connection <Conn fd=119 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-20 10:38:11.840460 [net info] accepted <Conn fd=119 addr=<NetAddr 127.0.0.1:65404> mode=passive>
-2021-01-20 10:38:11.846611 [net info] 6540a0fea6: setup connection <Conn fd=119 addr=<NetAddr 127.0.0.1:65404> mode=passive>
-2021-01-20 10:38:11.847051 [net info] established 6540a0fea6 <---> 065b010aed (via <Conn fd=119 addr=<NetAddr 127.0.0.1:65404> mode=passive>)
-2021-01-20 10:38:11.847918 [net info] 6540a0fea6: ping from <Conn fd=119 addr=<NetAddr 127.0.0.1:65404> mode=passive>
-2021-01-20 10:38:14.319722 [net info] accepted <Conn fd=120 addr=<NetAddr 127.0.0.1:65408> mode=passive>
-2021-01-20 10:38:14.374382 [hotstuff proto] Adding command af5570f5a1 to storage
-2021-01-20 10:38:14.374496 [hotstuff proto] Adding command 01acecb507 to storage
-2021-01-20 10:38:14.374567 [hotstuff proto] Adding command 2fcd151b82 to storage
-2021-01-20 10:38:14.374631 [hotstuff proto] Adding command 9ae4c9d086 to storage
-2021-01-20 10:38:14.374701 [hotstuff proto] Adding command 1b03ab083d to storage
-2021-01-20 10:38:14.374783 [hotstuff proto] Adding command 2be2196b9c to storage
-2021-01-20 10:38:14.374877 [hotstuff proto] Adding command 20aef0af2b to storage
-2021-01-20 10:38:14.374916 [hotstuff proto] Adding command 4e65285e65 to storage
-2021-01-20 10:38:14.374951 [hotstuff proto] Adding command 7b742c398b to storage
-2021-01-20 10:38:14.374987 [hotstuff proto] Adding command d8e0873e07 to storage
-2021-01-20 10:38:14.375019 [hotstuff proto] Adding command dd73a46975 to storage
-2021-01-20 10:38:14.375051 [hotstuff proto] Adding command f1d6ff0821 to storage
-2021-01-20 10:38:14.375084 [hotstuff proto] Adding command 930abd7018 to storage
-2021-01-20 10:38:14.375117 [hotstuff proto] Adding command 53dd18d822 to storage
-2021-01-20 10:38:14.375150 [hotstuff proto] Adding command ead27b1c86 to storage
-2021-01-20 10:38:14.375182 [hotstuff proto] Adding command 5f1ddbc2fb to storage
-2021-01-20 10:38:14.375215 [hotstuff proto] Adding command 48443c868f to storage
-2021-01-20 10:38:14.375249 [hotstuff proto] Adding command 9c8616c455 to storage
-2021-01-20 10:38:14.375280 [hotstuff proto] Adding command db182aa591 to storage
-2021-01-20 10:38:14.375313 [hotstuff proto] Adding command 1bcca6c039 to storage
-2021-01-20 10:38:14.375345 [hotstuff proto] Adding command f83bb221d5 to storage
-2021-01-20 10:38:14.375376 [hotstuff proto] Adding command a44c4438cf to storage
-2021-01-20 10:38:14.375409 [hotstuff proto] Adding command 2fadf4ab76 to storage
-2021-01-20 10:38:14.375442 [hotstuff proto] Adding command 3fbaba3c5b to storage
-2021-01-20 10:38:14.375475 [hotstuff proto] Adding command c63761c39f to storage
-2021-01-20 10:38:14.375507 [hotstuff proto] Adding command 9779c6fff1 to storage
-2021-01-20 10:38:14.375539 [hotstuff proto] Adding command 67e4f26e84 to storage
-2021-01-20 10:38:14.375570 [hotstuff proto] Adding command 5db43ae74c to storage
-2021-01-20 10:38:14.375600 [hotstuff proto] Adding command 31dba5fca7 to storage
-2021-01-20 10:38:14.375631 [hotstuff proto] Adding command 90d3cc4af3 to storage
-2021-01-20 10:38:14.375662 [hotstuff proto] Adding command 5eab1e29e4 to storage
-2021-01-20 10:38:14.375693 [hotstuff proto] Adding command 3786b5685d to storage
-2021-01-20 10:38:14.375723 [hotstuff proto] Adding command f976b84a67 to storage
-2021-01-20 10:38:14.375758 [hotstuff proto] Adding command c59a297409 to storage
-2021-01-20 10:38:14.375787 [hotstuff proto] Adding command c854c8f56f to storage
-2021-01-20 10:38:14.375818 [hotstuff proto] Adding command e1eb586829 to storage
-2021-01-20 10:38:14.375849 [hotstuff proto] Adding command 7c2f21ce5c to storage
-2021-01-20 10:38:14.375894 [hotstuff proto] Adding command bb2f4bcd51 to storage
-2021-01-20 10:38:14.375924 [hotstuff proto] Adding command 66ee151dbf to storage
-2021-01-20 10:38:14.375954 [hotstuff proto] Adding command 547c34decb to storage
-2021-01-20 10:38:14.375983 [hotstuff proto] Adding command 04164f6252 to storage
-2021-01-20 10:38:14.376013 [hotstuff proto] Adding command be84dc21f3 to storage
-2021-01-20 10:38:14.376042 [hotstuff proto] Adding command 25ab3aa916 to storage
-2021-01-20 10:38:14.376070 [hotstuff proto] Adding command 2544f2559d to storage
-2021-01-20 10:38:14.376099 [hotstuff proto] Adding command 0dd443f367 to storage
-2021-01-20 10:38:14.376163 [hotstuff proto] Adding command 7067b4ef8a to storage
-2021-01-20 10:38:14.376196 [hotstuff proto] Adding command 4d93be036c to storage
-2021-01-20 10:38:14.376227 [hotstuff proto] Adding command 42f0c08faf to storage
-2021-01-20 10:38:14.376824 [hotstuff proto] Adding command 982258dda3 to storage
-2021-01-20 10:38:14.376871 [hotstuff proto] Adding command 51335e1808 to storage
-2021-01-20 10:38:14.377640 [hotstuff proto] Proposed block size : 3
-2021-01-20 10:38:14.377800 [hotstuff proto] got <proposal rid=0 blk=20b18a460e>
-2021-01-20 10:38:14.377827 [hotstuff proto] Passed acceptable fairness check!
-2021-01-20 10:38:14.377889 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
-2021-01-20 10:38:14.377932 [hotstuff proto] Extracting commands!
-2021-01-20 10:38:14.377951 [hotstuff proto] The size before inserting into vote is: 3
-2021-01-20 10:38:14.378147 [hotstuff proto] Extracting commands!
-2021-01-20 10:38:14.378167 [hotstuff proto] The size while constructing vote is: 3
-2021-01-20 10:38:14.378188 [hotstuff proto] Inside do vote!
-2021-01-20 10:38:14.378206 [hotstuff proto] Extracting commands!
-2021-01-20 10:38:14.378222 [hotstuff proto] The size inside do_vote before pmaker is: 3
-2021-01-20 10:38:14.378244 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:43.149667 [net info] loaded configuration from hotstuff.conf
+2021-01-24 19:07:43.149853 [net info] loading extra configuration from ./hotstuff-sec3.conf
+2021-01-24 19:07:43.152971 [hotstuff proto] Proposed block size : 0
+2021-01-24 19:07:43.164013 [net info] starting all threads...
+2021-01-24 19:07:43.164346 [net info] listening to 10003
+2021-01-24 19:07:43.165781 [net info] accepted <Conn fd=40 addr=<NetAddr 127.0.0.1:59119> mode=passive>
+2021-01-24 19:07:43.172164 [net info] accepted <Conn fd=57 addr=<NetAddr 127.0.0.1:59123> mode=passive>
+2021-01-24 19:07:43.172484 [net info] accepted <Conn fd=118 addr=<NetAddr 127.0.0.1:59125> mode=passive>
+2021-01-24 19:07:43.182798 [net info] 6540a0fea6: setup connection <Conn fd=40 addr=<NetAddr 127.0.0.1:59119> mode=passive>
+2021-01-24 19:07:43.182855 [net info] 6540a0fea6: setup connection <Conn fd=57 addr=<NetAddr 127.0.0.1:59123> mode=passive>
+2021-01-24 19:07:43.183743 [net info] 6540a0fea6: setup connection <Conn fd=118 addr=<NetAddr 127.0.0.1:59125> mode=passive>
+2021-01-24 19:07:43.184361 [net info] starting all threads...
+2021-01-24 19:07:43.184750 [net info] listening to 20003
+2021-01-24 19:07:43.184967 [hotstuff info] ** starting the system with parameters **
+2021-01-24 19:07:43.184988 [hotstuff info] blk_size = 3
+2021-01-24 19:07:43.185003 [hotstuff info] conns = 0
+2021-01-24 19:07:43.185016 [hotstuff info] ** starting the event loop...
+2021-01-24 19:07:43.185213 [hotstuff proto] Pacemaker: stop rotation at 0
+2021-01-24 19:07:43.186113 [net info] created <Conn fd=134 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-24 19:07:43.186504 [net info] created <Conn fd=137 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-24 19:07:43.186997 [net info] created <Conn fd=140 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-24 19:07:43.187146 [net info] connected to remote <Conn fd=134 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-24 19:07:43.187180 [net info] connected to remote <Conn fd=137 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-24 19:07:43.187208 [net info] connected to remote <Conn fd=140 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-24 19:07:43.187349 [net info] established 6540a0fea6 <---> c261250345 (via <Conn fd=40 addr=<NetAddr 127.0.0.1:59119> mode=passive>)
+2021-01-24 19:07:43.187462 [net info] established 6540a0fea6 <---> 065b010aed (via <Conn fd=118 addr=<NetAddr 127.0.0.1:59125> mode=passive>)
+2021-01-24 19:07:43.187589 [net info] 6540a0fea6: lost connection <Conn fd=57 addr=<NetAddr 127.0.0.1:59123> mode=passive>
+2021-01-24 19:07:43.196234 [net info] 6540a0fea6: setup connection <Conn fd=134 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-24 19:07:43.196317 [net info] 6540a0fea6: setup connection <Conn fd=140 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-24 19:07:43.196372 [net info] 6540a0fea6: ping from <Conn fd=118 addr=<NetAddr 127.0.0.1:59125> mode=passive>
+2021-01-24 19:07:43.196406 [net info] 6540a0fea6: setup connection <Conn fd=137 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-24 19:07:43.196448 [net info] 6540a0fea6: ping from <Conn fd=40 addr=<NetAddr 127.0.0.1:59119> mode=passive>
+2021-01-24 19:07:43.197032 [net info] 6540a0fea6: lost connection <Conn fd=118 addr=<NetAddr 127.0.0.1:59125> mode=passive>
+2021-01-24 19:07:43.197067 [net info] ended 6540a0fea6 <-/-> 065b010aed (via <Conn fd=118 addr=<NetAddr 127.0.0.1:59125> mode=passive>)
+2021-01-24 19:07:43.197338 [net info] established 6540a0fea6 <---> 542865a568 (via <Conn fd=134 addr=<NetAddr 127.0.0.1:10000> mode=active>)
+2021-01-24 19:07:43.197374 [net info] 6540a0fea6: ping from <Conn fd=134 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-24 19:07:43.197632 [net info] established 6540a0fea6 <---> 065b010aed (via <Conn fd=140 addr=<NetAddr 127.0.0.1:10002> mode=active>)
+2021-01-24 19:07:43.197674 [net info] 6540a0fea6: lost connection <Conn fd=40 addr=<NetAddr 127.0.0.1:59119> mode=passive>
+2021-01-24 19:07:43.197699 [net info] ended 6540a0fea6 <-/-> c261250345 (via <Conn fd=40 addr=<NetAddr 127.0.0.1:59119> mode=passive>)
+2021-01-24 19:07:43.197860 [net info] 6540a0fea6: ping from <Conn fd=140 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-24 19:07:43.198020 [net info] established 6540a0fea6 <---> c261250345 (via <Conn fd=137 addr=<NetAddr 127.0.0.1:10001> mode=active>)
+2021-01-24 19:07:43.198119 [net info] 6540a0fea6: ping from <Conn fd=137 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-24 19:07:48.144001 [net info] accepted <Conn fd=40 addr=<NetAddr 127.0.0.1:59132> mode=passive>
+2021-01-24 19:07:48.170632 [hotstuff proto] Adding command af5570f5a1 to storage
+2021-01-24 19:07:48.171393 [hotstuff proto] Adding command 01acecb507 to storage
+2021-01-24 19:07:48.171455 [hotstuff proto] Adding command 2fcd151b82 to storage
+2021-01-24 19:07:48.171540 [hotstuff proto] Adding command 9ae4c9d086 to storage
+2021-01-24 19:07:48.171582 [hotstuff proto] Adding command 1b03ab083d to storage
+2021-01-24 19:07:48.171623 [hotstuff proto] Adding command 2be2196b9c to storage
+2021-01-24 19:07:48.171660 [hotstuff proto] Adding command 20aef0af2b to storage
+2021-01-24 19:07:48.171697 [hotstuff proto] Adding command 4e65285e65 to storage
+2021-01-24 19:07:48.171734 [hotstuff proto] Adding command 7b742c398b to storage
+2021-01-24 19:07:48.173071 [hotstuff proto] Adding command d8e0873e07 to storage
+2021-01-24 19:07:48.173126 [hotstuff proto] Adding command dd73a46975 to storage
+2021-01-24 19:07:48.173164 [hotstuff proto] Adding command f1d6ff0821 to storage
+2021-01-24 19:07:48.173199 [hotstuff proto] Adding command 930abd7018 to storage
+2021-01-24 19:07:48.173235 [hotstuff proto] Adding command 53dd18d822 to storage
+2021-01-24 19:07:48.173269 [hotstuff proto] Adding command ead27b1c86 to storage
+2021-01-24 19:07:48.173305 [hotstuff proto] Adding command 5f1ddbc2fb to storage
+2021-01-24 19:07:48.173341 [hotstuff proto] Adding command 48443c868f to storage
+2021-01-24 19:07:48.173382 [hotstuff proto] Adding command 9c8616c455 to storage
+2021-01-24 19:07:48.173417 [hotstuff proto] Adding command db182aa591 to storage
+2021-01-24 19:07:48.173452 [hotstuff proto] Adding command 1bcca6c039 to storage
+2021-01-24 19:07:48.173486 [hotstuff proto] Adding command f83bb221d5 to storage
+2021-01-24 19:07:48.173522 [hotstuff proto] Adding command a44c4438cf to storage
+2021-01-24 19:07:48.173558 [hotstuff proto] Adding command 2fadf4ab76 to storage
+2021-01-24 19:07:48.173595 [hotstuff proto] Adding command 3fbaba3c5b to storage
+2021-01-24 19:07:48.173632 [hotstuff proto] Adding command c63761c39f to storage
+2021-01-24 19:07:48.173668 [hotstuff proto] Adding command 9779c6fff1 to storage
+2021-01-24 19:07:48.173703 [hotstuff proto] Adding command 67e4f26e84 to storage
+2021-01-24 19:07:48.173738 [hotstuff proto] Adding command 5db43ae74c to storage
+2021-01-24 19:07:48.173773 [hotstuff proto] Adding command 31dba5fca7 to storage
+2021-01-24 19:07:48.173809 [hotstuff proto] Adding command 90d3cc4af3 to storage
+2021-01-24 19:07:48.173842 [hotstuff proto] Adding command 5eab1e29e4 to storage
+2021-01-24 19:07:48.173878 [hotstuff proto] Adding command 3786b5685d to storage
+2021-01-24 19:07:48.173914 [hotstuff proto] Adding command f976b84a67 to storage
+2021-01-24 19:07:48.173953 [hotstuff proto] Adding command c59a297409 to storage
+2021-01-24 19:07:48.173989 [hotstuff proto] Adding command c854c8f56f to storage
+2021-01-24 19:07:48.174022 [hotstuff proto] Adding command e1eb586829 to storage
+2021-01-24 19:07:48.174055 [hotstuff proto] Adding command 7c2f21ce5c to storage
+2021-01-24 19:07:48.174090 [hotstuff proto] Adding command bb2f4bcd51 to storage
+2021-01-24 19:07:48.174126 [hotstuff proto] Adding command 66ee151dbf to storage
+2021-01-24 19:07:48.174162 [hotstuff proto] Adding command 547c34decb to storage
+2021-01-24 19:07:48.174198 [hotstuff proto] Adding command 04164f6252 to storage
+2021-01-24 19:07:48.174234 [hotstuff proto] Adding command be84dc21f3 to storage
+2021-01-24 19:07:48.174270 [hotstuff proto] Adding command 25ab3aa916 to storage
+2021-01-24 19:07:48.174310 [hotstuff proto] Adding command 2544f2559d to storage
+2021-01-24 19:07:48.174346 [hotstuff proto] Adding command 0dd443f367 to storage
+2021-01-24 19:07:48.174409 [hotstuff proto] Adding command 7067b4ef8a to storage
+2021-01-24 19:07:48.174442 [hotstuff proto] Adding command 4d93be036c to storage
+2021-01-24 19:07:48.174474 [hotstuff proto] Adding command 42f0c08faf to storage
+2021-01-24 19:07:48.174507 [hotstuff proto] Adding command 982258dda3 to storage
+2021-01-24 19:07:48.174538 [hotstuff proto] Adding command 51335e1808 to storage
+2021-01-24 19:07:48.174577 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.174684 [hotstuff proto] got <proposal rid=0 blk=20b18a460e>
+2021-01-24 19:07:48.174705 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.174765 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
+2021-01-24 19:07:48.174959 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.174989 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.175005 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.175033 [hotstuff proto] Block hash is: 20b18a460e
+2021-01-24 19:07:48.175059 [hotstuff proto] Part cert is: 20b18a460e
+2021-01-24 19:07:48.175200 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.175219 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.175235 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.175250 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.175275 [hotstuff proto] The ts sent is: 1611533268171564
+2021-01-24 19:07:48.175291 [hotstuff proto] The ts sent is: 1611533268171602
+2021-01-24 19:07:48.175306 [hotstuff proto] The ts sent is: 1611533268171642
+2021-01-24 19:07:48.175322 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.175335 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.175350 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.175365 [hotstuff proto] Inside serialize, the ts sent is: 1611533268171564
+2021-01-24 19:07:48.175381 [hotstuff proto] Inside serialize, the ts sent is: 1611533268171602
+2021-01-24 19:07:48.175396 [hotstuff proto] Inside serialize, the ts sent is: 1611533268171642
+2021-01-24 19:07:48.177811 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.179509 [hotstuff proto] got <proposal rid=0 blk=d351e7b722>
+2021-01-24 19:07:48.179535 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.179605 [hotstuff proto] now state: <hotstuff hqc=20b18a460e hqc.height=1 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=2 tails=1>
+2021-01-24 19:07:48.179788 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.179811 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.179822 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.179837 [hotstuff proto] Block hash is: d351e7b722
+2021-01-24 19:07:48.179852 [hotstuff proto] Part cert is: d351e7b722
+2021-01-24 19:07:48.179936 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.179947 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.179957 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.179966 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.179976 [hotstuff proto] The ts sent is: 1611533268171680
+2021-01-24 19:07:48.179985 [hotstuff proto] The ts sent is: 1611533268171717
+2021-01-24 19:07:48.179994 [hotstuff proto] The ts sent is: 1611533268173020
+2021-01-24 19:07:48.180003 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.180012 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.180021 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.180030 [hotstuff proto] Inside serialize, the ts sent is: 1611533268171680
+2021-01-24 19:07:48.180039 [hotstuff proto] Inside serialize, the ts sent is: 1611533268171717
+2021-01-24 19:07:48.180048 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173020
+2021-01-24 19:07:48.182571 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.183322 [hotstuff proto] got <proposal rid=0 blk=dcab43131c>
+2021-01-24 19:07:48.183352 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.183423 [hotstuff proto] now state: <hotstuff hqc=d351e7b722 hqc.height=2 b_lock=20b18a460e b_exec=6b7d92eaae vheight=3 tails=1>
+2021-01-24 19:07:48.183520 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.183536 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.183548 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.183565 [hotstuff proto] Block hash is: dcab43131c
+2021-01-24 19:07:48.183582 [hotstuff proto] Part cert is: dcab43131c
+2021-01-24 19:07:48.183669 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.183681 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.183691 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.183701 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.183713 [hotstuff proto] The ts sent is: 1611533268173107
+2021-01-24 19:07:48.183723 [hotstuff proto] The ts sent is: 1611533268173147
+2021-01-24 19:07:48.183734 [hotstuff proto] The ts sent is: 1611533268173182
+2021-01-24 19:07:48.183745 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.183755 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.183765 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.183775 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173107
+2021-01-24 19:07:48.183785 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173147
+2021-01-24 19:07:48.183795 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173182
+2021-01-24 19:07:48.186089 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.186837 [hotstuff proto] got <proposal rid=0 blk=94bf4d9efe>
+2021-01-24 19:07:48.186890 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.186978 [hotstuff proto] commit <block id=20b18a460e height=1 parent=6b7d92eaae qc_ref=6b7d92eaae>
+2021-01-24 19:07:48.187047 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=1 cmd=af5570f5a1 blk=20b18a460e>
+2021-01-24 19:07:48.187119 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=1 cmd=01acecb507 blk=20b18a460e>
+2021-01-24 19:07:48.187161 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=1 cmd=2fcd151b82 blk=20b18a460e>
+2021-01-24 19:07:48.187219 [hotstuff proto] now state: <hotstuff hqc=dcab43131c hqc.height=3 b_lock=d351e7b722 b_exec=20b18a460e vheight=4 tails=1>
+2021-01-24 19:07:48.187372 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.187393 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.187410 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.187438 [hotstuff proto] Block hash is: 94bf4d9efe
+2021-01-24 19:07:48.187467 [hotstuff proto] Part cert is: 94bf4d9efe
+2021-01-24 19:07:48.187606 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.187623 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.187641 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.187656 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.187672 [hotstuff proto] The ts sent is: 1611533268173219
+2021-01-24 19:07:48.187687 [hotstuff proto] The ts sent is: 1611533268173253
+2021-01-24 19:07:48.187702 [hotstuff proto] The ts sent is: 1611533268173289
+2021-01-24 19:07:48.187718 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.187733 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.187749 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.187764 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173219
+2021-01-24 19:07:48.187780 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173253
+2021-01-24 19:07:48.187796 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173289
+2021-01-24 19:07:48.190547 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.191575 [hotstuff proto] got <proposal rid=0 blk=6bcbbc8d75>
+2021-01-24 19:07:48.191601 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.191672 [hotstuff proto] commit <block id=d351e7b722 height=2 parent=20b18a460e qc_ref=20b18a460e>
+2021-01-24 19:07:48.191741 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=2 cmd=9ae4c9d086 blk=d351e7b722>
+2021-01-24 19:07:48.191786 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=2 cmd=1b03ab083d blk=d351e7b722>
+2021-01-24 19:07:48.191829 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=2 cmd=2be2196b9c blk=d351e7b722>
+2021-01-24 19:07:48.191885 [hotstuff proto] now state: <hotstuff hqc=94bf4d9efe hqc.height=4 b_lock=dcab43131c b_exec=d351e7b722 vheight=5 tails=1>
+2021-01-24 19:07:48.192043 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.192066 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.192082 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.192110 [hotstuff proto] Block hash is: 6bcbbc8d75
+2021-01-24 19:07:48.192137 [hotstuff proto] Part cert is: 6bcbbc8d75
+2021-01-24 19:07:48.192281 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.192299 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.192315 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.192329 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.192345 [hotstuff proto] The ts sent is: 1611533268173324
+2021-01-24 19:07:48.192360 [hotstuff proto] The ts sent is: 1611533268173360
+2021-01-24 19:07:48.192375 [hotstuff proto] The ts sent is: 1611533268173401
+2021-01-24 19:07:48.192390 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.192407 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.192422 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.192438 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173324
+2021-01-24 19:07:48.192453 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173360
+2021-01-24 19:07:48.192466 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173401
+2021-01-24 19:07:48.195164 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.196402 [hotstuff proto] got <proposal rid=0 blk=485085f1b2>
+2021-01-24 19:07:48.196435 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.196563 [hotstuff proto] commit <block id=dcab43131c height=3 parent=d351e7b722 qc_ref=d351e7b722>
+2021-01-24 19:07:48.196616 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=3 cmd=20aef0af2b blk=dcab43131c>
+2021-01-24 19:07:48.196713 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=3 cmd=4e65285e65 blk=dcab43131c>
+2021-01-24 19:07:48.196759 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=3 cmd=7b742c398b blk=dcab43131c>
+2021-01-24 19:07:48.196817 [hotstuff proto] now state: <hotstuff hqc=6bcbbc8d75 hqc.height=5 b_lock=94bf4d9efe b_exec=dcab43131c vheight=6 tails=1>
+2021-01-24 19:07:48.197181 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.197213 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.197328 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.197364 [hotstuff proto] Block hash is: 485085f1b2
+2021-01-24 19:07:48.197392 [hotstuff proto] Part cert is: 485085f1b2
+2021-01-24 19:07:48.197544 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.197561 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.197576 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.197591 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.197674 [hotstuff proto] The ts sent is: 1611533268173435
+2021-01-24 19:07:48.197691 [hotstuff proto] The ts sent is: 1611533268173470
+2021-01-24 19:07:48.197706 [hotstuff proto] The ts sent is: 1611533268173506
+2021-01-24 19:07:48.197721 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.197736 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.197751 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.197766 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173435
+2021-01-24 19:07:48.197781 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173470
+2021-01-24 19:07:48.197840 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173506
+2021-01-24 19:07:48.200161 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.200883 [hotstuff proto] got <proposal rid=0 blk=ea5271543c>
+2021-01-24 19:07:48.200928 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.201002 [hotstuff proto] commit <block id=94bf4d9efe height=4 parent=dcab43131c qc_ref=dcab43131c>
+2021-01-24 19:07:48.201045 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=4 cmd=d8e0873e07 blk=94bf4d9efe>
+2021-01-24 19:07:48.201093 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=4 cmd=dd73a46975 blk=94bf4d9efe>
+2021-01-24 19:07:48.201135 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=4 cmd=f1d6ff0821 blk=94bf4d9efe>
+2021-01-24 19:07:48.201208 [hotstuff proto] now state: <hotstuff hqc=485085f1b2 hqc.height=6 b_lock=6bcbbc8d75 b_exec=94bf4d9efe vheight=7 tails=1>
+2021-01-24 19:07:48.201368 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.201396 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.201415 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.201444 [hotstuff proto] Block hash is: ea5271543c
+2021-01-24 19:07:48.201473 [hotstuff proto] Part cert is: ea5271543c
+2021-01-24 19:07:48.201620 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.201642 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.201661 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.201678 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.201697 [hotstuff proto] The ts sent is: 1611533268173542
+2021-01-24 19:07:48.201714 [hotstuff proto] The ts sent is: 1611533268173578
+2021-01-24 19:07:48.201731 [hotstuff proto] The ts sent is: 1611533268173614
+2021-01-24 19:07:48.201748 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.201765 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.201782 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.201799 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173542
+2021-01-24 19:07:48.201817 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173578
+2021-01-24 19:07:48.201834 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173614
+2021-01-24 19:07:48.207705 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.209209 [hotstuff proto] got <proposal rid=0 blk=253e572d6e>
+2021-01-24 19:07:48.209236 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.209305 [hotstuff proto] commit <block id=6bcbbc8d75 height=5 parent=94bf4d9efe qc_ref=94bf4d9efe>
+2021-01-24 19:07:48.209347 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=5 cmd=930abd7018 blk=6bcbbc8d75>
+2021-01-24 19:07:48.209391 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=5 cmd=53dd18d822 blk=6bcbbc8d75>
+2021-01-24 19:07:48.209437 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=5 cmd=ead27b1c86 blk=6bcbbc8d75>
+2021-01-24 19:07:48.209493 [hotstuff proto] now state: <hotstuff hqc=ea5271543c hqc.height=7 b_lock=485085f1b2 b_exec=6bcbbc8d75 vheight=8 tails=1>
+2021-01-24 19:07:48.209642 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.209662 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.209678 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.209704 [hotstuff proto] Block hash is: 253e572d6e
+2021-01-24 19:07:48.209732 [hotstuff proto] Part cert is: 253e572d6e
+2021-01-24 19:07:48.209881 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.209922 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.209946 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.209961 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.209979 [hotstuff proto] The ts sent is: 1611533268173650
+2021-01-24 19:07:48.209995 [hotstuff proto] The ts sent is: 1611533268173687
+2021-01-24 19:07:48.210011 [hotstuff proto] The ts sent is: 1611533268173721
+2021-01-24 19:07:48.210028 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.210070 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.210120 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.210139 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173650
+2021-01-24 19:07:48.210154 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173687
+2021-01-24 19:07:48.210170 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173721
+2021-01-24 19:07:48.213540 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.214390 [hotstuff proto] got <proposal rid=0 blk=63ce35b482>
+2021-01-24 19:07:48.214424 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.214502 [hotstuff proto] commit <block id=485085f1b2 height=6 parent=6bcbbc8d75 qc_ref=6bcbbc8d75>
+2021-01-24 19:07:48.214548 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=6 cmd=5f1ddbc2fb blk=485085f1b2>
+2021-01-24 19:07:48.214630 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=6 cmd=48443c868f blk=485085f1b2>
+2021-01-24 19:07:48.214676 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=6 cmd=9c8616c455 blk=485085f1b2>
+2021-01-24 19:07:48.214738 [hotstuff proto] now state: <hotstuff hqc=253e572d6e hqc.height=8 b_lock=ea5271543c b_exec=485085f1b2 vheight=9 tails=1>
+2021-01-24 19:07:48.214898 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.214924 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.214943 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.214973 [hotstuff proto] Block hash is: 63ce35b482
+2021-01-24 19:07:48.215003 [hotstuff proto] Part cert is: 63ce35b482
+2021-01-24 19:07:48.215208 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.215234 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.215254 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.215306 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.215337 [hotstuff proto] The ts sent is: 1611533268173758
+2021-01-24 19:07:48.215361 [hotstuff proto] The ts sent is: 1611533268173793
+2021-01-24 19:07:48.215407 [hotstuff proto] The ts sent is: 1611533268173828
+2021-01-24 19:07:48.215436 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.215453 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.215470 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.215487 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173758
+2021-01-24 19:07:48.215503 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173793
+2021-01-24 19:07:48.215520 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173828
+2021-01-24 19:07:48.218193 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.218879 [hotstuff proto] got <proposal rid=0 blk=ce1bb1b71a>
+2021-01-24 19:07:48.218911 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.219014 [hotstuff proto] commit <block id=ea5271543c height=7 parent=485085f1b2 qc_ref=485085f1b2>
+2021-01-24 19:07:48.219200 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=7 cmd=db182aa591 blk=ea5271543c>
+2021-01-24 19:07:48.219249 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=7 cmd=1bcca6c039 blk=ea5271543c>
+2021-01-24 19:07:48.219287 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=7 cmd=f83bb221d5 blk=ea5271543c>
+2021-01-24 19:07:48.219339 [hotstuff proto] now state: <hotstuff hqc=63ce35b482 hqc.height=9 b_lock=253e572d6e b_exec=ea5271543c vheight=10 tails=1>
+2021-01-24 19:07:48.219501 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.219525 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.219543 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.219573 [hotstuff proto] Block hash is: ce1bb1b71a
+2021-01-24 19:07:48.219601 [hotstuff proto] Part cert is: ce1bb1b71a
+2021-01-24 19:07:48.219744 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.219765 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.219781 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.219795 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.219845 [hotstuff proto] The ts sent is: 1611533268173863
+2021-01-24 19:07:48.219862 [hotstuff proto] The ts sent is: 1611533268173898
+2021-01-24 19:07:48.219877 [hotstuff proto] The ts sent is: 1611533268173934
+2021-01-24 19:07:48.219893 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.219909 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.219925 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.219943 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173863
+2021-01-24 19:07:48.219960 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173898
+2021-01-24 19:07:48.219977 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173934
+2021-01-24 19:07:48.223842 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.224644 [hotstuff proto] got <proposal rid=0 blk=51b777e441>
+2021-01-24 19:07:48.224678 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.224748 [hotstuff proto] commit <block id=253e572d6e height=8 parent=ea5271543c qc_ref=ea5271543c>
+2021-01-24 19:07:48.224789 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=8 cmd=a44c4438cf blk=253e572d6e>
+2021-01-24 19:07:48.224835 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=8 cmd=2fadf4ab76 blk=253e572d6e>
+2021-01-24 19:07:48.224878 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=8 cmd=3fbaba3c5b blk=253e572d6e>
+2021-01-24 19:07:48.224936 [hotstuff proto] now state: <hotstuff hqc=ce1bb1b71a hqc.height=10 b_lock=63ce35b482 b_exec=253e572d6e vheight=11 tails=1>
+2021-01-24 19:07:48.225094 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.225117 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.225133 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.225161 [hotstuff proto] Block hash is: 51b777e441
+2021-01-24 19:07:48.225187 [hotstuff proto] Part cert is: 51b777e441
+2021-01-24 19:07:48.225322 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.225340 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.225354 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.225370 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.225387 [hotstuff proto] The ts sent is: 1611533268173973
+2021-01-24 19:07:48.225402 [hotstuff proto] The ts sent is: 1611533268174007
+2021-01-24 19:07:48.225417 [hotstuff proto] The ts sent is: 1611533268174040
+2021-01-24 19:07:48.225432 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.225447 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.225462 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.225478 [hotstuff proto] Inside serialize, the ts sent is: 1611533268173973
+2021-01-24 19:07:48.225493 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174007
+2021-01-24 19:07:48.225508 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174040
+2021-01-24 19:07:48.229570 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.230615 [hotstuff proto] got <proposal rid=0 blk=6c8422f38a>
+2021-01-24 19:07:48.230667 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.230751 [hotstuff proto] commit <block id=63ce35b482 height=9 parent=253e572d6e qc_ref=253e572d6e>
+2021-01-24 19:07:48.230795 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=9 cmd=c63761c39f blk=63ce35b482>
+2021-01-24 19:07:48.230842 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=9 cmd=9779c6fff1 blk=63ce35b482>
+2021-01-24 19:07:48.230882 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=9 cmd=67e4f26e84 blk=63ce35b482>
+2021-01-24 19:07:48.230933 [hotstuff proto] now state: <hotstuff hqc=51b777e441 hqc.height=11 b_lock=ce1bb1b71a b_exec=63ce35b482 vheight=12 tails=1>
+2021-01-24 19:07:48.231086 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.231109 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.231123 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.231150 [hotstuff proto] Block hash is: 6c8422f38a
+2021-01-24 19:07:48.231209 [hotstuff proto] Part cert is: 6c8422f38a
+2021-01-24 19:07:48.231344 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.231365 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.231383 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.231399 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.231416 [hotstuff proto] The ts sent is: 1611533268174075
+2021-01-24 19:07:48.231433 [hotstuff proto] The ts sent is: 1611533268174110
+2021-01-24 19:07:48.231449 [hotstuff proto] The ts sent is: 1611533268174146
+2021-01-24 19:07:48.231464 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.231480 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.231496 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.231512 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174075
+2021-01-24 19:07:48.231527 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174110
+2021-01-24 19:07:48.231543 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174146
+2021-01-24 19:07:48.233994 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.234814 [hotstuff proto] got <proposal rid=0 blk=376f8494ac>
+2021-01-24 19:07:48.234844 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.234934 [hotstuff proto] commit <block id=ce1bb1b71a height=10 parent=63ce35b482 qc_ref=63ce35b482>
+2021-01-24 19:07:48.235004 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=10 cmd=5db43ae74c blk=ce1bb1b71a>
+2021-01-24 19:07:48.235048 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=10 cmd=31dba5fca7 blk=ce1bb1b71a>
+2021-01-24 19:07:48.235087 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=10 cmd=90d3cc4af3 blk=ce1bb1b71a>
+2021-01-24 19:07:48.235144 [hotstuff proto] now state: <hotstuff hqc=6c8422f38a hqc.height=12 b_lock=51b777e441 b_exec=ce1bb1b71a vheight=13 tails=1>
+2021-01-24 19:07:48.235384 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.235413 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.235430 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.235457 [hotstuff proto] Block hash is: 376f8494ac
+2021-01-24 19:07:48.235482 [hotstuff proto] Part cert is: 376f8494ac
+2021-01-24 19:07:48.235621 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.235641 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.235683 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.235708 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.235729 [hotstuff proto] The ts sent is: 1611533268174182
+2021-01-24 19:07:48.235747 [hotstuff proto] The ts sent is: 1611533268174219
+2021-01-24 19:07:48.235765 [hotstuff proto] The ts sent is: 1611533268174255
+2021-01-24 19:07:48.235783 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.235802 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.235820 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.235837 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174182
+2021-01-24 19:07:48.235854 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174219
+2021-01-24 19:07:48.235872 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174255
+2021-01-24 19:07:48.239928 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.241964 [hotstuff proto] got <proposal rid=0 blk=ff8a5db608>
+2021-01-24 19:07:48.241992 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.242060 [hotstuff proto] commit <block id=51b777e441 height=11 parent=ce1bb1b71a qc_ref=ce1bb1b71a>
+2021-01-24 19:07:48.242093 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=11 cmd=5eab1e29e4 blk=51b777e441>
+2021-01-24 19:07:48.242131 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=11 cmd=3786b5685d blk=51b777e441>
+2021-01-24 19:07:48.242166 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=11 cmd=f976b84a67 blk=51b777e441>
+2021-01-24 19:07:48.242218 [hotstuff proto] now state: <hotstuff hqc=376f8494ac hqc.height=13 b_lock=6c8422f38a b_exec=51b777e441 vheight=14 tails=1>
+2021-01-24 19:07:48.242311 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.242326 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.242335 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.242351 [hotstuff proto] Block hash is: ff8a5db608
+2021-01-24 19:07:48.242365 [hotstuff proto] Part cert is: ff8a5db608
+2021-01-24 19:07:48.242655 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.242703 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.242723 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.242739 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.242756 [hotstuff proto] The ts sent is: 1611533268174291
+2021-01-24 19:07:48.242772 [hotstuff proto] The ts sent is: 1611533268174330
+2021-01-24 19:07:48.242789 [hotstuff proto] The ts sent is: 1611533268174392
+2021-01-24 19:07:48.242804 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.242819 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.242834 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.242849 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174291
+2021-01-24 19:07:48.242864 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174330
+2021-01-24 19:07:48.242881 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174392
+2021-01-24 19:07:48.245742 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.246459 [hotstuff proto] got <proposal rid=0 blk=a053cce066>
+2021-01-24 19:07:48.246497 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.246568 [hotstuff proto] commit <block id=6c8422f38a height=12 parent=51b777e441 qc_ref=51b777e441>
+2021-01-24 19:07:48.246615 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=12 cmd=c59a297409 blk=6c8422f38a>
+2021-01-24 19:07:48.246666 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=12 cmd=c854c8f56f blk=6c8422f38a>
+2021-01-24 19:07:48.246708 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=12 cmd=e1eb586829 blk=6c8422f38a>
+2021-01-24 19:07:48.246839 [hotstuff proto] now state: <hotstuff hqc=ff8a5db608 hqc.height=14 b_lock=376f8494ac b_exec=6c8422f38a vheight=15 tails=1>
+2021-01-24 19:07:48.247041 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.247065 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.247082 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.247109 [hotstuff proto] Block hash is: a053cce066
+2021-01-24 19:07:48.247137 [hotstuff proto] Part cert is: a053cce066
+2021-01-24 19:07:48.247278 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.247294 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.247308 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.247324 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.247341 [hotstuff proto] The ts sent is: 1611533268174426
+2021-01-24 19:07:48.247369 [hotstuff proto] The ts sent is: 1611533268174457
+2021-01-24 19:07:48.247384 [hotstuff proto] The ts sent is: 1611533268174488
+2021-01-24 19:07:48.247398 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.247416 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.247432 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.247450 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174426
+2021-01-24 19:07:48.247468 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174457
+2021-01-24 19:07:48.247484 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174488
+2021-01-24 19:07:48.250476 [hotstuff proto] Proposed block size : 3
+2021-01-24 19:07:48.251203 [hotstuff proto] got <proposal rid=0 blk=b358e4eb2c>
+2021-01-24 19:07:48.251233 [hotstuff proto] Passed acceptable fairness check!
+2021-01-24 19:07:48.251301 [hotstuff proto] commit <block id=376f8494ac height=13 parent=6c8422f38a qc_ref=6c8422f38a>
+2021-01-24 19:07:48.251369 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=13 cmd=7c2f21ce5c blk=376f8494ac>
+2021-01-24 19:07:48.251411 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=13 cmd=bb2f4bcd51 blk=376f8494ac>
+2021-01-24 19:07:48.251478 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=13 cmd=66ee151dbf blk=376f8494ac>
+2021-01-24 19:07:48.251564 [hotstuff proto] now state: <hotstuff hqc=a053cce066 hqc.height=15 b_lock=ff8a5db608 b_exec=376f8494ac vheight=16 tails=1>
+2021-01-24 19:07:48.251762 [hotstuff proto] Inside do vote!
+2021-01-24 19:07:48.251791 [hotstuff proto] Replica id is: 3
+2021-01-24 19:07:48.251809 [hotstuff proto] Replica id test is: 3
+2021-01-24 19:07:48.251838 [hotstuff proto] Block hash is: b358e4eb2c
+2021-01-24 19:07:48.251866 [hotstuff proto] Part cert is: b358e4eb2c
+2021-01-24 19:07:48.252004 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.252027 [hotstuff proto] The size while constructing vote is: 3
+2021-01-24 19:07:48.252045 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.252060 [hotstuff proto] The size inside do_vote  after pmakeris: 3
+2021-01-24 19:07:48.252078 [hotstuff proto] The ts sent is: 1611533268174522
+2021-01-24 19:07:48.252299 [hotstuff proto] The ts sent is: 1611533268174553
+2021-01-24 19:07:48.252315 [hotstuff proto] The ts sent is: 1611533268174553
+2021-01-24 19:07:48.252331 [hotstuff proto] Serializing vote at replica starting!
+2021-01-24 19:07:48.252346 [hotstuff proto] Extracting commands!
+2021-01-24 19:07:48.252363 [hotstuff proto] The size before serializing is: 3
+2021-01-24 19:07:48.252380 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174522
+2021-01-24 19:07:48.252396 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174553
+2021-01-24 19:07:48.252413 [hotstuff proto] Inside serialize, the ts sent is: 1611533268174553
+2021-01-24 19:07:53.151698 [hotstuff info] ===== begin stats =====
+2021-01-24 19:07:53.151742 [hotstuff info] -------- queues -------
+2021-01-24 19:07:53.151765 [hotstuff info] blk_fetch_waiting: 0
+2021-01-24 19:07:53.151788 [hotstuff info] blk_delivery_waiting: 0
+2021-01-24 19:07:53.151811 [hotstuff info] decision_waiting: 11
+2021-01-24 19:07:53.151832 [hotstuff info] -------- misc ---------
+2021-01-24 19:07:53.151852 [hotstuff info] fetched: 0
+2021-01-24 19:07:53.151873 [hotstuff info] delivered: 16
+2021-01-24 19:07:53.151924 [hotstuff info] cmd_cache: 0
+2021-01-24 19:07:53.151949 [hotstuff info] blk_cache: 17
+2021-01-24 19:07:53.151972 [hotstuff info] ------ misc (10s) -----
+2021-01-24 19:07:53.151993 [hotstuff info] fetched: 0
+2021-01-24 19:07:53.152013 [hotstuff info] delivered: 16
+2021-01-24 19:07:53.152033 [hotstuff info] decided: 39
+2021-01-24 19:07:53.152051 [hotstuff info] gened: 0
+2021-01-24 19:07:53.152084 [hotstuff info] avg. parent_size: 1.000
+2021-01-24 19:07:53.152109 [hotstuff info] delivery time: 0.001 avg, 0.000 min, 0.002 max
+2021-01-24 19:07:53.152131 [hotstuff info] --- replica msg. (10s) ---
+2021-01-24 19:07:53.152292 [hotstuff info] 542865a568: 19(4077), 19(5869), 0
+2021-01-24 19:07:53.152376 [hotstuff info] c261250345: 3(13), 3(13), 0
+2021-01-24 19:07:53.152457 [hotstuff info] 065b010aed: 3(13), 3(13), 0
+2021-01-24 19:07:53.152482 [hotstuff info] sent: 25
+2021-01-24 19:07:53.152498 [hotstuff info] recv: 25
+2021-01-24 19:07:53.152517 [hotstuff info] --- replica msg. total ---
+2021-01-24 19:07:53.152533 [hotstuff info] sent: 25
+2021-01-24 19:07:53.152550 [hotstuff info] recv: 25
+2021-01-24 19:07:53.152567 [hotstuff info] ====== end stats ======
+2021-01-24 19:07:53.152583 [hotstuff info] --- client msg. (10s) ---
+2021-01-24 19:07:53.152608 [hotstuff info] <NetAddr 127.0.0.1:59132>: 39(2925), 50(400)
+2021-01-24 19:07:53.152624 [hotstuff info] --- end client msg. ---
+2021-01-24 19:07:53.152641 [hotstuff info] --- writing command_timestamp_storage into a file. ---
