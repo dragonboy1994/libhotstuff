@@ -41,7 +41,8 @@ HotStuffCore::HotStuffCore(ReplicaID id,
         vote_disabled(false),
         id(id),
         storage(new EntityStorage()),
-        command_timestamp_storage(new CommandTimestampStorage()) {
+        command_timestamp_storage(new CommandTimestampStorage()), 
+        orderedlist_storage(new OrderedListStorage()) {
     storage->add_blk(b0);
 }
 
@@ -178,6 +179,12 @@ block_t HotStuffCore::on_propose(const std::vector<uint256_t> &cmds,
     if (parents.empty())
         throw std::runtime_error("empty parents");
     for (const auto &_: parents) tails.erase(_);
+
+    if (parents[0]->get_hash() != b0->get_hash()){
+        orderedlist_t self_orderedlist = command_timestamp_storage->get_orderedlist(parents[0]->get_hash());
+        orderedlist_storage->add_ordered_list(parents[0]->get_hash(), *self_orderedlist);
+    }
+
     /* create the new block */
     block_t bnew = storage->add_blk(
         new Block(parents, cmds,

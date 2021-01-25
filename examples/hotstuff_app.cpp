@@ -23,6 +23,7 @@
 #include <unistd.h>
 #include <signal.h>
 #include <fstream>
+#include <boost/lexical_cast.hpp>
 
 #include "salticidae/stream.h"
 #include "salticidae/util.h"
@@ -418,7 +419,30 @@ void HotStuffApp::print_stat() const {
     }
     HOTSTUFF_LOG_INFO("--- end client msg. ---");
 
-    
+    // HOTSTUFF_LOG_INFO("--- writing orderedlist_storage into a file. ---");
+    // if(get_id() == 0) {
+    //     std::vector<uint256_t> vec = orderedlist_storage->get_all_block_hashes();
+    //     for (auto hash : vec){
+    //         HOTSTUFF_LOG_PROTO("block hash is: %s", get_hex10(hash).c_str());
+    //     }
+    //     for (auto cmd : orderedlist_storage->get_cmds_for_first_one(vec[3])) {
+    //         HOTSTUFF_LOG_PROTO("First - cmd hash is: %s", get_hex10(cmd).c_str());
+    //     }
+    //     for (auto ts : orderedlist_storage->get_timestamps_for_first_one(vec[3]))
+    //     {
+    //         HOTSTUFF_LOG_PROTO("First -ts  is: %s", boost::lexical_cast<std::string>(ts).c_str());
+    //     }
+    //     for (auto cmd : orderedlist_storage->get_cmds_for_second_one(vec[3]))
+    //     {
+    //         HOTSTUFF_LOG_PROTO("Second- cmd hash is: %s", get_hex10(cmd).c_str());
+    //     }
+    //     for (auto ts : orderedlist_storage->get_timestamps_for_second_one(vec[3]))
+    //     {
+    //         HOTSTUFF_LOG_PROTO("Second- ts  is: %s", boost::lexical_cast<std::string>(ts).c_str());
+    //     }
+    // }
+
+
     HOTSTUFF_LOG_INFO("--- writing command_timestamp_storage into a file. ---");
     std::ofstream outFile("command_timestamp_storage" + std::to_string(get_id()) + ".txt");
     std::vector<uint256_t> cmd_hashes = command_timestamp_storage->get_all_cmd_hashes();
@@ -428,6 +452,7 @@ void HotStuffApp::print_stat() const {
         outFile << get_hex10(cmd_hashes[i]).c_str() << " " << timestamps[i] << "\n"
                 << std::endl;
     }
+    HOTSTUFF_LOG_INFO("--- writing done. ---");
     outFile.close();
     HOTSTUFF_LOG_INFO("--- writing done. ---");
     
