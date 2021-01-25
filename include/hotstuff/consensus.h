@@ -73,6 +73,7 @@ class HotStuffCore {
     public:
     BoxObj<EntityStorage> storage;
     BoxObj<CommandTimestampStorage> command_timestamp_storage;
+    BoxObj<OrderedListStorage> orderedlist_storage;
 
     HotStuffCore(ReplicaID id, privkey_bt &&priv_key);
     virtual ~HotStuffCore() {
@@ -261,13 +262,13 @@ struct Vote : public Serializable
 
     void serialize(DataStream &s) const override
     {
-        HOTSTUFF_LOG_PROTO("Serializing vote at replica starting!");
-        std::vector<uint256_t> test_cmds = replica_preferred_orderedlist->extract_cmds();
-        HOTSTUFF_LOG_PROTO("The size before serializing is: %lu", test_cmds.size());
-        for (auto &ts : replica_preferred_orderedlist->extract_timestamps())
-        {
-            HOTSTUFF_LOG_PROTO("Inside serialize, the ts sent is: %s", boost::lexical_cast<std::string>(ts).c_str());
-        }
+        //HOTSTUFF_LOG_PROTO("Serializing vote at replica starting!");
+        // std::vector<uint256_t> test_cmds = replica_preferred_orderedlist->extract_cmds();
+        //HOTSTUFF_LOG_PROTO("The size before serializing is: %lu", test_cmds.size());
+        // for (auto &ts : replica_preferred_orderedlist->extract_timestamps())
+        // {
+        //     HOTSTUFF_LOG_PROTO("Inside serialize, the ts sent is: %s", boost::lexical_cast<std::string>(ts).c_str());
+        // }
         s << voter << blk_hash  << *replica_preferred_orderedlist << *cert;
     }
 
@@ -275,19 +276,20 @@ struct Vote : public Serializable
     {
         assert(hsc != nullptr);
         s >> voter >> blk_hash;
-        HOTSTUFF_LOG_PROTO("Deserializing vote at leader!");
+        //HOTSTUFF_LOG_PROTO("Deserializing vote at leader!");
         OrderedList _test;
         _test.unserialize(s, hsc);
-        std::vector<uint256_t> _test_cmds = _test.extract_cmds();
-        for (auto &cmd : _test_cmds)
-        {
-            HOTSTUFF_LOG_PROTO("The command sent is: %s", get_hex10(cmd).c_str());
-        }
-        std::vector<uint64_t> _test_ts= _test.extract_timestamps();
-        for (auto &ts : _test_ts)
-        {
-            HOTSTUFF_LOG_PROTO("The ts sent is: %s", boost::lexical_cast<std::string>(ts).c_str());
-        }
+        //std::vector<uint256_t> _test_cmds = _test.extract_cmds();
+        // for (auto &cmd : _test_cmds)
+        // {
+        //     HOTSTUFF_LOG_PROTO("The command sent is: %s", get_hex10(cmd).c_str());
+        // }
+        // std::vector<uint64_t> _test_ts= _test.extract_timestamps();
+        // for (auto &ts : _test_ts)
+        // {
+        //     HOTSTUFF_LOG_PROTO("The ts sent is: %s", boost::lexical_cast<std::string>(ts).c_str());
+        // }
+        hsc->orderedlist_storage->add_ordered_list(blk_hash,_test);
         cert = hsc->parse_part_cert(s);
     }
 

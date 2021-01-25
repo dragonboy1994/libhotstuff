@@ -159,6 +159,14 @@ std::vector<uint64_t> CommandTimestampStorage::get_timestamps(const std::vector<
 */
 orderedlist_t CommandTimestampStorage::get_orderedlist(const uint256_t &blk_hash)
 {
+    // while (available_cmd_hashes.size() < 3)
+    // {
+    //     HOTSTUFF_LOG_PROTO("Waiting!");
+    //     HOTSTUFF_LOG_PROTO("Number of available cmd hashes is: %d", available_cmd_hashes.size());
+    // }
+    // HOTSTUFF_LOG_PROTO("Number of available cmd hashes is: %d", available_cmd_hashes.size());
+
+    
     std::vector<uint256_t> proposed_available_cmd_hashes;
     std::vector<uint64_t> proposed_available_timestamps;
     for (auto i = 0; i < 3; i++)
@@ -179,31 +187,47 @@ orderedlist_t CommandTimestampStorage::get_orderedlist(const uint256_t &blk_hash
                 proposed_available_timestamps))).first->second;
 }
 
-/*
-const OrderedList get_orderedlist() const
+
+
+void OrderedListStorage::add_ordered_list(const uint256_t block_hash, const OrderedList preferred_orderedlist)
 {
-    // should there be size requirements on how big the ordered list should be?
-    while (available_cmd_hashes.size() < 3)
+    auto it = ordered_list_cache.find(block_hash);
+    if (it == ordered_list_cache.end())
     {
-        HOTSTUFF_LOG_PROTO("Waiting!");
-        HOTSTUFF_LOG_PROTO("Number of available cmd hashes is: %d", available_cmd_hashes.size());
+        HOTSTUFF_LOG_PROTO("It is a new addition!");
+        std::vector<OrderedList> temp{preferred_orderedlist};
+        ordered_list_cache.insert(std::make_pair(block_hash, temp));
     }
-    HOTSTUFF_LOG_PROTO("Number of available cmd hashes is: %d", available_cmd_hashes.size());
-
-    std::vector<uint256_t> proposed_available_cmd_hashes;
-    std::vector<uint64_t> proposed_available_timestamps;
-    for (auto i = 0; i < 3; i++)
+    else
     {
-        proposed_available_cmd_hashes.push_back(available_cmd_hashes[i]);
-        proposed_available_timestamps.push_back(available_timestamps[i]);
-        //HOTSTUFF_LOG_PROTO("cmd is: %s", get_hex10(available_cmd_hashes[i]).c_str());
-        //HOTSTUFF_LOG_PROTO("cmd is: %s", boost::lexical_cast<std::string>(available_timestamps[i]).c_str());
+        HOTSTUFF_LOG_PROTO("It is a new addition to existing record!");
+        it->second.push_back(preferred_orderedlist);
+        // HOTSTUFF_LOG_PROTO("Size of cache for this index is %lu", it->second.size());
     }
-
-    // remove the above while not testing and update the following to send all available cmds and ts
-    OrderedList replica_proposed_orderedlist = OrderedList(proposed_available_cmd_hashes, proposed_available_timestamps);
-    HOTSTUFF_LOG_PROTO("Obtained Ordered list!");
-    return replica_proposed_orderedlist;
 }
-*/
+
+std::vector<uint256_t> OrderedListStorage::get_all_block_hashes() const {
+    std::vector<uint256_t> block_hashes;
+    for (auto kv : ordered_list_cache)
+    {
+        block_hashes.push_back(kv.first);
+    }
+    return block_hashes;
+}
+
+// std::vector<uint256_t> OrderedListStorage::get_cmds_for_first_one(const uint256_t block_hash) const {
+//     return ordered_list_cache.find(block_hash)->second[0].extract_cmds();
+// }
+// std::vector<uint64_t> OrderedListStorage::get_timestamps_for_first_one(const uint256_t block_hash) const
+// {
+//     return ordered_list_cache.find(block_hash)->second[0].extract_timestamps();
+// }
+// std::vector<uint256_t> OrderedListStorage::get_cmds_for_second_one(const uint256_t block_hash) const
+// {
+//     return ordered_list_cache.find(block_hash)->second[1].extract_cmds();
+// }
+// std::vector<uint64_t> OrderedListStorage::get_timestamps_for_second_one(const uint256_t block_hash) const
+// {
+//     return ordered_list_cache.find(block_hash)->second[1].extract_timestamps();
+// }
 }
