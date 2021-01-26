@@ -187,23 +187,47 @@ orderedlist_t CommandTimestampStorage::get_orderedlist(const uint256_t &blk_hash
                 proposed_available_timestamps))).first->second;
 }
 
-
-
-void OrderedListStorage::add_ordered_list(const uint256_t block_hash, const OrderedList preferred_orderedlist)
+void OrderedListStorage::add_ordered_list(const uint256_t block_hash, const OrderedList preferred_orderedlist, bool leader)
 {
+    HOTSTUFF_LOG_PROTO("The block hash is: %s", get_hex10(block_hash).c_str());
     auto it = ordered_list_cache.find(block_hash);
     if (it == ordered_list_cache.end())
     {
         HOTSTUFF_LOG_PROTO("It is a new addition!");
         std::vector<OrderedList> temp{preferred_orderedlist};
         ordered_list_cache.insert(std::make_pair(block_hash, temp));
+        if(leader ==true) {HOTSTUFF_LOG_PROTO("It is leader");}
     }
     else
     {
         HOTSTUFF_LOG_PROTO("It is a new addition to existing record!");
-        it->second.push_back(preferred_orderedlist);
+        if (leader == true) 
+        {
+            it->second.insert(it->second.begin(), preferred_orderedlist);
+            HOTSTUFF_LOG_PROTO("It is leader");
+        }
+        else 
+        {
+            // include orderedlist from n-f-1 other replicas; the other one will be from leader 
+            // so total is n-f orderedlists 
+            if (it->second.size() < 3)
+            {
+                it->second.push_back(preferred_orderedlist);
+                HOTSTUFF_LOG_PROTO("It is replica");
+            }
+            else 
+            {
+                HOTSTUFF_LOG_PROTO("Enough lists!");
+            }
+            
+        }
         // HOTSTUFF_LOG_PROTO("Size of cache for this index is %lu", it->second.size());
     }
+}
+
+std::vector<OrderedList> OrderedListStorage::get_set_of_orderedlists(const uint256_t block_hash) const
+{
+    return ordered_list_cache.find(block_hash)->second;
 }
 
 std::vector<uint256_t> OrderedListStorage::get_all_block_hashes() const {
@@ -215,19 +239,19 @@ std::vector<uint256_t> OrderedListStorage::get_all_block_hashes() const {
     return block_hashes;
 }
 
-// std::vector<uint256_t> OrderedListStorage::get_cmds_for_first_one(const uint256_t block_hash) const {
-//     return ordered_list_cache.find(block_hash)->second[0].extract_cmds();
-// }
-// std::vector<uint64_t> OrderedListStorage::get_timestamps_for_first_one(const uint256_t block_hash) const
-// {
-//     return ordered_list_cache.find(block_hash)->second[0].extract_timestamps();
-// }
-// std::vector<uint256_t> OrderedListStorage::get_cmds_for_second_one(const uint256_t block_hash) const
-// {
-//     return ordered_list_cache.find(block_hash)->second[1].extract_cmds();
-// }
-// std::vector<uint64_t> OrderedListStorage::get_timestamps_for_second_one(const uint256_t block_hash) const
-// {
-//     return ordered_list_cache.find(block_hash)->second[1].extract_timestamps();
-// }
+std::vector<uint256_t> OrderedListStorage::get_cmds_for_first_one(const uint256_t block_hash) const {
+    return ordered_list_cache.find(block_hash)->second[0].extract_cmds();
+}
+std::vector<uint64_t> OrderedListStorage::get_timestamps_for_first_one(const uint256_t block_hash) const
+{
+    return ordered_list_cache.find(block_hash)->second[0].extract_timestamps();
+}
+std::vector<uint256_t> OrderedListStorage::get_cmds_for_second_one(const uint256_t block_hash) const
+{
+    return ordered_list_cache.find(block_hash)->second[1].extract_cmds();
+}
+std::vector<uint64_t> OrderedListStorage::get_timestamps_for_second_one(const uint256_t block_hash) const
+{
+    return ordered_list_cache.find(block_hash)->second[1].extract_timestamps();
+}
 }

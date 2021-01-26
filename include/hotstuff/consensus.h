@@ -289,7 +289,7 @@ struct Vote : public Serializable
         // {
         //     HOTSTUFF_LOG_PROTO("The ts sent is: %s", boost::lexical_cast<std::string>(ts).c_str());
         // }
-        hsc->orderedlist_storage->add_ordered_list(blk_hash,_test);
+        hsc->orderedlist_storage->add_ordered_list(blk_hash,_test, false);
         cert = hsc->parse_part_cert(s);
     }
 

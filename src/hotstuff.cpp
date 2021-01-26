@@ -379,6 +379,12 @@ void HotStuffBase::do_broadcast_proposal(const Proposal &prop) {
     pn.multicast_msg(MsgPropose(prop), peers);
     //for (const auto &replica: peers)
     //    pn.send_msg(prop_msg, replica);
+
+    // leader's addition of orderedlist should be done here.
+    command_timestamp_storage->refresh_available_cmds(prop.blk->get_cmds());
+    orderedlist_t self_orderedlist = command_timestamp_storage->get_orderedlist(prop.blk->get_hash());
+    HOTSTUFF_LOG_PROTO("Leader is adding");
+    orderedlist_storage->add_ordered_list(prop.blk->get_hash(), *self_orderedlist, true);
 }
 
 void HotStuffBase::do_vote(ReplicaID last_proposer, const Vote &dummy_vote)
