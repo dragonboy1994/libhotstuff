@@ -379,6 +379,8 @@ void HotStuffBase::do_broadcast_proposal(const Proposal &prop) {
     pn.multicast_msg(MsgPropose(prop), peers);
     //for (const auto &replica: peers)
     //    pn.send_msg(prop_msg, replica);
+    
+    // leader's addition of orderedlist should be done here.
 }
 
 void HotStuffBase::do_vote(ReplicaID last_proposer, const Vote &dummy_vote)

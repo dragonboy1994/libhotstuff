@@ -308,13 +308,13 @@ class OrderedListStorage {
     //std::vector<std::vector<OrderedList>> ordered_list_cache;
 
 public:
-    void add_ordered_list(const uint256_t block_hash, const OrderedList orderedlist);
+    void add_ordered_list(const uint256_t block_hash, const OrderedList preferred_orderedlist, bool leader);
     std::vector<OrderedList> get_set_of_orderedlists(const uint256_t block_hash) const;
-    // std::vector<uint256_t> get_all_block_hashes() const;
-    // std::vector<uint256_t> get_cmds_for_first_one(const uint256_t block_hash) const;
-    // std::vector<uint64_t> get_timestamps_for_first_one(const uint256_t block_hash) const;
-    // std::vector<uint256_t> get_cmds_for_second_one(const uint256_t block_hash) const;
-    // std::vector<uint64_t> get_timestamps_for_second_one(const uint256_t block_hash) const;
+    std::vector<uint256_t> get_all_block_hashes() const;
+    std::vector<uint256_t> get_cmds_for_first_one(const uint256_t block_hash) const;
+    std::vector<uint64_t> get_timestamps_for_first_one(const uint256_t block_hash) const;
+    std::vector<uint256_t> get_cmds_for_second_one(const uint256_t block_hash) const;
+    std::vector<uint64_t> get_timestamps_for_second_one(const uint256_t block_hash) const;
 
 
 };

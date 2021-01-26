@@ -1,428 +1,479 @@
-2021-01-25 12:12:33.632014 [net info] loaded configuration from hotstuff.conf
-2021-01-25 12:12:33.632491 [net info] loading extra configuration from ./hotstuff-sec0.conf
-2021-01-25 12:12:33.636777 [hotstuff proto] Proposed block size : 0
-2021-01-25 12:12:33.646008 [net info] starting all threads...
-2021-01-25 12:12:33.646319 [net info] listening to 10000
-2021-01-25 12:12:33.652586 [net info] starting all threads...
-2021-01-25 12:12:33.656436 [net info] listening to 20000
-2021-01-25 12:12:33.657909 [hotstuff info] ** starting the system with parameters **
-2021-01-25 12:12:33.657937 [hotstuff info] blk_size = 3
-2021-01-25 12:12:33.657952 [hotstuff info] conns = 0
-2021-01-25 12:12:33.657967 [hotstuff info] ** starting the event loop...
-2021-01-25 12:12:33.658166 [hotstuff proto] Pacemaker: stop rotation at 0
-2021-01-25 12:12:33.659116 [net info] created <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-25 12:12:33.659592 [net info] created <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-25 12:12:33.660083 [net info] created <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-25 12:12:33.660409 [net info] accepted <Conn fd=134 addr=<NetAddr 127.0.0.1:50471> mode=passive>
-2021-01-25 12:12:33.660472 [net info] connected to remote <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-25 12:12:33.660502 [net info] connected to remote <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-25 12:12:33.660529 [net info] connected to remote <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-25 12:12:33.665823 [net info] accepted <Conn fd=137 addr=<NetAddr 127.0.0.1:50477> mode=passive>
-2021-01-25 12:12:33.676918 [net info] 542865a568: setup connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-25 12:12:33.677002 [net info] 542865a568: setup connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-25 12:12:33.677865 [net info] 542865a568: setup connection <Conn fd=134 addr=<NetAddr 127.0.0.1:50471> mode=passive>
-2021-01-25 12:12:33.680411 [net info] 542865a568: setup connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-25 12:12:33.681218 [net info] 542865a568: setup connection <Conn fd=137 addr=<NetAddr 127.0.0.1:50477> mode=passive>
-2021-01-25 12:12:33.681830 [net info] accepted <Conn fd=140 addr=<NetAddr 127.0.0.1:50480> mode=passive>
-2021-01-25 12:12:33.685324 [net info] established 542865a568 <---> 065b010aed (via <Conn fd=134 addr=<NetAddr 127.0.0.1:50471> mode=passive>)
-2021-01-25 12:12:33.685736 [net info] 542865a568: lost connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-25 12:12:33.685903 [net info] established 542865a568 <---> 6540a0fea6 (via <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>)
-2021-01-25 12:12:33.685943 [net info] 542865a568: ping from <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-25 12:12:33.686168 [net info] established 542865a568 <---> c261250345 (via <Conn fd=137 addr=<NetAddr 127.0.0.1:50477> mode=passive>)
-2021-01-25 12:12:33.686899 [net info] 542865a568: lost connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-25 12:12:33.686978 [net info] 542865a568: ping from <Conn fd=137 addr=<NetAddr 127.0.0.1:50477> mode=passive>
-2021-01-25 12:12:33.687994 [net info] 542865a568: setup connection <Conn fd=140 addr=<NetAddr 127.0.0.1:50480> mode=passive>
-2021-01-25 12:12:33.688043 [net info] 542865a568: ping from <Conn fd=134 addr=<NetAddr 127.0.0.1:50471> mode=passive>
-2021-01-25 12:12:33.693183 [net info] 542865a568: lost connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-25 12:12:33.693217 [net info] ended 542865a568 <-/-> 6540a0fea6 (via <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>)
-2021-01-25 12:12:33.693452 [net info] established 542865a568 <---> 6540a0fea6 (via <Conn fd=140 addr=<NetAddr 127.0.0.1:50480> mode=passive>)
-2021-01-25 12:12:33.694468 [net info] 542865a568: ping from <Conn fd=140 addr=<NetAddr 127.0.0.1:50480> mode=passive>
-2021-01-25 12:12:38.331182 [net info] accepted <Conn fd=119 addr=<NetAddr 127.0.0.1:50491> mode=passive>
-2021-01-25 12:12:38.407140 [hotstuff proto] Adding command af5570f5a1 to storage
-2021-01-25 12:12:38.407389 [hotstuff proto] Adding command 01acecb507 to storage
-2021-01-25 12:12:38.407438 [hotstuff proto] Adding command 2fcd151b82 to storage
-2021-01-25 12:12:38.407479 [hotstuff proto] Adding command 9ae4c9d086 to storage
-2021-01-25 12:12:38.407513 [hotstuff proto] Adding command 1b03ab083d to storage
-2021-01-25 12:12:38.407548 [hotstuff proto] Adding command 2be2196b9c to storage
-2021-01-25 12:12:38.407581 [hotstuff proto] Adding command 20aef0af2b to storage
-2021-01-25 12:12:38.407616 [hotstuff proto] Adding command 4e65285e65 to storage
-2021-01-25 12:12:38.407649 [hotstuff proto] Adding command 7b742c398b to storage
-2021-01-25 12:12:38.407682 [hotstuff proto] Adding command d8e0873e07 to storage
-2021-01-25 12:12:38.407712 [hotstuff proto] Adding command dd73a46975 to storage
-2021-01-25 12:12:38.407743 [hotstuff proto] Adding command f1d6ff0821 to storage
-2021-01-25 12:12:38.407773 [hotstuff proto] Adding command 930abd7018 to storage
-2021-01-25 12:12:38.407803 [hotstuff proto] Adding command 53dd18d822 to storage
-2021-01-25 12:12:38.407833 [hotstuff proto] Adding command ead27b1c86 to storage
-2021-01-25 12:12:38.407864 [hotstuff proto] Adding command 5f1ddbc2fb to storage
-2021-01-25 12:12:38.407894 [hotstuff proto] Adding command 48443c868f to storage
-2021-01-25 12:12:38.407927 [hotstuff proto] Adding command 9c8616c455 to storage
-2021-01-25 12:12:38.407959 [hotstuff proto] Adding command db182aa591 to storage
-2021-01-25 12:12:38.407990 [hotstuff proto] Adding command 1bcca6c039 to storage
-2021-01-25 12:12:38.408019 [hotstuff proto] Adding command f83bb221d5 to storage
-2021-01-25 12:12:38.408049 [hotstuff proto] Adding command a44c4438cf to storage
-2021-01-25 12:12:38.408079 [hotstuff proto] Adding command 2fadf4ab76 to storage
-2021-01-25 12:12:38.408109 [hotstuff proto] Adding command 3fbaba3c5b to storage
-2021-01-25 12:12:38.408143 [hotstuff proto] Adding command c63761c39f to storage
-2021-01-25 12:12:38.408175 [hotstuff proto] Adding command 9779c6fff1 to storage
-2021-01-25 12:12:38.408206 [hotstuff proto] Adding command 67e4f26e84 to storage
-2021-01-25 12:12:38.408237 [hotstuff proto] Adding command 5db43ae74c to storage
-2021-01-25 12:12:38.408267 [hotstuff proto] Adding command 31dba5fca7 to storage
-2021-01-25 12:12:38.408300 [hotstuff proto] Adding command 90d3cc4af3 to storage
-2021-01-25 12:12:38.408333 [hotstuff proto] Adding command 5eab1e29e4 to storage
-2021-01-25 12:12:38.408375 [hotstuff proto] Adding command 3786b5685d to storage
-2021-01-25 12:12:38.408407 [hotstuff proto] Adding command f976b84a67 to storage
-2021-01-25 12:12:38.408447 [hotstuff proto] Adding command c59a297409 to storage
-2021-01-25 12:12:38.408481 [hotstuff proto] Adding command c854c8f56f to storage
-2021-01-25 12:12:38.408512 [hotstuff proto] Adding command e1eb586829 to storage
-2021-01-25 12:12:38.408543 [hotstuff proto] Adding command 7c2f21ce5c to storage
-2021-01-25 12:12:38.408575 [hotstuff proto] Adding command bb2f4bcd51 to storage
-2021-01-25 12:12:38.408608 [hotstuff proto] Adding command 66ee151dbf to storage
-2021-01-25 12:12:38.408638 [hotstuff proto] Adding command 547c34decb to storage
-2021-01-25 12:12:38.408666 [hotstuff proto] Adding command 04164f6252 to storage
-2021-01-25 12:12:38.408695 [hotstuff proto] Adding command be84dc21f3 to storage
-2021-01-25 12:12:38.408724 [hotstuff proto] Adding command 25ab3aa916 to storage
-2021-01-25 12:12:38.408753 [hotstuff proto] Adding command 2544f2559d to storage
-2021-01-25 12:12:38.408784 [hotstuff proto] Adding command 0dd443f367 to storage
-2021-01-25 12:12:38.408814 [hotstuff proto] Adding command 7067b4ef8a to storage
-2021-01-25 12:12:38.408845 [hotstuff proto] Adding command 4d93be036c to storage
-2021-01-25 12:12:38.408873 [hotstuff proto] Adding command 42f0c08faf to storage
-2021-01-25 12:12:38.408904 [hotstuff proto] Adding command 982258dda3 to storage
-2021-01-25 12:12:38.408932 [hotstuff proto] Adding command 51335e1808 to storage
-2021-01-25 12:12:38.410218 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.410257 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.410335 [hotstuff proto] propose <block id=20b18a460e height=1 parent=6b7d92eaae qc_ref=6b7d92eaae>
-2021-01-25 12:12:38.410546 [hotstuff proto] got <vote rid=0 blk=20b18a460e>
-2021-01-25 12:12:38.410604 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
-2021-01-25 12:12:38.410657 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.428616 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.432909 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.433487 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.433700 [hotstuff proto] got <vote rid=1 blk=20b18a460e>
-2021-01-25 12:12:38.433767 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
-2021-01-25 12:12:38.433876 [hotstuff proto] got <vote rid=3 blk=20b18a460e>
-2021-01-25 12:12:38.433939 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
-2021-01-25 12:12:38.433976 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.434005 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.434028 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.434094 [hotstuff proto] propose <block id=d351e7b722 height=2 parent=20b18a460e qc_ref=20b18a460e>
-2021-01-25 12:12:38.434259 [hotstuff proto] got <vote rid=0 blk=d351e7b722>
-2021-01-25 12:12:38.434312 [hotstuff proto] now state: <hotstuff hqc=20b18a460e hqc.height=1 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=2 tails=1>
-2021-01-25 12:12:38.434359 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.434509 [hotstuff proto] got <vote rid=2 blk=20b18a460e>
-2021-01-25 12:12:38.434570 [hotstuff proto] now state: <hotstuff hqc=20b18a460e hqc.height=1 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=2 tails=1>
-2021-01-25 12:12:38.440217 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.440518 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.441235 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.441326 [hotstuff proto] got <vote rid=2 blk=d351e7b722>
-2021-01-25 12:12:38.441383 [hotstuff proto] now state: <hotstuff hqc=20b18a460e hqc.height=1 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=2 tails=1>
-2021-01-25 12:12:38.441448 [hotstuff proto] got <vote rid=3 blk=d351e7b722>
-2021-01-25 12:12:38.441502 [hotstuff proto] now state: <hotstuff hqc=20b18a460e hqc.height=1 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=2 tails=1>
-2021-01-25 12:12:38.441543 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.442117 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.442161 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.442234 [hotstuff proto] propose <block id=5a8489930d height=3 parent=d351e7b722 qc_ref=d351e7b722>
-2021-01-25 12:12:38.442688 [hotstuff proto] got <vote rid=0 blk=5a8489930d>
-2021-01-25 12:12:38.442758 [hotstuff proto] now state: <hotstuff hqc=d351e7b722 hqc.height=2 b_lock=20b18a460e b_exec=6b7d92eaae vheight=3 tails=1>
-2021-01-25 12:12:38.442863 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.443027 [hotstuff proto] got <vote rid=1 blk=d351e7b722>
-2021-01-25 12:12:38.443097 [hotstuff proto] now state: <hotstuff hqc=d351e7b722 hqc.height=2 b_lock=20b18a460e b_exec=6b7d92eaae vheight=3 tails=1>
-2021-01-25 12:12:38.459319 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.459692 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.460098 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.460298 [hotstuff proto] got <vote rid=1 blk=5a8489930d>
-2021-01-25 12:12:38.460371 [hotstuff proto] now state: <hotstuff hqc=d351e7b722 hqc.height=2 b_lock=20b18a460e b_exec=6b7d92eaae vheight=3 tails=1>
-2021-01-25 12:12:38.460471 [hotstuff proto] got <vote rid=2 blk=5a8489930d>
-2021-01-25 12:12:38.460526 [hotstuff proto] now state: <hotstuff hqc=d351e7b722 hqc.height=2 b_lock=20b18a460e b_exec=6b7d92eaae vheight=3 tails=1>
-2021-01-25 12:12:38.460777 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.460818 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.460847 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.460986 [hotstuff proto] commit <block id=20b18a460e height=1 parent=6b7d92eaae qc_ref=6b7d92eaae>
-2021-01-25 12:12:38.461037 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=1 cmd=af5570f5a1 blk=20b18a460e>
-2021-01-25 12:12:38.461087 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=1 cmd=01acecb507 blk=20b18a460e>
-2021-01-25 12:12:38.461133 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=1 cmd=2fcd151b82 blk=20b18a460e>
-2021-01-25 12:12:38.461232 [hotstuff proto] propose <block id=f133446a12 height=4 parent=5a8489930d qc_ref=5a8489930d>
-2021-01-25 12:12:38.461406 [hotstuff proto] got <vote rid=0 blk=f133446a12>
-2021-01-25 12:12:38.461468 [hotstuff proto] now state: <hotstuff hqc=5a8489930d hqc.height=3 b_lock=d351e7b722 b_exec=20b18a460e vheight=4 tails=1>
-2021-01-25 12:12:38.461553 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.461654 [hotstuff proto] got <vote rid=3 blk=5a8489930d>
-2021-01-25 12:12:38.461711 [hotstuff proto] now state: <hotstuff hqc=5a8489930d hqc.height=3 b_lock=d351e7b722 b_exec=20b18a460e vheight=4 tails=1>
-2021-01-25 12:12:38.464278 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.464387 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.464473 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.464550 [hotstuff proto] got <vote rid=1 blk=f133446a12>
-2021-01-25 12:12:38.464609 [hotstuff proto] now state: <hotstuff hqc=5a8489930d hqc.height=3 b_lock=d351e7b722 b_exec=20b18a460e vheight=4 tails=1>
-2021-01-25 12:12:38.464721 [hotstuff proto] got <vote rid=3 blk=f133446a12>
-2021-01-25 12:12:38.464778 [hotstuff proto] now state: <hotstuff hqc=5a8489930d hqc.height=3 b_lock=d351e7b722 b_exec=20b18a460e vheight=4 tails=1>
-2021-01-25 12:12:38.464814 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.464842 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.464867 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.464936 [hotstuff proto] commit <block id=d351e7b722 height=2 parent=20b18a460e qc_ref=20b18a460e>
-2021-01-25 12:12:38.464977 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=2 cmd=9ae4c9d086 blk=d351e7b722>
-2021-01-25 12:12:38.465026 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=2 cmd=1b03ab083d blk=d351e7b722>
-2021-01-25 12:12:38.465071 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=2 cmd=2be2196b9c blk=d351e7b722>
-2021-01-25 12:12:38.465206 [hotstuff proto] propose <block id=e46be0811d height=5 parent=f133446a12 qc_ref=f133446a12>
-2021-01-25 12:12:38.465371 [hotstuff proto] got <vote rid=0 blk=e46be0811d>
-2021-01-25 12:12:38.465433 [hotstuff proto] now state: <hotstuff hqc=f133446a12 hqc.height=4 b_lock=5a8489930d b_exec=d351e7b722 vheight=5 tails=1>
-2021-01-25 12:12:38.465481 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.465664 [hotstuff proto] got <vote rid=2 blk=f133446a12>
-2021-01-25 12:12:38.466047 [hotstuff proto] now state: <hotstuff hqc=f133446a12 hqc.height=4 b_lock=5a8489930d b_exec=d351e7b722 vheight=5 tails=1>
-2021-01-25 12:12:38.469068 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.469160 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.469248 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.469380 [hotstuff proto] got <vote rid=2 blk=e46be0811d>
-2021-01-25 12:12:38.469448 [hotstuff proto] now state: <hotstuff hqc=f133446a12 hqc.height=4 b_lock=5a8489930d b_exec=d351e7b722 vheight=5 tails=1>
-2021-01-25 12:12:38.469542 [hotstuff proto] got <vote rid=1 blk=e46be0811d>
-2021-01-25 12:12:38.469600 [hotstuff proto] now state: <hotstuff hqc=f133446a12 hqc.height=4 b_lock=5a8489930d b_exec=d351e7b722 vheight=5 tails=1>
-2021-01-25 12:12:38.469637 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.469664 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.469688 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.469754 [hotstuff proto] commit <block id=5a8489930d height=3 parent=d351e7b722 qc_ref=d351e7b722>
-2021-01-25 12:12:38.469797 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=3 cmd=20aef0af2b blk=5a8489930d>
-2021-01-25 12:12:38.469845 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=3 cmd=4e65285e65 blk=5a8489930d>
-2021-01-25 12:12:38.469886 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=3 cmd=7b742c398b blk=5a8489930d>
-2021-01-25 12:12:38.469937 [hotstuff proto] propose <block id=e426c237f0 height=6 parent=e46be0811d qc_ref=e46be0811d>
-2021-01-25 12:12:38.470083 [hotstuff proto] got <vote rid=0 blk=e426c237f0>
-2021-01-25 12:12:38.470142 [hotstuff proto] now state: <hotstuff hqc=e46be0811d hqc.height=5 b_lock=f133446a12 b_exec=5a8489930d vheight=6 tails=1>
-2021-01-25 12:12:38.470197 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.470328 [hotstuff proto] got <vote rid=3 blk=e46be0811d>
-2021-01-25 12:12:38.470390 [hotstuff proto] now state: <hotstuff hqc=e46be0811d hqc.height=5 b_lock=f133446a12 b_exec=5a8489930d vheight=6 tails=1>
-2021-01-25 12:12:38.472619 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.472736 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.472812 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.472954 [hotstuff proto] got <vote rid=1 blk=e426c237f0>
-2021-01-25 12:12:38.473021 [hotstuff proto] now state: <hotstuff hqc=e46be0811d hqc.height=5 b_lock=f133446a12 b_exec=5a8489930d vheight=6 tails=1>
-2021-01-25 12:12:38.473081 [hotstuff proto] got <vote rid=2 blk=e426c237f0>
-2021-01-25 12:12:38.473138 [hotstuff proto] now state: <hotstuff hqc=e46be0811d hqc.height=5 b_lock=f133446a12 b_exec=5a8489930d vheight=6 tails=1>
-2021-01-25 12:12:38.473177 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.473206 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.473230 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.473298 [hotstuff proto] commit <block id=f133446a12 height=4 parent=5a8489930d qc_ref=5a8489930d>
-2021-01-25 12:12:38.473344 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=4 cmd=d8e0873e07 blk=f133446a12>
-2021-01-25 12:12:38.473394 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=4 cmd=dd73a46975 blk=f133446a12>
-2021-01-25 12:12:38.473437 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=4 cmd=f1d6ff0821 blk=f133446a12>
-2021-01-25 12:12:38.473494 [hotstuff proto] propose <block id=cc7d1828c5 height=7 parent=e426c237f0 qc_ref=e426c237f0>
-2021-01-25 12:12:38.473655 [hotstuff proto] got <vote rid=0 blk=cc7d1828c5>
-2021-01-25 12:12:38.473716 [hotstuff proto] now state: <hotstuff hqc=e426c237f0 hqc.height=6 b_lock=e46be0811d b_exec=f133446a12 vheight=7 tails=1>
-2021-01-25 12:12:38.473766 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.473858 [hotstuff proto] got <vote rid=3 blk=e426c237f0>
-2021-01-25 12:12:38.473911 [hotstuff proto] now state: <hotstuff hqc=e426c237f0 hqc.height=6 b_lock=e46be0811d b_exec=f133446a12 vheight=7 tails=1>
-2021-01-25 12:12:38.476084 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.476181 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.476260 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.476370 [hotstuff proto] got <vote rid=1 blk=cc7d1828c5>
-2021-01-25 12:12:38.476431 [hotstuff proto] now state: <hotstuff hqc=e426c237f0 hqc.height=6 b_lock=e46be0811d b_exec=f133446a12 vheight=7 tails=1>
-2021-01-25 12:12:38.476585 [hotstuff proto] got <vote rid=2 blk=cc7d1828c5>
-2021-01-25 12:12:38.476683 [hotstuff proto] now state: <hotstuff hqc=e426c237f0 hqc.height=6 b_lock=e46be0811d b_exec=f133446a12 vheight=7 tails=1>
-2021-01-25 12:12:38.476724 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.476754 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.476779 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.476851 [hotstuff proto] commit <block id=e46be0811d height=5 parent=f133446a12 qc_ref=f133446a12>
-2021-01-25 12:12:38.476895 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=5 cmd=930abd7018 blk=e46be0811d>
-2021-01-25 12:12:38.476945 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=5 cmd=53dd18d822 blk=e46be0811d>
-2021-01-25 12:12:38.476988 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=5 cmd=ead27b1c86 blk=e46be0811d>
-2021-01-25 12:12:38.477044 [hotstuff proto] propose <block id=302a6e524a height=8 parent=cc7d1828c5 qc_ref=cc7d1828c5>
-2021-01-25 12:12:38.477193 [hotstuff proto] got <vote rid=0 blk=302a6e524a>
-2021-01-25 12:12:38.477256 [hotstuff proto] now state: <hotstuff hqc=cc7d1828c5 hqc.height=7 b_lock=e426c237f0 b_exec=e46be0811d vheight=8 tails=1>
-2021-01-25 12:12:38.477308 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.477396 [hotstuff proto] got <vote rid=3 blk=cc7d1828c5>
-2021-01-25 12:12:38.477510 [hotstuff proto] now state: <hotstuff hqc=cc7d1828c5 hqc.height=7 b_lock=e426c237f0 b_exec=e46be0811d vheight=8 tails=1>
-2021-01-25 12:12:38.479544 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.479637 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.479710 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.479840 [hotstuff proto] got <vote rid=2 blk=302a6e524a>
-2021-01-25 12:12:38.479905 [hotstuff proto] now state: <hotstuff hqc=cc7d1828c5 hqc.height=7 b_lock=e426c237f0 b_exec=e46be0811d vheight=8 tails=1>
-2021-01-25 12:12:38.480045 [hotstuff proto] got <vote rid=3 blk=302a6e524a>
-2021-01-25 12:12:38.480107 [hotstuff proto] now state: <hotstuff hqc=cc7d1828c5 hqc.height=7 b_lock=e426c237f0 b_exec=e46be0811d vheight=8 tails=1>
-2021-01-25 12:12:38.480147 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.480177 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.480202 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.480268 [hotstuff proto] commit <block id=e426c237f0 height=6 parent=e46be0811d qc_ref=e46be0811d>
-2021-01-25 12:12:38.480314 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=6 cmd=5f1ddbc2fb blk=e426c237f0>
-2021-01-25 12:12:38.480362 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=6 cmd=48443c868f blk=e426c237f0>
-2021-01-25 12:12:38.480402 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=6 cmd=9c8616c455 blk=e426c237f0>
-2021-01-25 12:12:38.480460 [hotstuff proto] propose <block id=7f258a49e9 height=9 parent=302a6e524a qc_ref=302a6e524a>
-2021-01-25 12:12:38.480612 [hotstuff proto] got <vote rid=0 blk=7f258a49e9>
-2021-01-25 12:12:38.480669 [hotstuff proto] now state: <hotstuff hqc=302a6e524a hqc.height=8 b_lock=cc7d1828c5 b_exec=e426c237f0 vheight=9 tails=1>
-2021-01-25 12:12:38.480726 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.480808 [hotstuff proto] got <vote rid=1 blk=302a6e524a>
-2021-01-25 12:12:38.480863 [hotstuff proto] now state: <hotstuff hqc=302a6e524a hqc.height=8 b_lock=cc7d1828c5 b_exec=e426c237f0 vheight=9 tails=1>
-2021-01-25 12:12:38.483221 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.483323 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.483415 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.483570 [hotstuff proto] got <vote rid=1 blk=7f258a49e9>
-2021-01-25 12:12:38.483634 [hotstuff proto] now state: <hotstuff hqc=302a6e524a hqc.height=8 b_lock=cc7d1828c5 b_exec=e426c237f0 vheight=9 tails=1>
-2021-01-25 12:12:38.483698 [hotstuff proto] got <vote rid=3 blk=7f258a49e9>
-2021-01-25 12:12:38.483790 [hotstuff proto] now state: <hotstuff hqc=302a6e524a hqc.height=8 b_lock=cc7d1828c5 b_exec=e426c237f0 vheight=9 tails=1>
-2021-01-25 12:12:38.483831 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.483861 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.483886 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.483956 [hotstuff proto] commit <block id=cc7d1828c5 height=7 parent=e426c237f0 qc_ref=e426c237f0>
-2021-01-25 12:12:38.484001 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=7 cmd=db182aa591 blk=cc7d1828c5>
-2021-01-25 12:12:38.484051 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=7 cmd=1bcca6c039 blk=cc7d1828c5>
-2021-01-25 12:12:38.484094 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=7 cmd=f83bb221d5 blk=cc7d1828c5>
-2021-01-25 12:12:38.484152 [hotstuff proto] propose <block id=0149ff6a2b height=10 parent=7f258a49e9 qc_ref=7f258a49e9>
-2021-01-25 12:12:38.484315 [hotstuff proto] got <vote rid=0 blk=0149ff6a2b>
-2021-01-25 12:12:38.484379 [hotstuff proto] now state: <hotstuff hqc=7f258a49e9 hqc.height=9 b_lock=302a6e524a b_exec=cc7d1828c5 vheight=10 tails=1>
-2021-01-25 12:12:38.484431 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.484517 [hotstuff proto] got <vote rid=2 blk=7f258a49e9>
-2021-01-25 12:12:38.484571 [hotstuff proto] now state: <hotstuff hqc=7f258a49e9 hqc.height=9 b_lock=302a6e524a b_exec=cc7d1828c5 vheight=10 tails=1>
-2021-01-25 12:12:38.486535 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.486636 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.486830 [hotstuff proto] got <vote rid=2 blk=0149ff6a2b>
-2021-01-25 12:12:38.486896 [hotstuff proto] now state: <hotstuff hqc=7f258a49e9 hqc.height=9 b_lock=302a6e524a b_exec=cc7d1828c5 vheight=10 tails=1>
-2021-01-25 12:12:38.486975 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.487043 [hotstuff proto] got <vote rid=1 blk=0149ff6a2b>
-2021-01-25 12:12:38.487096 [hotstuff proto] now state: <hotstuff hqc=7f258a49e9 hqc.height=9 b_lock=302a6e524a b_exec=cc7d1828c5 vheight=10 tails=1>
-2021-01-25 12:12:38.487133 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.487171 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.487197 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.487268 [hotstuff proto] commit <block id=302a6e524a height=8 parent=cc7d1828c5 qc_ref=cc7d1828c5>
-2021-01-25 12:12:38.487310 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=8 cmd=a44c4438cf blk=302a6e524a>
-2021-01-25 12:12:38.487360 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=8 cmd=2fadf4ab76 blk=302a6e524a>
-2021-01-25 12:12:38.487404 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=8 cmd=3fbaba3c5b blk=302a6e524a>
-2021-01-25 12:12:38.487498 [hotstuff proto] propose <block id=7bb350e224 height=11 parent=0149ff6a2b qc_ref=0149ff6a2b>
-2021-01-25 12:12:38.487662 [hotstuff proto] got <vote rid=0 blk=7bb350e224>
-2021-01-25 12:12:38.487721 [hotstuff proto] now state: <hotstuff hqc=0149ff6a2b hqc.height=10 b_lock=7f258a49e9 b_exec=302a6e524a vheight=11 tails=1>
-2021-01-25 12:12:38.487771 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.487860 [hotstuff proto] got <vote rid=3 blk=0149ff6a2b>
-2021-01-25 12:12:38.487916 [hotstuff proto] now state: <hotstuff hqc=0149ff6a2b hqc.height=10 b_lock=7f258a49e9 b_exec=302a6e524a vheight=11 tails=1>
-2021-01-25 12:12:38.489856 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.489987 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.490059 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.490130 [hotstuff proto] got <vote rid=1 blk=7bb350e224>
-2021-01-25 12:12:38.490189 [hotstuff proto] now state: <hotstuff hqc=0149ff6a2b hqc.height=10 b_lock=7f258a49e9 b_exec=302a6e524a vheight=11 tails=1>
-2021-01-25 12:12:38.490318 [hotstuff proto] got <vote rid=2 blk=7bb350e224>
-2021-01-25 12:12:38.490419 [hotstuff proto] now state: <hotstuff hqc=0149ff6a2b hqc.height=10 b_lock=7f258a49e9 b_exec=302a6e524a vheight=11 tails=1>
-2021-01-25 12:12:38.490461 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.490488 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.490513 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.490576 [hotstuff proto] commit <block id=7f258a49e9 height=9 parent=302a6e524a qc_ref=302a6e524a>
-2021-01-25 12:12:38.490619 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=9 cmd=c63761c39f blk=7f258a49e9>
-2021-01-25 12:12:38.490669 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=9 cmd=9779c6fff1 blk=7f258a49e9>
-2021-01-25 12:12:38.490713 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=9 cmd=67e4f26e84 blk=7f258a49e9>
-2021-01-25 12:12:38.490803 [hotstuff proto] propose <block id=9fc679ebe9 height=12 parent=7bb350e224 qc_ref=7bb350e224>
-2021-01-25 12:12:38.490964 [hotstuff proto] got <vote rid=0 blk=9fc679ebe9>
-2021-01-25 12:12:38.491023 [hotstuff proto] now state: <hotstuff hqc=7bb350e224 hqc.height=11 b_lock=0149ff6a2b b_exec=7f258a49e9 vheight=12 tails=1>
-2021-01-25 12:12:38.491071 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.491170 [hotstuff proto] got <vote rid=3 blk=7bb350e224>
-2021-01-25 12:12:38.491267 [hotstuff proto] now state: <hotstuff hqc=7bb350e224 hqc.height=11 b_lock=0149ff6a2b b_exec=7f258a49e9 vheight=12 tails=1>
-2021-01-25 12:12:38.493027 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.493121 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.493226 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.493332 [hotstuff proto] got <vote rid=3 blk=9fc679ebe9>
-2021-01-25 12:12:38.493402 [hotstuff proto] now state: <hotstuff hqc=7bb350e224 hqc.height=11 b_lock=0149ff6a2b b_exec=7f258a49e9 vheight=12 tails=1>
-2021-01-25 12:12:38.493503 [hotstuff proto] got <vote rid=2 blk=9fc679ebe9>
-2021-01-25 12:12:38.493563 [hotstuff proto] now state: <hotstuff hqc=7bb350e224 hqc.height=11 b_lock=0149ff6a2b b_exec=7f258a49e9 vheight=12 tails=1>
-2021-01-25 12:12:38.493601 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.493632 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.493656 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.493725 [hotstuff proto] commit <block id=0149ff6a2b height=10 parent=7f258a49e9 qc_ref=7f258a49e9>
-2021-01-25 12:12:38.493766 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=10 cmd=5db43ae74c blk=0149ff6a2b>
-2021-01-25 12:12:38.493815 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=10 cmd=31dba5fca7 blk=0149ff6a2b>
-2021-01-25 12:12:38.493858 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=10 cmd=90d3cc4af3 blk=0149ff6a2b>
-2021-01-25 12:12:38.493918 [hotstuff proto] propose <block id=b467822a76 height=13 parent=9fc679ebe9 qc_ref=9fc679ebe9>
-2021-01-25 12:12:38.494100 [hotstuff proto] got <vote rid=0 blk=b467822a76>
-2021-01-25 12:12:38.494163 [hotstuff proto] now state: <hotstuff hqc=9fc679ebe9 hqc.height=12 b_lock=7bb350e224 b_exec=0149ff6a2b vheight=13 tails=1>
-2021-01-25 12:12:38.494213 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.494296 [hotstuff proto] got <vote rid=1 blk=9fc679ebe9>
-2021-01-25 12:12:38.494347 [hotstuff proto] now state: <hotstuff hqc=9fc679ebe9 hqc.height=12 b_lock=7bb350e224 b_exec=0149ff6a2b vheight=13 tails=1>
-2021-01-25 12:12:38.496160 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.496249 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.496327 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.496429 [hotstuff proto] got <vote rid=3 blk=b467822a76>
-2021-01-25 12:12:38.496492 [hotstuff proto] now state: <hotstuff hqc=9fc679ebe9 hqc.height=12 b_lock=7bb350e224 b_exec=0149ff6a2b vheight=13 tails=1>
-2021-01-25 12:12:38.496614 [hotstuff proto] got <vote rid=2 blk=b467822a76>
-2021-01-25 12:12:38.496714 [hotstuff proto] now state: <hotstuff hqc=9fc679ebe9 hqc.height=12 b_lock=7bb350e224 b_exec=0149ff6a2b vheight=13 tails=1>
-2021-01-25 12:12:38.496755 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.496783 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.496808 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.496875 [hotstuff proto] commit <block id=7bb350e224 height=11 parent=0149ff6a2b qc_ref=0149ff6a2b>
-2021-01-25 12:12:38.496918 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=11 cmd=5eab1e29e4 blk=7bb350e224>
-2021-01-25 12:12:38.496964 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=11 cmd=3786b5685d blk=7bb350e224>
-2021-01-25 12:12:38.497005 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=11 cmd=f976b84a67 blk=7bb350e224>
-2021-01-25 12:12:38.497059 [hotstuff proto] propose <block id=bd6d9069c6 height=14 parent=b467822a76 qc_ref=b467822a76>
-2021-01-25 12:12:38.497241 [hotstuff proto] got <vote rid=0 blk=bd6d9069c6>
-2021-01-25 12:12:38.497307 [hotstuff proto] now state: <hotstuff hqc=b467822a76 hqc.height=13 b_lock=9fc679ebe9 b_exec=7bb350e224 vheight=14 tails=1>
-2021-01-25 12:12:38.497356 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.497441 [hotstuff proto] got <vote rid=1 blk=b467822a76>
-2021-01-25 12:12:38.497497 [hotstuff proto] now state: <hotstuff hqc=b467822a76 hqc.height=13 b_lock=9fc679ebe9 b_exec=7bb350e224 vheight=14 tails=1>
-2021-01-25 12:12:38.499262 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.499389 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.499456 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.499534 [hotstuff proto] got <vote rid=1 blk=bd6d9069c6>
-2021-01-25 12:12:38.499593 [hotstuff proto] now state: <hotstuff hqc=b467822a76 hqc.height=13 b_lock=9fc679ebe9 b_exec=7bb350e224 vheight=14 tails=1>
-2021-01-25 12:12:38.499707 [hotstuff proto] got <vote rid=3 blk=bd6d9069c6>
-2021-01-25 12:12:38.499765 [hotstuff proto] now state: <hotstuff hqc=b467822a76 hqc.height=13 b_lock=9fc679ebe9 b_exec=7bb350e224 vheight=14 tails=1>
-2021-01-25 12:12:38.499801 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.499835 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.499858 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.499923 [hotstuff proto] commit <block id=9fc679ebe9 height=12 parent=7bb350e224 qc_ref=7bb350e224>
-2021-01-25 12:12:38.499962 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=12 cmd=c59a297409 blk=9fc679ebe9>
-2021-01-25 12:12:38.500004 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=12 cmd=c854c8f56f blk=9fc679ebe9>
-2021-01-25 12:12:38.500040 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=12 cmd=e1eb586829 blk=9fc679ebe9>
-2021-01-25 12:12:38.500089 [hotstuff proto] propose <block id=e208c8f1f1 height=15 parent=bd6d9069c6 qc_ref=bd6d9069c6>
-2021-01-25 12:12:38.500229 [hotstuff proto] got <vote rid=0 blk=e208c8f1f1>
-2021-01-25 12:12:38.500263 [hotstuff proto] now state: <hotstuff hqc=bd6d9069c6 hqc.height=14 b_lock=b467822a76 b_exec=9fc679ebe9 vheight=15 tails=1>
-2021-01-25 12:12:38.500293 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.500377 [hotstuff proto] got <vote rid=2 blk=bd6d9069c6>
-2021-01-25 12:12:38.500427 [hotstuff proto] now state: <hotstuff hqc=bd6d9069c6 hqc.height=14 b_lock=b467822a76 b_exec=9fc679ebe9 vheight=15 tails=1>
-2021-01-25 12:12:38.502146 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.502237 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.502308 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.502402 [hotstuff proto] got <vote rid=3 blk=e208c8f1f1>
-2021-01-25 12:12:38.502461 [hotstuff proto] now state: <hotstuff hqc=bd6d9069c6 hqc.height=14 b_lock=b467822a76 b_exec=9fc679ebe9 vheight=15 tails=1>
-2021-01-25 12:12:38.502552 [hotstuff proto] got <vote rid=2 blk=e208c8f1f1>
-2021-01-25 12:12:38.502646 [hotstuff proto] now state: <hotstuff hqc=bd6d9069c6 hqc.height=14 b_lock=b467822a76 b_exec=9fc679ebe9 vheight=15 tails=1>
-2021-01-25 12:12:38.502685 [hotstuff proto] got QC, propose a new block
-2021-01-25 12:12:38.502714 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.502738 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.502806 [hotstuff proto] commit <block id=b467822a76 height=13 parent=9fc679ebe9 qc_ref=9fc679ebe9>
-2021-01-25 12:12:38.502850 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=13 cmd=7c2f21ce5c blk=b467822a76>
-2021-01-25 12:12:38.502899 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=13 cmd=bb2f4bcd51 blk=b467822a76>
-2021-01-25 12:12:38.502961 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=13 cmd=66ee151dbf blk=b467822a76>
-2021-01-25 12:12:38.503035 [hotstuff proto] propose <block id=facedf625d height=16 parent=e208c8f1f1 qc_ref=e208c8f1f1>
-2021-01-25 12:12:38.503179 [hotstuff proto] got <vote rid=0 blk=facedf625d>
-2021-01-25 12:12:38.503233 [hotstuff proto] now state: <hotstuff hqc=e208c8f1f1 hqc.height=15 b_lock=bd6d9069c6 b_exec=b467822a76 vheight=16 tails=1>
-2021-01-25 12:12:38.503277 [hotstuff proto] Proposed block size : 3
-2021-01-25 12:12:38.503364 [hotstuff proto] got <vote rid=1 blk=e208c8f1f1>
-2021-01-25 12:12:38.503421 [hotstuff proto] now state: <hotstuff hqc=e208c8f1f1 hqc.height=15 b_lock=bd6d9069c6 b_exec=b467822a76 vheight=16 tails=1>
-2021-01-25 12:12:38.505168 [hotstuff proto] It is a new addition!
-2021-01-25 12:12:38.505355 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.505431 [hotstuff proto] It is a new addition to existing record!
-2021-01-25 12:12:38.505498 [hotstuff proto] got <vote rid=1 blk=facedf625d>
-2021-01-25 12:12:38.505552 [hotstuff proto] now state: <hotstuff hqc=e208c8f1f1 hqc.height=15 b_lock=bd6d9069c6 b_exec=b467822a76 vheight=16 tails=1>
-2021-01-25 12:12:38.505607 [hotstuff proto] got <vote rid=3 blk=facedf625d>
-2021-01-25 12:12:38.505657 [hotstuff proto] now state: <hotstuff hqc=e208c8f1f1 hqc.height=15 b_lock=bd6d9069c6 b_exec=b467822a76 vheight=16 tails=1>
-2021-01-25 12:12:38.505778 [hotstuff proto] got <vote rid=2 blk=facedf625d>
-2021-01-25 12:12:38.505834 [hotstuff proto] now state: <hotstuff hqc=facedf625d hqc.height=16 b_lock=bd6d9069c6 b_exec=b467822a76 vheight=16 tails=1>
-2021-01-25 12:12:43.635572 [hotstuff info] ===== begin stats =====
-2021-01-25 12:12:43.635627 [hotstuff info] -------- queues -------
-2021-01-25 12:12:43.635652 [hotstuff info] blk_fetch_waiting: 0
-2021-01-25 12:12:43.635675 [hotstuff info] blk_delivery_waiting: 0
-2021-01-25 12:12:43.635696 [hotstuff info] decision_waiting: 11
-2021-01-25 12:12:43.635718 [hotstuff info] -------- misc ---------
-2021-01-25 12:12:43.635738 [hotstuff info] fetched: 0
-2021-01-25 12:12:43.635759 [hotstuff info] delivered: 0
-2021-01-25 12:12:43.635783 [hotstuff info] cmd_cache: 0
-2021-01-25 12:12:43.635804 [hotstuff info] blk_cache: 17
-2021-01-25 12:12:43.635827 [hotstuff info] ------ misc (10s) -----
-2021-01-25 12:12:43.635848 [hotstuff info] fetched: 0
-2021-01-25 12:12:43.635872 [hotstuff info] delivered: 0
-2021-01-25 12:12:43.635895 [hotstuff info] decided: 39
-2021-01-25 12:12:43.635916 [hotstuff info] gened: 0
-2021-01-25 12:12:43.635937 [hotstuff info] avg. parent_size: 0.000
-2021-01-25 12:12:43.635959 [hotstuff info] delivery time: 0.000 avg, 0.000 min, 0.000 max
-2021-01-25 12:12:43.635980 [hotstuff info] --- replica msg. (10s) ---
-2021-01-25 12:12:43.636067 [hotstuff info] c261250345: 19(5869), 19(4077), 0
-2021-01-25 12:12:43.636162 [hotstuff info] 065b010aed: 19(5869), 19(4077), 0
-2021-01-25 12:12:43.636254 [hotstuff info] 6540a0fea6: 19(5869), 19(4077), 0
-2021-01-25 12:12:43.636285 [hotstuff info] sent: 57
-2021-01-25 12:12:43.636307 [hotstuff info] recv: 57
-2021-01-25 12:12:43.636327 [hotstuff info] --- replica msg. total ---
-2021-01-25 12:12:43.636347 [hotstuff info] sent: 57
-2021-01-25 12:12:43.636379 [hotstuff info] recv: 57
-2021-01-25 12:12:43.636400 [hotstuff info] ====== end stats ======
-2021-01-25 12:12:43.636445 [hotstuff info] --- client msg. (10s) ---
-2021-01-25 12:12:43.636467 [hotstuff info] <NetAddr 127.0.0.1:50491>: 39(2925), 50(400)
-2021-01-25 12:12:43.636484 [hotstuff info] --- end client msg. ---
-2021-01-25 12:12:43.636498 [hotstuff info] --- writing command_timestamp_storage into a file. ---
+2021-01-25 20:25:36.465073 [net info] loaded configuration from hotstuff.conf
+2021-01-25 20:25:36.468820 [net info] loading extra configuration from ./hotstuff-sec0.conf
+2021-01-25 20:25:36.474785 [hotstuff proto] Proposed block size : 0
+2021-01-25 20:25:36.491895 [net info] starting all threads...
+2021-01-25 20:25:36.492277 [net info] listening to 10000
+2021-01-25 20:25:36.498623 [net info] starting all threads...
+2021-01-25 20:25:36.498903 [net info] listening to 20000
+2021-01-25 20:25:36.499175 [hotstuff info] ** starting the system with parameters **
+2021-01-25 20:25:36.499198 [hotstuff info] blk_size = 3
+2021-01-25 20:25:36.499217 [hotstuff info] conns = 0
+2021-01-25 20:25:36.499231 [hotstuff info] ** starting the event loop...
+2021-01-25 20:25:36.499419 [hotstuff proto] Pacemaker: stop rotation at 0
+2021-01-25 20:25:36.500370 [net info] created <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-25 20:25:36.500742 [net info] created <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-25 20:25:36.501083 [net info] created <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-25 20:25:36.501430 [net info] accepted <Conn fd=134 addr=<NetAddr 127.0.0.1:52558> mode=passive>
+2021-01-25 20:25:36.501493 [net info] connected to remote <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-25 20:25:36.501520 [net info] connected to remote <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-25 20:25:36.501805 [net info] accepted <Conn fd=137 addr=<NetAddr 127.0.0.1:52559> mode=passive>
+2021-01-25 20:25:36.501843 [net info] connected to remote <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-25 20:25:36.502342 [net info] accepted <Conn fd=140 addr=<NetAddr 127.0.0.1:52561> mode=passive>
+2021-01-25 20:25:36.513348 [net info] 542865a568: setup connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-25 20:25:36.521411 [net info] 542865a568: setup connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-25 20:25:36.521556 [net info] 542865a568: setup connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-25 20:25:36.521683 [net info] 542865a568: setup connection <Conn fd=137 addr=<NetAddr 127.0.0.1:52559> mode=passive>
+2021-01-25 20:25:36.522577 [net info] 542865a568: setup connection <Conn fd=134 addr=<NetAddr 127.0.0.1:52558> mode=passive>
+2021-01-25 20:25:36.523143 [net info] 542865a568: lost connection <Conn fd=137 addr=<NetAddr 127.0.0.1:52559> mode=passive>
+2021-01-25 20:25:36.524193 [net info] 542865a568: lost connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-25 20:25:36.524440 [net info] established 542865a568 <---> 6540a0fea6 (via <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>)
+2021-01-25 20:25:36.524486 [net info] 542865a568: ping from <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-25 20:25:36.524777 [net info] established 542865a568 <---> 065b010aed (via <Conn fd=134 addr=<NetAddr 127.0.0.1:52558> mode=passive>)
+2021-01-25 20:25:36.525418 [net info] 542865a568: ping from <Conn fd=134 addr=<NetAddr 127.0.0.1:52558> mode=passive>
+2021-01-25 20:25:36.527042 [net info] 542865a568: setup connection <Conn fd=140 addr=<NetAddr 127.0.0.1:52561> mode=passive>
+2021-01-25 20:25:36.527315 [net info] established 542865a568 <---> c261250345 (via <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>)
+2021-01-25 20:25:36.527359 [net info] 542865a568: ping from <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-25 20:25:36.527455 [net info] 542865a568: lost connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-25 20:25:36.527498 [net info] ended 542865a568 <-/-> c261250345 (via <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>)
+2021-01-25 20:25:36.527715 [net info] established 542865a568 <---> c261250345 (via <Conn fd=140 addr=<NetAddr 127.0.0.1:52561> mode=passive>)
+2021-01-25 20:25:39.208610 [net info] accepted <Conn fd=119 addr=<NetAddr 127.0.0.1:52570> mode=passive>
+2021-01-25 20:25:39.214921 [net info] 542865a568: setup connection <Conn fd=119 addr=<NetAddr 127.0.0.1:52570> mode=passive>
+2021-01-25 20:25:39.215296 [net info] 542865a568: lost connection <Conn fd=140 addr=<NetAddr 127.0.0.1:52561> mode=passive>
+2021-01-25 20:25:39.215378 [net info] ended 542865a568 <-/-> c261250345 (via <Conn fd=140 addr=<NetAddr 127.0.0.1:52561> mode=passive>)
+2021-01-25 20:25:39.215660 [net info] established 542865a568 <---> c261250345 (via <Conn fd=119 addr=<NetAddr 127.0.0.1:52570> mode=passive>)
+2021-01-25 20:25:39.216468 [net info] 542865a568: ping from <Conn fd=119 addr=<NetAddr 127.0.0.1:52570> mode=passive>
+2021-01-25 20:25:41.269816 [net info] accepted <Conn fd=122 addr=<NetAddr 127.0.0.1:52571> mode=passive>
+2021-01-25 20:25:41.274873 [hotstuff proto] Adding command af5570f5a1 to storage
+2021-01-25 20:25:41.275203 [hotstuff proto] Adding command 01acecb507 to storage
+2021-01-25 20:25:41.275258 [hotstuff proto] Adding command 2fcd151b82 to storage
+2021-01-25 20:25:41.275303 [hotstuff proto] Adding command 9ae4c9d086 to storage
+2021-01-25 20:25:41.275342 [hotstuff proto] Adding command 1b03ab083d to storage
+2021-01-25 20:25:41.275382 [hotstuff proto] Adding command 2be2196b9c to storage
+2021-01-25 20:25:41.275422 [hotstuff proto] Adding command 20aef0af2b to storage
+2021-01-25 20:25:41.275463 [hotstuff proto] Adding command 4e65285e65 to storage
+2021-01-25 20:25:41.275502 [hotstuff proto] Adding command 7b742c398b to storage
+2021-01-25 20:25:41.276957 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.277106 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.277272 [hotstuff proto] propose <block id=20b18a460e height=1 parent=6b7d92eaae qc_ref=6b7d92eaae>
+2021-01-25 20:25:41.277122 [hotstuff proto] Adding command d8e0873e07 to storage
+2021-01-25 20:25:41.277710 [hotstuff proto] Adding command dd73a46975 to storage
+2021-01-25 20:25:41.277770 [hotstuff proto] got <vote rid=0 blk=20b18a460e>
+2021-01-25 20:25:41.277797 [hotstuff proto] Adding command f1d6ff0821 to storage
+2021-01-25 20:25:41.277866 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
+2021-01-25 20:25:41.277966 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.277871 [hotstuff proto] Adding command 930abd7018 to storage
+2021-01-25 20:25:41.278207 [hotstuff proto] Adding command 53dd18d822 to storage
+2021-01-25 20:25:41.278273 [hotstuff proto] Adding command ead27b1c86 to storage
+2021-01-25 20:25:41.278332 [hotstuff proto] Adding command 5f1ddbc2fb to storage
+2021-01-25 20:25:41.278393 [hotstuff proto] Adding command 48443c868f to storage
+2021-01-25 20:25:41.278466 [hotstuff proto] Adding command 9c8616c455 to storage
+2021-01-25 20:25:41.278522 [hotstuff proto] Adding command db182aa591 to storage
+2021-01-25 20:25:41.278581 [hotstuff proto] Adding command 1bcca6c039 to storage
+2021-01-25 20:25:41.278779 [hotstuff proto] Adding command f83bb221d5 to storage
+2021-01-25 20:25:41.278862 [hotstuff proto] Adding command a44c4438cf to storage
+2021-01-25 20:25:41.278918 [hotstuff proto] Adding command 2fadf4ab76 to storage
+2021-01-25 20:25:41.278962 [hotstuff proto] Adding command 3fbaba3c5b to storage
+2021-01-25 20:25:41.279020 [hotstuff proto] Adding command c63761c39f to storage
+2021-01-25 20:25:41.279069 [hotstuff proto] Adding command 9779c6fff1 to storage
+2021-01-25 20:25:41.279206 [hotstuff proto] Adding command 67e4f26e84 to storage
+2021-01-25 20:25:41.279279 [hotstuff proto] Adding command 5db43ae74c to storage
+2021-01-25 20:25:41.279326 [hotstuff proto] Adding command 31dba5fca7 to storage
+2021-01-25 20:25:41.279363 [hotstuff proto] Adding command 90d3cc4af3 to storage
+2021-01-25 20:25:41.279401 [hotstuff proto] Adding command 5eab1e29e4 to storage
+2021-01-25 20:25:41.279439 [hotstuff proto] Adding command 3786b5685d to storage
+2021-01-25 20:25:41.279479 [hotstuff proto] Adding command f976b84a67 to storage
+2021-01-25 20:25:41.279529 [hotstuff proto] Adding command c59a297409 to storage
+2021-01-25 20:25:41.279621 [hotstuff proto] Adding command c854c8f56f to storage
+2021-01-25 20:25:41.279691 [hotstuff proto] Adding command e1eb586829 to storage
+2021-01-25 20:25:41.279725 [hotstuff proto] Adding command 7c2f21ce5c to storage
+2021-01-25 20:25:41.279757 [hotstuff proto] Adding command bb2f4bcd51 to storage
+2021-01-25 20:25:41.279789 [hotstuff proto] Adding command 66ee151dbf to storage
+2021-01-25 20:25:41.279823 [hotstuff proto] Adding command 547c34decb to storage
+2021-01-25 20:25:41.279854 [hotstuff proto] Adding command 04164f6252 to storage
+2021-01-25 20:25:41.279885 [hotstuff proto] Adding command be84dc21f3 to storage
+2021-01-25 20:25:41.279917 [hotstuff proto] Adding command 25ab3aa916 to storage
+2021-01-25 20:25:41.279951 [hotstuff proto] Adding command 2544f2559d to storage
+2021-01-25 20:25:41.279985 [hotstuff proto] Adding command 0dd443f367 to storage
+2021-01-25 20:25:41.280015 [hotstuff proto] Adding command 7067b4ef8a to storage
+2021-01-25 20:25:41.280045 [hotstuff proto] Adding command 4d93be036c to storage
+2021-01-25 20:25:41.280282 [hotstuff proto] Adding command 42f0c08faf to storage
+2021-01-25 20:25:41.280387 [hotstuff proto] Adding command 982258dda3 to storage
+2021-01-25 20:25:41.280425 [hotstuff proto] Adding command 51335e1808 to storage
+2021-01-25 20:25:41.281157 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.281273 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.281363 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.281428 [hotstuff proto] got <vote rid=2 blk=20b18a460e>
+2021-01-25 20:25:41.281475 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
+2021-01-25 20:25:41.281526 [hotstuff proto] got <vote rid=3 blk=20b18a460e>
+2021-01-25 20:25:41.281571 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
+2021-01-25 20:25:41.281608 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.281648 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.281659 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.281672 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.281723 [hotstuff proto] propose <block id=193bac8a34 height=2 parent=20b18a460e qc_ref=20b18a460e>
+2021-01-25 20:25:41.281836 [hotstuff proto] got <vote rid=0 blk=193bac8a34>
+2021-01-25 20:25:41.281877 [hotstuff proto] now state: <hotstuff hqc=20b18a460e hqc.height=1 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=2 tails=1>
+2021-01-25 20:25:41.281924 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.281992 [hotstuff proto] got <vote rid=1 blk=20b18a460e>
+2021-01-25 20:25:41.282039 [hotstuff proto] now state: <hotstuff hqc=20b18a460e hqc.height=1 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=2 tails=1>
+2021-01-25 20:25:41.283209 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.283401 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.283496 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.283554 [hotstuff proto] got <vote rid=2 blk=193bac8a34>
+2021-01-25 20:25:41.283614 [hotstuff proto] now state: <hotstuff hqc=20b18a460e hqc.height=1 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=2 tails=1>
+2021-01-25 20:25:41.283659 [hotstuff proto] got <vote rid=1 blk=193bac8a34>
+2021-01-25 20:25:41.283691 [hotstuff proto] now state: <hotstuff hqc=20b18a460e hqc.height=1 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=2 tails=1>
+2021-01-25 20:25:41.283713 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.283732 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.283745 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.283764 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.283814 [hotstuff proto] propose <block id=f44777f8a0 height=3 parent=193bac8a34 qc_ref=193bac8a34>
+2021-01-25 20:25:41.283924 [hotstuff proto] got <vote rid=0 blk=f44777f8a0>
+2021-01-25 20:25:41.283965 [hotstuff proto] now state: <hotstuff hqc=193bac8a34 hqc.height=2 b_lock=20b18a460e b_exec=6b7d92eaae vheight=3 tails=1>
+2021-01-25 20:25:41.284036 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.284111 [hotstuff proto] got <vote rid=3 blk=193bac8a34>
+2021-01-25 20:25:41.284146 [hotstuff proto] now state: <hotstuff hqc=193bac8a34 hqc.height=2 b_lock=20b18a460e b_exec=6b7d92eaae vheight=3 tails=1>
+2021-01-25 20:25:41.285379 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.285491 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.285556 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.285611 [hotstuff proto] got <vote rid=1 blk=f44777f8a0>
+2021-01-25 20:25:41.285657 [hotstuff proto] now state: <hotstuff hqc=193bac8a34 hqc.height=2 b_lock=20b18a460e b_exec=6b7d92eaae vheight=3 tails=1>
+2021-01-25 20:25:41.285702 [hotstuff proto] got <vote rid=2 blk=f44777f8a0>
+2021-01-25 20:25:41.285747 [hotstuff proto] now state: <hotstuff hqc=193bac8a34 hqc.height=2 b_lock=20b18a460e b_exec=6b7d92eaae vheight=3 tails=1>
+2021-01-25 20:25:41.285778 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.285831 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.285857 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.285889 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.286001 [hotstuff proto] commit <block id=20b18a460e height=1 parent=6b7d92eaae qc_ref=6b7d92eaae>
+2021-01-25 20:25:41.286047 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=1 cmd=af5570f5a1 blk=20b18a460e>
+2021-01-25 20:25:41.286082 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=1 cmd=01acecb507 blk=20b18a460e>
+2021-01-25 20:25:41.286109 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=1 cmd=2fcd151b82 blk=20b18a460e>
+2021-01-25 20:25:41.286153 [hotstuff proto] propose <block id=99e2195803 height=4 parent=f44777f8a0 qc_ref=f44777f8a0>
+2021-01-25 20:25:41.286262 [hotstuff proto] got <vote rid=0 blk=99e2195803>
+2021-01-25 20:25:41.286315 [hotstuff proto] now state: <hotstuff hqc=f44777f8a0 hqc.height=3 b_lock=193bac8a34 b_exec=20b18a460e vheight=4 tails=1>
+2021-01-25 20:25:41.286345 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.286414 [hotstuff proto] got <vote rid=3 blk=f44777f8a0>
+2021-01-25 20:25:41.286448 [hotstuff proto] now state: <hotstuff hqc=f44777f8a0 hqc.height=3 b_lock=193bac8a34 b_exec=20b18a460e vheight=4 tails=1>
+2021-01-25 20:25:41.288699 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.288865 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.288947 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.289006 [hotstuff proto] got <vote rid=3 blk=99e2195803>
+2021-01-25 20:25:41.289054 [hotstuff proto] now state: <hotstuff hqc=f44777f8a0 hqc.height=3 b_lock=193bac8a34 b_exec=20b18a460e vheight=4 tails=1>
+2021-01-25 20:25:41.289102 [hotstuff proto] got <vote rid=1 blk=99e2195803>
+2021-01-25 20:25:41.289146 [hotstuff proto] now state: <hotstuff hqc=f44777f8a0 hqc.height=3 b_lock=193bac8a34 b_exec=20b18a460e vheight=4 tails=1>
+2021-01-25 20:25:41.289199 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.289254 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.289266 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.289286 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.289337 [hotstuff proto] commit <block id=193bac8a34 height=2 parent=20b18a460e qc_ref=20b18a460e>
+2021-01-25 20:25:41.289372 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=2 cmd=9ae4c9d086 blk=193bac8a34>
+2021-01-25 20:25:41.289404 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=2 cmd=1b03ab083d blk=193bac8a34>
+2021-01-25 20:25:41.289438 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=2 cmd=2be2196b9c blk=193bac8a34>
+2021-01-25 20:25:41.289514 [hotstuff proto] propose <block id=2040acda80 height=5 parent=99e2195803 qc_ref=99e2195803>
+2021-01-25 20:25:41.289671 [hotstuff proto] got <vote rid=0 blk=2040acda80>
+2021-01-25 20:25:41.289729 [hotstuff proto] now state: <hotstuff hqc=99e2195803 hqc.height=4 b_lock=f44777f8a0 b_exec=193bac8a34 vheight=5 tails=1>
+2021-01-25 20:25:41.289805 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.289866 [hotstuff proto] got <vote rid=2 blk=99e2195803>
+2021-01-25 20:25:41.289913 [hotstuff proto] now state: <hotstuff hqc=99e2195803 hqc.height=4 b_lock=f44777f8a0 b_exec=193bac8a34 vheight=5 tails=1>
+2021-01-25 20:25:41.292361 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.292805 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.293049 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.293146 [hotstuff proto] got <vote rid=2 blk=2040acda80>
+2021-01-25 20:25:41.293209 [hotstuff proto] now state: <hotstuff hqc=99e2195803 hqc.height=4 b_lock=f44777f8a0 b_exec=193bac8a34 vheight=5 tails=1>
+2021-01-25 20:25:41.293272 [hotstuff proto] got <vote rid=3 blk=2040acda80>
+2021-01-25 20:25:41.293328 [hotstuff proto] now state: <hotstuff hqc=99e2195803 hqc.height=4 b_lock=f44777f8a0 b_exec=193bac8a34 vheight=5 tails=1>
+2021-01-25 20:25:41.293369 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.293400 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.293418 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.293441 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.293507 [hotstuff proto] commit <block id=f44777f8a0 height=3 parent=193bac8a34 qc_ref=193bac8a34>
+2021-01-25 20:25:41.293551 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=3 cmd=20aef0af2b blk=f44777f8a0>
+2021-01-25 20:25:41.293599 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=3 cmd=4e65285e65 blk=f44777f8a0>
+2021-01-25 20:25:41.293636 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=3 cmd=7b742c398b blk=f44777f8a0>
+2021-01-25 20:25:41.293770 [hotstuff proto] propose <block id=763fa4a50c height=6 parent=2040acda80 qc_ref=2040acda80>
+2021-01-25 20:25:41.294429 [hotstuff proto] got <vote rid=0 blk=763fa4a50c>
+2021-01-25 20:25:41.294650 [hotstuff proto] now state: <hotstuff hqc=2040acda80 hqc.height=5 b_lock=99e2195803 b_exec=f44777f8a0 vheight=6 tails=1>
+2021-01-25 20:25:41.294842 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.295056 [hotstuff proto] got <vote rid=1 blk=2040acda80>
+2021-01-25 20:25:41.295169 [hotstuff proto] now state: <hotstuff hqc=2040acda80 hqc.height=5 b_lock=99e2195803 b_exec=f44777f8a0 vheight=6 tails=1>
+2021-01-25 20:25:41.298165 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.298285 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.298354 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.298405 [hotstuff proto] got <vote rid=1 blk=763fa4a50c>
+2021-01-25 20:25:41.298445 [hotstuff proto] now state: <hotstuff hqc=2040acda80 hqc.height=5 b_lock=99e2195803 b_exec=f44777f8a0 vheight=6 tails=1>
+2021-01-25 20:25:41.298570 [hotstuff proto] got <vote rid=2 blk=763fa4a50c>
+2021-01-25 20:25:41.298625 [hotstuff proto] now state: <hotstuff hqc=2040acda80 hqc.height=5 b_lock=99e2195803 b_exec=f44777f8a0 vheight=6 tails=1>
+2021-01-25 20:25:41.298659 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.298680 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.298694 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.298707 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.298758 [hotstuff proto] commit <block id=99e2195803 height=4 parent=f44777f8a0 qc_ref=f44777f8a0>
+2021-01-25 20:25:41.298794 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=4 cmd=d8e0873e07 blk=99e2195803>
+2021-01-25 20:25:41.298829 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=4 cmd=dd73a46975 blk=99e2195803>
+2021-01-25 20:25:41.298858 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=4 cmd=f1d6ff0821 blk=99e2195803>
+2021-01-25 20:25:41.298916 [hotstuff proto] propose <block id=7b1441e126 height=7 parent=763fa4a50c qc_ref=763fa4a50c>
+2021-01-25 20:25:41.299059 [hotstuff proto] got <vote rid=0 blk=7b1441e126>
+2021-01-25 20:25:41.299103 [hotstuff proto] now state: <hotstuff hqc=763fa4a50c hqc.height=6 b_lock=2040acda80 b_exec=99e2195803 vheight=7 tails=1>
+2021-01-25 20:25:41.299133 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.299201 [hotstuff proto] got <vote rid=3 blk=763fa4a50c>
+2021-01-25 20:25:41.299234 [hotstuff proto] now state: <hotstuff hqc=763fa4a50c hqc.height=6 b_lock=2040acda80 b_exec=99e2195803 vheight=7 tails=1>
+2021-01-25 20:25:41.301085 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.301210 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.301324 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.301392 [hotstuff proto] got <vote rid=2 blk=7b1441e126>
+2021-01-25 20:25:41.301433 [hotstuff proto] now state: <hotstuff hqc=763fa4a50c hqc.height=6 b_lock=2040acda80 b_exec=99e2195803 vheight=7 tails=1>
+2021-01-25 20:25:41.301498 [hotstuff proto] got <vote rid=3 blk=7b1441e126>
+2021-01-25 20:25:41.301539 [hotstuff proto] now state: <hotstuff hqc=763fa4a50c hqc.height=6 b_lock=2040acda80 b_exec=99e2195803 vheight=7 tails=1>
+2021-01-25 20:25:41.301569 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.301590 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.301607 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.301624 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.301666 [hotstuff proto] commit <block id=2040acda80 height=5 parent=99e2195803 qc_ref=99e2195803>
+2021-01-25 20:25:41.301710 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=5 cmd=930abd7018 blk=2040acda80>
+2021-01-25 20:25:41.301745 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=5 cmd=53dd18d822 blk=2040acda80>
+2021-01-25 20:25:41.301779 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=5 cmd=ead27b1c86 blk=2040acda80>
+2021-01-25 20:25:41.301839 [hotstuff proto] propose <block id=de0a21d1fe height=8 parent=7b1441e126 qc_ref=7b1441e126>
+2021-01-25 20:25:41.301967 [hotstuff proto] got <vote rid=0 blk=de0a21d1fe>
+2021-01-25 20:25:41.302011 [hotstuff proto] now state: <hotstuff hqc=7b1441e126 hqc.height=7 b_lock=763fa4a50c b_exec=2040acda80 vheight=8 tails=1>
+2021-01-25 20:25:41.302040 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.302107 [hotstuff proto] got <vote rid=1 blk=7b1441e126>
+2021-01-25 20:25:41.302140 [hotstuff proto] now state: <hotstuff hqc=7b1441e126 hqc.height=7 b_lock=763fa4a50c b_exec=2040acda80 vheight=8 tails=1>
+2021-01-25 20:25:41.303904 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.304036 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.304160 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.304230 [hotstuff proto] got <vote rid=1 blk=de0a21d1fe>
+2021-01-25 20:25:41.304278 [hotstuff proto] now state: <hotstuff hqc=7b1441e126 hqc.height=7 b_lock=763fa4a50c b_exec=2040acda80 vheight=8 tails=1>
+2021-01-25 20:25:41.304324 [hotstuff proto] got <vote rid=3 blk=de0a21d1fe>
+2021-01-25 20:25:41.304369 [hotstuff proto] now state: <hotstuff hqc=7b1441e126 hqc.height=7 b_lock=763fa4a50c b_exec=2040acda80 vheight=8 tails=1>
+2021-01-25 20:25:41.304428 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.304467 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.304479 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.304499 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.304560 [hotstuff proto] commit <block id=763fa4a50c height=6 parent=2040acda80 qc_ref=2040acda80>
+2021-01-25 20:25:41.304592 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=6 cmd=5f1ddbc2fb blk=763fa4a50c>
+2021-01-25 20:25:41.304649 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=6 cmd=48443c868f blk=763fa4a50c>
+2021-01-25 20:25:41.304691 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=6 cmd=9c8616c455 blk=763fa4a50c>
+2021-01-25 20:25:41.304743 [hotstuff proto] propose <block id=13a15ecb36 height=9 parent=de0a21d1fe qc_ref=de0a21d1fe>
+2021-01-25 20:25:41.304931 [hotstuff proto] got <vote rid=0 blk=13a15ecb36>
+2021-01-25 20:25:41.304993 [hotstuff proto] now state: <hotstuff hqc=de0a21d1fe hqc.height=8 b_lock=7b1441e126 b_exec=763fa4a50c vheight=9 tails=1>
+2021-01-25 20:25:41.305037 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.305125 [hotstuff proto] got <vote rid=2 blk=de0a21d1fe>
+2021-01-25 20:25:41.305229 [hotstuff proto] now state: <hotstuff hqc=de0a21d1fe hqc.height=8 b_lock=7b1441e126 b_exec=763fa4a50c vheight=9 tails=1>
+2021-01-25 20:25:41.307064 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.307180 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.307279 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.307331 [hotstuff proto] got <vote rid=2 blk=13a15ecb36>
+2021-01-25 20:25:41.307371 [hotstuff proto] now state: <hotstuff hqc=de0a21d1fe hqc.height=8 b_lock=7b1441e126 b_exec=763fa4a50c vheight=9 tails=1>
+2021-01-25 20:25:41.307488 [hotstuff proto] got <vote rid=3 blk=13a15ecb36>
+2021-01-25 20:25:41.307543 [hotstuff proto] now state: <hotstuff hqc=de0a21d1fe hqc.height=8 b_lock=7b1441e126 b_exec=763fa4a50c vheight=9 tails=1>
+2021-01-25 20:25:41.307577 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.307605 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.307627 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.307640 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.307695 [hotstuff proto] commit <block id=7b1441e126 height=7 parent=763fa4a50c qc_ref=763fa4a50c>
+2021-01-25 20:25:41.307749 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=7 cmd=db182aa591 blk=7b1441e126>
+2021-01-25 20:25:41.307850 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=7 cmd=1bcca6c039 blk=7b1441e126>
+2021-01-25 20:25:41.307923 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=7 cmd=f83bb221d5 blk=7b1441e126>
+2021-01-25 20:25:41.308002 [hotstuff proto] propose <block id=b76cc836f5 height=10 parent=13a15ecb36 qc_ref=13a15ecb36>
+2021-01-25 20:25:41.308133 [hotstuff proto] got <vote rid=0 blk=b76cc836f5>
+2021-01-25 20:25:41.308176 [hotstuff proto] now state: <hotstuff hqc=13a15ecb36 hqc.height=9 b_lock=de0a21d1fe b_exec=7b1441e126 vheight=10 tails=1>
+2021-01-25 20:25:41.308217 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.308288 [hotstuff proto] got <vote rid=1 blk=13a15ecb36>
+2021-01-25 20:25:41.308425 [hotstuff proto] now state: <hotstuff hqc=13a15ecb36 hqc.height=9 b_lock=de0a21d1fe b_exec=7b1441e126 vheight=10 tails=1>
+2021-01-25 20:25:41.313232 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.314186 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.315020 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.315135 [hotstuff proto] got <vote rid=1 blk=b76cc836f5>
+2021-01-25 20:25:41.315194 [hotstuff proto] now state: <hotstuff hqc=13a15ecb36 hqc.height=9 b_lock=de0a21d1fe b_exec=7b1441e126 vheight=10 tails=1>
+2021-01-25 20:25:41.315253 [hotstuff proto] got <vote rid=2 blk=b76cc836f5>
+2021-01-25 20:25:41.315299 [hotstuff proto] now state: <hotstuff hqc=13a15ecb36 hqc.height=9 b_lock=de0a21d1fe b_exec=7b1441e126 vheight=10 tails=1>
+2021-01-25 20:25:41.315336 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.315362 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.315383 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.315406 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.315468 [hotstuff proto] commit <block id=de0a21d1fe height=8 parent=7b1441e126 qc_ref=7b1441e126>
+2021-01-25 20:25:41.315509 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=8 cmd=a44c4438cf blk=de0a21d1fe>
+2021-01-25 20:25:41.315543 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=8 cmd=2fadf4ab76 blk=de0a21d1fe>
+2021-01-25 20:25:41.315565 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=8 cmd=3fbaba3c5b blk=de0a21d1fe>
+2021-01-25 20:25:41.315621 [hotstuff proto] propose <block id=a4f2ad5f28 height=11 parent=b76cc836f5 qc_ref=b76cc836f5>
+2021-01-25 20:25:41.315721 [hotstuff proto] got <vote rid=0 blk=a4f2ad5f28>
+2021-01-25 20:25:41.315753 [hotstuff proto] now state: <hotstuff hqc=b76cc836f5 hqc.height=10 b_lock=13a15ecb36 b_exec=de0a21d1fe vheight=11 tails=1>
+2021-01-25 20:25:41.315782 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.315859 [hotstuff proto] got <vote rid=3 blk=b76cc836f5>
+2021-01-25 20:25:41.315914 [hotstuff proto] now state: <hotstuff hqc=b76cc836f5 hqc.height=10 b_lock=13a15ecb36 b_exec=de0a21d1fe vheight=11 tails=1>
+2021-01-25 20:25:41.317949 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.318068 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.318135 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.318266 [hotstuff proto] got <vote rid=3 blk=a4f2ad5f28>
+2021-01-25 20:25:41.318320 [hotstuff proto] now state: <hotstuff hqc=b76cc836f5 hqc.height=10 b_lock=13a15ecb36 b_exec=de0a21d1fe vheight=11 tails=1>
+2021-01-25 20:25:41.318363 [hotstuff proto] got <vote rid=1 blk=a4f2ad5f28>
+2021-01-25 20:25:41.318395 [hotstuff proto] now state: <hotstuff hqc=b76cc836f5 hqc.height=10 b_lock=13a15ecb36 b_exec=de0a21d1fe vheight=11 tails=1>
+2021-01-25 20:25:41.318419 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.318438 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.318451 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.318471 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.318523 [hotstuff proto] commit <block id=13a15ecb36 height=9 parent=de0a21d1fe qc_ref=de0a21d1fe>
+2021-01-25 20:25:41.318558 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=9 cmd=c63761c39f blk=13a15ecb36>
+2021-01-25 20:25:41.318594 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=9 cmd=9779c6fff1 blk=13a15ecb36>
+2021-01-25 20:25:41.318631 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=9 cmd=67e4f26e84 blk=13a15ecb36>
+2021-01-25 20:25:41.318709 [hotstuff proto] propose <block id=89d4a99386 height=12 parent=a4f2ad5f28 qc_ref=a4f2ad5f28>
+2021-01-25 20:25:41.318833 [hotstuff proto] got <vote rid=0 blk=89d4a99386>
+2021-01-25 20:25:41.318877 [hotstuff proto] now state: <hotstuff hqc=a4f2ad5f28 hqc.height=11 b_lock=b76cc836f5 b_exec=13a15ecb36 vheight=12 tails=1>
+2021-01-25 20:25:41.318907 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.318984 [hotstuff proto] got <vote rid=2 blk=a4f2ad5f28>
+2021-01-25 20:25:41.319018 [hotstuff proto] now state: <hotstuff hqc=a4f2ad5f28 hqc.height=11 b_lock=b76cc836f5 b_exec=13a15ecb36 vheight=12 tails=1>
+2021-01-25 20:25:41.320726 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.320842 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.320965 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.321077 [hotstuff proto] got <vote rid=2 blk=89d4a99386>
+2021-01-25 20:25:41.321130 [hotstuff proto] now state: <hotstuff hqc=a4f2ad5f28 hqc.height=11 b_lock=b76cc836f5 b_exec=13a15ecb36 vheight=12 tails=1>
+2021-01-25 20:25:41.321173 [hotstuff proto] got <vote rid=1 blk=89d4a99386>
+2021-01-25 20:25:41.321206 [hotstuff proto] now state: <hotstuff hqc=a4f2ad5f28 hqc.height=11 b_lock=b76cc836f5 b_exec=13a15ecb36 vheight=12 tails=1>
+2021-01-25 20:25:41.321231 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.321252 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.321265 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.321283 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.321332 [hotstuff proto] commit <block id=b76cc836f5 height=10 parent=13a15ecb36 qc_ref=13a15ecb36>
+2021-01-25 20:25:41.321367 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=10 cmd=5db43ae74c blk=b76cc836f5>
+2021-01-25 20:25:41.321403 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=10 cmd=31dba5fca7 blk=b76cc836f5>
+2021-01-25 20:25:41.321483 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=10 cmd=90d3cc4af3 blk=b76cc836f5>
+2021-01-25 20:25:41.321555 [hotstuff proto] propose <block id=931e87141c height=13 parent=89d4a99386 qc_ref=89d4a99386>
+2021-01-25 20:25:41.321679 [hotstuff proto] got <vote rid=0 blk=931e87141c>
+2021-01-25 20:25:41.321723 [hotstuff proto] now state: <hotstuff hqc=89d4a99386 hqc.height=12 b_lock=a4f2ad5f28 b_exec=b76cc836f5 vheight=13 tails=1>
+2021-01-25 20:25:41.321762 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.321821 [hotstuff proto] got <vote rid=3 blk=89d4a99386>
+2021-01-25 20:25:41.321853 [hotstuff proto] now state: <hotstuff hqc=89d4a99386 hqc.height=12 b_lock=a4f2ad5f28 b_exec=b76cc836f5 vheight=13 tails=1>
+2021-01-25 20:25:41.323691 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.323862 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.323968 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.324022 [hotstuff proto] got <vote rid=2 blk=931e87141c>
+2021-01-25 20:25:41.324063 [hotstuff proto] now state: <hotstuff hqc=89d4a99386 hqc.height=12 b_lock=a4f2ad5f28 b_exec=b76cc836f5 vheight=13 tails=1>
+2021-01-25 20:25:41.324099 [hotstuff proto] got <vote rid=3 blk=931e87141c>
+2021-01-25 20:25:41.324131 [hotstuff proto] now state: <hotstuff hqc=89d4a99386 hqc.height=12 b_lock=a4f2ad5f28 b_exec=b76cc836f5 vheight=13 tails=1>
+2021-01-25 20:25:41.324155 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.324174 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.324187 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.324206 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.324266 [hotstuff proto] commit <block id=a4f2ad5f28 height=11 parent=b76cc836f5 qc_ref=b76cc836f5>
+2021-01-25 20:25:41.324303 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=11 cmd=5eab1e29e4 blk=a4f2ad5f28>
+2021-01-25 20:25:41.324338 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=11 cmd=3786b5685d blk=a4f2ad5f28>
+2021-01-25 20:25:41.324373 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=11 cmd=f976b84a67 blk=a4f2ad5f28>
+2021-01-25 20:25:41.324452 [hotstuff proto] propose <block id=ee0918a882 height=14 parent=931e87141c qc_ref=931e87141c>
+2021-01-25 20:25:41.324659 [hotstuff proto] got <vote rid=0 blk=ee0918a882>
+2021-01-25 20:25:41.324719 [hotstuff proto] now state: <hotstuff hqc=931e87141c hqc.height=13 b_lock=89d4a99386 b_exec=a4f2ad5f28 vheight=14 tails=1>
+2021-01-25 20:25:41.324754 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.324835 [hotstuff proto] got <vote rid=1 blk=931e87141c>
+2021-01-25 20:25:41.324906 [hotstuff proto] now state: <hotstuff hqc=931e87141c hqc.height=13 b_lock=89d4a99386 b_exec=a4f2ad5f28 vheight=14 tails=1>
+2021-01-25 20:25:41.329119 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.329808 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.333334 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.333465 [hotstuff proto] got <vote rid=1 blk=ee0918a882>
+2021-01-25 20:25:41.333530 [hotstuff proto] now state: <hotstuff hqc=931e87141c hqc.height=13 b_lock=89d4a99386 b_exec=a4f2ad5f28 vheight=14 tails=1>
+2021-01-25 20:25:41.333591 [hotstuff proto] got <vote rid=2 blk=ee0918a882>
+2021-01-25 20:25:41.333646 [hotstuff proto] now state: <hotstuff hqc=931e87141c hqc.height=13 b_lock=89d4a99386 b_exec=a4f2ad5f28 vheight=14 tails=1>
+2021-01-25 20:25:41.333687 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.333709 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.333720 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.333734 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.333773 [hotstuff proto] commit <block id=89d4a99386 height=12 parent=a4f2ad5f28 qc_ref=a4f2ad5f28>
+2021-01-25 20:25:41.333797 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=12 cmd=c59a297409 blk=89d4a99386>
+2021-01-25 20:25:41.333852 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=12 cmd=c854c8f56f blk=89d4a99386>
+2021-01-25 20:25:41.333874 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=12 cmd=e1eb586829 blk=89d4a99386>
+2021-01-25 20:25:41.333903 [hotstuff proto] propose <block id=a73bbfb444 height=15 parent=ee0918a882 qc_ref=ee0918a882>
+2021-01-25 20:25:41.334000 [hotstuff proto] got <vote rid=0 blk=a73bbfb444>
+2021-01-25 20:25:41.334030 [hotstuff proto] now state: <hotstuff hqc=ee0918a882 hqc.height=14 b_lock=931e87141c b_exec=89d4a99386 vheight=15 tails=1>
+2021-01-25 20:25:41.334059 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.335677 [hotstuff proto] got <vote rid=3 blk=ee0918a882>
+2021-01-25 20:25:41.335835 [hotstuff proto] now state: <hotstuff hqc=ee0918a882 hqc.height=14 b_lock=931e87141c b_exec=89d4a99386 vheight=15 tails=1>
+2021-01-25 20:25:41.343765 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.344800 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.345106 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.345223 [hotstuff proto] got <vote rid=1 blk=a73bbfb444>
+2021-01-25 20:25:41.345310 [hotstuff proto] now state: <hotstuff hqc=ee0918a882 hqc.height=14 b_lock=931e87141c b_exec=89d4a99386 vheight=15 tails=1>
+2021-01-25 20:25:41.345404 [hotstuff proto] got <vote rid=2 blk=a73bbfb444>
+2021-01-25 20:25:41.345459 [hotstuff proto] now state: <hotstuff hqc=ee0918a882 hqc.height=14 b_lock=931e87141c b_exec=89d4a99386 vheight=15 tails=1>
+2021-01-25 20:25:41.345506 [hotstuff proto] got QC, propose a new block
+2021-01-25 20:25:41.345543 [hotstuff proto] Leader is adding
+2021-01-25 20:25:41.345562 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.345586 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.345645 [hotstuff proto] commit <block id=931e87141c height=13 parent=89d4a99386 qc_ref=89d4a99386>
+2021-01-25 20:25:41.345678 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=13 cmd=7c2f21ce5c blk=931e87141c>
+2021-01-25 20:25:41.345815 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=13 cmd=bb2f4bcd51 blk=931e87141c>
+2021-01-25 20:25:41.345863 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=13 cmd=66ee151dbf blk=931e87141c>
+2021-01-25 20:25:41.345953 [hotstuff proto] propose <block id=e20fa388d2 height=16 parent=a73bbfb444 qc_ref=a73bbfb444>
+2021-01-25 20:25:41.346084 [hotstuff proto] got <vote rid=0 blk=e20fa388d2>
+2021-01-25 20:25:41.346139 [hotstuff proto] now state: <hotstuff hqc=a73bbfb444 hqc.height=15 b_lock=ee0918a882 b_exec=931e87141c vheight=16 tails=1>
+2021-01-25 20:25:41.346180 [hotstuff proto] Proposed block size : 3
+2021-01-25 20:25:41.346274 [hotstuff proto] got <vote rid=3 blk=a73bbfb444>
+2021-01-25 20:25:41.346358 [hotstuff proto] now state: <hotstuff hqc=a73bbfb444 hqc.height=15 b_lock=ee0918a882 b_exec=931e87141c vheight=16 tails=1>
+2021-01-25 20:25:41.348077 [hotstuff proto] It is a new addition!
+2021-01-25 20:25:41.348200 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.348280 [hotstuff proto] It is a new addition to existing record!
+2021-01-25 20:25:41.348425 [hotstuff proto] got <vote rid=3 blk=e20fa388d2>
+2021-01-25 20:25:41.348479 [hotstuff proto] now state: <hotstuff hqc=a73bbfb444 hqc.height=15 b_lock=ee0918a882 b_exec=931e87141c vheight=16 tails=1>
+2021-01-25 20:25:41.348518 [hotstuff proto] got <vote rid=1 blk=e20fa388d2>
+2021-01-25 20:25:41.348550 [hotstuff proto] now state: <hotstuff hqc=a73bbfb444 hqc.height=15 b_lock=ee0918a882 b_exec=931e87141c vheight=16 tails=1>
+2021-01-25 20:25:41.348681 [hotstuff proto] got <vote rid=2 blk=e20fa388d2>
+2021-01-25 20:25:41.348731 [hotstuff proto] now state: <hotstuff hqc=e20fa388d2 hqc.height=16 b_lock=ee0918a882 b_exec=931e87141c vheight=16 tails=1>
+2021-01-25 20:25:46.463754 [hotstuff info] ===== begin stats =====
+2021-01-25 20:25:46.463997 [hotstuff info] -------- queues -------
+2021-01-25 20:25:46.464115 [hotstuff info] blk_fetch_waiting: 0
+2021-01-25 20:25:46.464154 [hotstuff info] blk_delivery_waiting: 0
+2021-01-25 20:25:46.464185 [hotstuff info] decision_waiting: 11
+2021-01-25 20:25:46.464215 [hotstuff info] -------- misc ---------
+2021-01-25 20:25:46.464243 [hotstuff info] fetched: 0
+2021-01-25 20:25:46.464272 [hotstuff info] delivered: 0
+2021-01-25 20:25:46.464301 [hotstuff info] cmd_cache: 0
+2021-01-25 20:25:46.464330 [hotstuff info] blk_cache: 17
+2021-01-25 20:25:46.464358 [hotstuff info] ------ misc (10s) -----
+2021-01-25 20:25:46.464385 [hotstuff info] fetched: 0
+2021-01-25 20:25:46.464412 [hotstuff info] delivered: 0
+2021-01-25 20:25:46.464438 [hotstuff info] decided: 39
+2021-01-25 20:25:46.464466 [hotstuff info] gened: 0
+2021-01-25 20:25:46.464493 [hotstuff info] avg. parent_size: 0.000
+2021-01-25 20:25:46.464564 [hotstuff info] delivery time: 0.000 avg, 0.000 min, 0.000 max
+2021-01-25 20:25:46.464597 [hotstuff info] --- replica msg. (10s) ---
+2021-01-25 20:25:46.464739 [hotstuff info] c261250345: 19(5869), 19(4077), 0
+2021-01-25 20:25:46.464870 [hotstuff info] 065b010aed: 19(5869), 19(4077), 0
+2021-01-25 20:25:46.465018 [hotstuff info] 6540a0fea6: 19(5869), 19(4077), 0
+2021-01-25 20:25:46.465044 [hotstuff info] sent: 57
+2021-01-25 20:25:46.465070 [hotstuff info] recv: 57
+2021-01-25 20:25:46.465097 [hotstuff info] --- replica msg. total ---
+2021-01-25 20:25:46.465125 [hotstuff info] sent: 57
+2021-01-25 20:25:46.465152 [hotstuff info] recv: 57
+2021-01-25 20:25:46.465179 [hotstuff info] ====== end stats ======
+2021-01-25 20:25:46.465206 [hotstuff info] --- client msg. (10s) ---
+2021-01-25 20:25:46.465241 [hotstuff info] <NetAddr 127.0.0.1:52571>: 39(2925), 50(400)
+2021-01-25 20:25:46.465266 [hotstuff info] --- end client msg. ---
+2021-01-25 20:25:46.465294 [hotstuff info] --- writing orderedlist_storage into a file. ---
+2021-01-25 20:25:46.465463 [hotstuff proto] block hash is: ee0918a882
+2021-01-25 20:25:46.465517 [hotstuff proto] block hash is: 931e87141c
+2021-01-25 20:25:46.465592 [hotstuff proto] block hash is: a73bbfb444
+2021-01-25 20:25:46.465636 [hotstuff proto] block hash is: 89d4a99386
+2021-01-25 20:25:46.465664 [hotstuff proto] block hash is: b76cc836f5
+2021-01-25 20:25:46.465691 [hotstuff proto] block hash is: 7b1441e126
+2021-01-25 20:25:46.465717 [hotstuff proto] block hash is: de0a21d1fe
+2021-01-25 20:25:46.465743 [hotstuff proto] block hash is: 763fa4a50c
+2021-01-25 20:25:46.465769 [hotstuff proto] block hash is: e20fa388d2
+2021-01-25 20:25:46.465795 [hotstuff proto] block hash is: 13a15ecb36
+2021-01-25 20:25:46.465820 [hotstuff proto] block hash is: 193bac8a34
+2021-01-25 20:25:46.465846 [hotstuff proto] block hash is: 2040acda80
+2021-01-25 20:25:46.465872 [hotstuff proto] block hash is: 99e2195803
+2021-01-25 20:25:46.465898 [hotstuff proto] block hash is: f44777f8a0
+2021-01-25 20:25:46.465924 [hotstuff proto] block hash is: a4f2ad5f28
+2021-01-25 20:25:46.465949 [hotstuff proto] block hash is: 20b18a460e
+2021-01-25 20:25:46.465966 [hotstuff proto] Extracting commands!
+2021-01-25 20:25:46.465993 [hotstuff proto] First - cmd hash is: 7c2f21ce5c
+2021-01-25 20:25:46.466020 [hotstuff proto] First - cmd hash is: bb2f4bcd51
+2021-01-25 20:25:46.466046 [hotstuff proto] First - cmd hash is: 66ee151dbf
+2021-01-25 20:25:46.466084 [hotstuff proto] First -ts  is: 1611624341279741
+2021-01-25 20:25:46.466105 [hotstuff proto] First -ts  is: 1611624341279773
+2021-01-25 20:25:46.466123 [hotstuff proto] First -ts  is: 1611624341279804
+2021-01-25 20:25:46.466140 [hotstuff proto] Extracting commands!
+2021-01-25 20:25:46.466166 [hotstuff proto] Second- cmd hash is: 7c2f21ce5c
+2021-01-25 20:25:46.466192 [hotstuff proto] Second- cmd hash is: bb2f4bcd51
+2021-01-25 20:25:46.466218 [hotstuff proto] Second- cmd hash is: 66ee151dbf
+2021-01-25 20:25:46.466235 [hotstuff proto] Second- ts  is: 1611624341276219
+2021-01-25 20:25:46.466251 [hotstuff proto] Second- ts  is: 1611624341276237
+2021-01-25 20:25:46.466267 [hotstuff proto] Second- ts  is: 1611624341276257
+2021-01-25 20:25:46.466282 [hotstuff info] --- writing command_timestamp_storage into a file. ---

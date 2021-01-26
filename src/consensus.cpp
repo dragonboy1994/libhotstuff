@@ -181,8 +181,10 @@ block_t HotStuffCore::on_propose(const std::vector<uint256_t> &cmds,
     for (const auto &_: parents) tails.erase(_);
 
     if (parents[0]->get_hash() != b0->get_hash()){
+        command_timestamp_storage->refresh_available_cmds(parents[0]->get_cmds());
         orderedlist_t self_orderedlist = command_timestamp_storage->get_orderedlist(parents[0]->get_hash());
-        orderedlist_storage->add_ordered_list(parents[0]->get_hash(), *self_orderedlist);
+        HOTSTUFF_LOG_PROTO("Leader is adding");
+        orderedlist_storage->add_ordered_list(parents[0]->get_hash(), *self_orderedlist, true);
     }
 
     /* create the new block */
