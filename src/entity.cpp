@@ -189,12 +189,14 @@ orderedlist_t CommandTimestampStorage::get_orderedlist(const uint256_t &blk_hash
 
 void OrderedListStorage::add_ordered_list(const uint256_t block_hash, const OrderedList preferred_orderedlist, bool leader)
 {
+    HOTSTUFF_LOG_PROTO("The block hash is: %s", get_hex10(block_hash).c_str());
     auto it = ordered_list_cache.find(block_hash);
     if (it == ordered_list_cache.end())
     {
         HOTSTUFF_LOG_PROTO("It is a new addition!");
         std::vector<OrderedList> temp{preferred_orderedlist};
         ordered_list_cache.insert(std::make_pair(block_hash, temp));
+        if(leader ==true) {HOTSTUFF_LOG_PROTO("It is leader");}
     }
     else
     {
@@ -202,11 +204,22 @@ void OrderedListStorage::add_ordered_list(const uint256_t block_hash, const Orde
         if (leader == true) 
         {
             it->second.insert(it->second.begin(), preferred_orderedlist);
+            HOTSTUFF_LOG_PROTO("It is leader");
         }
         else 
         {
-            // include orderedlist from n-f-1 other replicas; the other one will be from leader            
-            it->second.push_back(preferred_orderedlist);
+            // include orderedlist from n-f-1 other replicas; the other one will be from leader 
+            // so total is n-f orderedlists 
+            if (it->second.size() < 3)
+            {
+                it->second.push_back(preferred_orderedlist);
+                HOTSTUFF_LOG_PROTO("It is replica");
+            }
+            else 
+            {
+                HOTSTUFF_LOG_PROTO("Enough lists!");
+            }
+            
         }
         // HOTSTUFF_LOG_PROTO("Size of cache for this index is %lu", it->second.size());
     }
