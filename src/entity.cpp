@@ -206,14 +206,19 @@ void OrderedListStorage::add_ordered_list(const uint256_t block_hash, const Orde
     }
 }
 
-std::vector<uint256_t> OrderedListStorage::get_all_block_hashes() const {
-    std::vector<uint256_t> block_hashes;
-    for (auto kv : ordered_list_cache)
-    {
-        block_hashes.push_back(kv.first);
-    }
-    return block_hashes;
+std::vector<OrderedList> OrderedListStorage::get_set_of_orderedlists(const uint256_t block_hash) const
+{
+    return ordered_list_cache.find(block_hash)->second;
 }
+
+// std::vector<uint256_t> OrderedListStorage::get_all_block_hashes() const {
+//     std::vector<uint256_t> block_hashes;
+//     for (auto kv : ordered_list_cache)
+//     {
+//         block_hashes.push_back(kv.first);
+//     }
+//     return block_hashes;
+// }
 
 // std::vector<uint256_t> OrderedListStorage::get_cmds_for_first_one(const uint256_t block_hash) const {
 //     return ordered_list_cache.find(block_hash)->second[0].extract_cmds();
