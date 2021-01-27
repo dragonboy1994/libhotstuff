@@ -7,65 +7,40 @@
 #include <queue>
 #include <cstdlib>
 #include <iostream>
+#include <cstring>
 #include "hotstuff/type.h"
 #include "hotstuff/entity.h"
 
 
 //TODO: deal with cmds appear less than (n - 2f) times
+//TODO: deal with "static cmp"
 namespace  Aequitas {
-
-//assuming different commands have different content of "cmds"
-struct OrderedList
-{
-    std::vector<uint256_t> cmds;
-    std::vector<uint64_t> timestamps;
-
-    OrderedList(std::vector<uint256_t> cmds, std::vector<uint64_t> timestamps) : cmd(cmds), timestamps(timestamps) {}
-
-    static bool cmp(const int& i, const int& j)
-    {
-        return timestamps[i] < timestamps[j];
-    }
-
-    void sort_cmds()
-    {
-        std::vector<int> id_for_sort;
-        int n_cmds = cmds.size();
-        for(int i = 0; i < n_cmds; i++) id_for_sort.push_back(i);
-        std::sort(id_for_sort.begin(), id_for_sort.end(), cmp);
-        std::vector<uint256_t> new_cmds;
-        for(int i = 0; i < n_cmds; i++) new_cmds.push_back(cmds[id_for_sort[i]]);
-        cmds.assign(new_cmds.begin(), new_cmds.end());
-        std::sort(timestamps.begin(), timestamps.end());
-    }
-
-    void printout()
-    {
-        int n_cmds = cmds.size();
-        for(int i = 0; i < n_cmds; i++)
-            std::cout << cmds[i] << " ";
-        std::cout << "\n";
-    }
-};
-
+const int max_number_cmds = 100;
 class TopologyGraph
 {
     private:
     //Arrays for adding edges & graph
     const int max_number_cmds = 100;
     std::vector<int> edge[max_number_cmds];
-    int cnt = 0, top = 0;
+    int cnt, top;
     int bel[max_number_cmds], dfn[max_number_cmds], low[max_number_cmds], stck[max_number_cmds];
     bool inst[max_number_cmds];
 
     public:
-    int scc = 0;
+    int scc;
     std::vector<int> scc_have[max_number_cmds];
     //Arrays for graph after scc
     std::vector<int> edge_with_scc[max_number_cmds];
     int inDegree[max_number_cmds];
 
     private:
+
+    int min(int i, int j)
+    {
+        if (i < j) return i;
+        return j;
+    }
+
     //find strong connected component
     void tarjan(int u)
     {
@@ -144,19 +119,19 @@ class TopologyGraph
     }
     
      
-}
+};
 
 //decide whether we should add an edge from cmd_j to cmd_i
 //if in more than threshold_number replicas, cmd_j is before cmd_i, then we'll add an edge
 //you can add the granularity "g" here if needed
-bool run_befor(int j, int i, std::vector<OrderedList> &proposed_orderlist, int threshold_number)
+bool run_before(int j, int i, std::vector<OrderedList> &proposed_orderlist, int threshold_number)
 {
     int n_replica = proposed_orderlist.size();
     int n_cmds = proposed_orderlist[0].cmds.size();
     int count = 0;
     for(int ii = 0; ii < n_replica; ii++)
     {
-        for(int jj = 0; jj < proposed_orderlist[ii].cmds.size())
+        for(int jj = 0; jj < proposed_orderlist[ii].cmds.size(); jj++)
         {
             if(proposed_orderlist[ii].cmds[jj] == proposed_orderlist[0].cmds[j]) {count++; break;}
             if(proposed_orderlist[ii].cmds[jj] == proposed_orderlist[0].cmds[i]) break;
@@ -169,7 +144,7 @@ bool run_befor(int j, int i, std::vector<OrderedList> &proposed_orderlist, int t
 //proposed_orderlist[0] is the orderlist of the leader before the leader receive other replicas' ordered list
 //return a vector, which will be a list of orderedlist
 //"timestamps" in these returned orderedlist are useless, cmds in one orderedlist should be in one block
-std::vector<OrderedList> aequitas_order(std::vector<OrderedList> &proposed_orderlist, float g)
+std::vector<OrderedList> aequitas_order(std::vector<OrderedList> &proposed_orderlist, double g)
 {
     int n_replica = proposed_orderlist.size();
     if(n_replica == 0) 
@@ -178,27 +153,27 @@ std::vector<OrderedList> aequitas_order(std::vector<OrderedList> &proposed_order
     if(n_cmds == 0 || (n_cmds != proposed_orderlist[0].timestamps.size()))
         throw std::runtime_error("no cmds to be ordered or cmds not in the right form.");
     
-    //sort all the cmds
-    for (int i = 0; i < n_replica; i++) proposed_orderlist[i].sort_cmds();
+    //sort all the cmds TODO
+    //for (int i = 0; i < n_replica; i++) proposed_orderlist[i].sort_cmds();
 
     //map the cmd to a number
     int distinct_cmd = 0;
-    std::vector<uint256_t> cmd_content; cmd_content.clear(); cmd_content.push_back("0");
+    std::vector<uint256_t> cmd_content; cmd_content.clear(); cmd_content.push_back(0);
     std::map<uint256_t, int> map_cmd; map_cmd.clear();
 
     TopologyGraph G;
 
     for (int i = 0; i < n_cmds; i++)
     {
-        uint256_t cmd_i = proposed_orderlist[0][i];
+        uint256_t cmd_i = proposed_orderlist[0].cmds[i];
         if (!map_cmd[cmd_i])
             map_cmd[cmd_i] = ++distinct_cmd, cmd_content.push_back(cmd_i);
-        int ii = map[cmd_i];
+        int ii = map_cmd[cmd_i];
         for (int j = 0; j < n_cmds; j++)
         {
-            uint256_t cmd_j = proposed_orderlist[0][j]
+            uint256_t cmd_j = proposed_orderlist[0].cmds[j];
             if (!map_cmd[cmd_j]) map_cmd[cmd_j] = ++distinct_cmd, cmd_content.push_back(cmd_j);
-            int jj = map[cmd_j];
+            int jj = map_cmd[cmd_j];
             if (j != i && run_before(j, i, proposed_orderlist, g * n_replica))
             {
 
@@ -215,26 +190,25 @@ std::vector<OrderedList> aequitas_order(std::vector<OrderedList> &proposed_order
     G.topology_sort(distinct_cmd);
     
     //now deal with graph after scc
-    std::queue<int> que;
-    que.clear();
+    std::queue<int> que = std::queue<int>();
     int check_whether_all_cmds_are_ordered = 0;
     std::vector<OrderedList> final_ordered_vector; final_ordered_vector.clear();
     for (int i = 1; i <= G.scc; i++)
     {
         if (G.inDegree[i] == 0) que.push(i);
     }
-    While(!que.empty())
+    while(!que.empty())
     {
         std::vector<uint256_t> cmds; cmds.clear();
         std::vector<uint64_t> timestamps; timestamps.clear();
         std::vector<int> to_be_added; to_be_added.clear();
-        While(!que.empty())
+        while(!que.empty())
         {
             int u = que.front();
             que.pop();
             for (int i = 0; i < G.scc_have[u].size(); i++)
             {
-                cmds.push_back(cmd_content[G.scc_have[i]]);
+                cmds.push_back(cmd_content[G.scc_have[u][i]]);
                 check_whether_all_cmds_are_ordered++;
             }
             for (int i = 0; i < G.edge_with_scc[u].size(); i++)
@@ -259,6 +233,5 @@ std::vector<OrderedList> aequitas_order(std::vector<OrderedList> &proposed_order
 
 }
 
-}
 
 #endif

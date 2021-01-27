@@ -127,12 +127,20 @@ using orderedlist_t = salticidae::ArcObj<OrderedList>;
 
 
 /** Abstraction for containing OrderedList. */
+/** assuming different commands have different content of "cmds". */
 class OrderedList
 {
     friend HotStuffCore;
+    public:
     /** cmds contain the commands and timestamps contain their corresponding timestamps.*/
     std::vector<uint256_t> cmds;
     std::vector<uint64_t> timestamps;
+    /*
+    bool cmp(const int& i, const int& j)
+    {
+        return timestamps[i] < timestamps[j];
+    }
+    */
 
 public:
     // the constructors
@@ -144,6 +152,27 @@ public:
     void unserialize(DataStream &s, HotStuffCore *hsc);
     const std::vector<uint256_t> &extract_cmds() const { return cmds; }
     const std::vector<uint64_t> &extract_timestamps() const { return timestamps; }
+
+    /*
+    void sort_cmds()
+    {
+        std::vector<int> id_for_sort;
+        int n_cmds = cmds.size();
+        for(int i = 0; i < n_cmds; i++) id_for_sort.push_back(i);
+        std::sort(id_for_sort.begin(), id_for_sort.end(), cmp);
+        std::vector<uint256_t> new_cmds;
+        for(int i = 0; i < n_cmds; i++) new_cmds.push_back(cmds[id_for_sort[i]]);
+        cmds.assign(new_cmds.begin(), new_cmds.end());
+        std::sort(timestamps.begin(), timestamps.end());
+    }
+    */
+    void printout()
+    {
+        int n_cmds = cmds.size();
+        for(int i = 0; i < n_cmds; i++)
+            std::cout << cmds[i] << " ";
+        std::cout << "\n";
+    }
 };
 
 
