@@ -27,6 +27,7 @@
 #include "hotstuff/type.h"
 #include "hotstuff/entity.h"
 #include "hotstuff/crypto.h"
+#include "hotstuff/aequitas.h"
 
 namespace hotstuff {
 
