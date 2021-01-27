@@ -16,11 +16,11 @@
 
 int main()
 {
-    float g = 3.0/4.0;
+    double g = 3.0/4.0;
     int n = 5;
     int n_cmds = 4;
-    std::vector<int> timestamps;
-    std::vector<Aequitas::OrderedList> proposed_orderlist;
+    std::vector<int> timestamps__;
+    std::vector<OrderedList> proposed_orderlist;
     for (int i = 1; i <= n_cmds; i++) timestamps__.push_back(i);
     for (int i = 1; i <= n; i++)
     {
@@ -31,11 +31,11 @@ int main()
             timestamps.push_back((uint64_t)(timestamps__[i]));
             cmds.push_back((uint256_t)(timestamps__[i]));
         }
-        Aequitas::OrderedList cur_proposed_orderlist(timestamps, cmds);
+        OrderedList cur_proposed_orderlist(timestamps, cmds);
         proposed_orderlist.push_back(cur_proposed_orderlist);
         std::next_permutation(timestamps__.begin(), timestamps__.end());
     }
-    std::vector<Aequitas::OrderedList> final_orderlist = Aequitas::aequitas_order(proposed_orderlist, g);
+    std::vector<OrderedList> final_orderlist = Aequitas::aequitas_order(proposed_orderlist, g);
     for (int i = 0; i < final_orderlist.size(); i++)
     {
         final_orderlist[i].printout();
