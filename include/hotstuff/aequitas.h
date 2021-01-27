@@ -86,8 +86,8 @@ class TopologyGraph
 
     public:
 
-    TopologySort() { clear_array(); }
-    ~TopologySort() {}
+    TopologyGraph() { clear_array(); }
+    ~TopologyGraph() {}
 
     void addedge(int i, int j)
     {
