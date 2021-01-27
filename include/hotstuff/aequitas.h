@@ -140,7 +140,6 @@ bool run_before(int j, int i, std::vector<hotstuff::OrderedList> &proposed_order
     return false;
 }
 
-// g should be a float between (0,1), if cmd1 appears before cmd2 in g*number_of_nodes, one edge from cmd1 to cmd2 will be added
 //proposed_orderlist[0] is the orderlist of the leader before the leader receive other replicas' ordered list
 //return a vector, which will be a list of orderedlist
 //"timestamps" in these returned orderedlist are useless, cmds in one orderedlist should be in one block

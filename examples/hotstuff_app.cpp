@@ -23,7 +23,7 @@
 #include <unistd.h>
 #include <signal.h>
 #include <fstream>
-//#include <boost/lexical_cast.hpp>
+#include <boost/lexical_cast.hpp>
 
 #include "salticidae/stream.h"
 #include "salticidae/util.h"
