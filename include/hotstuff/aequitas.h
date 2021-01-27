@@ -144,7 +144,7 @@ bool run_before(int j, int i, std::vector<OrderedList> &proposed_orderlist, int 
 //proposed_orderlist[0] is the orderlist of the leader before the leader receive other replicas' ordered list
 //return a vector, which will be a list of orderedlist
 //"timestamps" in these returned orderedlist are useless, cmds in one orderedlist should be in one block
-std::vector<OrderedList> aequitas_order(std::vector<OrderedList> &proposed_orderlist, double g)
+std::vector<hotstuff::OrderedList> aequitas_order(std::vector<hotstuff::OrderedList> &proposed_orderlist, double g)
 {
     int n_replica = proposed_orderlist.size();
     if(n_replica == 0) 

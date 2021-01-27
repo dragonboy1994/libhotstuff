@@ -166,6 +166,7 @@ public:
         std::sort(timestamps.begin(), timestamps.end());
     }
     */
+    /*
     void printout()
     {
         int n_cmds = cmds.size();
@@ -173,6 +174,7 @@ public:
             std::cout << cmds[i] << " ";
         std::cout << "\n";
     }
+    */
 };
 
 
