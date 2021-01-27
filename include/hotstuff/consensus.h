@@ -21,7 +21,7 @@
 #include <cassert>
 #include <set>
 #include <unordered_map>
-#include <boost/lexical_cast.hpp>
+//#include <boost/lexical_cast.hpp>
 
 #include "hotstuff/promise.hpp"
 #include "hotstuff/type.h"
