@@ -135,11 +135,12 @@ class OrderedList
     /** cmds contain the commands and timestamps contain their corresponding timestamps.*/
     std::vector<uint256_t> cmds;
     std::vector<uint64_t> timestamps;
-
+    /*
     bool cmp(const int& i, const int& j)
     {
         return timestamps[i] < timestamps[j];
     }
+    */
 
 public:
     OrderedList() = default;
@@ -157,7 +158,7 @@ public:
 
     const std::vector<uint64_t> &extract_timestamps() const { return timestamps; }
 
-
+    /*
     void sort_cmds()
     {
         std::vector<int> id_for_sort;
@@ -169,7 +170,7 @@ public:
         cmds.assign(new_cmds.begin(), new_cmds.end());
         std::sort(timestamps.begin(), timestamps.end());
     }
-
+    */
     void printout()
     {
         int n_cmds = cmds.size();

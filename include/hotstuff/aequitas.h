@@ -13,6 +13,7 @@
 
 
 //TODO: deal with cmds appear less than (n - 2f) times
+//TODO: deal with "static cmp"
 namespace  Aequitas {
 const int max_number_cmds = 100;
 class TopologyGraph
@@ -21,12 +22,12 @@ class TopologyGraph
     //Arrays for adding edges & graph
     const int max_number_cmds = 100;
     std::vector<int> edge[max_number_cmds];
-    int cnt = 0, top = 0;
+    int cnt, top;
     int bel[max_number_cmds], dfn[max_number_cmds], low[max_number_cmds], stck[max_number_cmds];
     bool inst[max_number_cmds];
 
     public:
-    int scc = 0;
+    int scc;
     std::vector<int> scc_have[max_number_cmds];
     //Arrays for graph after scc
     std::vector<int> edge_with_scc[max_number_cmds];
@@ -153,8 +154,8 @@ std::vector<OrderedList> aequitas_order(std::vector<OrderedList> &proposed_order
     if(n_cmds == 0 || (n_cmds != proposed_orderlist[0].timestamps.size()))
         throw std::runtime_error("no cmds to be ordered or cmds not in the right form.");
     
-    //sort all the cmds
-    for (int i = 0; i < n_replica; i++) proposed_orderlist[i].sort_cmds();
+    //sort all the cmds TODO
+    //for (int i = 0; i < n_replica; i++) proposed_orderlist[i].sort_cmds();
 
     //map the cmd to a number
     int distinct_cmd = 0;
