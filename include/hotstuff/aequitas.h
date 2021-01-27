@@ -20,7 +20,6 @@ class TopologyGraph
 {
     private:
     //Arrays for adding edges & graph
-    const int max_number_cmds = 100;
     std::vector<int> edge[max_number_cmds];
     int cnt, top;
     int bel[max_number_cmds], dfn[max_number_cmds], low[max_number_cmds], stck[max_number_cmds];
@@ -124,7 +123,7 @@ class TopologyGraph
 //decide whether we should add an edge from cmd_j to cmd_i
 //if in more than threshold_number replicas, cmd_j is before cmd_i, then we'll add an edge
 //you can add the granularity "g" here if needed
-bool run_before(int j, int i, std::vector<OrderedList> &proposed_orderlist, int threshold_number)
+bool run_before(int j, int i, std::vector<hotstuff::OrderedList> &proposed_orderlist, int threshold_number)
 {
     int n_replica = proposed_orderlist.size();
     int n_cmds = proposed_orderlist[0].cmds.size();
@@ -145,7 +144,7 @@ bool run_before(int j, int i, std::vector<OrderedList> &proposed_orderlist, int 
 //proposed_orderlist[0] is the orderlist of the leader before the leader receive other replicas' ordered list
 //return a vector, which will be a list of orderedlist
 //"timestamps" in these returned orderedlist are useless, cmds in one orderedlist should be in one block
-std::vector<OrderedList> aequitas_order(std::vector<OrderedList> &proposed_orderlist, double g)
+std::vector<hotstuff::OrderedList> aequitas_order(std::vector<hotstuff::OrderedList> &proposed_orderlist, double g)
 {
     int n_replica = proposed_orderlist.size();
     if(n_replica == 0) 
@@ -193,7 +192,7 @@ std::vector<OrderedList> aequitas_order(std::vector<OrderedList> &proposed_order
     //now deal with graph after scc
     std::queue<int> que = std::queue<int>();
     int check_whether_all_cmds_are_ordered = 0;
-    std::vector<OrderedList> final_ordered_vector; final_ordered_vector.clear();
+    std::vector<hotstuff::OrderedList> final_ordered_vector; final_ordered_vector.clear();
     for (int i = 1; i <= G.scc; i++)
     {
         if (G.inDegree[i] == 0) que.push(i);
@@ -221,14 +220,14 @@ std::vector<OrderedList> aequitas_order(std::vector<OrderedList> &proposed_order
             }
             G.edge_with_scc[u].clear();
         }
-        OrderedList final_ordered_list(cmds, timestamps);
+        hotstuff::OrderedList final_ordered_list(cmds, timestamps);
         final_ordered_vector.push_back(final_ordered_list);
 
         for(int i = 0; i < to_be_added.size(); i++)
             que.push(to_be_added[i]);
     }
     if (check_whether_all_cmds_are_ordered != distinct_cmd)
-        throw std::runtime_error("Aequitas failed to topoloty sort the commands...");
+        throw std::runtime_error("Aequitas failed to topology sort the commands...");
     return final_ordered_vector;
 }
 
