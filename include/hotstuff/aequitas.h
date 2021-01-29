@@ -14,7 +14,7 @@
 
 //TODO: deal with cmds appear less than (n - 2f) times
 //TODO: deal with "static cmp"
-namespace  Aequitas {
+namespace  hotstuff {
 const int max_number_cmds = 100;
 class TopologyGraph
 {
