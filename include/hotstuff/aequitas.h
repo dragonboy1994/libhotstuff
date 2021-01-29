@@ -107,7 +107,7 @@ class TopologyGraph
         {
             for (int j = 0; j < edge[i].size(); j++)
             {
-                int ii = bel[i], jj = bel[j];
+                int ii = bel[i], jj = bel[edge[i][j]];
                 if(ii != jj)
                 {
                     edge_with_scc[ii].push_back(jj);
@@ -152,8 +152,8 @@ std::vector<hotstuff::OrderedList> aequitas_order(std::vector<hotstuff::OrderedL
     if(n_cmds == 0 || (n_cmds != proposed_orderlist[0].timestamps.size()))
         throw std::runtime_error("no cmds to be ordered or cmds not in the right form.");
     
-    //sort all the cmds TODO
-    //for (int i = 0; i < n_replica; i++) proposed_orderlist[i].sort_cmds();
+    //sort all the cmds
+    for (int i = 0; i < n_replica; i++) proposed_orderlist[i].sort_cmds();
 
     //map the cmd to a number
     int distinct_cmd = 0;
