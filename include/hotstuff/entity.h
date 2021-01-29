@@ -153,19 +153,41 @@ public:
     const std::vector<uint256_t> &extract_cmds() const { return cmds; }
     const std::vector<uint64_t> &extract_timestamps() const { return timestamps; }
 
-    /*
+    void sort_id_according_to_timestamp(std::vector<int> &id_for_sort, int l, int r)
+    {
+        if (l < r)
+        {
+            int i = l, j = r, x = id_for_sort[l];
+            while (i < j)
+            {
+                while(i < j && timestamps[id_for_sort[j]] >= timestamps[x])
+                    j--;  
+                if(i < j) 
+                    id_for_sort[i] = id_for_sort[j];
+            
+                while(i < j && timestamps[id_for_sort[i]] <= timestamps[x])
+                    i++;  
+                if(i < j) 
+                    id_for_sort[j] = id_for_sort[i];
+            }
+            id_for_sort[i] = x;
+            sort_id_according_to_timestamp(id_for_sort, l, i - 1);
+            sort_id_according_to_timestamp(id_for_sort, i + 1, r);
+        }
+    }
     void sort_cmds()
     {
         std::vector<int> id_for_sort;
         int n_cmds = cmds.size();
         for(int i = 0; i < n_cmds; i++) id_for_sort.push_back(i);
-        std::sort(id_for_sort.begin(), id_for_sort.end(), cmp);
+
+        sort_id_according_to_timestamp(id_for_sort, 0, id_for_sort.size() - 1);
+
         std::vector<uint256_t> new_cmds;
         for(int i = 0; i < n_cmds; i++) new_cmds.push_back(cmds[id_for_sort[i]]);
         cmds.assign(new_cmds.begin(), new_cmds.end());
         std::sort(timestamps.begin(), timestamps.end());
     }
-    */
     /*
     void printout()
     {
