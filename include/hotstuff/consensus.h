@@ -21,13 +21,12 @@
 #include <cassert>
 #include <set>
 #include <unordered_map>
-//#include <boost/lexical_cast.hpp>
+#include <boost/lexical_cast.hpp>
 
 #include "hotstuff/promise.hpp"
 #include "hotstuff/type.h"
 #include "hotstuff/entity.h"
 #include "hotstuff/crypto.h"
-#include "hotstuff/aequitas.h"
 
 namespace hotstuff {
 

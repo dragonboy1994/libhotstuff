@@ -488,8 +488,14 @@ void HotStuffBase::start(
                 for (uint32_t i = 0; i < blk_size; i++)
                 {
                     cmds.push_back(cmd_pending_buffer.front());
+                    HOTSTUFF_LOG_PROTO("command being included in proposal to be sent is: %s", get_hex10(cmd_pending_buffer.front()).c_str());
                     cmd_pending_buffer.pop();
                 }
+
+                // std::vector<uint256_t> cmds_test;
+                // float g = 3.0 / 4.0;
+                // cmds_test = aequitas_order(this->orderedlist_storage->get_set_of_orderedlists(pmaker->get_parents()[0]->get_hash()), g);
+
                 pmaker->beat().then([this, cmds = std::move(cmds)](ReplicaID proposer) {
                     if (proposer == get_id())
                         on_propose(cmds, pmaker->get_parents());
