@@ -18,6 +18,7 @@
 #include "hotstuff/hotstuff.h"
 #include "hotstuff/client.h"
 #include "hotstuff/liveness.h"
+#include "hotstuff/aequitas.h"
 
 using salticidae::static_pointer_cast;
 
@@ -492,11 +493,18 @@ void HotStuffBase::start(
                     cmd_pending_buffer.pop();
                 }
 
-                // std::vector<uint256_t> cmds_test;
-                // float g = 3.0 / 4.0;
-                // cmds_test = aequitas_order(this->orderedlist_storage->get_set_of_orderedlists(pmaker->get_parents()[0]->get_hash()), g);
+                
+                //std::vector<uint256_t> cmds_test;
+                //float g = 3.0 / 4.0;
+                //cmds_test = Aequitas::aequitas_order(this->orderedlist_storage->get_set_of_orderedlists(pmaker->get_parents()[0]->get_hash()), g);
 
                 pmaker->beat().then([this, cmds = std::move(cmds)](ReplicaID proposer) {
+                    // uint256_t block_hash = pmaker->get_parents()[0]->get_hash();
+                    // HOTSTUFF_LOG_PROTO("The parent block is: %s", get_hex10(block_hash).c_str());
+                    // float g = 3.0 / 4.0;
+                    // std::vector<OrderedList> test_orderedlists = this->orderedlist_storage->get_set_of_orderedlists(block_hash);
+                    // OrderedList = 
+
                     if (proposer == get_id())
                         on_propose(cmds, pmaker->get_parents());
                 });
