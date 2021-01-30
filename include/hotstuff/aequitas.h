@@ -68,7 +68,6 @@ class TopologyGraph
 
     void clear_array()
     {
-        HOTSTUFF_LOG_PROTO("Inside clear_array - step 1!");
         for(int i = 0; i < max_number_cmds; i++)
         {
             edge[i].clear();
@@ -82,16 +81,11 @@ class TopologyGraph
         std::memset(stck, 0, sizeof(stck));
         std::memset(inst, 0, sizeof(inst));
         std::memset(inDegree, 0, sizeof(inDegree));
-        HOTSTUFF_LOG_PROTO("Inside clear_array - step 2!");
     }    
 
     public:
 
-    TopologyGraph() {
-        HOTSTUFF_LOG_PROTO("Inside constructor for TopologyGraph - step 1");
-        clear_array();
-        HOTSTUFF_LOG_PROTO("Inside constructor for TopologyGraph - step 2");
-    }
+    TopologyGraph() { clear_array(); }
     ~TopologyGraph() {}
 
     void addedge(int i, int j)
@@ -149,26 +143,24 @@ bool run_before(int j, int i, std::vector<hotstuff::OrderedList> &proposed_order
 //return a vector, which will be a list of orderedlist
 //"timestamps" in these returned orderedlist are useless, cmds in one orderedlist should be in one block
 hotstuff::LeaderProposedOrderedList aequitas_order(std::vector<hotstuff::OrderedList> &proposed_orderlist, double g)
-{   
-    HOTSTUFF_LOG_PROTO("Inside aequitas ordering module!");
+{
     int n_replica = proposed_orderlist.size();
     if(n_replica == 0) 
         throw std::runtime_error("the number of replica is 0.");
     int n_cmds = proposed_orderlist[0].cmds.size();
     if(n_cmds == 0 || (n_cmds != proposed_orderlist[0].timestamps.size()))
         throw std::runtime_error("no cmds to be ordered or cmds not in the right form.");
-    HOTSTUFF_LOG_PROTO("Inside aequitas ordering module - step0.1!");
+    
     //sort all the cmds
     for (int i = 0; i < n_replica; i++) proposed_orderlist[i].sort_cmds();
-    HOTSTUFF_LOG_PROTO("Inside aequitas ordering module - step0.2!");
+
     //map the cmd to a number
     int distinct_cmd = 0;
     std::vector<uint256_t> cmd_content; cmd_content.clear(); cmd_content.push_back(0);
     std::map<uint256_t, int> map_cmd; map_cmd.clear();
-    HOTSTUFF_LOG_PROTO("Inside aequitas ordering module - step0.3!");
+
     TopologyGraph G;
 
-    HOTSTUFF_LOG_PROTO("Inside aequitas ordering module - step1!");
     for (int i = 0; i < n_cmds; i++)
     {
         uint256_t cmd_i = proposed_orderlist[0].cmds[i];
@@ -191,10 +183,10 @@ hotstuff::LeaderProposedOrderedList aequitas_order(std::vector<hotstuff::Ordered
 
     //find scc
     G.find_scc(distinct_cmd);
-    HOTSTUFF_LOG_PROTO("Inside aequitas ordering module - step2!");
+    
     //topology sort start...
     G.topology_sort(distinct_cmd);
-    HOTSTUFF_LOG_PROTO("Inside aequitas ordering module - step3!");
+    
     //now deal with graph after scc
     std::queue<int> que = std::queue<int>();
     int check_whether_all_cmds_are_ordered = 0;
@@ -203,7 +195,6 @@ hotstuff::LeaderProposedOrderedList aequitas_order(std::vector<hotstuff::Ordered
     {
         if (G.inDegree[i] == 0) que.push(i);
     }
-    HOTSTUFF_LOG_PROTO("Inside aequitas ordering module - step4!");
     while(!que.empty())
     {
         std::vector<uint256_t> cmds; cmds.clear();
@@ -231,9 +222,8 @@ hotstuff::LeaderProposedOrderedList aequitas_order(std::vector<hotstuff::Ordered
         for(int i = 0; i < to_be_added.size(); i++)
             que.push(to_be_added[i]);
     }
-    HOTSTUFF_LOG_PROTO("Inside aequitas ordering module - step5!");
     hotstuff::LeaderProposedOrderedList final_ordered_vector(final_ordered_cmds);
-    HOTSTUFF_LOG_PROTO("Inside aequitas ordering module - step6!");
+
     if (check_whether_all_cmds_are_ordered != distinct_cmd)
         throw std::runtime_error("Aequitas failed to topology sort the commands...");
     return final_ordered_vector;

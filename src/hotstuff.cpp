@@ -508,7 +508,7 @@ void HotStuffBase::start(
                         HOTSTUFF_LOG_PROTO("Size of the test_orderedlst is %lu", test_orderedlists.size());
                         LeaderProposedOrderedList proposed_orderedlist = Aequitas::aequitas_order(test_orderedlists,g);
                         HOTSTUFF_LOG_PROTO("Finished aequitas ordering module!");
-                        // proposed_orderedlist.print_out();
+                        proposed_orderedlist.print_out();
                     }
                    
 
