@@ -163,13 +163,9 @@ hotstuff::LeaderProposedOrderedList aequitas_order(std::vector<hotstuff::Ordered
     HOTSTUFF_LOG_PROTO("Inside aequitas ordering module - step0.2!");
     //map the cmd to a number
     int distinct_cmd = 0;
-    uint256_t test_num = 0;
-    std::vector<uint256_t> cmd_content; 
-    cmd_content.push_back(test_num);
+    std::vector<uint256_t> cmd_content; cmd_content.clear(); cmd_content.push_back(0);
+    std::map<uint256_t, int> map_cmd; map_cmd.clear();
     HOTSTUFF_LOG_PROTO("Inside aequitas ordering module - step0.3!");
-    std::map<uint256_t, int> map_cmd;
-    HOTSTUFF_LOG_PROTO("Inside aequitas ordering module - step0.4!");
-
     TopologyGraph G;
 
     HOTSTUFF_LOG_PROTO("Inside aequitas ordering module - step1!");
