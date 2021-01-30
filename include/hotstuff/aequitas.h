@@ -142,7 +142,7 @@ bool run_before(int j, int i, std::vector<hotstuff::OrderedList> &proposed_order
 //proposed_orderlist[0] is the orderlist of the leader before the leader receive other replicas' ordered list
 //return a vector, which will be a list of orderedlist
 //"timestamps" in these returned orderedlist are useless, cmds in one orderedlist should be in one block
-std::vector<hotstuff::OrderedList> aequitas_order(std::vector<hotstuff::OrderedList> &proposed_orderlist, double g)
+hotstuff::LeaderProposedOrderedList aequitas_order(std::vector<hotstuff::OrderedList> &proposed_orderlist, double g)
 {
     int n_replica = proposed_orderlist.size();
     if(n_replica == 0) 
@@ -190,7 +190,7 @@ std::vector<hotstuff::OrderedList> aequitas_order(std::vector<hotstuff::OrderedL
     //now deal with graph after scc
     std::queue<int> que = std::queue<int>();
     int check_whether_all_cmds_are_ordered = 0;
-    std::vector<hotstuff::OrderedList> final_ordered_vector; final_ordered_vector.clear();
+    std::vector<std::vector<uint256_t> > final_ordered_cmds; final_ordered_cmds.clear();
     for (int i = 1; i <= G.scc; i++)
     {
         if (G.inDegree[i] == 0) que.push(i);
@@ -198,7 +198,6 @@ std::vector<hotstuff::OrderedList> aequitas_order(std::vector<hotstuff::OrderedL
     while(!que.empty())
     {
         std::vector<uint256_t> cmds; cmds.clear();
-        std::vector<uint64_t> timestamps; timestamps.clear();
         std::vector<int> to_be_added; to_be_added.clear();
         while(!que.empty())
         {
@@ -218,12 +217,13 @@ std::vector<hotstuff::OrderedList> aequitas_order(std::vector<hotstuff::OrderedL
             }
             G.edge_with_scc[u].clear();
         }
-        hotstuff::OrderedList final_ordered_list(cmds, timestamps);
-        final_ordered_vector.push_back(final_ordered_list);
+        final_ordered_cmds.push_back(cmds);
 
         for(int i = 0; i < to_be_added.size(); i++)
             que.push(to_be_added[i]);
     }
+    hotstuff::LeaderProposedOrderedList final_ordered_vector(final_ordered_cmds);
+
     if (check_whether_all_cmds_are_ordered != distinct_cmd)
         throw std::runtime_error("Aequitas failed to topology sort the commands...");
     return final_ordered_vector;

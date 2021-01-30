@@ -209,13 +209,12 @@ class LeaderProposedOrderedList {
     friend HotStuffCore;
 
 public:
-    std::vector<std::vector<uint256_t>> cmds;
+    std::vector<std::vector<uint256_t> > cmds;
 
 public:
     // the constructors
     LeaderProposedOrderedList() = default;
-    LeaderProposedOrderedList(const std::vector<std::vector<uint256_t>> &cmds,
-                const std::vector<std::vector<uint64_t>> &timestamps) : cmds(cmds), timestamps(timestamps) {}
+    LeaderProposedOrderedList(const std::vector<std::vector<uint256_t> > &cmds) : cmds(cmds) {}
 };
 
 
