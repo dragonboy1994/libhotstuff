@@ -143,7 +143,8 @@ bool run_before(int j, int i, std::vector<hotstuff::OrderedList> &proposed_order
 //return a vector, which will be a list of orderedlist
 //"timestamps" in these returned orderedlist are useless, cmds in one orderedlist should be in one block
 hotstuff::LeaderProposedOrderedList aequitas_order(std::vector<hotstuff::OrderedList> &proposed_orderlist, double g)
-{
+{   
+    HOTSTUFF_LOG_PROTO("Inside aequitas ordering module!");
     int n_replica = proposed_orderlist.size();
     if(n_replica == 0) 
         throw std::runtime_error("the number of replica is 0.");
