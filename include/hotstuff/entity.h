@@ -201,10 +201,8 @@ public:
 
 
 /** This data structure is used only for sending proposed orderering by leader to the replicas. 
- * cmds contain the commands and timestamps contain their corresponding timestamps.
  * Each index of the outer vector in cmds represent a rank. And each index points to an inner vector of commands
  * that have the same rank.
- * Note that while inserting a (cmd,timestamp) pair, take care to have similar index location.
  * This is datatype of the output of aequitas_order()
 */
 class LeaderProposedOrderedList {
@@ -212,7 +210,6 @@ class LeaderProposedOrderedList {
 
 public:
     std::vector<std::vector<uint256_t>> cmds;
-    std::vector<std::vector<uint64_t>> timestamps;
 
 public:
     // the constructors
