@@ -37,8 +37,9 @@ class VoteStorage;
 
 /** Abstraction for HotStuff protocol state machine (without network implementation). */
 class HotStuffCore {
-    block_t b0;                                  /** the genesis block */
     /* === state variables === */
+    block_t b0; /** the genesis block */
+
     /** block containing the QC for the highest block having one */
     std::pair<block_t, quorum_cert_bt> hqc;   /**< highest QC */
     block_t b_lock;                            /**< locked block */
@@ -79,6 +80,8 @@ class HotStuffCore {
     virtual ~HotStuffCore() {
         b0->qc_ref = nullptr;
     }
+
+    uint256_t get_genesis_hash() const { return b0->get_hash(); };
 
     /* Inputs of the state machine triggered by external events, should called
      * by the class user, with proper invariants. */

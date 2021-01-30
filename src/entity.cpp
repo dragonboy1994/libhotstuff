@@ -227,6 +227,9 @@ void OrderedListStorage::add_ordered_list(const uint256_t block_hash, const Orde
 
 std::vector<OrderedList> OrderedListStorage::get_set_of_orderedlists(const uint256_t block_hash) const
 {
+    if(ordered_list_cache.find(block_hash)->second.size() == 0){
+        throw std::runtime_error("Empty orderedlist...");
+    }
     return ordered_list_cache.find(block_hash)->second;
 }
 

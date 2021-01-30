@@ -215,7 +215,15 @@ public:
     // the constructors
     LeaderProposedOrderedList() = default;
     LeaderProposedOrderedList(const std::vector<std::vector<uint256_t> > &cmds) : cmds(cmds) {}
-};
+
+    void print_out() const {
+        for (auto rank = 0; rank < cmds.size(); rank++) {
+            for (auto &cmd: cmds[rank]) {
+                HOTSTUFF_LOG_PROTO("(Rank, cmd): (%lu, %s)", rank, get_hex10(cmd).c_str());
+            }
+        }
+    }
+ };
 
 
 
