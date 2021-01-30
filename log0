@@ -1,171 +1,168 @@
-2021-01-30 17:11:41.826774 [net info] loaded configuration from hotstuff.conf
-2021-01-30 17:11:41.827186 [net info] loading extra configuration from ./hotstuff-sec0.conf
-2021-01-30 17:11:41.830302 [hotstuff proto] Proposed block size : 0
-2021-01-30 17:11:41.842188 [net info] starting all threads...
-2021-01-30 17:11:41.842578 [net info] listening to 10000
-2021-01-30 17:11:41.849050 [net info] starting all threads...
-2021-01-30 17:11:41.849569 [net info] listening to 20000
-2021-01-30 17:11:41.849769 [hotstuff info] ** starting the system with parameters **
-2021-01-30 17:11:41.849788 [hotstuff info] blk_size = 3
-2021-01-30 17:11:41.849801 [hotstuff info] conns = 0
-2021-01-30 17:11:41.849815 [hotstuff info] ** starting the event loop...
-2021-01-30 17:11:41.850004 [hotstuff proto] Pacemaker: stop rotation at 0
-2021-01-30 17:11:41.851071 [net info] created <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-30 17:11:41.852022 [net info] created <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-30 17:11:41.852434 [net info] created <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-30 17:11:41.852760 [net info] accepted <Conn fd=134 addr=<NetAddr 127.0.0.1:52867> mode=passive>
-2021-01-30 17:11:41.852816 [net info] connected to remote <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-30 17:11:41.852846 [net info] connected to remote <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-30 17:11:41.853130 [net info] accepted <Conn fd=137 addr=<NetAddr 127.0.0.1:52866> mode=passive>
-2021-01-30 17:11:41.853166 [net info] connected to remote <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-30 17:11:41.853666 [net info] accepted <Conn fd=140 addr=<NetAddr 127.0.0.1:52868> mode=passive>
-2021-01-30 17:11:41.870675 [net info] 542865a568: setup connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-30 17:11:41.870772 [net info] 542865a568: setup connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-30 17:11:41.870822 [net info] 542865a568: setup connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-30 17:11:41.871674 [net info] 542865a568: setup connection <Conn fd=137 addr=<NetAddr 127.0.0.1:52866> mode=passive>
-2021-01-30 17:11:41.873296 [net info] 542865a568: setup connection <Conn fd=134 addr=<NetAddr 127.0.0.1:52867> mode=passive>
-2021-01-30 17:11:41.873345 [net info] 542865a568: setup connection <Conn fd=140 addr=<NetAddr 127.0.0.1:52868> mode=passive>
-2021-01-30 17:11:41.873643 [net info] 542865a568: lost connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-30 17:11:41.873847 [net info] established 542865a568 <---> 6540a0fea6 (via <Conn fd=137 addr=<NetAddr 127.0.0.1:52866> mode=passive>)
-2021-01-30 17:11:41.873936 [net info] 542865a568: lost connection <Conn fd=140 addr=<NetAddr 127.0.0.1:52868> mode=passive>
-2021-01-30 17:11:41.874072 [net info] 542865a568: lost connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-30 17:11:41.875076 [net info] 542865a568: ping from <Conn fd=137 addr=<NetAddr 127.0.0.1:52866> mode=passive>
-2021-01-30 17:11:41.876999 [net info] established 542865a568 <---> c261250345 (via <Conn fd=134 addr=<NetAddr 127.0.0.1:52867> mode=passive>)
-2021-01-30 17:11:41.877332 [net info] 542865a568: lost connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-30 17:11:41.879767 [net info] 542865a568: ping from <Conn fd=134 addr=<NetAddr 127.0.0.1:52867> mode=passive>
-2021-01-30 17:11:44.334208 [net info] created <Conn fd=119 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-30 17:11:44.335787 [net info] connected to remote <Conn fd=119 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-30 17:11:44.349562 [net info] 542865a568: setup connection <Conn fd=119 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-30 17:11:44.353735 [net info] 542865a568: lost connection <Conn fd=119 addr=<NetAddr 127.0.0.1:10002> mode=active>
-2021-01-30 17:11:44.409392 [net info] accepted <Conn fd=119 addr=<NetAddr 127.0.0.1:52881> mode=passive>
-2021-01-30 17:11:44.413481 [net info] 542865a568: setup connection <Conn fd=119 addr=<NetAddr 127.0.0.1:52881> mode=passive>
-2021-01-30 17:11:44.413774 [net info] established 542865a568 <---> 065b010aed (via <Conn fd=119 addr=<NetAddr 127.0.0.1:52881> mode=passive>)
-2021-01-30 17:11:44.414349 [net info] 542865a568: ping from <Conn fd=119 addr=<NetAddr 127.0.0.1:52881> mode=passive>
-2021-01-30 17:11:46.577762 [net info] accepted <Conn fd=120 addr=<NetAddr 127.0.0.1:52882> mode=passive>
-2021-01-30 17:11:46.596871 [hotstuff proto] Adding command af5570f5a1 to storage
-2021-01-30 17:11:46.597040 [hotstuff proto] Adding command 01acecb507 to storage
-2021-01-30 17:11:46.597102 [hotstuff proto] Adding command 2fcd151b82 to storage
-2021-01-30 17:11:46.597146 [hotstuff proto] Adding command 9ae4c9d086 to storage
-2021-01-30 17:11:46.597208 [hotstuff proto] Adding command 1b03ab083d to storage
-2021-01-30 17:11:46.597250 [hotstuff proto] Adding command 2be2196b9c to storage
-2021-01-30 17:11:46.597287 [hotstuff proto] Adding command 20aef0af2b to storage
-2021-01-30 17:11:46.597325 [hotstuff proto] Adding command 4e65285e65 to storage
-2021-01-30 17:11:46.597366 [hotstuff proto] Adding command 7b742c398b to storage
-2021-01-30 17:11:46.597762 [hotstuff proto] Adding command d8e0873e07 to storage
-2021-01-30 17:11:46.597811 [hotstuff proto] Adding command dd73a46975 to storage
-2021-01-30 17:11:46.597846 [hotstuff proto] Adding command f1d6ff0821 to storage
-2021-01-30 17:11:46.597883 [hotstuff proto] Adding command 930abd7018 to storage
-2021-01-30 17:11:46.597916 [hotstuff proto] Adding command 53dd18d822 to storage
-2021-01-30 17:11:46.597951 [hotstuff proto] Adding command ead27b1c86 to storage
-2021-01-30 17:11:46.597983 [hotstuff proto] Adding command 5f1ddbc2fb to storage
-2021-01-30 17:11:46.598017 [hotstuff proto] Adding command 48443c868f to storage
-2021-01-30 17:11:46.598054 [hotstuff proto] Adding command 9c8616c455 to storage
-2021-01-30 17:11:46.598090 [hotstuff proto] Adding command db182aa591 to storage
-2021-01-30 17:11:46.598122 [hotstuff proto] Adding command 1bcca6c039 to storage
-2021-01-30 17:11:46.598157 [hotstuff proto] Adding command f83bb221d5 to storage
-2021-01-30 17:11:46.598189 [hotstuff proto] Adding command a44c4438cf to storage
-2021-01-30 17:11:46.598224 [hotstuff proto] Adding command 2fadf4ab76 to storage
-2021-01-30 17:11:46.598257 [hotstuff proto] Adding command 3fbaba3c5b to storage
-2021-01-30 17:11:46.598292 [hotstuff proto] Adding command c63761c39f to storage
-2021-01-30 17:11:46.598519 [hotstuff proto] Adding command 9779c6fff1 to storage
-2021-01-30 17:11:46.598558 [hotstuff proto] Adding command 67e4f26e84 to storage
-2021-01-30 17:11:46.598588 [hotstuff proto] Adding command 5db43ae74c to storage
-2021-01-30 17:11:46.598616 [hotstuff proto] Adding command 31dba5fca7 to storage
-2021-01-30 17:11:46.598645 [hotstuff proto] Adding command 90d3cc4af3 to storage
-2021-01-30 17:11:46.598676 [hotstuff proto] Adding command 5eab1e29e4 to storage
-2021-01-30 17:11:46.598831 [hotstuff proto] command being included in proposal to be sent is: af5570f5a1
-2021-01-30 17:11:46.598869 [hotstuff proto] command being included in proposal to be sent is: 01acecb507
-2021-01-30 17:11:46.598896 [hotstuff proto] command being included in proposal to be sent is: 2fcd151b82
-2021-01-30 17:11:46.598923 [hotstuff proto] got QC, propose a new block
-2021-01-30 17:11:46.598954 [hotstuff proto] The parent block is: 6b7d92eaae
-2021-01-30 17:11:46.599010 [hotstuff proto] Proposed block size : 3
-2021-01-30 17:11:46.599131 [hotstuff proto] propose <block id=20b18a460e height=1 parent=6b7d92eaae qc_ref=6b7d92eaae>
-2021-01-30 17:11:46.599353 [hotstuff proto] got <vote rid=0 blk=20b18a460e>
-2021-01-30 17:11:46.599413 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
-2021-01-30 17:11:46.599435 [hotstuff proto] Adding command 3786b5685d to storage
-2021-01-30 17:11:46.599468 [hotstuff proto] Proposed block size : 3
-2021-01-30 17:11:46.599514 [hotstuff proto] Adding command f976b84a67 to storage
-2021-01-30 17:11:46.599589 [hotstuff proto] Adding command c59a297409 to storage
-2021-01-30 17:11:46.599623 [hotstuff proto] Adding command c854c8f56f to storage
-2021-01-30 17:11:46.599655 [hotstuff proto] Adding command e1eb586829 to storage
-2021-01-30 17:11:46.599690 [hotstuff proto] Adding command 7c2f21ce5c to storage
-2021-01-30 17:11:46.599723 [hotstuff proto] Adding command bb2f4bcd51 to storage
-2021-01-30 17:11:46.599756 [hotstuff proto] Adding command 66ee151dbf to storage
-2021-01-30 17:11:46.599787 [hotstuff proto] Adding command 547c34decb to storage
-2021-01-30 17:11:46.599818 [hotstuff proto] Adding command 04164f6252 to storage
-2021-01-30 17:11:46.599851 [hotstuff proto] Adding command be84dc21f3 to storage
-2021-01-30 17:11:46.599882 [hotstuff proto] Adding command 25ab3aa916 to storage
-2021-01-30 17:11:46.599918 [hotstuff proto] Adding command 2544f2559d to storage
-2021-01-30 17:11:46.599956 [hotstuff proto] Adding command 0dd443f367 to storage
-2021-01-30 17:11:46.599989 [hotstuff proto] Adding command 7067b4ef8a to storage
-2021-01-30 17:11:46.600019 [hotstuff proto] Adding command 4d93be036c to storage
-2021-01-30 17:11:46.600050 [hotstuff proto] Adding command 42f0c08faf to storage
-2021-01-30 17:11:46.600085 [hotstuff proto] Adding command 982258dda3 to storage
-2021-01-30 17:11:46.600116 [hotstuff proto] Adding command 51335e1808 to storage
-2021-01-30 17:11:46.599517 [hotstuff proto] Leader is adding
-2021-01-30 17:11:46.601510 [hotstuff proto] The block hash is: 20b18a460e
-2021-01-30 17:11:46.601530 [hotstuff proto] It is a new addition!
-2021-01-30 17:11:46.601549 [hotstuff proto] It is leader
-2021-01-30 17:11:46.601596 [hotstuff proto] command being included in proposal to be sent is: 9ae4c9d086
-2021-01-30 17:11:46.601624 [hotstuff proto] command being included in proposal to be sent is: 1b03ab083d
-2021-01-30 17:11:46.601652 [hotstuff proto] command being included in proposal to be sent is: 2be2196b9c
-2021-01-30 17:11:46.601691 [hotstuff proto] command being included in proposal to be sent is: 20aef0af2b
-2021-01-30 17:11:46.601718 [hotstuff proto] command being included in proposal to be sent is: 4e65285e65
-2021-01-30 17:11:46.601745 [hotstuff proto] command being included in proposal to be sent is: 7b742c398b
-2021-01-30 17:11:46.601782 [hotstuff proto] command being included in proposal to be sent is: d8e0873e07
-2021-01-30 17:11:46.601810 [hotstuff proto] command being included in proposal to be sent is: dd73a46975
-2021-01-30 17:11:46.601836 [hotstuff proto] command being included in proposal to be sent is: f1d6ff0821
-2021-01-30 17:11:46.601871 [hotstuff proto] command being included in proposal to be sent is: 930abd7018
-2021-01-30 17:11:46.601898 [hotstuff proto] command being included in proposal to be sent is: 53dd18d822
-2021-01-30 17:11:46.601925 [hotstuff proto] command being included in proposal to be sent is: ead27b1c86
-2021-01-30 17:11:46.601960 [hotstuff proto] command being included in proposal to be sent is: 5f1ddbc2fb
-2021-01-30 17:11:46.601987 [hotstuff proto] command being included in proposal to be sent is: 48443c868f
-2021-01-30 17:11:46.602038 [hotstuff proto] command being included in proposal to be sent is: 9c8616c455
-2021-01-30 17:11:46.602089 [hotstuff proto] command being included in proposal to be sent is: db182aa591
-2021-01-30 17:11:46.602182 [hotstuff proto] command being included in proposal to be sent is: 1bcca6c039
-2021-01-30 17:11:46.602213 [hotstuff proto] command being included in proposal to be sent is: f83bb221d5
-2021-01-30 17:11:46.602251 [hotstuff proto] command being included in proposal to be sent is: a44c4438cf
-2021-01-30 17:11:46.602277 [hotstuff proto] command being included in proposal to be sent is: 2fadf4ab76
-2021-01-30 17:11:46.602302 [hotstuff proto] command being included in proposal to be sent is: 3fbaba3c5b
-2021-01-30 17:11:46.602336 [hotstuff proto] command being included in proposal to be sent is: c63761c39f
-2021-01-30 17:11:46.602370 [hotstuff proto] command being included in proposal to be sent is: 9779c6fff1
-2021-01-30 17:11:46.602396 [hotstuff proto] command being included in proposal to be sent is: 67e4f26e84
-2021-01-30 17:11:46.602459 [hotstuff proto] command being included in proposal to be sent is: 5db43ae74c
-2021-01-30 17:11:46.602486 [hotstuff proto] command being included in proposal to be sent is: 31dba5fca7
-2021-01-30 17:11:46.602512 [hotstuff proto] command being included in proposal to be sent is: 90d3cc4af3
-2021-01-30 17:11:46.602545 [hotstuff proto] command being included in proposal to be sent is: 5eab1e29e4
-2021-01-30 17:11:46.602570 [hotstuff proto] command being included in proposal to be sent is: 3786b5685d
-2021-01-30 17:11:46.602595 [hotstuff proto] command being included in proposal to be sent is: f976b84a67
-2021-01-30 17:11:46.602629 [hotstuff proto] command being included in proposal to be sent is: c59a297409
-2021-01-30 17:11:46.602655 [hotstuff proto] command being included in proposal to be sent is: c854c8f56f
-2021-01-30 17:11:46.602680 [hotstuff proto] command being included in proposal to be sent is: e1eb586829
-2021-01-30 17:11:46.602712 [hotstuff proto] command being included in proposal to be sent is: 7c2f21ce5c
-2021-01-30 17:11:46.602738 [hotstuff proto] command being included in proposal to be sent is: bb2f4bcd51
-2021-01-30 17:11:46.602763 [hotstuff proto] command being included in proposal to be sent is: 66ee151dbf
-2021-01-30 17:11:46.602800 [hotstuff proto] command being included in proposal to be sent is: 547c34decb
-2021-01-30 17:11:46.602825 [hotstuff proto] command being included in proposal to be sent is: 04164f6252
-2021-01-30 17:11:46.602850 [hotstuff proto] command being included in proposal to be sent is: be84dc21f3
-2021-01-30 17:11:46.602882 [hotstuff proto] command being included in proposal to be sent is: 25ab3aa916
-2021-01-30 17:11:46.602908 [hotstuff proto] command being included in proposal to be sent is: 2544f2559d
-2021-01-30 17:11:46.602932 [hotstuff proto] command being included in proposal to be sent is: 0dd443f367
-2021-01-30 17:11:46.602967 [hotstuff proto] command being included in proposal to be sent is: 7067b4ef8a
-2021-01-30 17:11:46.602993 [hotstuff proto] command being included in proposal to be sent is: 4d93be036c
-2021-01-30 17:11:46.603017 [hotstuff proto] command being included in proposal to be sent is: 42f0c08faf
-2021-01-30 17:11:46.606208 [hotstuff proto] The block hash is: 20b18a460e
-2021-01-30 17:11:46.606263 [hotstuff proto] It is a new addition to existing record!
-2021-01-30 17:11:46.606284 [hotstuff proto] It is replica
-2021-01-30 17:11:46.606417 [hotstuff proto] The block hash is: 20b18a460e
-2021-01-30 17:11:46.606445 [hotstuff proto] It is a new addition to existing record!
-2021-01-30 17:11:46.606463 [hotstuff proto] It is replica
-2021-01-30 17:11:46.606771 [hotstuff proto] The block hash is: 20b18a460e
-2021-01-30 17:11:46.606796 [hotstuff proto] It is a new addition to existing record!
-2021-01-30 17:11:46.606813 [hotstuff proto] Enough lists!
-2021-01-30 17:11:46.606877 [hotstuff proto] got <vote rid=1 blk=20b18a460e>
-2021-01-30 17:11:46.606936 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
-2021-01-30 17:11:46.606998 [hotstuff proto] got <vote rid=3 blk=20b18a460e>
-2021-01-30 17:11:46.607050 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
-2021-01-30 17:11:46.607092 [hotstuff proto] got QC, propose a new block
-2021-01-30 17:11:46.607123 [hotstuff proto] The parent block is: 20b18a460e
-2021-01-30 17:11:46.607158 [hotstuff proto] Applying aequitas protocol!
-2021-01-30 17:11:46.607195 [hotstuff proto] Size of the test_orderedlst is 3
-2021-01-30 17:11:46.607222 [hotstuff proto] Inside aequitas ordering module!
+2021-01-30 17:38:44.828610 [net info] loaded configuration from hotstuff.conf
+2021-01-30 17:38:44.829567 [net info] loading extra configuration from ./hotstuff-sec0.conf
+2021-01-30 17:38:44.833981 [hotstuff proto] Proposed block size : 0
+2021-01-30 17:38:44.840940 [net info] starting all threads...
+2021-01-30 17:38:44.841794 [net info] listening to 10000
+2021-01-30 17:38:44.847818 [net info] starting all threads...
+2021-01-30 17:38:44.848075 [net info] listening to 20000
+2021-01-30 17:38:44.848421 [hotstuff info] ** starting the system with parameters **
+2021-01-30 17:38:44.848447 [hotstuff info] blk_size = 3
+2021-01-30 17:38:44.848461 [hotstuff info] conns = 0
+2021-01-30 17:38:44.848475 [hotstuff info] ** starting the event loop...
+2021-01-30 17:38:44.848672 [hotstuff proto] Pacemaker: stop rotation at 0
+2021-01-30 17:38:44.849517 [net info] created <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-30 17:38:44.849913 [net info] created <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-30 17:38:44.850333 [net info] created <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-30 17:38:44.850682 [net info] accepted <Conn fd=134 addr=<NetAddr 127.0.0.1:53226> mode=passive>
+2021-01-30 17:38:44.850744 [net info] connected to remote <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-30 17:38:44.850772 [net info] connected to remote <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-30 17:38:44.851260 [net info] accepted <Conn fd=137 addr=<NetAddr 127.0.0.1:53229> mode=passive>
+2021-01-30 17:38:44.851320 [net info] connected to remote <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-30 17:38:44.867936 [net info] accepted <Conn fd=140 addr=<NetAddr 127.0.0.1:53234> mode=passive>
+2021-01-30 17:38:44.867998 [net info] 542865a568: setup connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-30 17:38:44.868091 [net info] 542865a568: setup connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-30 17:38:44.868150 [net info] 542865a568: setup connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-30 17:38:44.869127 [net info] 542865a568: setup connection <Conn fd=134 addr=<NetAddr 127.0.0.1:53226> mode=passive>
+2021-01-30 17:38:44.871917 [net info] established 542865a568 <---> 065b010aed (via <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>)
+2021-01-30 17:38:44.872007 [net info] 542865a568: ping from <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-30 17:38:44.872101 [net info] 542865a568: lost connection <Conn fd=134 addr=<NetAddr 127.0.0.1:53226> mode=passive>
+2021-01-30 17:38:44.873326 [net info] 542865a568: setup connection <Conn fd=137 addr=<NetAddr 127.0.0.1:53229> mode=passive>
+2021-01-30 17:38:44.875007 [net info] 542865a568: setup connection <Conn fd=140 addr=<NetAddr 127.0.0.1:53234> mode=passive>
+2021-01-30 17:38:44.875329 [net info] established 542865a568 <---> 6540a0fea6 (via <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>)
+2021-01-30 17:38:44.875456 [net info] 542865a568: ping from <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-30 17:38:44.877625 [net info] established 542865a568 <---> c261250345 (via <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>)
+2021-01-30 17:38:44.877736 [net info] 542865a568: lost connection <Conn fd=137 addr=<NetAddr 127.0.0.1:53229> mode=passive>
+2021-01-30 17:38:44.878062 [net info] 542865a568: ping from <Conn fd=125 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-30 17:38:44.880424 [net info] 542865a568: lost connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>
+2021-01-30 17:38:44.880465 [net info] ended 542865a568 <-/-> 065b010aed (via <Conn fd=128 addr=<NetAddr 127.0.0.1:10002> mode=active>)
+2021-01-30 17:38:44.880670 [net info] established 542865a568 <---> 065b010aed (via <Conn fd=140 addr=<NetAddr 127.0.0.1:53234> mode=passive>)
+2021-01-30 17:38:47.561692 [net info] accepted <Conn fd=119 addr=<NetAddr 127.0.0.1:53240> mode=passive>
+2021-01-30 17:38:47.567943 [net info] 542865a568: setup connection <Conn fd=119 addr=<NetAddr 127.0.0.1:53240> mode=passive>
+2021-01-30 17:38:47.568205 [net info] 542865a568: lost connection <Conn fd=140 addr=<NetAddr 127.0.0.1:53234> mode=passive>
+2021-01-30 17:38:47.568253 [net info] ended 542865a568 <-/-> 065b010aed (via <Conn fd=140 addr=<NetAddr 127.0.0.1:53234> mode=passive>)
+2021-01-30 17:38:47.568521 [net info] established 542865a568 <---> 065b010aed (via <Conn fd=119 addr=<NetAddr 127.0.0.1:53240> mode=passive>)
+2021-01-30 17:38:47.569175 [net info] 542865a568: ping from <Conn fd=119 addr=<NetAddr 127.0.0.1:53240> mode=passive>
+2021-01-30 17:38:49.806582 [net info] accepted <Conn fd=122 addr=<NetAddr 127.0.0.1:53241> mode=passive>
+2021-01-30 17:38:49.836617 [hotstuff proto] Adding command af5570f5a1 to storage
+2021-01-30 17:38:49.837205 [hotstuff proto] Adding command 01acecb507 to storage
+2021-01-30 17:38:49.837263 [hotstuff proto] Adding command 2fcd151b82 to storage
+2021-01-30 17:38:49.837303 [hotstuff proto] Adding command 9ae4c9d086 to storage
+2021-01-30 17:38:49.837337 [hotstuff proto] Adding command 1b03ab083d to storage
+2021-01-30 17:38:49.837369 [hotstuff proto] Adding command 2be2196b9c to storage
+2021-01-30 17:38:49.837401 [hotstuff proto] Adding command 20aef0af2b to storage
+2021-01-30 17:38:49.837430 [hotstuff proto] Adding command 4e65285e65 to storage
+2021-01-30 17:38:49.837459 [hotstuff proto] Adding command 7b742c398b to storage
+2021-01-30 17:38:49.837490 [hotstuff proto] Adding command d8e0873e07 to storage
+2021-01-30 17:38:49.837521 [hotstuff proto] Adding command dd73a46975 to storage
+2021-01-30 17:38:49.837551 [hotstuff proto] Adding command f1d6ff0821 to storage
+2021-01-30 17:38:49.837586 [hotstuff proto] Adding command 930abd7018 to storage
+2021-01-30 17:38:49.837628 [hotstuff proto] Adding command 53dd18d822 to storage
+2021-01-30 17:38:49.837883 [hotstuff proto] Adding command ead27b1c86 to storage
+2021-01-30 17:38:49.837928 [hotstuff proto] Adding command 5f1ddbc2fb to storage
+2021-01-30 17:38:49.837965 [hotstuff proto] Adding command 48443c868f to storage
+2021-01-30 17:38:49.837999 [hotstuff proto] Adding command 9c8616c455 to storage
+2021-01-30 17:38:49.838033 [hotstuff proto] Adding command db182aa591 to storage
+2021-01-30 17:38:49.838068 [hotstuff proto] Adding command 1bcca6c039 to storage
+2021-01-30 17:38:49.838100 [hotstuff proto] Adding command f83bb221d5 to storage
+2021-01-30 17:38:49.837628 [hotstuff proto] command being included in proposal to be sent is: af5570f5a1
+2021-01-30 17:38:49.838130 [hotstuff proto] Adding command a44c4438cf to storage
+2021-01-30 17:38:49.839572 [hotstuff proto] command being included in proposal to be sent is: 01acecb507
+2021-01-30 17:38:49.839604 [hotstuff proto] Adding command 2fadf4ab76 to storage
+2021-01-30 17:38:49.839833 [hotstuff proto] Adding command 3fbaba3c5b to storage
+2021-01-30 17:38:49.839905 [hotstuff proto] Adding command c63761c39f to storage
+2021-01-30 17:38:49.839960 [hotstuff proto] Adding command 9779c6fff1 to storage
+2021-01-30 17:38:49.839997 [hotstuff proto] Adding command 67e4f26e84 to storage
+2021-01-30 17:38:49.840039 [hotstuff proto] Adding command 5db43ae74c to storage
+2021-01-30 17:38:49.840084 [hotstuff proto] Adding command 31dba5fca7 to storage
+2021-01-30 17:38:49.840116 [hotstuff proto] Adding command 90d3cc4af3 to storage
+2021-01-30 17:38:49.840152 [hotstuff proto] Adding command 5eab1e29e4 to storage
+2021-01-30 17:38:49.840185 [hotstuff proto] Adding command 3786b5685d to storage
+2021-01-30 17:38:49.840221 [hotstuff proto] Adding command f976b84a67 to storage
+2021-01-30 17:38:49.839624 [hotstuff proto] command being included in proposal to be sent is: 2fcd151b82
+2021-01-30 17:38:49.840289 [hotstuff proto] got QC, propose a new block
+2021-01-30 17:38:49.840308 [hotstuff proto] Adding command c59a297409 to storage
+2021-01-30 17:38:49.840350 [hotstuff proto] Adding command c854c8f56f to storage
+2021-01-30 17:38:49.840358 [hotstuff proto] The parent block is: 6b7d92eaae
+2021-01-30 17:38:49.840385 [hotstuff proto] Adding command e1eb586829 to storage
+2021-01-30 17:38:49.840421 [hotstuff proto] Adding command 7c2f21ce5c to storage
+2021-01-30 17:38:49.840487 [hotstuff proto] Adding command bb2f4bcd51 to storage
+2021-01-30 17:38:49.840387 [hotstuff proto] Proposed block size : 3
+2021-01-30 17:38:49.840521 [hotstuff proto] Adding command 66ee151dbf to storage
+2021-01-30 17:38:49.840553 [hotstuff proto] Adding command 547c34decb to storage
+2021-01-30 17:38:49.840585 [hotstuff proto] Adding command 04164f6252 to storage
+2021-01-30 17:38:49.840620 [hotstuff proto] Adding command be84dc21f3 to storage
+2021-01-30 17:38:49.840653 [hotstuff proto] Adding command 25ab3aa916 to storage
+2021-01-30 17:38:49.840684 [hotstuff proto] Adding command 2544f2559d to storage
+2021-01-30 17:38:49.840590 [hotstuff proto] propose <block id=20b18a460e height=1 parent=6b7d92eaae qc_ref=6b7d92eaae>
+2021-01-30 17:38:49.840717 [hotstuff proto] Adding command 0dd443f367 to storage
+2021-01-30 17:38:49.840747 [hotstuff proto] Adding command 7067b4ef8a to storage
+2021-01-30 17:38:49.840855 [hotstuff proto] Adding command 4d93be036c to storage
+2021-01-30 17:38:49.841132 [hotstuff proto] got <vote rid=0 blk=20b18a460e>
+2021-01-30 17:38:49.841200 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
+2021-01-30 17:38:49.841254 [hotstuff proto] Proposed block size : 3
+2021-01-30 17:38:49.841314 [hotstuff proto] Adding command 42f0c08faf to storage
+2021-01-30 17:38:49.841349 [hotstuff proto] Adding command 982258dda3 to storage
+2021-01-30 17:38:49.841401 [hotstuff proto] Adding command 51335e1808 to storage
+2021-01-30 17:38:49.841351 [hotstuff proto] Leader is adding
+2021-01-30 17:38:49.841464 [hotstuff proto] The block hash is: 20b18a460e
+2021-01-30 17:38:49.841483 [hotstuff proto] It is a new addition!
+2021-01-30 17:38:49.841503 [hotstuff proto] It is leader
+2021-01-30 17:38:49.841549 [hotstuff proto] command being included in proposal to be sent is: 9ae4c9d086
+2021-01-30 17:38:49.841580 [hotstuff proto] command being included in proposal to be sent is: 1b03ab083d
+2021-01-30 17:38:49.841650 [hotstuff proto] command being included in proposal to be sent is: 2be2196b9c
+2021-01-30 17:38:49.841710 [hotstuff proto] command being included in proposal to be sent is: 20aef0af2b
+2021-01-30 17:38:49.841742 [hotstuff proto] command being included in proposal to be sent is: 4e65285e65
+2021-01-30 17:38:49.841771 [hotstuff proto] command being included in proposal to be sent is: 7b742c398b
+2021-01-30 17:38:49.841813 [hotstuff proto] command being included in proposal to be sent is: d8e0873e07
+2021-01-30 17:38:49.841841 [hotstuff proto] command being included in proposal to be sent is: dd73a46975
+2021-01-30 17:38:49.841867 [hotstuff proto] command being included in proposal to be sent is: f1d6ff0821
+2021-01-30 17:38:49.841904 [hotstuff proto] command being included in proposal to be sent is: 930abd7018
+2021-01-30 17:38:49.841931 [hotstuff proto] command being included in proposal to be sent is: 53dd18d822
+2021-01-30 17:38:49.841961 [hotstuff proto] command being included in proposal to be sent is: ead27b1c86
+2021-01-30 17:38:49.841998 [hotstuff proto] command being included in proposal to be sent is: 5f1ddbc2fb
+2021-01-30 17:38:49.842025 [hotstuff proto] command being included in proposal to be sent is: 48443c868f
+2021-01-30 17:38:49.842053 [hotstuff proto] command being included in proposal to be sent is: 9c8616c455
+2021-01-30 17:38:49.842091 [hotstuff proto] command being included in proposal to be sent is: db182aa591
+2021-01-30 17:38:49.842116 [hotstuff proto] command being included in proposal to be sent is: 1bcca6c039
+2021-01-30 17:38:49.842143 [hotstuff proto] command being included in proposal to be sent is: f83bb221d5
+2021-01-30 17:38:49.842183 [hotstuff proto] command being included in proposal to be sent is: a44c4438cf
+2021-01-30 17:38:49.842213 [hotstuff proto] command being included in proposal to be sent is: 2fadf4ab76
+2021-01-30 17:38:49.842242 [hotstuff proto] command being included in proposal to be sent is: 3fbaba3c5b
+2021-01-30 17:38:49.842278 [hotstuff proto] command being included in proposal to be sent is: c63761c39f
+2021-01-30 17:38:49.842331 [hotstuff proto] command being included in proposal to be sent is: 9779c6fff1
+2021-01-30 17:38:49.842361 [hotstuff proto] command being included in proposal to be sent is: 67e4f26e84
+2021-01-30 17:38:49.842400 [hotstuff proto] command being included in proposal to be sent is: 5db43ae74c
+2021-01-30 17:38:49.842428 [hotstuff proto] command being included in proposal to be sent is: 31dba5fca7
+2021-01-30 17:38:49.842455 [hotstuff proto] command being included in proposal to be sent is: 90d3cc4af3
+2021-01-30 17:38:49.842491 [hotstuff proto] command being included in proposal to be sent is: 5eab1e29e4
+2021-01-30 17:38:49.842518 [hotstuff proto] command being included in proposal to be sent is: 3786b5685d
+2021-01-30 17:38:49.842548 [hotstuff proto] command being included in proposal to be sent is: f976b84a67
+2021-01-30 17:38:49.842586 [hotstuff proto] command being included in proposal to be sent is: c59a297409
+2021-01-30 17:38:49.842614 [hotstuff proto] command being included in proposal to be sent is: c854c8f56f
+2021-01-30 17:38:49.842642 [hotstuff proto] command being included in proposal to be sent is: e1eb586829
+2021-01-30 17:38:49.842679 [hotstuff proto] command being included in proposal to be sent is: 7c2f21ce5c
+2021-01-30 17:38:49.842709 [hotstuff proto] command being included in proposal to be sent is: bb2f4bcd51
+2021-01-30 17:38:49.842737 [hotstuff proto] command being included in proposal to be sent is: 66ee151dbf
+2021-01-30 17:38:49.842817 [hotstuff proto] The block hash is: 20b18a460e
+2021-01-30 17:38:49.842837 [hotstuff proto] It is a new addition to existing record!
+2021-01-30 17:38:49.842851 [hotstuff proto] It is replica
+2021-01-30 17:38:49.842970 [hotstuff proto] The block hash is: 20b18a460e
+2021-01-30 17:38:49.842994 [hotstuff proto] It is a new addition to existing record!
+2021-01-30 17:38:49.843005 [hotstuff proto] It is replica
+2021-01-30 17:38:49.843072 [hotstuff proto] The block hash is: 20b18a460e
+2021-01-30 17:38:49.843085 [hotstuff proto] It is a new addition to existing record!
+2021-01-30 17:38:49.843095 [hotstuff proto] Enough lists!
+2021-01-30 17:38:49.843126 [hotstuff proto] command being included in proposal to be sent is: 547c34decb
+2021-01-30 17:38:49.843143 [hotstuff proto] command being included in proposal to be sent is: 04164f6252
+2021-01-30 17:38:49.843158 [hotstuff proto] command being included in proposal to be sent is: be84dc21f3
+2021-01-30 17:38:49.843186 [hotstuff proto] got <vote rid=1 blk=20b18a460e>
+2021-01-30 17:38:49.843216 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
+2021-01-30 17:38:49.843253 [hotstuff proto] got <vote rid=2 blk=20b18a460e>
+2021-01-30 17:38:49.843283 [hotstuff proto] now state: <hotstuff hqc=6b7d92eaae hqc.height=0 b_lock=6b7d92eaae b_exec=6b7d92eaae vheight=1 tails=1>
+2021-01-30 17:38:49.843309 [hotstuff proto] got QC, propose a new block
+2021-01-30 17:38:49.843327 [hotstuff proto] The parent block is: 20b18a460e
+2021-01-30 17:38:49.843337 [hotstuff proto] Applying aequitas protocol!
+2021-01-30 17:38:49.843348 [hotstuff proto] Size of the test_orderedlst is 3
+2021-01-30 17:38:49.843369 [hotstuff proto] Inside aequitas ordering module!
+2021-01-30 17:38:49.843379 [hotstuff proto] Inside aequitas ordering module - step0.1!
+2021-01-30 17:38:49.843399 [hotstuff proto] Inside aequitas ordering module - step0.2!
