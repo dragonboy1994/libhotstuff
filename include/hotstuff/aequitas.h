@@ -157,7 +157,7 @@ hotstuff::LeaderProposedOrderedList aequitas_order(std::vector<hotstuff::Ordered
 
     //map the cmd to a number
     int distinct_cmd = 0;
-    std::vector<uint256_t> cmd_content; cmd_content.clear(); cmd_content.push_back(0);
+    std::vector<uint256_t> cmd_content; cmd_content.clear();
     std::map<uint256_t, int> map_cmd; map_cmd.clear();
 
     TopologyGraph G;
@@ -206,7 +206,7 @@ hotstuff::LeaderProposedOrderedList aequitas_order(std::vector<hotstuff::Ordered
             que.pop();
             for (int i = 0; i < G.scc_have[u].size(); i++)
             {
-                cmds.push_back(cmd_content[G.scc_have[u][i]]);
+                cmds.push_back(cmd_content[G.scc_have[u][i] - 1]);
                 check_whether_all_cmds_are_ordered++;
             }
             for (int i = 0; i < G.edge_with_scc[u].size(); i++)
