@@ -1,272 +1,385 @@
-2021-01-30 21:54:12.644904 [net info] loaded configuration from hotstuff.conf
-2021-01-30 21:54:12.645299 [net info] loading extra configuration from ./hotstuff-sec2.conf
-2021-01-30 21:54:12.649659 [hotstuff proto] Proposed block size : 0
-2021-01-30 21:54:12.658985 [net info] starting all threads...
-2021-01-30 21:54:12.660203 [net info] listening to 10002
-2021-01-30 21:54:12.666540 [net info] starting all threads...
-2021-01-30 21:54:12.667470 [net info] listening to 20002
-2021-01-30 21:54:12.668241 [hotstuff info] ** starting the system with parameters **
-2021-01-30 21:54:12.668276 [hotstuff info] blk_size = 3
-2021-01-30 21:54:12.668292 [hotstuff info] conns = 0
-2021-01-30 21:54:12.668306 [hotstuff info] ** starting the event loop...
-2021-01-30 21:54:12.668520 [hotstuff proto] Pacemaker: stop rotation at 0
-2021-01-30 21:54:12.671304 [net info] created <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-30 21:54:12.671737 [net info] created <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-30 21:54:12.672100 [net info] created <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-30 21:54:12.672442 [net info] accepted <Conn fd=134 addr=<NetAddr 127.0.0.1:55477> mode=passive>
-2021-01-30 21:54:12.672507 [net info] connected to remote <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-30 21:54:12.672537 [net info] connected to remote <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-30 21:54:12.672572 [net info] connected to remote <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-30 21:54:12.673931 [net info] accepted <Conn fd=137 addr=<NetAddr 127.0.0.1:55482> mode=passive>
-2021-01-30 21:54:12.686098 [net info] 065b010aed: setup connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-30 21:54:12.686201 [net info] 065b010aed: setup connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-30 21:54:12.690065 [net info] accepted <Conn fd=140 addr=<NetAddr 127.0.0.1:55486> mode=passive>
-2021-01-30 21:54:12.690211 [net info] 065b010aed: setup connection <Conn fd=134 addr=<NetAddr 127.0.0.1:55477> mode=passive>
-2021-01-30 21:54:12.690248 [net info] 065b010aed: setup connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-30 21:54:12.695118 [net info] 065b010aed: setup connection <Conn fd=137 addr=<NetAddr 127.0.0.1:55482> mode=passive>
-2021-01-30 21:54:12.695173 [net info] 065b010aed: lost connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
-2021-01-30 21:54:12.695274 [net info] 065b010aed: lost connection <Conn fd=134 addr=<NetAddr 127.0.0.1:55477> mode=passive>
-2021-01-30 21:54:12.697384 [net info] 065b010aed: setup connection <Conn fd=140 addr=<NetAddr 127.0.0.1:55486> mode=passive>
-2021-01-30 21:54:12.697619 [net info] established 065b010aed <---> c261250345 (via <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>)
-2021-01-30 21:54:12.697756 [net info] 065b010aed: ping from <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-30 21:54:12.699234 [net info] established 065b010aed <---> 542865a568 (via <Conn fd=137 addr=<NetAddr 127.0.0.1:55482> mode=passive>)
-2021-01-30 21:54:12.699377 [net info] 065b010aed: lost connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
-2021-01-30 21:54:12.700241 [net info] 065b010aed: ping from <Conn fd=137 addr=<NetAddr 127.0.0.1:55482> mode=passive>
-2021-01-30 21:54:12.702657 [net info] established 065b010aed <---> 6540a0fea6 (via <Conn fd=140 addr=<NetAddr 127.0.0.1:55486> mode=passive>)
-2021-01-30 21:54:12.703325 [net info] 065b010aed: ping from <Conn fd=140 addr=<NetAddr 127.0.0.1:55486> mode=passive>
-2021-01-30 21:54:17.640059 [net info] accepted <Conn fd=119 addr=<NetAddr 127.0.0.1:55491> mode=passive>
-2021-01-30 21:54:17.686445 [hotstuff proto] Adding command af5570f5a1 to storage
-2021-01-30 21:54:17.686496 [hotstuff proto] Adding command 01acecb507 to storage
-2021-01-30 21:54:17.686523 [hotstuff proto] Adding command 2fcd151b82 to storage
-2021-01-30 21:54:17.686567 [hotstuff proto] Adding command 9ae4c9d086 to storage
-2021-01-30 21:54:17.686611 [hotstuff proto] Adding command 1b03ab083d to storage
-2021-01-30 21:54:17.686634 [hotstuff proto] Adding command 2be2196b9c to storage
-2021-01-30 21:54:17.686653 [hotstuff proto] Adding command 20aef0af2b to storage
-2021-01-30 21:54:17.686671 [hotstuff proto] Adding command 4e65285e65 to storage
-2021-01-30 21:54:17.686688 [hotstuff proto] Adding command 7b742c398b to storage
-2021-01-30 21:54:17.688617 [hotstuff proto] Adding command d8e0873e07 to storage
-2021-01-30 21:54:17.688689 [hotstuff proto] Adding command dd73a46975 to storage
-2021-01-30 21:54:17.688765 [hotstuff proto] Adding command f1d6ff0821 to storage
-2021-01-30 21:54:17.688798 [hotstuff proto] Adding command 930abd7018 to storage
-2021-01-30 21:54:17.688854 [hotstuff proto] Adding command 53dd18d822 to storage
-2021-01-30 21:54:17.688921 [hotstuff proto] Adding command ead27b1c86 to storage
-2021-01-30 21:54:17.688970 [hotstuff proto] Adding command 5f1ddbc2fb to storage
-2021-01-30 21:54:17.689000 [hotstuff proto] Adding command 48443c868f to storage
-2021-01-30 21:54:17.689038 [hotstuff proto] Adding command 9c8616c455 to storage
-2021-01-30 21:54:17.689073 [hotstuff proto] Adding command db182aa591 to storage
-2021-01-30 21:54:17.689104 [hotstuff proto] Adding command 1bcca6c039 to storage
-2021-01-30 21:54:17.689134 [hotstuff proto] Adding command f83bb221d5 to storage
-2021-01-30 21:54:17.689163 [hotstuff proto] Adding command a44c4438cf to storage
-2021-01-30 21:54:17.689193 [hotstuff proto] Adding command 2fadf4ab76 to storage
-2021-01-30 21:54:17.689223 [hotstuff proto] Adding command 3fbaba3c5b to storage
-2021-01-30 21:54:17.689257 [hotstuff proto] Adding command c63761c39f to storage
-2021-01-30 21:54:17.689277 [hotstuff proto] Adding command 9779c6fff1 to storage
-2021-01-30 21:54:17.689295 [hotstuff proto] Adding command 67e4f26e84 to storage
-2021-01-30 21:54:17.689311 [hotstuff proto] Adding command 5db43ae74c to storage
-2021-01-30 21:54:17.689328 [hotstuff proto] Adding command 31dba5fca7 to storage
-2021-01-30 21:54:17.689347 [hotstuff proto] Adding command 90d3cc4af3 to storage
-2021-01-30 21:54:17.689365 [hotstuff proto] Adding command 5eab1e29e4 to storage
-2021-01-30 21:54:17.689382 [hotstuff proto] Adding command 3786b5685d to storage
-2021-01-30 21:54:17.689399 [hotstuff proto] Adding command f976b84a67 to storage
-2021-01-30 21:54:17.689420 [hotstuff proto] Adding command c59a297409 to storage
-2021-01-30 21:54:17.689437 [hotstuff proto] Adding command c854c8f56f to storage
-2021-01-30 21:54:17.689454 [hotstuff proto] Adding command e1eb586829 to storage
-2021-01-30 21:54:17.689471 [hotstuff proto] Adding command 7c2f21ce5c to storage
-2021-01-30 21:54:17.689490 [hotstuff proto] Adding command bb2f4bcd51 to storage
-2021-01-30 21:54:17.689507 [hotstuff proto] Adding command 66ee151dbf to storage
-2021-01-30 21:54:17.689552 [hotstuff proto] Adding command 547c34decb to storage
-2021-01-30 21:54:17.689617 [hotstuff proto] Adding command 04164f6252 to storage
-2021-01-30 21:54:17.689798 [hotstuff proto] Adding command be84dc21f3 to storage
-2021-01-30 21:54:17.689832 [hotstuff proto] Adding command 25ab3aa916 to storage
-2021-01-30 21:54:17.689863 [hotstuff proto] Adding command 2544f2559d to storage
-2021-01-30 21:54:17.689894 [hotstuff proto] Adding command 0dd443f367 to storage
-2021-01-30 21:54:17.689924 [hotstuff proto] Adding command 7067b4ef8a to storage
-2021-01-30 21:54:17.689955 [hotstuff proto] Adding command 4d93be036c to storage
-2021-01-30 21:54:17.689985 [hotstuff proto] Adding command 42f0c08faf to storage
-2021-01-30 21:54:17.690017 [hotstuff proto] Adding command 982258dda3 to storage
-2021-01-30 21:54:17.690046 [hotstuff proto] Adding command 51335e1808 to storage
-2021-01-30 21:54:17.691200 [hotstuff proto] (Rank, cmd): (0, af5570f5a1)
-2021-01-30 21:54:17.691240 [hotstuff proto] (Rank, cmd): (1, 01acecb507)
-2021-01-30 21:54:17.691270 [hotstuff proto] (Rank, cmd): (2, 2fcd151b82)
-2021-01-30 21:54:17.691291 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.691418 [hotstuff proto] got <proposal rid=0 blk=b6e3e0a1fa>
-2021-01-30 21:54:17.691472 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.691539 [hotstuff proto] now state: <hotstuff hqc=6ef382c751 hqc.height=0 b_lock=6ef382c751 b_exec=6ef382c751 vheight=1 tails=1>
-2021-01-30 21:54:17.691920 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.697097 [hotstuff proto] (Rank, cmd): (0, 9ae4c9d086)
-2021-01-30 21:54:17.697136 [hotstuff proto] (Rank, cmd): (1, 1b03ab083d)
-2021-01-30 21:54:17.697163 [hotstuff proto] (Rank, cmd): (2, 2be2196b9c)
-2021-01-30 21:54:17.697202 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.698497 [hotstuff proto] got <proposal rid=0 blk=6f4205911e>
-2021-01-30 21:54:17.698531 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.698605 [hotstuff proto] now state: <hotstuff hqc=b6e3e0a1fa hqc.height=1 b_lock=6ef382c751 b_exec=6ef382c751 vheight=2 tails=1>
-2021-01-30 21:54:17.698904 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.703435 [hotstuff proto] (Rank, cmd): (0, 20aef0af2b)
-2021-01-30 21:54:17.703472 [hotstuff proto] (Rank, cmd): (1, 4e65285e65)
-2021-01-30 21:54:17.703517 [hotstuff proto] (Rank, cmd): (2, 7b742c398b)
-2021-01-30 21:54:17.703539 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.704364 [hotstuff proto] got <proposal rid=0 blk=1de41aca08>
-2021-01-30 21:54:17.704420 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.704522 [hotstuff proto] now state: <hotstuff hqc=6f4205911e hqc.height=2 b_lock=b6e3e0a1fa b_exec=6ef382c751 vheight=3 tails=1>
-2021-01-30 21:54:17.704937 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.709432 [hotstuff proto] (Rank, cmd): (0, d8e0873e07)
-2021-01-30 21:54:17.709469 [hotstuff proto] (Rank, cmd): (1, dd73a46975)
-2021-01-30 21:54:17.709497 [hotstuff proto] (Rank, cmd): (2, f1d6ff0821)
-2021-01-30 21:54:17.709518 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.710813 [hotstuff proto] got <proposal rid=0 blk=51afcb899d>
-2021-01-30 21:54:17.710855 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.710942 [hotstuff proto] commit <block id=b6e3e0a1fa height=1 parent=6ef382c751 qc_ref=6ef382c751>
-2021-01-30 21:54:17.711155 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=1 cmd=af5570f5a1 blk=b6e3e0a1fa>
-2021-01-30 21:54:17.711216 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=1 cmd=01acecb507 blk=b6e3e0a1fa>
-2021-01-30 21:54:17.711260 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=1 cmd=2fcd151b82 blk=b6e3e0a1fa>
-2021-01-30 21:54:17.711319 [hotstuff proto] now state: <hotstuff hqc=1de41aca08 hqc.height=3 b_lock=6f4205911e b_exec=b6e3e0a1fa vheight=4 tails=1>
-2021-01-30 21:54:17.711609 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.714264 [hotstuff proto] (Rank, cmd): (0, 930abd7018)
-2021-01-30 21:54:17.714306 [hotstuff proto] (Rank, cmd): (1, 53dd18d822)
-2021-01-30 21:54:17.714334 [hotstuff proto] (Rank, cmd): (2, ead27b1c86)
-2021-01-30 21:54:17.714357 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.715186 [hotstuff proto] got <proposal rid=0 blk=ababe27239>
-2021-01-30 21:54:17.715218 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.715290 [hotstuff proto] commit <block id=6f4205911e height=2 parent=b6e3e0a1fa qc_ref=b6e3e0a1fa>
-2021-01-30 21:54:17.715361 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=2 cmd=9ae4c9d086 blk=6f4205911e>
-2021-01-30 21:54:17.715440 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=2 cmd=1b03ab083d blk=6f4205911e>
-2021-01-30 21:54:17.715483 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=2 cmd=2be2196b9c blk=6f4205911e>
-2021-01-30 21:54:17.715537 [hotstuff proto] now state: <hotstuff hqc=51afcb899d hqc.height=4 b_lock=1de41aca08 b_exec=6f4205911e vheight=5 tails=1>
-2021-01-30 21:54:17.715797 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.719253 [hotstuff proto] (Rank, cmd): (0, 5f1ddbc2fb)
-2021-01-30 21:54:17.719292 [hotstuff proto] (Rank, cmd): (1, 48443c868f)
-2021-01-30 21:54:17.719351 [hotstuff proto] (Rank, cmd): (2, 9c8616c455)
-2021-01-30 21:54:17.719373 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.720060 [hotstuff proto] got <proposal rid=0 blk=0dc3266add>
-2021-01-30 21:54:17.720104 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.720183 [hotstuff proto] commit <block id=1de41aca08 height=3 parent=6f4205911e qc_ref=6f4205911e>
-2021-01-30 21:54:17.720228 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=3 cmd=20aef0af2b blk=1de41aca08>
-2021-01-30 21:54:17.720273 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=3 cmd=4e65285e65 blk=1de41aca08>
-2021-01-30 21:54:17.720313 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=3 cmd=7b742c398b blk=1de41aca08>
-2021-01-30 21:54:17.720370 [hotstuff proto] now state: <hotstuff hqc=ababe27239 hqc.height=5 b_lock=51afcb899d b_exec=1de41aca08 vheight=6 tails=1>
-2021-01-30 21:54:17.720675 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.723590 [hotstuff proto] (Rank, cmd): (0, db182aa591)
-2021-01-30 21:54:17.723638 [hotstuff proto] (Rank, cmd): (1, 1bcca6c039)
-2021-01-30 21:54:17.723668 [hotstuff proto] (Rank, cmd): (2, f83bb221d5)
-2021-01-30 21:54:17.723689 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.724723 [hotstuff proto] got <proposal rid=0 blk=67f745dbe8>
-2021-01-30 21:54:17.724749 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.724823 [hotstuff proto] commit <block id=51afcb899d height=4 parent=1de41aca08 qc_ref=1de41aca08>
-2021-01-30 21:54:17.724867 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=4 cmd=d8e0873e07 blk=51afcb899d>
-2021-01-30 21:54:17.724957 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=4 cmd=dd73a46975 blk=51afcb899d>
-2021-01-30 21:54:17.725000 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=4 cmd=f1d6ff0821 blk=51afcb899d>
-2021-01-30 21:54:17.725054 [hotstuff proto] now state: <hotstuff hqc=0dc3266add hqc.height=6 b_lock=ababe27239 b_exec=51afcb899d vheight=7 tails=1>
-2021-01-30 21:54:17.725350 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.728694 [hotstuff proto] (Rank, cmd): (0, a44c4438cf)
-2021-01-30 21:54:17.728746 [hotstuff proto] (Rank, cmd): (1, 2fadf4ab76)
-2021-01-30 21:54:17.728777 [hotstuff proto] (Rank, cmd): (2, 3fbaba3c5b)
-2021-01-30 21:54:17.728797 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.729903 [hotstuff proto] got <proposal rid=0 blk=d19f6c7ea3>
-2021-01-30 21:54:17.729935 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.730007 [hotstuff proto] commit <block id=ababe27239 height=5 parent=51afcb899d qc_ref=51afcb899d>
-2021-01-30 21:54:17.730050 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=5 cmd=930abd7018 blk=ababe27239>
-2021-01-30 21:54:17.730097 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=5 cmd=53dd18d822 blk=ababe27239>
-2021-01-30 21:54:17.730137 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=5 cmd=ead27b1c86 blk=ababe27239>
-2021-01-30 21:54:17.730193 [hotstuff proto] now state: <hotstuff hqc=67f745dbe8 hqc.height=7 b_lock=0dc3266add b_exec=ababe27239 vheight=8 tails=1>
-2021-01-30 21:54:17.731115 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.733630 [hotstuff proto] (Rank, cmd): (0, c63761c39f)
-2021-01-30 21:54:17.733681 [hotstuff proto] (Rank, cmd): (1, 9779c6fff1)
-2021-01-30 21:54:17.733712 [hotstuff proto] (Rank, cmd): (2, 67e4f26e84)
-2021-01-30 21:54:17.733733 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.734638 [hotstuff proto] got <proposal rid=0 blk=ff8f811f68>
-2021-01-30 21:54:17.734717 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.734858 [hotstuff proto] commit <block id=0dc3266add height=6 parent=ababe27239 qc_ref=ababe27239>
-2021-01-30 21:54:17.734904 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=6 cmd=5f1ddbc2fb blk=0dc3266add>
-2021-01-30 21:54:17.734983 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=6 cmd=48443c868f blk=0dc3266add>
-2021-01-30 21:54:17.735060 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=6 cmd=9c8616c455 blk=0dc3266add>
-2021-01-30 21:54:17.735120 [hotstuff proto] now state: <hotstuff hqc=d19f6c7ea3 hqc.height=8 b_lock=67f745dbe8 b_exec=0dc3266add vheight=9 tails=1>
-2021-01-30 21:54:17.735509 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.743275 [hotstuff proto] (Rank, cmd): (0, 5db43ae74c)
-2021-01-30 21:54:17.743310 [hotstuff proto] (Rank, cmd): (1, 31dba5fca7)
-2021-01-30 21:54:17.743338 [hotstuff proto] (Rank, cmd): (2, 90d3cc4af3)
-2021-01-30 21:54:17.743400 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.744148 [hotstuff proto] got <proposal rid=0 blk=0059420434>
-2021-01-30 21:54:17.744178 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.744257 [hotstuff proto] commit <block id=67f745dbe8 height=7 parent=0dc3266add qc_ref=0dc3266add>
-2021-01-30 21:54:17.744533 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=7 cmd=db182aa591 blk=67f745dbe8>
-2021-01-30 21:54:17.744665 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=7 cmd=1bcca6c039 blk=67f745dbe8>
-2021-01-30 21:54:17.744726 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=7 cmd=f83bb221d5 blk=67f745dbe8>
-2021-01-30 21:54:17.744784 [hotstuff proto] now state: <hotstuff hqc=ff8f811f68 hqc.height=9 b_lock=d19f6c7ea3 b_exec=67f745dbe8 vheight=10 tails=1>
-2021-01-30 21:54:17.745074 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.750085 [hotstuff proto] (Rank, cmd): (0, 5eab1e29e4)
-2021-01-30 21:54:17.750215 [hotstuff proto] (Rank, cmd): (1, 3786b5685d)
-2021-01-30 21:54:17.750274 [hotstuff proto] (Rank, cmd): (2, f976b84a67)
-2021-01-30 21:54:17.750348 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.751311 [hotstuff proto] got <proposal rid=0 blk=ff5cd43d56>
-2021-01-30 21:54:17.751380 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.751461 [hotstuff proto] commit <block id=d19f6c7ea3 height=8 parent=67f745dbe8 qc_ref=67f745dbe8>
-2021-01-30 21:54:17.751501 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=8 cmd=a44c4438cf blk=d19f6c7ea3>
-2021-01-30 21:54:17.751552 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=8 cmd=2fadf4ab76 blk=d19f6c7ea3>
-2021-01-30 21:54:17.751595 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=8 cmd=3fbaba3c5b blk=d19f6c7ea3>
-2021-01-30 21:54:17.751649 [hotstuff proto] now state: <hotstuff hqc=0059420434 hqc.height=10 b_lock=ff8f811f68 b_exec=d19f6c7ea3 vheight=11 tails=1>
-2021-01-30 21:54:17.751974 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.758890 [hotstuff proto] (Rank, cmd): (0, c59a297409)
-2021-01-30 21:54:17.758944 [hotstuff proto] (Rank, cmd): (1, c854c8f56f)
-2021-01-30 21:54:17.758973 [hotstuff proto] (Rank, cmd): (2, e1eb586829)
-2021-01-30 21:54:17.758995 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.760008 [hotstuff proto] got <proposal rid=0 blk=e4e65574f4>
-2021-01-30 21:54:17.760037 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.760110 [hotstuff proto] commit <block id=ff8f811f68 height=9 parent=d19f6c7ea3 qc_ref=d19f6c7ea3>
-2021-01-30 21:54:17.760154 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=9 cmd=c63761c39f blk=ff8f811f68>
-2021-01-30 21:54:17.760255 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=9 cmd=9779c6fff1 blk=ff8f811f68>
-2021-01-30 21:54:17.760298 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=9 cmd=67e4f26e84 blk=ff8f811f68>
-2021-01-30 21:54:17.760354 [hotstuff proto] now state: <hotstuff hqc=ff5cd43d56 hqc.height=11 b_lock=0059420434 b_exec=ff8f811f68 vheight=12 tails=1>
-2021-01-30 21:54:17.760642 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.764468 [hotstuff proto] (Rank, cmd): (0, 7c2f21ce5c)
-2021-01-30 21:54:17.764518 [hotstuff proto] (Rank, cmd): (1, bb2f4bcd51)
-2021-01-30 21:54:17.764584 [hotstuff proto] (Rank, cmd): (2, 66ee151dbf)
-2021-01-30 21:54:17.764612 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.765945 [hotstuff proto] got <proposal rid=0 blk=acbaba52ae>
-2021-01-30 21:54:17.766001 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.766083 [hotstuff proto] commit <block id=0059420434 height=10 parent=ff8f811f68 qc_ref=ff8f811f68>
-2021-01-30 21:54:17.766132 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=10 cmd=5db43ae74c blk=0059420434>
-2021-01-30 21:54:17.766180 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=10 cmd=31dba5fca7 blk=0059420434>
-2021-01-30 21:54:17.766223 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=10 cmd=90d3cc4af3 blk=0059420434>
-2021-01-30 21:54:17.766281 [hotstuff proto] now state: <hotstuff hqc=e4e65574f4 hqc.height=12 b_lock=ff5cd43d56 b_exec=0059420434 vheight=13 tails=1>
-2021-01-30 21:54:17.766737 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.775145 [hotstuff proto] (Rank, cmd): (0, 547c34decb)
-2021-01-30 21:54:17.775206 [hotstuff proto] (Rank, cmd): (1, 04164f6252)
-2021-01-30 21:54:17.775236 [hotstuff proto] (Rank, cmd): (2, be84dc21f3)
-2021-01-30 21:54:17.775258 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.776329 [hotstuff proto] got <proposal rid=0 blk=87b21d9769>
-2021-01-30 21:54:17.776360 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.776433 [hotstuff proto] commit <block id=ff5cd43d56 height=11 parent=0059420434 qc_ref=0059420434>
-2021-01-30 21:54:17.776476 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=11 cmd=5eab1e29e4 blk=ff5cd43d56>
-2021-01-30 21:54:17.776607 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=11 cmd=3786b5685d blk=ff5cd43d56>
-2021-01-30 21:54:17.776649 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=11 cmd=f976b84a67 blk=ff5cd43d56>
-2021-01-30 21:54:17.776704 [hotstuff proto] now state: <hotstuff hqc=acbaba52ae hqc.height=13 b_lock=e4e65574f4 b_exec=ff5cd43d56 vheight=14 tails=1>
-2021-01-30 21:54:17.776988 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.780268 [hotstuff proto] (Rank, cmd): (0, 25ab3aa916)
-2021-01-30 21:54:17.780380 [hotstuff proto] (Rank, cmd): (1, 2544f2559d)
-2021-01-30 21:54:17.780399 [hotstuff proto] (Rank, cmd): (2, 0dd443f367)
-2021-01-30 21:54:17.780412 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.781327 [hotstuff proto] got <proposal rid=0 blk=9f280da84a>
-2021-01-30 21:54:17.781381 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.781454 [hotstuff proto] commit <block id=e4e65574f4 height=12 parent=ff5cd43d56 qc_ref=ff5cd43d56>
-2021-01-30 21:54:17.781494 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=12 cmd=c59a297409 blk=e4e65574f4>
-2021-01-30 21:54:17.781543 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=12 cmd=c854c8f56f blk=e4e65574f4>
-2021-01-30 21:54:17.781583 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=12 cmd=e1eb586829 blk=e4e65574f4>
-2021-01-30 21:54:17.781637 [hotstuff proto] now state: <hotstuff hqc=87b21d9769 hqc.height=14 b_lock=acbaba52ae b_exec=e4e65574f4 vheight=15 tails=1>
-2021-01-30 21:54:17.781939 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.789004 [hotstuff proto] (Rank, cmd): (0, 7067b4ef8a)
-2021-01-30 21:54:17.789043 [hotstuff proto] (Rank, cmd): (1, 4d93be036c)
-2021-01-30 21:54:17.789074 [hotstuff proto] (Rank, cmd): (2, 42f0c08faf)
-2021-01-30 21:54:17.789098 [hotstuff proto] Proposed block size : 3
-2021-01-30 21:54:17.791588 [hotstuff proto] got <proposal rid=0 blk=ad08ae0d9b>
-2021-01-30 21:54:17.791625 [hotstuff proto] Passed acceptable fairness check!
-2021-01-30 21:54:17.791704 [hotstuff proto] commit <block id=acbaba52ae height=13 parent=e4e65574f4 qc_ref=e4e65574f4>
-2021-01-30 21:54:17.791752 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=13 cmd=7c2f21ce5c blk=acbaba52ae>
-2021-01-30 21:54:17.791984 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=13 cmd=bb2f4bcd51 blk=acbaba52ae>
-2021-01-30 21:54:17.792066 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=13 cmd=66ee151dbf blk=acbaba52ae>
-2021-01-30 21:54:17.792126 [hotstuff proto] now state: <hotstuff hqc=9f280da84a hqc.height=15 b_lock=87b21d9769 b_exec=acbaba52ae vheight=16 tails=1>
-2021-01-30 21:54:17.792417 [hotstuff proto] The size while constructing vote is: 3
-2021-01-30 21:54:17.873163 [net info] 065b010aed: lost connection <Conn fd=137 addr=<NetAddr 127.0.0.1:55482> mode=passive>
-2021-01-30 21:54:17.873263 [net info] ended 065b010aed <-/-> 542865a568 (via <Conn fd=137 addr=<NetAddr 127.0.0.1:55482> mode=passive>)
-2021-01-30 21:54:20.264900 [net info] 065b010aed: lost connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
-2021-01-30 21:54:20.264993 [net info] ended 065b010aed <-/-> c261250345 (via <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>)
-2021-01-30 21:54:20.557451 [net info] created <Conn fd=122 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-31 00:27:09.239853 [net info] loaded configuration from hotstuff.conf
+2021-01-31 00:27:09.240104 [net info] loading extra configuration from ./hotstuff-sec2.conf
+2021-01-31 00:27:09.243199 [hotstuff proto] Proposed block size : 0
+2021-01-31 00:27:09.250383 [net info] starting all threads...
+2021-01-31 00:27:09.250869 [net info] listening to 10002
+2021-01-31 00:27:09.256801 [net info] starting all threads...
+2021-01-31 00:27:09.257368 [net info] listening to 20002
+2021-01-31 00:27:09.257564 [hotstuff info] ** starting the system with parameters **
+2021-01-31 00:27:09.257585 [hotstuff info] blk_size = 3
+2021-01-31 00:27:09.257600 [hotstuff info] conns = 0
+2021-01-31 00:27:09.257613 [hotstuff info] ** starting the event loop...
+2021-01-31 00:27:09.257993 [hotstuff proto] Pacemaker: stop rotation at 0
+2021-01-31 00:27:09.259133 [net info] created <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-31 00:27:09.259686 [net info] created <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-31 00:27:09.260123 [net info] created <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-31 00:27:09.260456 [net info] accepted <Conn fd=134 addr=<NetAddr 127.0.0.1:56172> mode=passive>
+2021-01-31 00:27:09.260512 [net info] connected to remote <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-31 00:27:09.260540 [net info] connected to remote <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-31 00:27:09.260566 [net info] connected to remote <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-31 00:27:09.260844 [net info] accepted <Conn fd=137 addr=<NetAddr 127.0.0.1:56176> mode=passive>
+2021-01-31 00:27:09.261600 [net info] accepted <Conn fd=140 addr=<NetAddr 127.0.0.1:56179> mode=passive>
+2021-01-31 00:27:09.278700 [net info] 065b010aed: setup connection <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-31 00:27:09.278817 [net info] 065b010aed: setup connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-31 00:27:09.278873 [net info] 065b010aed: setup connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-31 00:27:09.279755 [net info] 065b010aed: setup connection <Conn fd=137 addr=<NetAddr 127.0.0.1:56176> mode=passive>
+2021-01-31 00:27:09.280636 [net info] 065b010aed: setup connection <Conn fd=134 addr=<NetAddr 127.0.0.1:56172> mode=passive>
+2021-01-31 00:27:09.281159 [net info] 065b010aed: lost connection <Conn fd=137 addr=<NetAddr 127.0.0.1:56176> mode=passive>
+2021-01-31 00:27:09.282234 [net info] 065b010aed: setup connection <Conn fd=140 addr=<NetAddr 127.0.0.1:56179> mode=passive>
+2021-01-31 00:27:09.282431 [net info] established 065b010aed <---> c261250345 (via <Conn fd=134 addr=<NetAddr 127.0.0.1:56172> mode=passive>)
+2021-01-31 00:27:09.282858 [net info] established 065b010aed <---> 6540a0fea6 (via <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>)
+2021-01-31 00:27:09.282895 [net info] 065b010aed: ping from <Conn fd=131 addr=<NetAddr 127.0.0.1:10003> mode=active>
+2021-01-31 00:27:09.283505 [net info] 065b010aed: lost connection <Conn fd=128 addr=<NetAddr 127.0.0.1:10001> mode=active>
+2021-01-31 00:27:09.283725 [net info] 065b010aed: ping from <Conn fd=134 addr=<NetAddr 127.0.0.1:56172> mode=passive>
+2021-01-31 00:27:09.283945 [net info] 065b010aed: lost connection <Conn fd=140 addr=<NetAddr 127.0.0.1:56179> mode=passive>
+2021-01-31 00:27:09.285334 [net info] established 065b010aed <---> 542865a568 (via <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>)
+2021-01-31 00:27:09.285371 [net info] 065b010aed: ping from <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-31 00:27:14.078767 [net info] accepted <Conn fd=119 addr=<NetAddr 127.0.0.1:56183> mode=passive>
+2021-01-31 00:27:14.108800 [hotstuff proto] Adding command af5570f5a1 to storage
+2021-01-31 00:27:14.108854 [hotstuff proto] (cmd,timestamp): (af5570f5a1,1612070834108828)
+2021-01-31 00:27:14.108945 [hotstuff proto] Adding command 01acecb507 to storage
+2021-01-31 00:27:14.108979 [hotstuff proto] (cmd,timestamp): (01acecb507,1612070834108965)
+2021-01-31 00:27:14.109151 [hotstuff proto] Adding command 2fcd151b82 to storage
+2021-01-31 00:27:14.109206 [hotstuff proto] (cmd,timestamp): (2fcd151b82,1612070834109191)
+2021-01-31 00:27:14.109245 [hotstuff proto] Adding command 9ae4c9d086 to storage
+2021-01-31 00:27:14.109274 [hotstuff proto] (cmd,timestamp): (9ae4c9d086,1612070834109261)
+2021-01-31 00:27:14.109306 [hotstuff proto] Adding command 1b03ab083d to storage
+2021-01-31 00:27:14.109334 [hotstuff proto] (cmd,timestamp): (1b03ab083d,1612070834109321)
+2021-01-31 00:27:14.109368 [hotstuff proto] Adding command 2be2196b9c to storage
+2021-01-31 00:27:14.109396 [hotstuff proto] (cmd,timestamp): (2be2196b9c,1612070834109382)
+2021-01-31 00:27:14.109428 [hotstuff proto] Adding command 20aef0af2b to storage
+2021-01-31 00:27:14.109455 [hotstuff proto] (cmd,timestamp): (20aef0af2b,1612070834109442)
+2021-01-31 00:27:14.109486 [hotstuff proto] Adding command 4e65285e65 to storage
+2021-01-31 00:27:14.109514 [hotstuff proto] (cmd,timestamp): (4e65285e65,1612070834109501)
+2021-01-31 00:27:14.109545 [hotstuff proto] Adding command 7b742c398b to storage
+2021-01-31 00:27:14.109573 [hotstuff proto] (cmd,timestamp): (7b742c398b,1612070834109559)
+2021-01-31 00:27:14.109606 [hotstuff proto] Adding command d8e0873e07 to storage
+2021-01-31 00:27:14.109635 [hotstuff proto] (cmd,timestamp): (d8e0873e07,1612070834109621)
+2021-01-31 00:27:14.109666 [hotstuff proto] Adding command dd73a46975 to storage
+2021-01-31 00:27:14.109695 [hotstuff proto] (cmd,timestamp): (dd73a46975,1612070834109681)
+2021-01-31 00:27:14.109727 [hotstuff proto] Adding command f1d6ff0821 to storage
+2021-01-31 00:27:14.109756 [hotstuff proto] (cmd,timestamp): (f1d6ff0821,1612070834109742)
+2021-01-31 00:27:14.109789 [hotstuff proto] Adding command 930abd7018 to storage
+2021-01-31 00:27:14.109819 [hotstuff proto] (cmd,timestamp): (930abd7018,1612070834109805)
+2021-01-31 00:27:14.109851 [hotstuff proto] Adding command 53dd18d822 to storage
+2021-01-31 00:27:14.109880 [hotstuff proto] (cmd,timestamp): (53dd18d822,1612070834109866)
+2021-01-31 00:27:14.109912 [hotstuff proto] Adding command ead27b1c86 to storage
+2021-01-31 00:27:14.109941 [hotstuff proto] (cmd,timestamp): (ead27b1c86,1612070834109927)
+2021-01-31 00:27:14.109972 [hotstuff proto] Adding command 5f1ddbc2fb to storage
+2021-01-31 00:27:14.110000 [hotstuff proto] (cmd,timestamp): (5f1ddbc2fb,1612070834109987)
+2021-01-31 00:27:14.110032 [hotstuff proto] Adding command 48443c868f to storage
+2021-01-31 00:27:14.110061 [hotstuff proto] (cmd,timestamp): (48443c868f,1612070834110047)
+2021-01-31 00:27:14.110102 [hotstuff proto] Adding command 9c8616c455 to storage
+2021-01-31 00:27:14.110129 [hotstuff proto] (cmd,timestamp): (9c8616c455,1612070834110115)
+2021-01-31 00:27:14.110161 [hotstuff proto] Adding command db182aa591 to storage
+2021-01-31 00:27:14.110189 [hotstuff proto] (cmd,timestamp): (db182aa591,1612070834110175)
+2021-01-31 00:27:14.110220 [hotstuff proto] Adding command 1bcca6c039 to storage
+2021-01-31 00:27:14.110249 [hotstuff proto] (cmd,timestamp): (1bcca6c039,1612070834110235)
+2021-01-31 00:27:14.110280 [hotstuff proto] Adding command f83bb221d5 to storage
+2021-01-31 00:27:14.110309 [hotstuff proto] (cmd,timestamp): (f83bb221d5,1612070834110295)
+2021-01-31 00:27:14.110340 [hotstuff proto] Adding command a44c4438cf to storage
+2021-01-31 00:27:14.110368 [hotstuff proto] (cmd,timestamp): (a44c4438cf,1612070834110354)
+2021-01-31 00:27:14.110399 [hotstuff proto] Adding command 2fadf4ab76 to storage
+2021-01-31 00:27:14.110428 [hotstuff proto] (cmd,timestamp): (2fadf4ab76,1612070834110414)
+2021-01-31 00:27:14.110459 [hotstuff proto] Adding command 3fbaba3c5b to storage
+2021-01-31 00:27:14.110487 [hotstuff proto] (cmd,timestamp): (3fbaba3c5b,1612070834110473)
+2021-01-31 00:27:14.110519 [hotstuff proto] Adding command c63761c39f to storage
+2021-01-31 00:27:14.110547 [hotstuff proto] (cmd,timestamp): (c63761c39f,1612070834110534)
+2021-01-31 00:27:14.110579 [hotstuff proto] Adding command 9779c6fff1 to storage
+2021-01-31 00:27:14.110607 [hotstuff proto] (cmd,timestamp): (9779c6fff1,1612070834110593)
+2021-01-31 00:27:14.110779 [hotstuff proto] Adding command 67e4f26e84 to storage
+2021-01-31 00:27:14.110815 [hotstuff proto] (cmd,timestamp): (67e4f26e84,1612070834110801)
+2021-01-31 00:27:14.110846 [hotstuff proto] Adding command 5db43ae74c to storage
+2021-01-31 00:27:14.110872 [hotstuff proto] (cmd,timestamp): (5db43ae74c,1612070834110859)
+2021-01-31 00:27:14.110902 [hotstuff proto] Adding command 31dba5fca7 to storage
+2021-01-31 00:27:14.110928 [hotstuff proto] (cmd,timestamp): (31dba5fca7,1612070834110915)
+2021-01-31 00:27:14.110955 [hotstuff proto] Adding command 90d3cc4af3 to storage
+2021-01-31 00:27:14.112474 [hotstuff proto] (cmd,timestamp): (90d3cc4af3,1612070834112456)
+2021-01-31 00:27:14.112531 [hotstuff proto] Adding command 5eab1e29e4 to storage
+2021-01-31 00:27:14.112560 [hotstuff proto] (cmd,timestamp): (5eab1e29e4,1612070834112546)
+2021-01-31 00:27:14.112591 [hotstuff proto] Adding command 3786b5685d to storage
+2021-01-31 00:27:14.112618 [hotstuff proto] (cmd,timestamp): (3786b5685d,1612070834112604)
+2021-01-31 00:27:14.112647 [hotstuff proto] Adding command f976b84a67 to storage
+2021-01-31 00:27:14.112674 [hotstuff proto] (cmd,timestamp): (f976b84a67,1612070834112660)
+2021-01-31 00:27:14.112710 [hotstuff proto] Adding command c59a297409 to storage
+2021-01-31 00:27:14.112735 [hotstuff proto] (cmd,timestamp): (c59a297409,1612070834112721)
+2021-01-31 00:27:14.112765 [hotstuff proto] Adding command c854c8f56f to storage
+2021-01-31 00:27:14.112791 [hotstuff proto] (cmd,timestamp): (c854c8f56f,1612070834112777)
+2021-01-31 00:27:14.112820 [hotstuff proto] Adding command e1eb586829 to storage
+2021-01-31 00:27:14.112845 [hotstuff proto] (cmd,timestamp): (e1eb586829,1612070834112832)
+2021-01-31 00:27:14.112875 [hotstuff proto] Adding command 7c2f21ce5c to storage
+2021-01-31 00:27:14.112901 [hotstuff proto] (cmd,timestamp): (7c2f21ce5c,1612070834112887)
+2021-01-31 00:27:14.112930 [hotstuff proto] Adding command bb2f4bcd51 to storage
+2021-01-31 00:27:14.112956 [hotstuff proto] (cmd,timestamp): (bb2f4bcd51,1612070834112942)
+2021-01-31 00:27:14.112986 [hotstuff proto] Adding command 66ee151dbf to storage
+2021-01-31 00:27:14.113011 [hotstuff proto] (cmd,timestamp): (66ee151dbf,1612070834112998)
+2021-01-31 00:27:14.113041 [hotstuff proto] Adding command 547c34decb to storage
+2021-01-31 00:27:14.113066 [hotstuff proto] (cmd,timestamp): (547c34decb,1612070834113053)
+2021-01-31 00:27:14.113167 [hotstuff proto] Adding command 04164f6252 to storage
+2021-01-31 00:27:14.113314 [hotstuff proto] (cmd,timestamp): (04164f6252,1612070834113182)
+2021-01-31 00:27:14.113357 [hotstuff proto] Adding command be84dc21f3 to storage
+2021-01-31 00:27:14.113386 [hotstuff proto] (cmd,timestamp): (be84dc21f3,1612070834113372)
+2021-01-31 00:27:14.113417 [hotstuff proto] Adding command 25ab3aa916 to storage
+2021-01-31 00:27:14.113446 [hotstuff proto] (cmd,timestamp): (25ab3aa916,1612070834113432)
+2021-01-31 00:27:14.113479 [hotstuff proto] Adding command 2544f2559d to storage
+2021-01-31 00:27:14.113508 [hotstuff proto] (cmd,timestamp): (2544f2559d,1612070834113495)
+2021-01-31 00:27:14.113541 [hotstuff proto] Adding command 0dd443f367 to storage
+2021-01-31 00:27:14.113570 [hotstuff proto] (cmd,timestamp): (0dd443f367,1612070834113556)
+2021-01-31 00:27:14.113604 [hotstuff proto] Adding command 7067b4ef8a to storage
+2021-01-31 00:27:14.113633 [hotstuff proto] (cmd,timestamp): (7067b4ef8a,1612070834113619)
+2021-01-31 00:27:14.113666 [hotstuff proto] Adding command 4d93be036c to storage
+2021-01-31 00:27:14.113694 [hotstuff proto] (cmd,timestamp): (4d93be036c,1612070834113680)
+2021-01-31 00:27:14.113726 [hotstuff proto] Adding command 42f0c08faf to storage
+2021-01-31 00:27:14.113755 [hotstuff proto] (cmd,timestamp): (42f0c08faf,1612070834113742)
+2021-01-31 00:27:14.113789 [hotstuff proto] Adding command 982258dda3 to storage
+2021-01-31 00:27:14.113816 [hotstuff proto] (cmd,timestamp): (982258dda3,1612070834113805)
+2021-01-31 00:27:14.113845 [hotstuff proto] Adding command 51335e1808 to storage
+2021-01-31 00:27:14.113956 [hotstuff proto] (cmd,timestamp): (51335e1808,1612070834113892)
+2021-01-31 00:27:14.115519 [hotstuff proto] (Rank, cmd): (0, af5570f5a1)
+2021-01-31 00:27:14.115562 [hotstuff proto] (Rank, cmd): (1, 01acecb507)
+2021-01-31 00:27:14.115595 [hotstuff proto] (Rank, cmd): (2, 2fcd151b82)
+2021-01-31 00:27:14.115619 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.115740 [hotstuff proto] got <proposal rid=0 blk=b6e3e0a1fa>
+2021-01-31 00:27:14.115763 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.115783 [hotstuff proto] (Rank, timestamp): (0, 1612070834108828)
+2021-01-31 00:27:14.115802 [hotstuff proto] (Rank, timestamp): (1, 1612070834108965)
+2021-01-31 00:27:14.115819 [hotstuff proto] (Rank, timestamp): (2, 1612070834109191)
+2021-01-31 00:27:14.115836 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.115897 [hotstuff proto] now state: <hotstuff hqc=6ef382c751 hqc.height=0 b_lock=6ef382c751 b_exec=6ef382c751 vheight=1 tails=1>
+2021-01-31 00:27:14.116345 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.119468 [hotstuff proto] (Rank, cmd): (0, 9ae4c9d086)
+2021-01-31 00:27:14.119506 [hotstuff proto] (Rank, cmd): (1, 1b03ab083d)
+2021-01-31 00:27:14.119534 [hotstuff proto] (Rank, cmd): (2, 2be2196b9c)
+2021-01-31 00:27:14.119562 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.121261 [hotstuff proto] got <proposal rid=0 blk=6f4205911e>
+2021-01-31 00:27:14.121291 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.121312 [hotstuff proto] (Rank, timestamp): (0, 1612070834109261)
+2021-01-31 00:27:14.121326 [hotstuff proto] (Rank, timestamp): (1, 1612070834109321)
+2021-01-31 00:27:14.121338 [hotstuff proto] (Rank, timestamp): (2, 1612070834109382)
+2021-01-31 00:27:14.121349 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.121389 [hotstuff proto] now state: <hotstuff hqc=b6e3e0a1fa hqc.height=1 b_lock=6ef382c751 b_exec=6ef382c751 vheight=2 tails=1>
+2021-01-31 00:27:14.121557 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.123428 [hotstuff proto] (Rank, cmd): (0, 20aef0af2b)
+2021-01-31 00:27:14.123514 [hotstuff proto] (Rank, cmd): (1, 4e65285e65)
+2021-01-31 00:27:14.123554 [hotstuff proto] (Rank, cmd): (2, 7b742c398b)
+2021-01-31 00:27:14.123578 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.124330 [hotstuff proto] got <proposal rid=0 blk=acea1209d3>
+2021-01-31 00:27:14.124369 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.124392 [hotstuff proto] (Rank, timestamp): (0, 1612070834109442)
+2021-01-31 00:27:14.124409 [hotstuff proto] (Rank, timestamp): (1, 1612070834109501)
+2021-01-31 00:27:14.124425 [hotstuff proto] (Rank, timestamp): (2, 1612070834109559)
+2021-01-31 00:27:14.124442 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.124513 [hotstuff proto] now state: <hotstuff hqc=6f4205911e hqc.height=2 b_lock=b6e3e0a1fa b_exec=6ef382c751 vheight=3 tails=1>
+2021-01-31 00:27:14.124810 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.127521 [hotstuff proto] (Rank, cmd): (0, d8e0873e07)
+2021-01-31 00:27:14.127559 [hotstuff proto] (Rank, cmd): (1, dd73a46975)
+2021-01-31 00:27:14.127586 [hotstuff proto] (Rank, cmd): (2, f1d6ff0821)
+2021-01-31 00:27:14.127609 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.128445 [hotstuff proto] got <proposal rid=0 blk=bbb81e9454>
+2021-01-31 00:27:14.128473 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.128494 [hotstuff proto] (Rank, timestamp): (0, 1612070834109621)
+2021-01-31 00:27:14.128511 [hotstuff proto] (Rank, timestamp): (1, 1612070834109681)
+2021-01-31 00:27:14.128528 [hotstuff proto] (Rank, timestamp): (2, 1612070834109742)
+2021-01-31 00:27:14.128545 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.128624 [hotstuff proto] commit <block id=b6e3e0a1fa height=1 parent=6ef382c751 qc_ref=6ef382c751>
+2021-01-31 00:27:14.128664 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=1 cmd=af5570f5a1 blk=b6e3e0a1fa>
+2021-01-31 00:27:14.128846 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=1 cmd=01acecb507 blk=b6e3e0a1fa>
+2021-01-31 00:27:14.128891 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=1 cmd=2fcd151b82 blk=b6e3e0a1fa>
+2021-01-31 00:27:14.128951 [hotstuff proto] now state: <hotstuff hqc=acea1209d3 hqc.height=3 b_lock=6f4205911e b_exec=b6e3e0a1fa vheight=4 tails=1>
+2021-01-31 00:27:14.129437 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.134407 [hotstuff proto] (Rank, cmd): (0, 930abd7018)
+2021-01-31 00:27:14.134449 [hotstuff proto] (Rank, cmd): (1, 53dd18d822)
+2021-01-31 00:27:14.134475 [hotstuff proto] (Rank, cmd): (2, ead27b1c86)
+2021-01-31 00:27:14.134498 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.135516 [hotstuff proto] got <proposal rid=0 blk=79daaf01fd>
+2021-01-31 00:27:14.135549 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.135571 [hotstuff proto] (Rank, timestamp): (0, 1612070834109805)
+2021-01-31 00:27:14.135588 [hotstuff proto] (Rank, timestamp): (1, 1612070834109866)
+2021-01-31 00:27:14.135604 [hotstuff proto] (Rank, timestamp): (2, 1612070834109927)
+2021-01-31 00:27:14.135621 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.135694 [hotstuff proto] commit <block id=6f4205911e height=2 parent=b6e3e0a1fa qc_ref=b6e3e0a1fa>
+2021-01-31 00:27:14.135739 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=2 cmd=9ae4c9d086 blk=6f4205911e>
+2021-01-31 00:27:14.135883 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=2 cmd=1b03ab083d blk=6f4205911e>
+2021-01-31 00:27:14.135931 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=2 cmd=2be2196b9c blk=6f4205911e>
+2021-01-31 00:27:14.135987 [hotstuff proto] now state: <hotstuff hqc=bbb81e9454 hqc.height=4 b_lock=acea1209d3 b_exec=6f4205911e vheight=5 tails=1>
+2021-01-31 00:27:14.136270 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.139192 [hotstuff proto] (Rank, cmd): (0, 5f1ddbc2fb)
+2021-01-31 00:27:14.139250 [hotstuff proto] (Rank, cmd): (1, 48443c868f)
+2021-01-31 00:27:14.139293 [hotstuff proto] (Rank, cmd): (2, 9c8616c455)
+2021-01-31 00:27:14.139316 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.140230 [hotstuff proto] got <proposal rid=0 blk=59ad564513>
+2021-01-31 00:27:14.140262 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.140284 [hotstuff proto] (Rank, timestamp): (0, 1612070834109987)
+2021-01-31 00:27:14.140304 [hotstuff proto] (Rank, timestamp): (1, 1612070834110047)
+2021-01-31 00:27:14.140321 [hotstuff proto] (Rank, timestamp): (2, 1612070834110115)
+2021-01-31 00:27:14.140340 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.140490 [hotstuff proto] commit <block id=acea1209d3 height=3 parent=6f4205911e qc_ref=6f4205911e>
+2021-01-31 00:27:14.140580 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=3 cmd=20aef0af2b blk=acea1209d3>
+2021-01-31 00:27:14.140704 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=3 cmd=4e65285e65 blk=acea1209d3>
+2021-01-31 00:27:14.140855 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=3 cmd=7b742c398b blk=acea1209d3>
+2021-01-31 00:27:14.140928 [hotstuff proto] now state: <hotstuff hqc=79daaf01fd hqc.height=5 b_lock=bbb81e9454 b_exec=acea1209d3 vheight=6 tails=1>
+2021-01-31 00:27:14.141204 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.144561 [hotstuff proto] (Rank, cmd): (0, db182aa591)
+2021-01-31 00:27:14.144772 [hotstuff proto] (Rank, cmd): (1, 1bcca6c039)
+2021-01-31 00:27:14.144841 [hotstuff proto] (Rank, cmd): (2, f83bb221d5)
+2021-01-31 00:27:14.144874 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.145569 [hotstuff proto] got <proposal rid=0 blk=59d8777b7f>
+2021-01-31 00:27:14.145598 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.145621 [hotstuff proto] (Rank, timestamp): (0, 1612070834110175)
+2021-01-31 00:27:14.145682 [hotstuff proto] (Rank, timestamp): (1, 1612070834110235)
+2021-01-31 00:27:14.145702 [hotstuff proto] (Rank, timestamp): (2, 1612070834110295)
+2021-01-31 00:27:14.145731 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.145807 [hotstuff proto] commit <block id=bbb81e9454 height=4 parent=acea1209d3 qc_ref=acea1209d3>
+2021-01-31 00:27:14.145858 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=4 cmd=d8e0873e07 blk=bbb81e9454>
+2021-01-31 00:27:14.145902 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=4 cmd=dd73a46975 blk=bbb81e9454>
+2021-01-31 00:27:14.145943 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=4 cmd=f1d6ff0821 blk=bbb81e9454>
+2021-01-31 00:27:14.145998 [hotstuff proto] now state: <hotstuff hqc=59ad564513 hqc.height=6 b_lock=79daaf01fd b_exec=bbb81e9454 vheight=7 tails=1>
+2021-01-31 00:27:14.146288 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.150810 [hotstuff proto] (Rank, cmd): (0, a44c4438cf)
+2021-01-31 00:27:14.150898 [hotstuff proto] (Rank, cmd): (1, 2fadf4ab76)
+2021-01-31 00:27:14.150933 [hotstuff proto] (Rank, cmd): (2, 3fbaba3c5b)
+2021-01-31 00:27:14.150959 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.152419 [hotstuff proto] got <proposal rid=0 blk=d452c8fb69>
+2021-01-31 00:27:14.152444 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.152466 [hotstuff proto] (Rank, timestamp): (0, 1612070834110354)
+2021-01-31 00:27:14.152481 [hotstuff proto] (Rank, timestamp): (1, 1612070834110414)
+2021-01-31 00:27:14.152495 [hotstuff proto] (Rank, timestamp): (2, 1612070834110473)
+2021-01-31 00:27:14.152513 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.152586 [hotstuff proto] commit <block id=79daaf01fd height=5 parent=bbb81e9454 qc_ref=bbb81e9454>
+2021-01-31 00:27:14.152629 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=5 cmd=930abd7018 blk=79daaf01fd>
+2021-01-31 00:27:14.152864 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=5 cmd=53dd18d822 blk=79daaf01fd>
+2021-01-31 00:27:14.152911 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=5 cmd=ead27b1c86 blk=79daaf01fd>
+2021-01-31 00:27:14.152966 [hotstuff proto] now state: <hotstuff hqc=59d8777b7f hqc.height=7 b_lock=59ad564513 b_exec=79daaf01fd vheight=8 tails=1>
+2021-01-31 00:27:14.153246 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.155503 [hotstuff proto] (Rank, cmd): (0, c63761c39f)
+2021-01-31 00:27:14.155538 [hotstuff proto] (Rank, cmd): (1, 9779c6fff1)
+2021-01-31 00:27:14.155566 [hotstuff proto] (Rank, cmd): (2, 67e4f26e84)
+2021-01-31 00:27:14.155587 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.157459 [hotstuff proto] got <proposal rid=0 blk=d1aa68ff4d>
+2021-01-31 00:27:14.157488 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.157509 [hotstuff proto] (Rank, timestamp): (0, 1612070834110534)
+2021-01-31 00:27:14.157546 [hotstuff proto] (Rank, timestamp): (1, 1612070834110593)
+2021-01-31 00:27:14.157570 [hotstuff proto] (Rank, timestamp): (2, 1612070834110801)
+2021-01-31 00:27:14.157589 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.157645 [hotstuff proto] commit <block id=59ad564513 height=6 parent=79daaf01fd qc_ref=79daaf01fd>
+2021-01-31 00:27:14.157669 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=6 cmd=5f1ddbc2fb blk=59ad564513>
+2021-01-31 00:27:14.157707 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=6 cmd=48443c868f blk=59ad564513>
+2021-01-31 00:27:14.157744 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=6 cmd=9c8616c455 blk=59ad564513>
+2021-01-31 00:27:14.157782 [hotstuff proto] now state: <hotstuff hqc=d452c8fb69 hqc.height=8 b_lock=59d8777b7f b_exec=59ad564513 vheight=9 tails=1>
+2021-01-31 00:27:14.157950 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.159969 [hotstuff proto] (Rank, cmd): (0, 5db43ae74c)
+2021-01-31 00:27:14.160043 [hotstuff proto] (Rank, cmd): (1, 31dba5fca7)
+2021-01-31 00:27:14.160072 [hotstuff proto] (Rank, cmd): (2, 90d3cc4af3)
+2021-01-31 00:27:14.160094 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.161020 [hotstuff proto] got <proposal rid=0 blk=432fdcad1c>
+2021-01-31 00:27:14.161060 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.161085 [hotstuff proto] (Rank, timestamp): (0, 1612070834110859)
+2021-01-31 00:27:14.161105 [hotstuff proto] (Rank, timestamp): (1, 1612070834110915)
+2021-01-31 00:27:14.161122 [hotstuff proto] (Rank, timestamp): (2, 1612070834112456)
+2021-01-31 00:27:14.161140 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.161205 [hotstuff proto] commit <block id=59d8777b7f height=7 parent=59ad564513 qc_ref=59ad564513>
+2021-01-31 00:27:14.161245 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=7 cmd=db182aa591 blk=59d8777b7f>
+2021-01-31 00:27:14.161330 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=7 cmd=1bcca6c039 blk=59d8777b7f>
+2021-01-31 00:27:14.161370 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=7 cmd=f83bb221d5 blk=59d8777b7f>
+2021-01-31 00:27:14.161426 [hotstuff proto] now state: <hotstuff hqc=d1aa68ff4d hqc.height=9 b_lock=d452c8fb69 b_exec=59d8777b7f vheight=10 tails=1>
+2021-01-31 00:27:14.161705 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.168967 [hotstuff proto] (Rank, cmd): (0, 5eab1e29e4)
+2021-01-31 00:27:14.169008 [hotstuff proto] (Rank, cmd): (1, 3786b5685d)
+2021-01-31 00:27:14.169036 [hotstuff proto] (Rank, cmd): (2, f976b84a67)
+2021-01-31 00:27:14.169057 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.170895 [hotstuff proto] got <proposal rid=0 blk=1bc213c79b>
+2021-01-31 00:27:14.170926 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.170950 [hotstuff proto] (Rank, timestamp): (0, 1612070834112546)
+2021-01-31 00:27:14.170968 [hotstuff proto] (Rank, timestamp): (1, 1612070834112604)
+2021-01-31 00:27:14.170985 [hotstuff proto] (Rank, timestamp): (2, 1612070834112660)
+2021-01-31 00:27:14.171004 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.171095 [hotstuff proto] commit <block id=d452c8fb69 height=8 parent=59d8777b7f qc_ref=59d8777b7f>
+2021-01-31 00:27:14.171145 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=8 cmd=a44c4438cf blk=d452c8fb69>
+2021-01-31 00:27:14.171186 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=8 cmd=2fadf4ab76 blk=d452c8fb69>
+2021-01-31 00:27:14.171224 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=8 cmd=3fbaba3c5b blk=d452c8fb69>
+2021-01-31 00:27:14.171265 [hotstuff proto] now state: <hotstuff hqc=432fdcad1c hqc.height=10 b_lock=d1aa68ff4d b_exec=d452c8fb69 vheight=11 tails=1>
+2021-01-31 00:27:14.171443 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.173665 [hotstuff proto] (Rank, cmd): (0, c59a297409)
+2021-01-31 00:27:14.173701 [hotstuff proto] (Rank, cmd): (1, c854c8f56f)
+2021-01-31 00:27:14.173730 [hotstuff proto] (Rank, cmd): (2, e1eb586829)
+2021-01-31 00:27:14.173752 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.174847 [hotstuff proto] got <proposal rid=0 blk=916dc93a79>
+2021-01-31 00:27:14.174870 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.174891 [hotstuff proto] (Rank, timestamp): (0, 1612070834112721)
+2021-01-31 00:27:14.174907 [hotstuff proto] (Rank, timestamp): (1, 1612070834112777)
+2021-01-31 00:27:14.174938 [hotstuff proto] (Rank, timestamp): (2, 1612070834112832)
+2021-01-31 00:27:14.174956 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.175028 [hotstuff proto] commit <block id=d1aa68ff4d height=9 parent=d452c8fb69 qc_ref=d452c8fb69>
+2021-01-31 00:27:14.175070 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=9 cmd=c63761c39f blk=d1aa68ff4d>
+2021-01-31 00:27:14.175141 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=9 cmd=9779c6fff1 blk=d1aa68ff4d>
+2021-01-31 00:27:14.175220 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=9 cmd=67e4f26e84 blk=d1aa68ff4d>
+2021-01-31 00:27:14.175281 [hotstuff proto] now state: <hotstuff hqc=1bc213c79b hqc.height=11 b_lock=432fdcad1c b_exec=d1aa68ff4d vheight=12 tails=1>
+2021-01-31 00:27:14.175564 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.179558 [hotstuff proto] (Rank, cmd): (0, 7c2f21ce5c)
+2021-01-31 00:27:14.179606 [hotstuff proto] (Rank, cmd): (1, bb2f4bcd51)
+2021-01-31 00:27:14.179649 [hotstuff proto] (Rank, cmd): (2, 66ee151dbf)
+2021-01-31 00:27:14.179675 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.180463 [hotstuff proto] got <proposal rid=0 blk=e87cc944ae>
+2021-01-31 00:27:14.180491 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.180511 [hotstuff proto] (Rank, timestamp): (0, 1612070834112887)
+2021-01-31 00:27:14.180528 [hotstuff proto] (Rank, timestamp): (1, 1612070834112942)
+2021-01-31 00:27:14.180544 [hotstuff proto] (Rank, timestamp): (2, 1612070834112998)
+2021-01-31 00:27:14.180559 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.180630 [hotstuff proto] commit <block id=432fdcad1c height=10 parent=d1aa68ff4d qc_ref=d1aa68ff4d>
+2021-01-31 00:27:14.180673 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=10 cmd=5db43ae74c blk=432fdcad1c>
+2021-01-31 00:27:14.180720 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=10 cmd=31dba5fca7 blk=432fdcad1c>
+2021-01-31 00:27:14.180760 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=10 cmd=90d3cc4af3 blk=432fdcad1c>
+2021-01-31 00:27:14.180814 [hotstuff proto] now state: <hotstuff hqc=916dc93a79 hqc.height=12 b_lock=1bc213c79b b_exec=432fdcad1c vheight=13 tails=1>
+2021-01-31 00:27:14.181099 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.186515 [hotstuff proto] (Rank, cmd): (0, 547c34decb)
+2021-01-31 00:27:14.186551 [hotstuff proto] (Rank, cmd): (1, 04164f6252)
+2021-01-31 00:27:14.186578 [hotstuff proto] (Rank, cmd): (2, be84dc21f3)
+2021-01-31 00:27:14.186599 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.187690 [hotstuff proto] got <proposal rid=0 blk=0eb1e0d5ce>
+2021-01-31 00:27:14.187719 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.187739 [hotstuff proto] (Rank, timestamp): (0, 1612070834113053)
+2021-01-31 00:27:14.187755 [hotstuff proto] (Rank, timestamp): (1, 1612070834113182)
+2021-01-31 00:27:14.187772 [hotstuff proto] (Rank, timestamp): (2, 1612070834113372)
+2021-01-31 00:27:14.187789 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.187861 [hotstuff proto] commit <block id=1bc213c79b height=11 parent=432fdcad1c qc_ref=432fdcad1c>
+2021-01-31 00:27:14.187905 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=11 cmd=5eab1e29e4 blk=1bc213c79b>
+2021-01-31 00:27:14.188092 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=11 cmd=3786b5685d blk=1bc213c79b>
+2021-01-31 00:27:14.188138 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=11 cmd=f976b84a67 blk=1bc213c79b>
+2021-01-31 00:27:14.188196 [hotstuff proto] now state: <hotstuff hqc=e87cc944ae hqc.height=13 b_lock=916dc93a79 b_exec=1bc213c79b vheight=14 tails=1>
+2021-01-31 00:27:14.188495 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.191020 [hotstuff proto] (Rank, cmd): (0, 25ab3aa916)
+2021-01-31 00:27:14.191058 [hotstuff proto] (Rank, cmd): (1, 2544f2559d)
+2021-01-31 00:27:14.191087 [hotstuff proto] (Rank, cmd): (2, 0dd443f367)
+2021-01-31 00:27:14.191107 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.192251 [hotstuff proto] got <proposal rid=0 blk=9eec31b52d>
+2021-01-31 00:27:14.192276 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.192488 [hotstuff proto] (Rank, timestamp): (0, 1612070834113432)
+2021-01-31 00:27:14.192510 [hotstuff proto] (Rank, timestamp): (1, 1612070834113495)
+2021-01-31 00:27:14.192526 [hotstuff proto] (Rank, timestamp): (2, 1612070834113556)
+2021-01-31 00:27:14.192566 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.192636 [hotstuff proto] commit <block id=916dc93a79 height=12 parent=1bc213c79b qc_ref=1bc213c79b>
+2021-01-31 00:27:14.192679 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=12 cmd=c59a297409 blk=916dc93a79>
+2021-01-31 00:27:14.192848 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=12 cmd=c854c8f56f blk=916dc93a79>
+2021-01-31 00:27:14.192890 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=12 cmd=e1eb586829 blk=916dc93a79>
+2021-01-31 00:27:14.193000 [hotstuff proto] now state: <hotstuff hqc=0eb1e0d5ce hqc.height=14 b_lock=e87cc944ae b_exec=916dc93a79 vheight=15 tails=1>
+2021-01-31 00:27:14.193254 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.197066 [hotstuff proto] (Rank, cmd): (0, 7067b4ef8a)
+2021-01-31 00:27:14.197111 [hotstuff proto] (Rank, cmd): (1, 4d93be036c)
+2021-01-31 00:27:14.197143 [hotstuff proto] (Rank, cmd): (2, 42f0c08faf)
+2021-01-31 00:27:14.197168 [hotstuff proto] Proposed block size : 3
+2021-01-31 00:27:14.198197 [hotstuff proto] got <proposal rid=0 blk=d3e0c1ebc0>
+2021-01-31 00:27:14.198246 [hotstuff proto] The timestamps in the proposed ordered list are
+2021-01-31 00:27:14.198273 [hotstuff proto] (Rank, timestamp): (0, 1612070834113619)
+2021-01-31 00:27:14.198294 [hotstuff proto] (Rank, timestamp): (1, 1612070834113680)
+2021-01-31 00:27:14.198312 [hotstuff proto] (Rank, timestamp): (2, 1612070834113742)
+2021-01-31 00:27:14.198331 [hotstuff proto] Passed acceptable fairness check!
+2021-01-31 00:27:14.198401 [hotstuff proto] commit <block id=e87cc944ae height=13 parent=916dc93a79 qc_ref=916dc93a79>
+2021-01-31 00:27:14.198445 [hotstuff info] replicated <fin decision=1 cmd_idx=0 cmd_height=13 cmd=7c2f21ce5c blk=e87cc944ae>
+2021-01-31 00:27:14.198502 [hotstuff info] replicated <fin decision=1 cmd_idx=1 cmd_height=13 cmd=bb2f4bcd51 blk=e87cc944ae>
+2021-01-31 00:27:14.198547 [hotstuff info] replicated <fin decision=1 cmd_idx=2 cmd_height=13 cmd=66ee151dbf blk=e87cc944ae>
+2021-01-31 00:27:14.198601 [hotstuff proto] now state: <hotstuff hqc=9eec31b52d hqc.height=15 b_lock=0eb1e0d5ce b_exec=e87cc944ae vheight=16 tails=1>
+2021-01-31 00:27:14.198881 [hotstuff proto] The size while constructing vote is: 3
+2021-01-31 00:27:14.263574 [net info] 065b010aed: lost connection <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-31 00:27:14.263635 [net info] ended 065b010aed <-/-> 542865a568 (via <Conn fd=125 addr=<NetAddr 127.0.0.1:10000> mode=active>)
+2021-01-31 00:27:16.945958 [net info] created <Conn fd=122 addr=<NetAddr 127.0.0.1:10000> mode=active>
+2021-01-31 00:27:16.946317 [net info] 065b010aed: lost connection <Conn fd=122 addr=<NetAddr 127.0.0.1:10000> mode=active>
