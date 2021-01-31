@@ -290,7 +290,8 @@ class PMRoundRobinProposer: virtual public PaceMaker {
     }
 
     void do_new_consensus(int x, const std::vector<uint256_t> &cmds) {
-        auto blk = hsc->on_propose(cmds, get_parents(), bytearray_t());
+        LeaderProposedOrderedList proposed_orderedlist;
+        auto blk = hsc->on_propose(cmds, get_parents(), proposed_orderedlist, bytearray_t());
         pm_qc_manual.reject();
         (pm_qc_manual = hsc->async_qc_finish(blk))
             .then([this, x]() {

@@ -200,6 +200,7 @@ public:
 };
 
 
+
 /** This data structure is used only for sending proposed orderering by leader to the replicas. 
  * Each index of the outer vector in cmds represent a rank. And each index points to an inner vector of commands
  * that have the same rank.
@@ -223,6 +224,17 @@ public:
             }
         }
     }
+
+    /** used only for searching for new commands  by a replica in the received proposal*/
+    std::vector<uint256_t> convert_to_vec() const {
+        std::vector<uint256_t> vectorized_cmds;
+        for(auto cmd_vec: cmds) {
+            for(auto cmd: cmd_vec) {
+                vectorized_cmds.push_back(cmd);
+            }
+        }
+        return vectorized_cmds;
+    }
  };
 
 
@@ -234,6 +246,7 @@ class Block {
     std::vector<uint256_t> parent_hashes;
     std::vector<uint256_t> cmds;
     quorum_cert_bt qc;
+    LeaderProposedOrderedList proposed_orderedlist;
     bytearray_t extra;
 
     /* the following fields can be derived from above */
@@ -264,6 +277,7 @@ class Block {
     Block(const std::vector<block_t> &parents,
         const std::vector<uint256_t> &cmds,
         quorum_cert_bt &&qc,
+        const LeaderProposedOrderedList &proposed_orderedlist, 
         bytearray_t &&extra,
         uint32_t height,
         const block_t &qc_ref,
@@ -272,6 +286,7 @@ class Block {
             parent_hashes(get_hashes(parents)),
             cmds(cmds),
             qc(std::move(qc)),
+            proposed_orderedlist(proposed_orderedlist),
             extra(std::move(extra)),
             hash(salticidae::get_hash(*this)),
             parents(parents),
@@ -295,6 +310,10 @@ class Block {
 
     const std::vector<uint256_t> &get_parent_hashes() const {
         return parent_hashes;
+    }
+
+    const LeaderProposedOrderedList &get_proposed_orderedlist() const {
+        return proposed_orderedlist;
     }
 
     const uint256_t &get_hash() const { return hash; }

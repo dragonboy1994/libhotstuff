@@ -119,6 +119,7 @@ class HotStuffCore {
      * while the others are uncles/aunts */
     block_t on_propose(const std::vector<uint256_t> &cmds,
                     const std::vector<block_t> &parents,
+                    const LeaderProposedOrderedList &proposed_orderedlist,
                     bytearray_t &&extra = bytearray_t());
 
     /* Functions required to construct concrete instances for abstract classes.

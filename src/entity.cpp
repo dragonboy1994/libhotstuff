@@ -46,6 +46,16 @@ void Block::serialize(DataStream &s) const {
     s << htole((uint32_t)cmds.size());
     for (auto cmd: cmds)
         s << cmd;
+
+    // serializing LeaderProposedOrderedList
+    s << htole((uint32_t)proposed_orderedlist.cmds.size());
+    for (auto cmd_vec: proposed_orderedlist.cmds) {
+        s << htole((uint32_t)cmd_vec.size());
+        for (auto cmd: cmd_vec) {
+            s << cmd;
+        }
+    }
+
     s << *qc << htole((uint32_t)extra.size()) << extra;
 }
 
@@ -63,6 +73,23 @@ void Block::unserialize(DataStream &s, HotStuffCore *hsc) {
         s >> cmd;
 //    for (auto &cmd: cmds)
 //        cmd = hsc->parse_cmd(s);
+
+    // deserializing LeaderProposedOrderedList
+    uint32_t tot_rank;
+    s >> tot_rank;
+    tot_rank = letoh(tot_rank);
+    proposed_orderedlist.cmds.resize(tot_rank);
+    for (auto &cmd_vec: proposed_orderedlist.cmds) {
+        uint32_t num_cmds;
+        s >> num_cmds;
+        cmd_vec.resize(num_cmds);
+        for (auto &cmd: cmd_vec) {
+            s >> cmd;
+        }
+    }
+    // printing the leader proosed orderedlist
+    proposed_orderedlist.print_out();
+
     qc = hsc->parse_quorum_cert(s);
     s >> n;
     n = letoh(n);
