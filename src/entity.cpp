@@ -126,6 +126,7 @@ void CommandTimestampStorage::add_command_to_storage(const uint256_t cmd_hash)
     uint64_t timestamp_us = tv.tv_sec;
     timestamp_us *= 1000 * 1000;
     timestamp_us += tv.tv_usec;
+    HOTSTUFF_LOG_PROTO("(cmd,timestamp): (%s,%s)",get_hex10(cmd_hash).c_str(),boost::lexical_cast<std::string>(timestamp_us).c_str());
     cmd_ts_storage.insert(std::make_pair(cmd_hash, timestamp_us));
     available_cmd_hashes.push_back(cmd_hash);
     available_timestamps.push_back(timestamp_us);

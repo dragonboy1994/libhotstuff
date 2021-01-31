@@ -222,6 +222,19 @@ void HotStuffCore::on_receive_proposal(const Proposal &prop) {
             command_timestamp_storage->add_command_to_storage(cmd);
         }
     }
+
+    // get timestamps associated with the leader proposed orderedlist
+    HOTSTUFF_LOG_PROTO("The timestamps in the proposed ordered list are");
+    std::vector<std::vector<uint64_t>> vectorized_timestamps = command_timestamp_storage->get_timestamps_1(bnew->get_proposed_orderedlist());
+    for (auto rank = 0; rank < vectorized_timestamps.size(); rank++)
+    {
+        for (auto &ts : vectorized_timestamps[rank])
+        {
+            HOTSTUFF_LOG_PROTO("(Rank, timestamp): (%lu, %s)", rank, boost::lexical_cast<std::string>(ts).c_str());
+        }
+    }
+    
+
     // get timestamps of the commands in the proposed block
     std::vector<uint64_t> timestamps_of_cmds = command_timestamp_storage->get_timestamps(bnew->get_cmds());
     
