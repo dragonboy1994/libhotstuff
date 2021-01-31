@@ -215,7 +215,7 @@ void HotStuffCore::on_receive_proposal(const Proposal &prop) {
     block_t bnew = prop.blk;
     sanity_check_delivered(bnew);
     // checking for any new commands the replica is seeing for first time
-    for (auto &cmd : bnew->get_cmds())
+    for (auto &cmd : bnew->get_proposed_orderedlist().convert_to_vec())
     {
         if (command_timestamp_storage->is_new_command(cmd))
         {
