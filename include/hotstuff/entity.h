@@ -244,7 +244,6 @@ public:
 class Block {
     friend HotStuffCore;
     std::vector<uint256_t> parent_hashes;
-    std::vector<uint256_t> cmds;
     quorum_cert_bt qc;
     LeaderProposedOrderedList proposed_orderedlist;
     bytearray_t extra;
@@ -275,7 +274,6 @@ class Block {
         delivered(delivered), decision(decision) {}
 
     Block(const std::vector<block_t> &parents,
-        const std::vector<uint256_t> &cmds,
         quorum_cert_bt &&qc,
         const LeaderProposedOrderedList &proposed_orderedlist, 
         bytearray_t &&extra,
@@ -284,7 +282,6 @@ class Block {
         quorum_cert_bt &&self_qc,
         int8_t decision = 0):
             parent_hashes(get_hashes(parents)),
-            cmds(cmds),
             qc(std::move(qc)),
             proposed_orderedlist(proposed_orderedlist),
             extra(std::move(extra)),
@@ -300,9 +297,9 @@ class Block {
 
     void unserialize(DataStream &s, HotStuffCore *hsc);
 
-    const std::vector<uint256_t> &get_cmds() const {
-        return cmds;
-    }
+    // const std::vector<uint256_t> &get_cmds() const {
+    //     return cmds;
+    // }
 
     const std::vector<block_t> &get_parents() const {
         return parents;
@@ -390,7 +387,7 @@ public:
     const std::vector<uint64_t> &get_all_timestamps() const { return timestamps; }
     std::vector<uint64_t> get_timestamps(const std::vector<uint256_t> &cmd_hashes_inquired) const;
     std::vector<std::vector<uint64_t>> get_timestamps_1(const LeaderProposedOrderedList &proposed_orderedlist) const;
-    orderedlist_t get_orderedlist(const uint256_t &blk_hash);
+    orderedlist_t get_orderedlist(const uint256_t &blk_hash, uint32_t blk_size);
     
 };
 

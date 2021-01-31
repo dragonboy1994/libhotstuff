@@ -104,8 +104,8 @@ class HotStuffCore {
     * "check timestamps" are the timestamps arranged in the order of corresponding commands
     * included in the proposal. 
     * "delta_max" is the maximum bound on the network delay. */
-    bool acceptable_fairness_check(const std::vector<uint64_t> check_timestamps, uint64_t delta_max) const;
-    bool acceptable_fairness_check_1(const std::vector<std::vector<uint64_t>> check_timestamps, uint64_t delta_max) const;
+    // bool acceptable_fairness_check(const std::vector<uint64_t> check_timestamps, uint64_t delta_max) const;
+    bool acceptable_fairness_check(const std::vector<std::vector<uint64_t>> check_timestamps, uint64_t delta_max) const;
 
     /** Call upon the delivery of a proposal message.
      * The block mentioned in the message should be already delivered. */
@@ -118,8 +118,7 @@ class HotStuffCore {
     /** Call to submit new commands to be decided (executed). "Parents" must
      * contain at least one block, and the first block is the actual parent,
      * while the others are uncles/aunts */
-    block_t on_propose(const std::vector<uint256_t> &cmds,
-                    const std::vector<block_t> &parents,
+    block_t on_propose(const std::vector<block_t> &parents,
                     const LeaderProposedOrderedList &proposed_orderedlist,
                     bytearray_t &&extra = bytearray_t());
 
