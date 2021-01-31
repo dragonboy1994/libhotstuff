@@ -485,35 +485,45 @@ void HotStuffBase::start(
             cmd_pending_buffer.push(cmd_hash);
             if (cmd_pending_buffer.size() >= blk_size)
             {
-                std::vector<uint256_t> cmds;
-                for (uint32_t i = 0; i < blk_size; i++)
-                {
-                    cmds.push_back(cmd_pending_buffer.front());
-                    HOTSTUFF_LOG_PROTO("command being included in proposal to be sent is: %s", get_hex10(cmd_pending_buffer.front()).c_str());
-                    cmd_pending_buffer.pop();
-                }
+                // std::vector<uint256_t> cmds;
+                // for (uint32_t i = 0; i < blk_size; i++)
+                // {
+                //     cmds.push_back(cmd_pending_buffer.front());
+                //     HOTSTUFF_LOG_PROTO("command being included in proposal to be sent is: %s", get_hex10(cmd_pending_buffer.front()).c_str());
+                //     cmd_pending_buffer.pop();
+                // }
 
                 
                 //std::vector<uint256_t> cmds_test;
                 //float g = 3.0 / 4.0;
                 //cmds_test = Aequitas::aequitas_order(this->orderedlist_storage->get_set_of_orderedlists(pmaker->get_parents()[0]->get_hash()), g);
 
-                pmaker->beat().then([this, cmds = std::move(cmds)](ReplicaID proposer) {
+                pmaker->beat().then([this](ReplicaID proposer) {
+                    std::vector<uint256_t> cmds;
+                    for (uint32_t i = 0; i < blk_size; i++)
+                    {
+                        cmds.push_back(cmd_pending_buffer.front());
+                        HOTSTUFF_LOG_PROTO("command being included in proposal to be sent is: %s", get_hex10(cmd_pending_buffer.front()).c_str());
+                        cmd_pending_buffer.pop();
+                    }
+
                     uint256_t block_hash = pmaker->get_parents()[0]->get_hash();
                     HOTSTUFF_LOG_PROTO("The parent block is: %s", get_hex10(block_hash).c_str());
-                    if (block_hash != this->get_genesis_hash()) {
+                    LeaderProposedOrderedList proposed_orderedlist;
+                    if (block_hash != this->get_genesis_hash())
+                    {
                         HOTSTUFF_LOG_PROTO("Applying aequitas protocol!");
                         float g = 3.0 / 4.0;
                         std::vector<OrderedList> test_orderedlists = this->orderedlist_storage->get_set_of_orderedlists(block_hash);
                         HOTSTUFF_LOG_PROTO("Size of the test_orderedlst is %lu", test_orderedlists.size());
-                        LeaderProposedOrderedList proposed_orderedlist = Aequitas::aequitas_order(test_orderedlists,g);
+                        proposed_orderedlist = Aequitas::aequitas_order(test_orderedlists,g);
                         HOTSTUFF_LOG_PROTO("Finished aequitas ordering module!");
                         proposed_orderedlist.print_out();
                     }
                    
 
                     if (proposer == get_id())
-                        on_propose(cmds, pmaker->get_parents());
+                        on_propose(cmds, pmaker->get_parents(), proposed_orderedlist);
                 });
                 return true;
             }
