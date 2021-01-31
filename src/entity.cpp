@@ -180,6 +180,22 @@ std::vector<uint64_t> CommandTimestampStorage::get_timestamps(const std::vector<
     return timestamps_list;
 }
 
+std::vector<std::vector<uint64_t>> CommandTimestampStorage::get_timestamps_1(const LeaderProposedOrderedList &proposed_orderedlist_inquired) const
+{
+    std::vector<std::vector<uint64_t>> proposed_orderedlist_timestamp;
+    for (auto &cmd_vec : proposed_orderedlist_inquired.cmds) 
+    {
+        std::vector<uint64_t> timestamp_vec;
+        timestamp_vec.clear();
+        for (auto& cmd_hash: cmd_vec) 
+        {
+            auto it = std::find(cmd_hashes.begin(), cmd_hashes.end(), cmd_hash);
+            timestamp_vec.push_back(timestamps[std::distance(cmd_hashes.begin(), it)]);
+        }
+        proposed_orderedlist_timestamp.push_back(timestamp_vec);
+    }
+    return proposed_orderedlist_timestamp;
+}
 
 /** Get a new ordered list to send as part of the vote.
   * Basically has to repackage the available cmds and timestamps into ordered list
