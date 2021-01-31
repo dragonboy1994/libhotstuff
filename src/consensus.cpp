@@ -262,7 +262,7 @@ void HotStuffCore::on_receive_proposal(const Proposal &prop) {
     if (acceptable_fairness_check(timestamps_of_cmds, delta_max)) 
     {
         HOTSTUFF_LOG_PROTO("Passed acceptable fairness check!");
-        command_timestamp_storage->refresh_available_cmds(bnew->get_cmds());
+        command_timestamp_storage->refresh_available_cmds(bnew->get_proposed_orderedlist().convert_to_vec());
         update(bnew);
         bool opinion = false;
         if (bnew->height > vheight)
