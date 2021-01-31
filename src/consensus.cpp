@@ -72,6 +72,26 @@ bool HotStuffCore::acceptable_fairness_check(const std::vector<uint64_t> check_t
     return accept;
 }
 
+
+bool HotStuffCore::acceptable_fairness_check_1(const std::vector<std::vector<uint64_t>> check_timestamps, uint64_t delta) const
+{
+    bool accept = true;
+    for (auto i = 1; i < check_timestamps.size(); i++) {
+        for (auto ts2 : check_timestamps[i]) {
+            for (auto j = 0; j < i; j++) {
+                for (auto ts1 : check_timestamps[j]) {
+                    if (ts1 > ts2 + 2 * delta) {
+                        accept = false;
+                        HOTSTUFF_LOG_PROTO("Unacceptable fairness!");
+                    }
+                }
+            }
+        }
+    }
+    return accept;
+}
+
+
 block_t HotStuffCore::get_delivered_blk(const uint256_t &blk_hash) {
     block_t blk = storage->find_blk(blk_hash);
     if (blk == nullptr || !blk->delivered)
@@ -233,12 +253,13 @@ void HotStuffCore::on_receive_proposal(const Proposal &prop) {
             HOTSTUFF_LOG_PROTO("(Rank, timestamp): (%lu, %s)", rank, boost::lexical_cast<std::string>(ts).c_str());
         }
     }
-    
+    bool test_check = acceptable_fairness_check_1(vectorized_timestamps, delta_max);
+    HOTSTUFF_LOG_PROTO("Test value is: %d", test_check);
 
     // get timestamps of the commands in the proposed block
     std::vector<uint64_t> timestamps_of_cmds = command_timestamp_storage->get_timestamps(bnew->get_cmds());
     
-    if (acceptable_fairness_check (timestamps_of_cmds, delta_max)) 
+    if (acceptable_fairness_check(timestamps_of_cmds, delta_max)) 
     {
         HOTSTUFF_LOG_PROTO("Passed acceptable fairness check!");
         command_timestamp_storage->refresh_available_cmds(bnew->get_cmds());

@@ -105,6 +105,7 @@ class HotStuffCore {
     * included in the proposal. 
     * "delta_max" is the maximum bound on the network delay. */
     bool acceptable_fairness_check(const std::vector<uint64_t> check_timestamps, uint64_t delta_max) const;
+    bool acceptable_fairness_check_1(const std::vector<std::vector<uint64_t>> check_timestamps, uint64_t delta_max) const;
 
     /** Call upon the delivery of a proposal message.
      * The block mentioned in the message should be already delivered. */
