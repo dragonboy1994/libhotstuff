@@ -520,6 +520,14 @@ void HotStuffBase::start(
                         HOTSTUFF_LOG_PROTO("Finished aequitas ordering module!");
                         proposed_orderedlist.print_out();
                     }
+                    else 
+                    {
+                        std::vector<std::vector<uint256_t>> proposed_ranked_cmds;
+                        for(auto cmd: cmds) {
+                            proposed_ranked_cmds.push_back(std::vector<uint256_t> {cmd});
+                        }
+                        proposed_orderedlist = LeaderProposedOrderedList(proposed_ranked_cmds);
+                    }
                    
 
                     if (proposer == get_id())
