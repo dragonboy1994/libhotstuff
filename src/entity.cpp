@@ -42,10 +42,10 @@ void Block::serialize(DataStream &s) const {
     s << htole((uint32_t)parent_hashes.size());
     for (const auto &hash: parent_hashes)
         s << hash;
-    HOTSTUFF_LOG_PROTO("Proposed block size : %lu", cmds.size());
-    s << htole((uint32_t)cmds.size());
-    for (auto cmd: cmds)
-        s << cmd;
+    //  HOTSTUFF_LOG_PROTO("Proposed block size : %lu", cmds.size());
+    // s << htole((uint32_t)cmds.size());
+    // for (auto cmd: cmds)
+    //     s << cmd;
 
     // serializing LeaderProposedOrderedList
     s << htole((uint32_t)proposed_orderedlist.cmds.size());
@@ -66,11 +66,11 @@ void Block::unserialize(DataStream &s, HotStuffCore *hsc) {
     parent_hashes.resize(n);
     for (auto &hash: parent_hashes)
         s >> hash;
-    s >> n;
-    n = letoh(n);
-    cmds.resize(n);
-    for (auto &cmd: cmds)
-        s >> cmd;
+    // s >> n;
+    // n = letoh(n);
+    // cmds.resize(n);
+    // for (auto &cmd: cmds)
+    //     s >> cmd;
 //    for (auto &cmd: cmds)
 //        cmd = hsc->parse_cmd(s);
 
@@ -201,7 +201,7 @@ std::vector<std::vector<uint64_t>> CommandTimestampStorage::get_timestamps_1(con
 /** Get a new ordered list to send as part of the vote.
   * Basically has to repackage the available cmds and timestamps into ordered list
 */
-orderedlist_t CommandTimestampStorage::get_orderedlist(const uint256_t &blk_hash)
+orderedlist_t CommandTimestampStorage::get_orderedlist(const uint256_t &blk_hash, uint32_t blk_size)
 {
     // while (available_cmd_hashes.size() < 3)
     // {
@@ -213,7 +213,7 @@ orderedlist_t CommandTimestampStorage::get_orderedlist(const uint256_t &blk_hash
     
     std::vector<uint256_t> proposed_available_cmd_hashes;
     std::vector<uint64_t> proposed_available_timestamps;
-    for (auto i = 0; i < 3; i++)
+    for (auto i = 0; i < blk_size; i++)
     {
         proposed_available_cmd_hashes.push_back(available_cmd_hashes[i]);
         proposed_available_timestamps.push_back(available_timestamps[i]);

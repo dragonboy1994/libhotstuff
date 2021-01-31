@@ -373,18 +373,10 @@ HotStuffBase::HotStuffBase(uint32_t blk_size,
 }
 
 void HotStuffBase::do_broadcast_proposal(const Proposal &prop) {
-    //MsgPropose prop_msg(prop);
-    // HOTSTUFF_LOG_PROTO("Inside do broadcast proposal!");
-    // std::vector<uint256_t> test_cmds = prop.blk->get_cmds();
-    // HOTSTUFF_LOG_PROTO("The size inside do broadcast proposal is: %lu", test_cmds.size());
     pn.multicast_msg(MsgPropose(prop), peers);
-    //for (const auto &replica: peers)
-    //    pn.send_msg(prop_msg, replica);
-
     // leader's addition of orderedlist should be done here.
-    command_timestamp_storage->refresh_available_cmds(prop.blk->get_cmds());
-    orderedlist_t self_orderedlist = command_timestamp_storage->get_orderedlist(prop.blk->get_hash());
-    HOTSTUFF_LOG_PROTO("Leader is adding");
+    command_timestamp_storage->refresh_available_cmds(prop.blk->get_proposed_orderedlist().convert_to_vec());
+    orderedlist_t self_orderedlist = command_timestamp_storage->get_orderedlist(prop.blk->get_hash(), blk_size);
     orderedlist_storage->add_ordered_list(prop.blk->get_hash(), *self_orderedlist, true);
 }
 
@@ -413,7 +405,7 @@ void HotStuffBase::do_vote(ReplicaID last_proposer, const Vote &dummy_vote)
                 //HOTSTUFF_LOG_PROTO("Part test cert is: %s", get_hex10(certificate->get_obj_hash()).c_str());
                 // WARN - Here the data inside replica_preferred_orderedlist is not returned on calling extract_cmds()
                 //orderedlist_t replica_orderedlist = command_timestamp_storage->get_orderedlist(blk_hash_test);
-                Vote vote = Vote(std::move(dummy_vote.voter), vote_blk_hash, create_part_cert(*priv_key, vote_blk_hash), command_timestamp_storage->get_orderedlist(vote_blk_hash), this);
+                Vote vote = Vote(std::move(dummy_vote.voter), vote_blk_hash, create_part_cert(*priv_key, vote_blk_hash), command_timestamp_storage->get_orderedlist(vote_blk_hash, blk_size), this);
                 //HOTSTUFF_LOG_PROTO("The size inside do_vote  after pmakeris: %lu", vote_test.replica_preferred_orderedlist->extract_cmds().size());
                 //for(auto &ts: vote_test.replica_preferred_orderedlist->extract_timestamps()) {
                 //    HOTSTUFF_LOG_PROTO("The ts sent is: %s", boost::lexical_cast<std::string>(ts).c_str());
@@ -482,7 +474,7 @@ void HotStuffBase::start(
             else
                 e.second(Finality(id, 0, 0, 0, cmd_hash, uint256_t()));
             if (proposer != get_id()) continue;
-            cmd_pending_buffer.push(cmd_hash);
+            cmd_pending_buffer.push_back(cmd_hash);
             if (cmd_pending_buffer.size() >= blk_size)
             {
                 // std::vector<uint256_t> cmds;
@@ -494,44 +486,46 @@ void HotStuffBase::start(
                 // }
 
                 
-                //std::vector<uint256_t> cmds_test;
-                //float g = 3.0 / 4.0;
-                //cmds_test = Aequitas::aequitas_order(this->orderedlist_storage->get_set_of_orderedlists(pmaker->get_parents()[0]->get_hash()), g);
-
                 pmaker->beat().then([this](ReplicaID proposer) {
-                    std::vector<uint256_t> cmds;
-                    for (uint32_t i = 0; i < blk_size; i++)
-                    {
-                        cmds.push_back(cmd_pending_buffer.front());
-                        HOTSTUFF_LOG_PROTO("command being included in proposal to be sent is: %s", get_hex10(cmd_pending_buffer.front()).c_str());
-                        cmd_pending_buffer.pop();
-                    }
+                    
 
                     uint256_t block_hash = pmaker->get_parents()[0]->get_hash();
                     HOTSTUFF_LOG_PROTO("The parent block is: %s", get_hex10(block_hash).c_str());
                     LeaderProposedOrderedList proposed_orderedlist;
                     if (block_hash != this->get_genesis_hash())
                     {
-                        HOTSTUFF_LOG_PROTO("Applying aequitas protocol!");
+                        // applying Aequitas to get the proposed ordering
                         float g = 3.0 / 4.0;
-                        std::vector<OrderedList> test_orderedlists = this->orderedlist_storage->get_set_of_orderedlists(block_hash);
-                        HOTSTUFF_LOG_PROTO("Size of the test_orderedlst is %lu", test_orderedlists.size());
-                        proposed_orderedlist = Aequitas::aequitas_order(test_orderedlists,g);
-                        HOTSTUFF_LOG_PROTO("Finished aequitas ordering module!");
+                        std::vector<OrderedList> replica_orderedlists = this->orderedlist_storage->get_set_of_orderedlists(block_hash);
+                        proposed_orderedlist = Aequitas::aequitas_order(replica_orderedlists,g);
+                        for (auto cmd: proposed_orderedlist.convert_to_vec()) 
+                        {
+                            auto it = std::find(cmd_pending_buffer.begin(), cmd_pending_buffer.end(), cmd);
+                            auto index = std::distance(cmd_pending_buffer.begin(), it);
+                            cmd_pending_buffer.erase(cmd_pending_buffer.begin() + index);
+                        }
                         proposed_orderedlist.print_out();
                     }
                     else 
                     {
+                        // beginning proposal, no need for aequitas
+                        std::vector<uint256_t> cmds;
+                        for (uint32_t i = 0; i < blk_size; i++)
+                        {
+                            cmds.push_back(cmd_pending_buffer.front());
+                            cmd_pending_buffer.erase(cmd_pending_buffer.begin());
+                        }
                         std::vector<std::vector<uint256_t>> proposed_ranked_cmds;
                         for(auto cmd: cmds) {
                             proposed_ranked_cmds.push_back(std::vector<uint256_t> {cmd});
                         }
                         proposed_orderedlist = LeaderProposedOrderedList(proposed_ranked_cmds);
+                        proposed_orderedlist.print_out();
                     }
                    
 
                     if (proposer == get_id())
-                        on_propose(cmds, pmaker->get_parents(), proposed_orderedlist);
+                        on_propose(pmaker->get_parents(), proposed_orderedlist);
                 });
                 return true;
             }
