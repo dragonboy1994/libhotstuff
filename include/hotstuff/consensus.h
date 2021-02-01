@@ -115,6 +115,8 @@ class HotStuffCore {
      * The block mentioned in the message should be already delivered. */
     void on_receive_vote(const Vote &vote);
 
+    virtual size_t num_peers() const = 0;
+
     /** Call to submit new commands to be decided (executed). "Parents" must
      * contain at least one block, and the first block is the actual parent,
      * while the others are uncles/aunts */
@@ -293,7 +295,7 @@ struct Vote : public Serializable
         // {
         //     HOTSTUFF_LOG_PROTO("The ts sent is: %s", boost::lexical_cast<std::string>(ts).c_str());
         // }
-        hsc->orderedlist_storage->add_ordered_list(blk_hash,_test, false);
+        hsc->orderedlist_storage->add_ordered_list(blk_hash,_test, false, hsc->num_peers());
         cert = hsc->parse_part_cert(s);
     }
 

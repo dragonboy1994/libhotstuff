@@ -377,7 +377,7 @@ void HotStuffBase::do_broadcast_proposal(const Proposal &prop) {
     // leader's addition of orderedlist should be done here.
     command_timestamp_storage->refresh_available_cmds(prop.blk->get_proposed_orderedlist().convert_to_vec());
     orderedlist_t self_orderedlist = command_timestamp_storage->get_orderedlist(prop.blk->get_hash(), blk_size);
-    orderedlist_storage->add_ordered_list(prop.blk->get_hash(), *self_orderedlist, true);
+    orderedlist_storage->add_ordered_list(prop.blk->get_hash(), *self_orderedlist, true, num_peers());
 }
 
 void HotStuffBase::do_vote(ReplicaID last_proposer, const Vote &dummy_vote)

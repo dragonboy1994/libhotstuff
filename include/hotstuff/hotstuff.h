@@ -231,6 +231,7 @@ class HotStuffBase: public HotStuffCore {
                 bool ec_loop = false);
 
     size_t size() const { return peers.size(); }
+    size_t num_peers() const { return peers.size(); }
     const auto &get_decision_waiting() const { return decision_waiting; }
     ThreadCall &get_tcall() { return tcall; }
     PaceMaker *get_pace_maker() { return pmaker.get(); }
