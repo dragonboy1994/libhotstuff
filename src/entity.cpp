@@ -231,9 +231,12 @@ orderedlist_t CommandTimestampStorage::get_orderedlist(const uint256_t &blk_hash
                 proposed_available_timestamps))).first->second;
 }
 
-void OrderedListStorage::add_ordered_list(const uint256_t block_hash, const OrderedList preferred_orderedlist, bool leader)
+void OrderedListStorage::add_ordered_list(const uint256_t block_hash, const OrderedList preferred_orderedlist, bool leader, size_t num_peers)
 {
     HOTSTUFF_LOG_PROTO("The block hash is: %s", get_hex10(block_hash).c_str());
+    // size_t num_faulty = num_peers / 3;
+    // HOTSTUFF_LOG_PROTO("Number of faulty is: %lu", num_faulty);
+    // size_t test_num = num_peers + 1 - num_faulty
     auto it = ordered_list_cache.find(block_hash);
     if (it == ordered_list_cache.end())
     {
