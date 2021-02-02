@@ -255,17 +255,9 @@ void OrderedListStorage::add_ordered_list(const uint256_t block_hash, const Orde
         }
         else 
         {
-            // include orderedlist from n-f-1 other replicas; the other one will be from leader 
-            // so total is n-f orderedlists 
-            if (it->second.size() < 3)
-            {
-                it->second.push_back(preferred_orderedlist);
-                HOTSTUFF_LOG_PROTO("It is replica");
-            }
-            else 
-            {
-                HOTSTUFF_LOG_PROTO("Enough lists!");
-            }
+            // for now the assumption is that all replicas are honest
+            it->second.push_back(preferred_orderedlist);
+            HOTSTUFF_LOG_PROTO("It is replica");
             
         }
         // HOTSTUFF_LOG_PROTO("Size of cache for this index is %lu", it->second.size());
