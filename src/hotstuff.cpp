@@ -463,10 +463,11 @@ void HotStuffBase::start(
         ec.dispatch();
     HOTSTUFF_LOG_INFO("===========checkpoint2=============");
     cmd_pending.reg_handler(ec, [this](cmd_queue_t &q) {
+        HOTSTUFF_LOG_INFO("===========checkpoint3=============");
         std::pair<uint256_t, commit_cb_t> e;
         while (q.try_dequeue(e))
         {
-            HOTSTUFF_LOG_INFO("===========checkpoint3=============");
+            HOTSTUFF_LOG_INFO("===========checkpoint4=============");
             ReplicaID proposer = pmaker->get_proposer();
 
             const auto &cmd_hash = e.first;
@@ -475,7 +476,8 @@ void HotStuffBase::start(
                 it = decision_waiting.insert(std::make_pair(cmd_hash, e.second)).first;
             else
                 e.second(Finality(id, 0, 0, 0, cmd_hash, uint256_t()));
-            if (proposer != get_id()) continue;
+            if (proposer != get_id())
+                continue;
             cmd_pending_buffer.push_back(cmd_hash);
             if (cmd_pending_buffer.size() >= blk_size)
             {
