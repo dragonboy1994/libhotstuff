@@ -74,7 +74,8 @@ void connect_all()
 
 bool try_send(bool check = true)
 {
-    if ((!check || waiting.size() < max_async_num) && (max_iter_num > 0))
+    // if ((!check || waiting.size() < max_async_num) && (max_iter_num > 0))
+    if (!check || waiting.size() < max_async_num)
     {
         auto cmd = new CommandDummy(cid, cnt++);
         MsgReqCmd msg(*cmd);
@@ -86,8 +87,8 @@ bool try_send(bool check = true)
                           max_iter_num);
         waiting.insert(std::make_pair(
             cmd->get_hash(), Request(cmd)));
-        if (max_iter_num > 0)
-            max_iter_num--;
+        // if (max_iter_num > 0)
+        max_iter_num--;
         return true;
     }
     return false;
@@ -115,8 +116,7 @@ void client_resp_cmd_handler(MsgRespCmd &&msg, const Net::conn_t &)
     elapsed.push_back(std::make_pair(tv, et.elapsed_sec));
 #endif
     waiting.erase(it);
-    while (try_send())
-        ;
+    while (try_send());
 }
 
 std::pair<std::string, std::string> split_ip_port_cport(const std::string &s)
