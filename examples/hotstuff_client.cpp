@@ -80,12 +80,10 @@ bool try_send(bool check = true)
         MsgReqCmd msg(*cmd);
         for (auto &p : conns)
             mn.send_msg(msg, p.second);
-#ifndef HOTSTUFF_ENABLE_BENCHMARK
         HOTSTUFF_LOG_INFO("send new cmds %.10s",
                           get_hex(cmd->get_hash()).c_str());
         HOTSTUFF_LOG_INFO("max_iter_num %d",
                           max_iter_num);
-#endif
         waiting.insert(std::make_pair(
             cmd->get_hash(), Request(cmd)));
         if (max_iter_num > 0)
@@ -133,6 +131,7 @@ int main(int argc, char **argv)
     HOTSTUFF_LOG_INFO("Client started %d",
                       0);
 #endif
+    HOTSTUFF_LOG_INFO("Client started!");
     Config config("hotstuff.conf");
 
     auto opt_idx = Config::OptValInt::create(0);
@@ -183,8 +182,7 @@ int main(int argc, char **argv)
     nfaulty = (replicas.size() - 1) / 3;
     HOTSTUFF_LOG_INFO("nfaulty = %zu", nfaulty);
     connect_all();
-    while (try_send())
-        ;
+    while (try_send());
     ec.dispatch();
 
 #ifdef HOTSTUFF_ENABLE_BENCHMARK
