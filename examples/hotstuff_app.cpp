@@ -290,7 +290,7 @@ int main(int argc, char **argv) {
     salticidae::SigEvent ev_sigterm(ec, shutdown);
     ev_sigint.add(SIGINT);
     ev_sigterm.add(SIGTERM);
-    HOTSTUFF_LOG_INFO("papp to be started!"):
+    HOTSTUFF_LOG_INFO("papp to be started!");
     papp->start(reps);
     elapsed.stop(true);
     return 0;
