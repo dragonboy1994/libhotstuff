@@ -436,7 +436,7 @@ HotStuffBase::~HotStuffBase() {}
 void HotStuffBase::start(
         std::vector<std::tuple<NetAddr, pubkey_bt, uint256_t>> &&replicas,
         bool ec_loop) {
-    HOTSTUFF_LOG_INFO("Entered HotStuffBase::start()!");
+    HOTSTUFF_LOG_INFO("===========checkpoint1=============");
     for (size_t i = 0; i < replicas.size(); i++)
     {
         auto &addr = std::get<0>(replicas[i]);
@@ -461,11 +461,12 @@ void HotStuffBase::start(
     pmaker->init(this);
     if (ec_loop)
         ec.dispatch();
-
+    HOTSTUFF_LOG_INFO("===========checkpoint2=============");
     cmd_pending.reg_handler(ec, [this](cmd_queue_t &q) {
         std::pair<uint256_t, commit_cb_t> e;
         while (q.try_dequeue(e))
         {
+            HOTSTUFF_LOG_INFO("===========checkpoint3=============");
             ReplicaID proposer = pmaker->get_proposer();
 
             const auto &cmd_hash = e.first;
