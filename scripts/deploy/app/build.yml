@@ -10,7 +10,11 @@
     - file:
         path: "{{ (hs_repo_dir, 'build') | path_join }}"
         state: absent
+<<<<<<< HEAD
     - command: cmake -DCMAKE_BUID_TYPE=Release -DHOTSTUFF_PROTO_LOG=OFF -DCMAKE_CXXFLAGS="-DHOTSTUFF_ENABLE_BENCHMARK" "-DCMAKE_CXX_FLAGS='{{ hs_flags | default('') }}'"
+=======
+    - command: cmake -DCMAKE_BUID_TYPE=Release -DHOTSTUFF_PROTO_LOG=OFF "-DCMAKE_CXX_FLAGS='{{ hs_flags | default('') }}'"
+>>>>>>> 615080e2112e6755daf2389baa307cc5ccf9777a
       args:
         chdir: "{{ hs_repo_dir }}"
       environment:

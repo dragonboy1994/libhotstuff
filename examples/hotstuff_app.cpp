@@ -420,6 +420,7 @@ void HotStuffApp::print_stat() const {
     HOTSTUFF_LOG_INFO("--- end client msg. ---");
 
     HOTSTUFF_LOG_INFO("--- writing orderedlist_storage into a file. ---");
+<<<<<<< HEAD
     int cur_get_id = get_id();
     HOTSTUFF_LOG_INFO("get_id()=%d",cur_get_id);
     if(cur_get_id == 0) {
@@ -430,6 +431,13 @@ void HotStuffApp::print_stat() const {
             HOTSTUFF_LOG_PROTO("block hash is: %s", get_hex10(hash).c_str());
         }
 	HOTSTUFF_LOG_INFO("vec.size()=%d",vec.size());
+=======
+    if(get_id() == 0) {
+        std::vector<uint256_t> vec = orderedlist_storage->get_all_block_hashes();
+        for (auto hash : vec){
+            HOTSTUFF_LOG_PROTO("block hash is: %s", get_hex10(hash).c_str());
+        }
+>>>>>>> 615080e2112e6755daf2389baa307cc5ccf9777a
         for (auto cmd : orderedlist_storage->get_cmds_for_first_one(vec[3])) {
             HOTSTUFF_LOG_PROTO("First - cmd hash is: %s", get_hex10(cmd).c_str());
         }
@@ -446,7 +454,11 @@ void HotStuffApp::print_stat() const {
             HOTSTUFF_LOG_PROTO("Second- ts  is: %s", boost::lexical_cast<std::string>(ts).c_str());
         }
     }
+<<<<<<< HEAD
 	HOTSTUFF_LOG_INFO("successfully finishing command_timestamp_storage.");
+=======
+
+>>>>>>> 615080e2112e6755daf2389baa307cc5ccf9777a
 
     HOTSTUFF_LOG_INFO("--- writing command_timestamp_storage into a file. ---");
     std::ofstream outFile("command_timestamp_storage" + std::to_string(get_id()) + ".txt");
