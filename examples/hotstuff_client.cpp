@@ -186,6 +186,7 @@ int main(int argc, char **argv)
     ec.dispatch();
 
 #ifdef HOTSTUFF_ENABLE_BENCHMARK
+    HOTSTUFF_LOG_INFO("You successfully turn on HOTSTUFF_ENABLE_BENCHMARK");
     for (const auto &e : elapsed)
     {
         char fmt[64];

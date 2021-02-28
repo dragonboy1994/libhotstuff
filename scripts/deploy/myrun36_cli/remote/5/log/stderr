@@ -1,0 +1,367 @@
+2021-02-25 22:25:24.733499 [hotstuff info] Client started!
+2021-02-25 22:25:24.733592 [net info] starting all threads...
+2021-02-25 22:25:24.733699 [net warn] ignoring option name in conf file: block-size
+2021-02-25 22:25:24.733707 [net warn] ignoring option name in conf file: nworker
+2021-02-25 22:25:24.733713 [net warn] ignoring option name in conf file: repnworker
+2021-02-25 22:25:24.733719 [net warn] ignoring option name in conf file: clinworker
+2021-02-25 22:25:24.733725 [net warn] ignoring option name in conf file: repburst
+2021-02-25 22:25:24.733730 [net warn] ignoring option name in conf file: cliburst
+2021-02-25 22:25:24.733735 [net warn] ignoring option name in conf file: pace-maker
+2021-02-25 22:25:24.733748 [net info] loaded configuration from hotstuff.conf
+2021-02-25 22:25:24.733823 [hotstuff info] nfaulty = 1
+2021-02-25 22:25:24.742975 [net info] created <Conn fd=11 addr=<NetAddr 172.31.35.159:20000> mode=active>
+2021-02-25 22:25:24.745635 [net info] created <Conn fd=11 addr=<NetAddr 172.31.38.100:20000> mode=active>
+2021-02-25 22:25:24.745912 [net info] created <Conn fd=20 addr=<NetAddr 172.31.33.119:20000> mode=active>
+2021-02-25 22:25:24.746165 [net info] created <Conn fd=22 addr=<NetAddr 172.31.39.96:20000> mode=active>
+2021-02-25 22:25:24.746239 [hotstuff info] send new cmds f0a0278e43
+2021-02-25 22:25:24.746257 [hotstuff info] max_iter_num 200000
+2021-02-25 22:25:24.746276 [hotstuff info] send new cmds 8ad041705a
+2021-02-25 22:25:24.746282 [hotstuff info] max_iter_num 199999
+2021-02-25 22:25:24.746296 [hotstuff info] send new cmds 4f9fe0685b
+2021-02-25 22:25:24.746302 [hotstuff info] max_iter_num 199998
+2021-02-25 22:25:24.746317 [hotstuff info] send new cmds 080d5756a6
+2021-02-25 22:25:24.746323 [hotstuff info] max_iter_num 199997
+2021-02-25 22:25:24.746338 [hotstuff info] send new cmds 267833806a
+2021-02-25 22:25:24.746343 [hotstuff info] max_iter_num 199996
+2021-02-25 22:25:24.746358 [hotstuff info] send new cmds 04cf609765
+2021-02-25 22:25:24.746363 [hotstuff info] max_iter_num 199995
+2021-02-25 22:25:24.746378 [hotstuff info] send new cmds 39e5a27f4f
+2021-02-25 22:25:24.746384 [hotstuff info] max_iter_num 199994
+2021-02-25 22:25:24.746398 [hotstuff info] send new cmds 3571bcf1ed
+2021-02-25 22:25:24.746404 [hotstuff info] max_iter_num 199993
+2021-02-25 22:25:24.746419 [hotstuff info] send new cmds e31674c558
+2021-02-25 22:25:24.746425 [hotstuff info] max_iter_num 199992
+2021-02-25 22:25:24.746438 [hotstuff info] send new cmds 9b3b7f2f23
+2021-02-25 22:25:24.746444 [hotstuff info] max_iter_num 199991
+2021-02-25 22:25:24.746458 [hotstuff info] send new cmds 0d04950512
+2021-02-25 22:25:24.746463 [hotstuff info] max_iter_num 199990
+2021-02-25 22:25:24.746477 [hotstuff info] send new cmds 83a1ba02f9
+2021-02-25 22:25:24.746482 [hotstuff info] max_iter_num 199989
+2021-02-25 22:25:24.746495 [hotstuff info] send new cmds 0c5b0569ea
+2021-02-25 22:25:24.746501 [hotstuff info] max_iter_num 199988
+2021-02-25 22:25:24.746514 [hotstuff info] send new cmds 12952b2086
+2021-02-25 22:25:24.746520 [hotstuff info] max_iter_num 199987
+2021-02-25 22:25:24.746534 [hotstuff info] send new cmds d8c14370b8
+2021-02-25 22:25:24.746539 [hotstuff info] max_iter_num 199986
+2021-02-25 22:25:24.746553 [hotstuff info] send new cmds 6e742e1f6b
+2021-02-25 22:25:24.746558 [hotstuff info] max_iter_num 199985
+2021-02-25 22:25:24.746572 [hotstuff info] send new cmds ec527c1355
+2021-02-25 22:25:24.746577 [hotstuff info] max_iter_num 199984
+2021-02-25 22:25:24.746594 [hotstuff info] send new cmds 61d6dfa93a
+2021-02-25 22:25:24.746599 [hotstuff info] max_iter_num 199983
+2021-02-25 22:25:24.746613 [hotstuff info] send new cmds 2541dfdf2a
+2021-02-25 22:25:24.746619 [hotstuff info] max_iter_num 199982
+2021-02-25 22:25:24.746633 [hotstuff info] send new cmds 7411589362
+2021-02-25 22:25:24.746639 [hotstuff info] max_iter_num 199981
+2021-02-25 22:25:24.746669 [hotstuff info] send new cmds bcbfaa29f3
+2021-02-25 22:25:24.746677 [hotstuff info] max_iter_num 199980
+2021-02-25 22:25:24.746693 [hotstuff info] send new cmds 5d563a3361
+2021-02-25 22:25:24.746699 [hotstuff info] max_iter_num 199979
+2021-02-25 22:25:24.746720 [hotstuff info] send new cmds 2ff25c814f
+2021-02-25 22:25:24.746726 [hotstuff info] max_iter_num 199978
+2021-02-25 22:25:24.746742 [hotstuff info] send new cmds 8efc7a5ef1
+2021-02-25 22:25:24.746775 [hotstuff info] max_iter_num 199977
+2021-02-25 22:25:24.746790 [hotstuff info] send new cmds bf1c89be8f
+2021-02-25 22:25:24.746795 [hotstuff info] max_iter_num 199976
+2021-02-25 22:25:24.746810 [hotstuff info] send new cmds 1734ba9610
+2021-02-25 22:25:24.746814 [hotstuff info] max_iter_num 199975
+2021-02-25 22:25:24.746828 [hotstuff info] send new cmds 4fe42a7ab5
+2021-02-25 22:25:24.746833 [hotstuff info] max_iter_num 199974
+2021-02-25 22:25:24.746847 [hotstuff info] send new cmds 642ef4e3b8
+2021-02-25 22:25:24.746852 [hotstuff info] max_iter_num 199973
+2021-02-25 22:25:24.746869 [hotstuff info] send new cmds be61a8d59a
+2021-02-25 22:25:24.746875 [hotstuff info] max_iter_num 199972
+2021-02-25 22:25:24.746890 [hotstuff info] send new cmds 37d29d7a24
+2021-02-25 22:25:24.746896 [hotstuff info] max_iter_num 199971
+2021-02-25 22:25:24.746914 [hotstuff info] send new cmds 630f4e946e
+2021-02-25 22:25:24.746919 [hotstuff info] max_iter_num 199970
+2021-02-25 22:25:24.746934 [hotstuff info] send new cmds 099647b8d5
+2021-02-25 22:25:24.746939 [hotstuff info] max_iter_num 199969
+2021-02-25 22:25:24.746953 [hotstuff info] send new cmds 1c2b25b697
+2021-02-25 22:25:24.746958 [hotstuff info] max_iter_num 199968
+2021-02-25 22:25:24.746972 [hotstuff info] send new cmds 818e4ffa69
+2021-02-25 22:25:24.746978 [hotstuff info] max_iter_num 199967
+2021-02-25 22:25:24.746992 [hotstuff info] send new cmds 2be40d4d0d
+2021-02-25 22:25:24.746998 [hotstuff info] max_iter_num 199966
+2021-02-25 22:25:24.747013 [hotstuff info] send new cmds 23b663284f
+2021-02-25 22:25:24.747018 [hotstuff info] max_iter_num 199965
+2021-02-25 22:25:24.747033 [hotstuff info] send new cmds 5f402a9b92
+2021-02-25 22:25:24.747038 [hotstuff info] max_iter_num 199964
+2021-02-25 22:25:24.747054 [hotstuff info] send new cmds 1795e1dc05
+2021-02-25 22:25:24.747059 [hotstuff info] max_iter_num 199963
+2021-02-25 22:25:24.747077 [hotstuff info] send new cmds e654b49747
+2021-02-25 22:25:24.747083 [hotstuff info] max_iter_num 199962
+2021-02-25 22:25:24.747099 [hotstuff info] send new cmds bd33d543b1
+2021-02-25 22:25:24.747105 [hotstuff info] max_iter_num 199961
+2021-02-25 22:25:24.747121 [hotstuff info] send new cmds 01e8eb4614
+2021-02-25 22:25:24.747127 [hotstuff info] max_iter_num 199960
+2021-02-25 22:25:24.747142 [hotstuff info] send new cmds 1376c96095
+2021-02-25 22:25:24.747148 [hotstuff info] max_iter_num 199959
+2021-02-25 22:25:24.747164 [hotstuff info] send new cmds a7abe8c93e
+2021-02-25 22:25:24.747169 [hotstuff info] max_iter_num 199958
+2021-02-25 22:25:24.747183 [hotstuff info] send new cmds 460dde661a
+2021-02-25 22:25:24.747188 [hotstuff info] max_iter_num 199957
+2021-02-25 22:25:24.747203 [hotstuff info] send new cmds 2ae654b8a6
+2021-02-25 22:25:24.747208 [hotstuff info] max_iter_num 199956
+2021-02-25 22:25:24.747222 [hotstuff info] send new cmds 9fb28c8522
+2021-02-25 22:25:24.747227 [hotstuff info] max_iter_num 199955
+2021-02-25 22:25:24.747242 [hotstuff info] send new cmds d5cdb2ec42
+2021-02-25 22:25:24.747247 [hotstuff info] max_iter_num 199954
+2021-02-25 22:25:24.747261 [hotstuff info] send new cmds 39e2c5af20
+2021-02-25 22:25:24.747266 [hotstuff info] max_iter_num 199953
+2021-02-25 22:25:24.747280 [hotstuff info] send new cmds 4b42c70c93
+2021-02-25 22:25:24.747286 [hotstuff info] max_iter_num 199952
+2021-02-25 22:25:24.747303 [hotstuff info] send new cmds 52f2cd9951
+2021-02-25 22:25:24.747309 [hotstuff info] max_iter_num 199951
+2021-02-25 22:25:24.747324 [hotstuff info] send new cmds fe705d59d0
+2021-02-25 22:25:24.747329 [hotstuff info] max_iter_num 199950
+2021-02-25 22:25:24.747343 [hotstuff info] send new cmds a533ff6f83
+2021-02-25 22:25:24.747348 [hotstuff info] max_iter_num 199949
+2021-02-25 22:25:24.747361 [hotstuff info] send new cmds 1dedbd0a79
+2021-02-25 22:25:24.747367 [hotstuff info] max_iter_num 199948
+2021-02-25 22:25:24.747387 [hotstuff info] send new cmds cd0c63ce65
+2021-02-25 22:25:24.747392 [hotstuff info] max_iter_num 199947
+2021-02-25 22:25:24.747404 [hotstuff info] send new cmds b2f7f0c5ef
+2021-02-25 22:25:24.747409 [hotstuff info] max_iter_num 199946
+2021-02-25 22:25:24.747422 [hotstuff info] send new cmds 30be01d2a8
+2021-02-25 22:25:24.747428 [hotstuff info] max_iter_num 199945
+2021-02-25 22:25:24.747441 [hotstuff info] send new cmds af6ec02326
+2021-02-25 22:25:24.747446 [hotstuff info] max_iter_num 199944
+2021-02-25 22:25:24.747460 [hotstuff info] send new cmds 37750567f9
+2021-02-25 22:25:24.747464 [hotstuff info] max_iter_num 199943
+2021-02-25 22:25:24.747476 [hotstuff info] send new cmds f1bed6ac56
+2021-02-25 22:25:24.747481 [hotstuff info] max_iter_num 199942
+2021-02-25 22:25:24.747493 [hotstuff info] send new cmds 11217f56f7
+2021-02-25 22:25:24.747498 [hotstuff info] max_iter_num 199941
+2021-02-25 22:25:24.747517 [hotstuff info] send new cmds 9430185fda
+2021-02-25 22:25:24.747523 [hotstuff info] max_iter_num 199940
+2021-02-25 22:25:24.747536 [hotstuff info] send new cmds 2cf944f08f
+2021-02-25 22:25:24.747542 [hotstuff info] max_iter_num 199939
+2021-02-25 22:25:24.747557 [hotstuff info] send new cmds e618d8f208
+2021-02-25 22:25:24.747562 [hotstuff info] max_iter_num 199938
+2021-02-25 22:25:24.747577 [hotstuff info] send new cmds 7d97e7d55e
+2021-02-25 22:25:24.747582 [hotstuff info] max_iter_num 199937
+2021-02-25 22:25:24.747595 [hotstuff info] send new cmds 22df2f46a9
+2021-02-25 22:25:24.747601 [hotstuff info] max_iter_num 199936
+2021-02-25 22:25:24.747615 [hotstuff info] send new cmds ff0fbbcd9f
+2021-02-25 22:25:24.747621 [hotstuff info] max_iter_num 199935
+2021-02-25 22:25:24.747636 [hotstuff info] send new cmds 2986743303
+2021-02-25 22:25:24.747641 [hotstuff info] max_iter_num 199934
+2021-02-25 22:25:24.747654 [hotstuff info] send new cmds 77b3ad03da
+2021-02-25 22:25:24.747659 [hotstuff info] max_iter_num 199933
+2021-02-25 22:25:24.747678 [hotstuff info] send new cmds 3c088466cf
+2021-02-25 22:25:24.747683 [hotstuff info] max_iter_num 199932
+2021-02-25 22:25:24.747697 [hotstuff info] send new cmds 5e96df0c50
+2021-02-25 22:25:24.747703 [hotstuff info] max_iter_num 199931
+2021-02-25 22:25:24.747718 [hotstuff info] send new cmds a31c8c215e
+2021-02-25 22:25:24.747723 [hotstuff info] max_iter_num 199930
+2021-02-25 22:25:24.747736 [hotstuff info] send new cmds 3cd56bf5df
+2021-02-25 22:25:24.747812 [hotstuff info] max_iter_num 199929
+2021-02-25 22:25:24.747830 [hotstuff info] send new cmds 98cb16a039
+2021-02-25 22:25:24.747835 [hotstuff info] max_iter_num 199928
+2021-02-25 22:25:24.747847 [hotstuff info] send new cmds 16952e7b52
+2021-02-25 22:25:24.747852 [hotstuff info] max_iter_num 199927
+2021-02-25 22:25:24.747867 [hotstuff info] send new cmds af7eb879b0
+2021-02-25 22:25:24.747872 [hotstuff info] max_iter_num 199926
+2021-02-25 22:25:24.747887 [hotstuff info] send new cmds 18f672ef39
+2021-02-25 22:25:24.747892 [hotstuff info] max_iter_num 199925
+2021-02-25 22:25:24.747907 [hotstuff info] send new cmds 394cafeacc
+2021-02-25 22:25:24.747912 [hotstuff info] max_iter_num 199924
+2021-02-25 22:25:24.747925 [hotstuff info] send new cmds e761c3a284
+2021-02-25 22:25:24.747930 [hotstuff info] max_iter_num 199923
+2021-02-25 22:25:24.747947 [hotstuff info] send new cmds 180ce06635
+2021-02-25 22:25:24.747951 [hotstuff info] max_iter_num 199922
+2021-02-25 22:25:24.747965 [hotstuff info] send new cmds f02db0a021
+2021-02-25 22:25:24.747970 [hotstuff info] max_iter_num 199921
+2021-02-25 22:25:24.747985 [hotstuff info] send new cmds 9d7d948ef1
+2021-02-25 22:25:24.747990 [hotstuff info] max_iter_num 199920
+2021-02-25 22:25:24.748004 [hotstuff info] send new cmds 8d610417e5
+2021-02-25 22:25:24.748009 [hotstuff info] max_iter_num 199919
+2021-02-25 22:25:24.748024 [hotstuff info] send new cmds c2d5864c27
+2021-02-25 22:25:24.748029 [hotstuff info] max_iter_num 199918
+2021-02-25 22:25:24.748042 [hotstuff info] send new cmds 453512f1c9
+2021-02-25 22:25:24.748047 [hotstuff info] max_iter_num 199917
+2021-02-25 22:25:24.748060 [hotstuff info] send new cmds 9f2a454eec
+2021-02-25 22:25:24.748070 [hotstuff info] max_iter_num 199916
+2021-02-25 22:25:24.748083 [hotstuff info] send new cmds eeafa754d8
+2021-02-25 22:25:24.748088 [hotstuff info] max_iter_num 199915
+2021-02-25 22:25:24.748101 [hotstuff info] send new cmds 0116217b0b
+2021-02-25 22:25:24.748499 [hotstuff info] max_iter_num 199914
+2021-02-25 22:25:24.748521 [hotstuff info] send new cmds 7957e7d550
+2021-02-25 22:25:24.748526 [hotstuff info] max_iter_num 199913
+2021-02-25 22:25:24.748538 [hotstuff info] send new cmds 78be006752
+2021-02-25 22:25:24.748542 [hotstuff info] max_iter_num 199912
+2021-02-25 22:25:24.748558 [hotstuff info] send new cmds 8c749327d8
+2021-02-25 22:25:24.748563 [hotstuff info] max_iter_num 199911
+2021-02-25 22:25:24.748576 [hotstuff info] send new cmds 636d0284ca
+2021-02-25 22:25:24.748581 [hotstuff info] max_iter_num 199910
+2021-02-25 22:25:24.748595 [hotstuff info] send new cmds 68a41f3aa0
+2021-02-25 22:25:24.748600 [hotstuff info] max_iter_num 199909
+2021-02-25 22:25:24.748613 [hotstuff info] send new cmds 02ca38ef35
+2021-02-25 22:25:24.748618 [hotstuff info] max_iter_num 199908
+2021-02-25 22:25:24.748631 [hotstuff info] send new cmds b3af006fe8
+2021-02-25 22:25:24.748635 [hotstuff info] max_iter_num 199907
+2021-02-25 22:25:24.748647 [hotstuff info] send new cmds 06a6cbcdbb
+2021-02-25 22:25:24.748651 [hotstuff info] max_iter_num 199906
+2021-02-25 22:25:24.748664 [hotstuff info] send new cmds 3212414c1a
+2021-02-25 22:25:24.748669 [hotstuff info] max_iter_num 199905
+2021-02-25 22:25:24.748682 [hotstuff info] send new cmds 28ca179869
+2021-02-25 22:25:24.748686 [hotstuff info] max_iter_num 199904
+2021-02-25 22:25:24.748698 [hotstuff info] send new cmds 109a3ea392
+2021-02-25 22:25:24.748702 [hotstuff info] max_iter_num 199903
+2021-02-25 22:25:24.748715 [hotstuff info] send new cmds 5a83685094
+2021-02-25 22:25:24.748720 [hotstuff info] max_iter_num 199902
+2021-02-25 22:25:24.748733 [hotstuff info] send new cmds 5c9a0c9958
+2021-02-25 22:25:24.748738 [hotstuff info] max_iter_num 199901
+2021-02-25 22:25:24.748753 [hotstuff info] send new cmds 585c5821c7
+2021-02-25 22:25:24.748758 [hotstuff info] max_iter_num 199900
+2021-02-25 22:25:24.748772 [hotstuff info] send new cmds 33365d80f6
+2021-02-25 22:25:24.748778 [hotstuff info] max_iter_num 199899
+2021-02-25 22:25:24.748792 [hotstuff info] send new cmds 5d801d21ec
+2021-02-25 22:25:24.748798 [hotstuff info] max_iter_num 199898
+2021-02-25 22:25:24.748813 [hotstuff info] send new cmds b0fdb443fd
+2021-02-25 22:25:24.748818 [hotstuff info] max_iter_num 199897
+2021-02-25 22:25:24.748833 [hotstuff info] send new cmds cbe0930147
+2021-02-25 22:25:24.748838 [hotstuff info] max_iter_num 199896
+2021-02-25 22:25:24.748852 [hotstuff info] send new cmds 70c9f4d1bc
+2021-02-25 22:25:24.748858 [hotstuff info] max_iter_num 199895
+2021-02-25 22:25:24.748871 [hotstuff info] send new cmds 8229ac5755
+2021-02-25 22:25:24.748877 [hotstuff info] max_iter_num 199894
+2021-02-25 22:25:24.748891 [hotstuff info] send new cmds 6c5e7e3b59
+2021-02-25 22:25:24.748896 [hotstuff info] max_iter_num 199893
+2021-02-25 22:25:24.748910 [hotstuff info] send new cmds 11607dcc0f
+2021-02-25 22:25:24.748915 [hotstuff info] max_iter_num 199892
+2021-02-25 22:25:24.748929 [hotstuff info] send new cmds 4d6a54576d
+2021-02-25 22:25:24.748934 [hotstuff info] max_iter_num 199891
+2021-02-25 22:25:24.748951 [hotstuff info] send new cmds 0c37a5ff4f
+2021-02-25 22:25:24.748956 [hotstuff info] max_iter_num 199890
+2021-02-25 22:25:24.748970 [hotstuff info] send new cmds 048d9af59b
+2021-02-25 22:25:24.748976 [hotstuff info] max_iter_num 199889
+2021-02-25 22:25:24.748990 [hotstuff info] send new cmds 245cb3cb27
+2021-02-25 22:25:24.748995 [hotstuff info] max_iter_num 199888
+2021-02-25 22:25:24.749009 [hotstuff info] send new cmds a1f4bacec4
+2021-02-25 22:25:24.749015 [hotstuff info] max_iter_num 199887
+2021-02-25 22:25:24.749029 [hotstuff info] send new cmds f64c305402
+2021-02-25 22:25:24.749034 [hotstuff info] max_iter_num 199886
+2021-02-25 22:25:24.749047 [hotstuff info] send new cmds 722397cf12
+2021-02-25 22:25:24.749058 [hotstuff info] max_iter_num 199885
+2021-02-25 22:25:24.749073 [hotstuff info] send new cmds 1ed4829dcc
+2021-02-25 22:25:24.749078 [hotstuff info] max_iter_num 199884
+2021-02-25 22:25:24.749092 [hotstuff info] send new cmds 2d029740ef
+2021-02-25 22:25:24.749097 [hotstuff info] max_iter_num 199883
+2021-02-25 22:25:24.749111 [hotstuff info] send new cmds 6d767464ee
+2021-02-25 22:25:24.749117 [hotstuff info] max_iter_num 199882
+2021-02-25 22:25:24.749131 [hotstuff info] send new cmds 2df02115a7
+2021-02-25 22:25:24.749137 [hotstuff info] max_iter_num 199881
+2021-02-25 22:25:24.749150 [hotstuff info] send new cmds 83ac222e7a
+2021-02-25 22:25:24.749156 [hotstuff info] max_iter_num 199880
+2021-02-25 22:25:24.749173 [hotstuff info] send new cmds b0952da0c4
+2021-02-25 22:25:24.749178 [hotstuff info] max_iter_num 199879
+2021-02-25 22:25:24.749193 [hotstuff info] send new cmds dec97e9f67
+2021-02-25 22:25:24.749198 [hotstuff info] max_iter_num 199878
+2021-02-25 22:25:24.749213 [hotstuff info] send new cmds b02beeea1f
+2021-02-25 22:25:24.749218 [hotstuff info] max_iter_num 199877
+2021-02-25 22:25:24.749233 [hotstuff info] send new cmds c8e32d7ce5
+2021-02-25 22:25:24.749238 [hotstuff info] max_iter_num 199876
+2021-02-25 22:25:24.749252 [hotstuff info] send new cmds 9cfd876a53
+2021-02-25 22:25:24.749256 [hotstuff info] max_iter_num 199875
+2021-02-25 22:25:24.749271 [hotstuff info] send new cmds e5b7b7b078
+2021-02-25 22:25:24.749276 [hotstuff info] max_iter_num 199874
+2021-02-25 22:25:24.749289 [hotstuff info] send new cmds 863998d374
+2021-02-25 22:25:24.749295 [hotstuff info] max_iter_num 199873
+2021-02-25 22:25:24.749315 [hotstuff info] send new cmds 9b57cdc783
+2021-02-25 22:25:24.749321 [hotstuff info] max_iter_num 199872
+2021-02-25 22:25:24.749336 [hotstuff info] send new cmds fe21cc7ad2
+2021-02-25 22:25:24.749342 [hotstuff info] max_iter_num 199871
+2021-02-25 22:25:24.749355 [hotstuff info] send new cmds 55d79be0e0
+2021-02-25 22:25:24.749360 [hotstuff info] max_iter_num 199870
+2021-02-25 22:25:24.749374 [hotstuff info] send new cmds 481e107202
+2021-02-25 22:25:24.749379 [hotstuff info] max_iter_num 199869
+2021-02-25 22:25:24.749394 [hotstuff info] send new cmds 8b75f90c96
+2021-02-25 22:25:24.749398 [hotstuff info] max_iter_num 199868
+2021-02-25 22:25:24.749410 [hotstuff info] send new cmds d29d3668cd
+2021-02-25 22:25:24.749415 [hotstuff info] max_iter_num 199867
+2021-02-25 22:25:24.749427 [hotstuff info] send new cmds ab80f82272
+2021-02-25 22:25:24.749432 [hotstuff info] max_iter_num 199866
+2021-02-25 22:25:24.749444 [hotstuff info] send new cmds 05a922418a
+2021-02-25 22:25:24.749449 [hotstuff info] max_iter_num 199865
+2021-02-25 22:25:24.749462 [hotstuff info] send new cmds b07e548567
+2021-02-25 22:25:24.749466 [hotstuff info] max_iter_num 199864
+2021-02-25 22:25:24.749481 [hotstuff info] send new cmds f9864b689d
+2021-02-25 22:25:24.749486 [hotstuff info] max_iter_num 199863
+2021-02-25 22:25:24.749499 [hotstuff info] send new cmds 9eeeff662f
+2021-02-25 22:25:24.749504 [hotstuff info] max_iter_num 199862
+2021-02-25 22:25:24.749516 [hotstuff info] send new cmds c7f22ee98f
+2021-02-25 22:25:24.749521 [hotstuff info] max_iter_num 199861
+2021-02-25 22:25:24.749533 [hotstuff info] send new cmds 51ffd0cbbc
+2021-02-25 22:25:24.749538 [hotstuff info] max_iter_num 199860
+2021-02-25 22:25:24.749551 [hotstuff info] send new cmds e42c78eeb4
+2021-02-25 22:25:24.749555 [hotstuff info] max_iter_num 199859
+2021-02-25 22:25:24.749568 [hotstuff info] send new cmds 8ebcbb5117
+2021-02-25 22:25:24.749573 [hotstuff info] max_iter_num 199858
+2021-02-25 22:25:24.749587 [hotstuff info] send new cmds 6195adfa77
+2021-02-25 22:25:24.749592 [hotstuff info] max_iter_num 199857
+2021-02-25 22:25:24.749606 [hotstuff info] send new cmds 297a9d2ba4
+2021-02-25 22:25:24.749610 [hotstuff info] max_iter_num 199856
+2021-02-25 22:25:24.749623 [hotstuff info] send new cmds b5ddfc7454
+2021-02-25 22:25:24.749628 [hotstuff info] max_iter_num 199855
+2021-02-25 22:25:24.749642 [hotstuff info] send new cmds 2cfed30d4c
+2021-02-25 22:25:24.749647 [hotstuff info] max_iter_num 199854
+2021-02-25 22:25:24.749666 [hotstuff info] send new cmds 47bc2180b1
+2021-02-25 22:25:24.749671 [hotstuff info] max_iter_num 199853
+2021-02-25 22:25:24.749688 [hotstuff info] send new cmds 248cf2d982
+2021-02-25 22:25:24.749693 [hotstuff info] max_iter_num 199852
+2021-02-25 22:25:24.749706 [hotstuff info] send new cmds e49bbdb738
+2021-02-25 22:25:24.749711 [hotstuff info] max_iter_num 199851
+2021-02-25 22:25:24.749725 [hotstuff info] send new cmds cc4a0ef075
+2021-02-25 22:25:24.749730 [hotstuff info] max_iter_num 199850
+2021-02-25 22:25:24.749744 [hotstuff info] send new cmds 9ec6d58a8b
+2021-02-25 22:25:24.749749 [hotstuff info] max_iter_num 199849
+2021-02-25 22:25:24.749763 [hotstuff info] send new cmds 1693ce15d6
+2021-02-25 22:25:24.749769 [hotstuff info] max_iter_num 199848
+2021-02-25 22:25:24.749784 [hotstuff info] send new cmds 639ee36002
+2021-02-25 22:25:24.749789 [hotstuff info] max_iter_num 199847
+2021-02-25 22:25:24.749804 [hotstuff info] send new cmds 9e9b086236
+2021-02-25 22:25:24.749809 [hotstuff info] max_iter_num 199846
+2021-02-25 22:25:24.749823 [hotstuff info] send new cmds e602b7c52d
+2021-02-25 22:25:24.749829 [hotstuff info] max_iter_num 199845
+2021-02-25 22:25:24.749842 [hotstuff info] send new cmds 33ac69d8bd
+2021-02-25 22:25:24.749847 [hotstuff info] max_iter_num 199844
+2021-02-25 22:25:24.749861 [hotstuff info] send new cmds f7194f794e
+2021-02-25 22:25:24.749866 [hotstuff info] max_iter_num 199843
+2021-02-25 22:25:24.749887 [hotstuff info] send new cmds a451529548
+2021-02-25 22:25:24.749892 [hotstuff info] max_iter_num 199842
+2021-02-25 22:25:24.749908 [hotstuff info] send new cmds 1127d0d294
+2021-02-25 22:25:24.749913 [hotstuff info] max_iter_num 199841
+2021-02-25 22:25:24.749927 [hotstuff info] send new cmds c354d1cbcf
+2021-02-25 22:25:24.749932 [hotstuff info] max_iter_num 199840
+2021-02-25 22:25:24.749947 [hotstuff info] send new cmds 0648286de3
+2021-02-25 22:25:24.749952 [hotstuff info] max_iter_num 199839
+2021-02-25 22:25:24.749967 [hotstuff info] send new cmds 335ff967be
+2021-02-25 22:25:24.749972 [hotstuff info] max_iter_num 199838
+2021-02-25 22:25:24.749987 [hotstuff info] send new cmds a504c6850b
+2021-02-25 22:25:24.749993 [hotstuff info] max_iter_num 199837
+2021-02-25 22:25:24.750008 [hotstuff info] send new cmds a6cb963cb0
+2021-02-25 22:25:24.750013 [hotstuff info] max_iter_num 199836
+2021-02-25 22:25:24.750027 [hotstuff info] send new cmds fbb9b6041d
+2021-02-25 22:25:24.750032 [hotstuff info] max_iter_num 199835
+2021-02-25 22:25:24.750047 [hotstuff info] send new cmds a2dfabad05
+2021-02-25 22:25:24.750052 [hotstuff info] max_iter_num 199834
+2021-02-25 22:25:24.750066 [hotstuff info] send new cmds 9fe9166681
+2021-02-25 22:25:24.750072 [hotstuff info] max_iter_num 199833
+2021-02-25 22:25:24.750087 [hotstuff info] send new cmds 6142402dcb
+2021-02-25 22:25:24.750093 [hotstuff info] max_iter_num 199832
+2021-02-25 22:25:24.750109 [hotstuff info] send new cmds 34b9352157
+2021-02-25 22:25:24.750115 [hotstuff info] max_iter_num 199831
+2021-02-25 22:25:24.750130 [hotstuff info] send new cmds a7fa779a0d
+2021-02-25 22:25:24.750135 [hotstuff info] max_iter_num 199830
+2021-02-25 22:25:24.750150 [hotstuff info] send new cmds e099eeb19a
+2021-02-25 22:25:24.750155 [hotstuff info] max_iter_num 199829
+2021-02-25 22:25:24.750170 [hotstuff info] send new cmds 6fe6e3f596
+2021-02-25 22:25:24.750176 [hotstuff info] max_iter_num 199828
+2021-02-25 22:25:24.750191 [hotstuff info] send new cmds ecdbacad37
+2021-02-25 22:25:24.750196 [hotstuff info] max_iter_num 199827
+2021-02-25 22:25:24.750211 [hotstuff info] send new cmds fd09e5e7b0
+2021-02-25 22:25:24.750217 [hotstuff info] max_iter_num 199826
+2021-02-25 22:34:08.620893 [hotstuff info] You successfully turn on HOTSTUFF_ENABLE_BENCHMARK
+2021-02-25 22:34:08.620933 [net info] stopping all threads...
