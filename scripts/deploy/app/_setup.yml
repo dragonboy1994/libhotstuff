@@ -12,6 +12,7 @@
           - cmake
           - make
           - dh-autoreconf
+          - libboost-dev
         state:
           latest
       become: true
