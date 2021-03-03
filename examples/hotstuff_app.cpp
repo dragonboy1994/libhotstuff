@@ -446,12 +446,8 @@ void HotStuffApp::print_stat() const {
             HOTSTUFF_LOG_PROTO("Second- ts  is: %s", boost::lexical_cast<std::string>(ts).c_str());
         }
     }
-<<<<<<< HEAD
+
 	HOTSTUFF_LOG_INFO("successfully finishing command_timestamp_storage.");
-=======
-
->>>>>>> 615080e2112e6755daf2389baa307cc5ccf9777a
-
     HOTSTUFF_LOG_INFO("--- writing command_timestamp_storage into a file. ---");
     std::ofstream outFile("command_timestamp_storage" + std::to_string(get_id()) + ".txt");
     std::vector<uint256_t> cmd_hashes = command_timestamp_storage->get_all_cmd_hashes();
